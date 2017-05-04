@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="220dp" >
+
+        <com.example.objLoader.view.imagecycle.ImageCycleView
+            android:id="@+id/icy_home"
+            android:layout_width="fill_parent"
+            android:layout_height="220dp" />
+
+        <ImageView
+            android:id="@+id/iv_home_user"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:background="@drawable/home_user" />
+
+        <RelativeLayout
+            android:id="@+id/rl_app_info"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_below="@id/iv_home_user"
+            android:layout_marginTop="50dp"
+            android:layout_marginLeft="10dp" >
+
+            <TextView
+                android:id="@+id/tv_home_app_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_toLeftOf="@+id/tv_app_version"
+                android:paddingRight="5dp"
+                android:text="@string/login_app_name"
+                android:textColor="#0d548c"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/tv_home_app_version"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_toRightOf="@id/tv_home_app_name"
+                android:paddingLeft="3dp"
+                android:text="@string/login_app_version"
+                android:textColor="#0d548c"
+                android:textSize="12sp" />
+        </RelativeLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/rl_app_info"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="3dp"
+            android:text="@string/home_title"
+            android:textColor="#9a9997" 
+            android:textSize="14sp" />
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="6dp"
+        android:background="#646361" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="#ffffff" >
+
+        <TextView
+            android:id="@+id/tv_home_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:paddingRight="10dp"
+            android:text=""
+            android:textColor="#9a9997" 
+            android:textSize="14sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:paddingLeft="10dp"
+            android:text="@string/home_text"
+            android:textColor="#000000"
+            android:textSize="16sp" />
+    </RelativeLayout>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/home_bg" />
+
+</LinearLayout>

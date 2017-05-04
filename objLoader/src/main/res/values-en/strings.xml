@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">DMe</string>
+
+    <!-- AccountInfoActivity -->
+    <string name="account_info_title">Personal information</string>
+    <string name="account_info_username">Username</string>
+    <string name="account_info_change_pwd">Change Password</string>
+    <string name="account_info_log_out">Drop out</string>
+
+    <!-- ChangePwdActivity -->
+    <string name="change_pwd_title">Change Password</string>
+    <string name="change_pwd_old_pwd">Old password</string>
+    <string name="change_pwd_input_old_pwd">Please enter old password:</string>
+    <string name="change_pwd_new_pwd">New password:</string>
+    <string name="change_pwd_input_new_pwd">Please enter a new password</string>
+    <string name="change_pwd_confirm_pwd">Confirm password:</string>
+    <string name="change_pwd_input_confirm_pwd">Please confirm your password</string>
+    <string name="change_pwd_old_confirm">Submit</string>
+
+    <!-- ChangeUsernameActivity -->
+    <string name="change_username_title">Username</string>
+    <string name="change_username_save">Save</string>
+    <string name="change_username_input_new_username">Please enter a new user name</string>
+
+    <!-- ForgertPwdActivity -->
+    <string name="forget_pwd_find_pwd">Forgot password</string>
+
+    <!-- FrontPicActivity -->
+    <string name="front_Pic">Frontal view</string>
+    <string name="front_title">Please import or capture your frontal</string>
+
+    <!-- LoginActivity -->
+    <string name="login">Login</string>
+    <string name="login_other">Other Login</string>
+    <string name="login_register">Sign up now</string>
+    <string name="login_forget_pwd">Forget password?</string>
+    <string name="login_user_pwd_not_null">User name or password can not be empty</string>
+    <string name="login_app_name">FitMe</string>
+    <string name="login_app_version">V1.0</string>
+
+    <!-- MeasureActivity -->
+    <string name="measure_title">measuring</string>
+    <string name="measure_input_weightorheight">Please enter your height, weight,</string>
+    <string name="measure_height">Height(CM)</string>
+    <string name="measure_weight">Weight(KG)</string>
+    <string name="measure_input_height">Please enter a height</string>
+    <string name="measure_input_weight">Please enter your weight</string>
+
+    <!-- RegisterActivity -->
+    <string name="register_title">Register</string>
+
+    <!-- SidePicActivity -->
+    <string name="side_pic">According to the side</string>
+    <string name="side_title">Please import photos or shoot your side</string>
+    <string name="side_start_measure">Started</string>
+    <string name="measuring">Measuring!</string>
+    <string name="side_upload_pic_front">Uploading positive picture  </string>
+    <string name="side_upload_pic_side">Uploading photos side  </string>
+    <string name="side_puload_pic_success">Photo uploaded completed</string>
+
+    <!-- SizeActivity -->
+    <string name="size_details">Detailed Size</string>
+    <string name="size_mate">Matching</string>
+    <string name="size_model">3D model</string>
+    <string name="size_my_log">My record</string>
+    <string name="input_size_name">Please enter a record of the name</string>
+    <string name="size_id">No.</string>
+    <string name="size_project">Project</string>
+    <string name="size">Size</string>
+    
+    <!-- HomeActivity -->
+	<string name="home_title">Get rid of the shackles of traditional measurement</string>
+	<string name="home_text">User Experience Measurement</string>
+	<string name="home_measure">Measuring</string>
+	<string name="home_size">Size</string>
+	<string name="home_game">Game</string>
+	<string name="home_dizhi">Custom</string>
+	<string name="home_shop">Shop</string>
+
+    <!-- public -->
+    <string name="first_measure">The human body measurement first, please</string>
+    <string name="delete_my_log">Please select the record you want to delete first</string>
+    <string name="delete">Delete</string>
+    <string name="delete_log">Whether to delete the selected record</string>
+    <string name="not_login">Not logged in, please login</string>
+    <string name="input_weight_height">Please enter height and weight</string>
+    <string name="selector_front_pic">Select frontal</string>
+    <string name="selector_side_pic">Please choose a side photo</string>
+    <string name="not_details_size">No record, upload photos</string>
+    <string name="model_not_found">No 3D model file, re-upload photo</string>
+    <string name="front_pic_not_found">Frontal view does not exist</string>
+    <string name="side_pic_not_found">Side photo does not exist</string>
+    <string name="upload_pic_error">Picture upload error!!!</string>
+    <string name="server_error">Server is not responding, if re-upload</string>
+    <string name="open_model">Opening 3D model files, please wait...</string>
+    <string name="measureing">Taking measurements, please wait...</string>
+    <string name="record">Recording</string>
+    <string name="pwd_lenght">Please enter a password (6-12 alphanumeric characters)</string>
+    <string name="pwd_equals">Enter the password twice inconsistent, please re-enter</string>
+    <string name="inaccessible">Write Open</string>
+    <string name="input_username">Please enter user name</string>
+    <string name="input_password">Please enter your password</string>
+    <string name="username_save">Username Saved</string>
+    <string name="save">Save</string>
+    <string name="input_mobile">Please enter the phone number</string>
+    <string name="input_auth_code">Please enter verification code</string>
+    <string name="input_send_auth_code">Send the verification code</string>
+    <string name="input_pwd">Set password</string>
+    <string name="input_confirm_pwd">Please confirm your password</string>
+    <string name="confirm">Confirm</string>
+    <string name="cancel">Cancel</string>
+    <string name="right_mobile">Please enter the correct phone number</string>
+    <string name="pwd_not_right">Again passwords do not match, please re-enter!</string>
+    <string name="auth_code_already">Verification code has been sent</string>
+    <string name="auth_code_right">Verification code right</string>
+    <string name="camear">Photograph</string>
+    <string name="album">Photo Gallery</string>
+    <string name="next">Next</string>
+    <string name="log_check_network">Please check your network connection!!!</string>
+    <string name="clientError">Client Error</string>
+    <string name="serverError">Server error occurred</string>
+    <string name="networkError">Please check your network</string>
+    <string name="timeoutError">Request timed out, the server is not responding</string>
+    <string name="unKnownHostError">No server specified</string>
+    <string name="uRLError">URL error</string>
+    <string name="notFoundCacheError">Cache is not found</string>
+    <string name="error_no">Unknown mistake</string>
+
+    <string name="pickerview_year">Year</string>
+    <string name="pickerview_month">Month</string>
+    <string name="pickerview_day">Day</string>
+    <string name="pickerview_hours">Hours</string>
+    <string name="pickerview_minutes">Minutes</string>
+    <string name="pickerview_seconds">Seconds</string>
+    <string name="submit">Submit</string>
+    <string name="account_info_measure_record" >Measure record</string>
+    <string name="account_info_measure_protocol" >Measure protocol</string>
+    <string name="logout">Logout</string>
+    <string name="logout_msg">Are you sure exit?all information will be cleared.</string>
+    <string name="tips_for_measure" />
+    <string name="person_center">Person center</string>
+    <string name="begin_measure">Begin measure</string>
+    <string name="no_present">Not ready</string>
+
+</resources>

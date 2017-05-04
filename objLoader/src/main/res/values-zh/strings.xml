@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">点米量身</string>
+
+    <!-- AccountInfoActivity -->
+    <string name="account_info_title">个人信息</string>
+    <string name="account_info_username">用户名</string>
+    <string name="account_info_change_pwd">修改密码</string>
+    <string name="account_info_log_out">退出登陆</string>
+
+    <!-- ChangePwdActivity -->
+    <string name="change_pwd_title">修改密码</string>
+    <string name="change_pwd_old_pwd">原密码</string>
+    <string name="change_pwd_input_old_pwd">请输入原密码:</string>
+    <string name="change_pwd_new_pwd">新密码:</string>
+    <string name="change_pwd_input_new_pwd">请输入新密码</string>
+    <string name="change_pwd_confirm_pwd">确认密码:</string>
+    <string name="change_pwd_input_confirm_pwd">请确认密码</string>
+    <string name="change_pwd_old_confirm">提交</string>
+
+    <!-- ChangeUsernameActivity -->
+    <string name="change_username_title">用户名</string>
+    <string name="change_username_save">保存</string>
+    <string name="change_username_input_new_username">请输入新用户名</string>
+
+    <!-- ForgertPwdActivity -->
+    <string name="forget_pwd_find_pwd">找回密码</string>
+
+    <!-- FrontPicActivity -->
+    <string name="front_Pic">正面照</string>
+    <string name="front_title">请导入或拍摄您的正面照</string>
+
+    <!-- LoginActivity -->
+    <string name="login">登录</string>
+    <string name="login_other">其它登录</string>
+    <string name="login_register">立即注册</string>
+    <string name="login_forget_pwd">忘记密码?</string>
+    <string name="login_user_pwd_not_null">用户名或密码不能为空</string>
+    <string name="login_app_name">人体测量</string>
+    <string name="login_app_version">v1.0</string>
+
+    <!-- MeasureActivity -->
+    <string name="measure_title">测量</string>
+    <string name="measure_input_weightorheight">请输入您的身高、体重</string>
+    <string name="measure_height">身高(CM)</string>
+    <string name="measure_weight">体重(KG)</string>
+    <string name="measure_input_height">请输入身高</string>
+    <string name="measure_input_weight">请输入体重</string>
+
+    <!-- RegisterActivity -->
+    <string name="register_title">注册</string>
+
+    <!-- SidePicActivity -->
+    <string name="side_pic">侧面照</string>
+    <string name="side_title">请导入或拍摄您的侧面照</string>
+    <string name="side_start_measure">开始测量</string>
+    <string name="measuring">正在测量</string>
+    <string name="side_upload_pic_front">正在上传正面照片    </string>
+    <string name="side_upload_pic_side">正在上传侧面照片    </string>
+    <string name="side_puload_pic_success">照片已上传完成</string>
+
+    <!-- SizeActivity -->
+    <string name="size_details">详细尺寸</string>
+    <string name="size_mate">号型匹配</string>
+    <string name="size_model">3D模型</string>
+    <string name="size_my_log">我的记录</string>
+    <string name="input_size_name">请输入记录的名称</string>
+    <string name="size_id">序号</string>
+    <string name="size_project">项目</string>
+    <string name="size">尺寸</string>
+    
+    <!-- HomeActivity -->
+	<string name="home_title">摆脱传统的测量的束缚</string>
+	<string name="home_text">用户测量体验</string>
+	<string name="home_measure">测量</string>
+	<string name="home_size">尺寸</string>
+	<string name="home_game">游戏</string>
+	<string name="home_dizhi">订制</string>
+	<string name="home_shop">商城</string>
+
+    <!-- public -->
+    <string name="first_measure">请先进行人体测量</string>
+    <string name="delete_my_log">请先选择需要删除的记录</string>
+    <string name="delete_log">是否删除选中的记录</string>
+    <string name="delete">删除</string>
+    <string name="not_login">未登录,请先登录</string>
+    <string name="input_weight_height">请输入身高和体重</string>
+    <string name="selector_front_pic">请选择正面照</string>
+    <string name="selector_side_pic">请选择侧面照</string>
+    <string name="not_details_size">无记录，请上传照片</string>
+    <string name="model_not_found">无3D模型文件,请重新上传照片</string>
+    <string name="front_pic_not_found">正面照不存在</string>
+    <string name="side_pic_not_found">侧面照不存在</string>
+    <string name="upload_pic_error">上传图片出错!!!</string>
+    <string name="server_error">服务器无响应,是否重新上传</string>
+    <string name="open_model">正在打开3D模型文件,请稍候...</string>
+    <string name="measureing">正在测量,请稍候...</string>
+    <string name="record">记录</string>
+    <string name="pwd_lenght">请输入密码(6-12个字母、数字)</string>
+    <string name="pwd_equals">两次密码输入不一致,请重新输入</string>
+    <string name="inaccessible">暂未开放</string>
+    <string name="input_username">请输入用户名</string>
+    <string name="input_password">请输入密码</string>
+    <string name="username_save">用户名已保存</string>
+    <string name="save">保存</string>
+    <string name="input_mobile">请输入手机号码</string>
+    <string name="input_auth_code">请输入验证码</string>
+    <string name="input_send_auth_code">发送验证码</string>
+    <string name="input_pwd">请设置密码</string>
+    <string name="input_confirm_pwd">请确认密码</string>
+    <string name="confirm">确认</string>
+    <string name="cancel">取消</string>
+    <string name="right_mobile">请输入正确的手机号码</string>
+    <string name="pwd_not_right">再次输入的密码不一致,请重新输入!</string>
+    <string name="auth_code_already">验证码已发送</string>
+    <string name="auth_code_right">验证码提交正确</string>
+    <string name="camear">拍照</string>
+    <string name="album">相册</string>
+    <string name="next">下一步</string>
+    <string name="log_check_network">请检查网络连接!!!</string>
+    <string name="clientError">客户端发生错误</string>
+    <string name="serverError">服务器发生错误</string>
+    <string name="networkError"> 请检查网络</string>
+    <string name="timeoutError">请求超时,服务器无响应</string>
+    <string name="unKnownHostError">未发现指定服务器</string>
+    <string name="uRLError">URL错误</string>
+    <string name="notFoundCacheError">没有发现缓存</string>
+    <string name="error_no">未知错误</string>
+
+    <string name="pickerview_year">年</string>
+    <string name="pickerview_month">月</string>
+    <string name="pickerview_day">日</string>
+    <string name="pickerview_hours">时</string>
+    <string name="pickerview_minutes">分</string>
+    <string name="pickerview_seconds">秒</string>
+    <string name="submit">提交</string>
+    <string name="account_info_measure_record" >量身记录</string>
+    <string name="account_info_measure_protocol" >量身协议</string>
+    <string name="logout">退出登录</string>
+    <string name="logout_msg">您确定要退出登录吗？退出后账号信息将被清空。</string>
+    <string name="tips_for_measure" >为保障量身质量及准确性，请你穿着较为贴身的义务进行拍照，或选择贴身的照片</string>
+    <string name="person_center">个人中心</string>
+    <string name="begin_measure">开始量身</string>
+    <string name="no_present">暂未开放</string>
+
+
+</resources>

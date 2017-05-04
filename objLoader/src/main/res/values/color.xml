@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- 标题颜色 -->
+    <!--<color name="title_color">#0d548c</color>-->
+    <color name="title_color">#333e47</color>
+
+    <!-- 透明色 -->
+    <color name="transparent">#00000000</color>
+    <!-- 内容字体颜色 -->
+    <color name="content_font_color">#999999</color>
+    <!-- 按下内容字体颜色 -->
+    <color name="pressed_content_font_color">#00c1ff</color>
+    <!-- 白色 -->
+    <color name="white">#ffffff</color>
+    <!-- 主页英文红色字体 -->
+    <color name="home_red_font">#fd3561</color>
+    <!-- 背景色 -->
+	<color name="backgrond">#cccccc</color>
+	
+	<color name="color_accent">#7c4dff</color>
+    <color name="color_success">#3CCD88</color>
+    <color name="color_error">#f44336</color>
+
+
+    <color name="color_bg">#333e47</color>
+    <color name="color_base_deep">#1F262E</color>
+    <color name="color_base">#273037</color>
+
+
+    <color name="title">#b7b9bb</color>
+    <color name="yollow">#f0a53a</color>
+
+    <!--actionDialogColor-->
+    <color name="black">#000000</color>
+    <color name="trans">#00000000</color>
+    <color name="alertdialog_line">#c6c6c6</color>
+    <color name="actionsheet_blue">#037BFF</color>
+    <color name="actionsheet_red">#FD4A2E</color>
+    <color name="actionsheet_gray">#8F8F8F</color>
+
+
+
+</resources>

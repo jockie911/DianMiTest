@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merger version="3"><dataSet config="main"><source path="E:\Code\Android\MyApplication\sMSSDK\src\main\assets"/><source path="E:\Code\Android\MyApplication\sMSSDK\build\generated\assets\shaders\debug"/></dataSet><dataSet config="debug"><source path="E:\Code\Android\MyApplication\sMSSDK\src\debug\assets"/></dataSet></merger>

@@ -1,0 +1,274 @@
+-- Merging decision tree log ---
+manifest
+ADDED from E:\Code\Android\MyApplication\objLoader\src\main\AndroidManifest.xml:2:1-133:12
+	package
+		ADDED from E:\Code\Android\MyApplication\objLoader\src\main\AndroidManifest.xml:3:5-36
+		INJECTED from E:\Code\Android\MyApplication\objLoader\src\main\AndroidManifest.xml
+		INJECTED from E:\Code\Android\MyApplication\objLoader\src\main\AndroidManifest.xml
+	android:versionName
+		ADDED from E:\Code\Android\MyApplication\objLoader\src\main\AndroidManifest.xml:5:5-30
+		INJECTED from E:\Code\Android\MyApplication\objLoader\src\main\AndroidManifest.xml
+		INJECTED from E:\Code\Android\MyApplication\objLoader\src\main\AndroidManifest.xml
+	android:versionCode
+		ADDED from E:\Code\Android\MyApplication\objLoader\src\main\AndroidManifest.xml:4:5-28
+		INJECTED from E:\Code\Android\MyApplication\objLoader\src\main\AndroidManifest.xml
+		INJECTED from E:\Code\Android\MyApplication\objLoader\src\main\AndroidManifest.xml
+	xmlns:android
+		ADDED from E:\Code\Android\MyApplication\objLoader\src\main\AndroidManifest.xml:2:11-69
+uses-sdk
+ADDED from E:\Code\Android\MyApplication\objLoader\src\main\AndroidManifest.xml:7:5-9:41
+MERGED from [MyApplication:sMSSDK:unspecified] E:\Code\Android\MyApplication\sMSSDK\build\intermediates\bundles\default\AndroidManifest.xml:7:5-9:41
+MERGED from [com.android.support.constraint:constraint-layout:1.0.2] C:\Users\yc\.android\build-cache\55f2ddc8ca84cc4a398f974a4a196734dee55575\output\AndroidManifest.xml:5:5-7:41
+MERGED from [com.yarolegovich:discrete-scrollview:1.1.4] C:\Users\yc\.android\build-cache\ba879d93af5f994975fd39aab3155ab57c6c0f03\output\AndroidManifest.xml:8:5-10:41
+MERGED from [com.android.support:recyclerview-v7:25.2.0] C:\Users\yc\.android\build-cache\f036dc2fa940f3d42e4946e92c9e36445ef67a74\output\AndroidManifest.xml:20:5-43
+MERGED from [com.jude:swipebackhelper:3.1.2] C:\Users\yc\.android\build-cache\2262fff0c1f2cedb2a7688f3109cbc825523166c\output\AndroidManifest.xml:7:5-9:41
+MERGED from [com.android.support:appcompat-v7:25.3.1] C:\Users\yc\.android\build-cache\d0928f8ffb5d248f984d90ffe3601d0e67dd1423\output\AndroidManifest.xml:21:5-23:78
+MERGED from [com.android.support:support-v4:25.3.1] C:\Users\yc\.android\build-cache\f4cc810a5d1d0f67b511eaf90ca566300aeddc70\output\AndroidManifest.xml:21:5-23:54
+MERGED from [com.android.support:support-fragment:25.3.1] C:\Users\yc\.android\build-cache\8b43b5bb113515b65480c6490b82f6243b80034e\output\AndroidManifest.xml:21:5-23:60
+MERGED from [com.android.support:support-media-compat:25.3.1] C:\Users\yc\.android\build-cache\408d465a57b41a9a6e9d543347e1020e7546d11e\output\AndroidManifest.xml:21:5-23:63
+MERGED from [com.android.support:support-core-ui:25.3.1] C:\Users\yc\.android\build-cache\51250feb2a6e8a80f6d6f9a48e279a4625525eda\output\AndroidManifest.xml:21:5-23:58
+MERGED from [com.android.support:support-core-utils:25.3.1] C:\Users\yc\.android\build-cache\c61b0258c8ab4513f727c4cbfab29ae17d8d68cd\output\AndroidManifest.xml:21:5-23:61
+MERGED from [com.android.support:animated-vector-drawable:25.3.1] C:\Users\yc\.android\build-cache\dcef2eeadf7e8c04fbca84a43468cdadef03e88a\output\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-vector-drawable:25.3.1] C:\Users\yc\.android\build-cache\ed05c00a3b295e294c5ffed2c1461d31ebe63734\output\AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:support-compat:25.3.1] C:\Users\yc\.android\build-cache\df968a0ab5a91fb038dff00e50d7d287ae3cf11c\output\AndroidManifest.xml:21:5-23:58
+	tools:overrideLibrary
+		ADDED from [com.android.support:appcompat-v7:25.3.1] C:\Users\yc\.android\build-cache\d0928f8ffb5d248f984d90ffe3601d0e67dd1423\output\AndroidManifest.xml:23:9-75
+	android:targetSdkVersion
+		ADDED from E:\Code\Android\MyApplication\objLoader\src\main\AndroidManifest.xml:9:9-38
+		INJECTED from E:\Code\Android\MyApplication\objLoader\src\main\AndroidManifest.xml
+		INJECTED from E:\Code\Android\MyApplication\objLoader\src\main\AndroidManifest.xml
+	android:minSdkVersion
+		ADDED from E:\Code\Android\MyApplication\objLoader\src\main\AndroidManifest.xml:8:9-35
+		INJECTED from E:\Code\Android\MyApplication\objLoader\src\main\AndroidManifest.xml
+		INJECTED from E:\Code\Android\MyApplication\objLoader\src\main\AndroidManifest.xml
+uses-permission#android.permission.READ_EXTERNAL_STORAGE
+ADDED from E:\Code\Android\MyApplication\objLoader\src\main\AndroidManifest.xml:11:5-80
+	android:name
+		ADDED from E:\Code\Android\MyApplication\objLoader\src\main\AndroidManifest.xml:11:22-77
+uses-permission#android.permission.WRITE_EXTERNAL_STORAGE
+ADDED from E:\Code\Android\MyApplication\objLoader\src\main\AndroidManifest.xml:12:5-81
+	android:name
+		ADDED from E:\Code\Android\MyApplication\objLoader\src\main\AndroidManifest.xml:12:22-78
+uses-permission#android.permission.MOUNT_UNMOUNT_FILESYSTEMS
+ADDED from E:\Code\Android\MyApplication\objLoader\src\main\AndroidManifest.xml:13:5-84
+	android:name
+		ADDED from E:\Code\Android\MyApplication\objLoader\src\main\AndroidManifest.xml:13:22-81
+uses-permission#android.permission.INTERNET
+ADDED from E:\Code\Android\MyApplication\objLoader\src\main\AndroidManifest.xml:14:5-67
+	android:name
+		ADDED from E:\Code\Android\MyApplication\objLoader\src\main\AndroidManifest.xml:14:22-64
+uses-permission#android.permission.ACCESS_NETWORK_STATE
+ADDED from E:\Code\Android\MyApplication\objLoader\src\main\AndroidManifest.xml:15:5-79
+	android:name
+		ADDED from E:\Code\Android\MyApplication\objLoader\src\main\AndroidManifest.xml:15:22-76
+uses-permission#android.permission.CHANGE_NETWORK_STATE
+ADDED from E:\Code\Android\MyApplication\objLoader\src\main\AndroidManifest.xml:16:5-79
+	android:name
+		ADDED from E:\Code\Android\MyApplication\objLoader\src\main\AndroidManifest.xml:16:22-76
+uses-permission#android.permission.CHANGE_WIFI_STATE
+ADDED from E:\Code\Android\MyApplication\objLoader\src\main\AndroidManifest.xml:17:5-76
+	android:name
+		ADDED from E:\Code\Android\MyApplication\objLoader\src\main\AndroidManifest.xml:17:22-73
+uses-permission#android.permission.CHANGE_WIFI_MULTICAST_STATE
+ADDED from E:\Code\Android\MyApplication\objLoader\src\main\AndroidManifest.xml:18:5-86
+	android:name
+		ADDED from E:\Code\Android\MyApplication\objLoader\src\main\AndroidManifest.xml:18:22-83
+uses-permission#android.permission.ACCESS_WIFI_STATE
+ADDED from E:\Code\Android\MyApplication\objLoader\src\main\AndroidManifest.xml:19:5-76
+	android:name
+		ADDED from E:\Code\Android\MyApplication\objLoader\src\main\AndroidManifest.xml:19:22-73
+uses-permission#android.permission.READ_CONTACTS
+ADDED from E:\Code\Android\MyApplication\objLoader\src\main\AndroidManifest.xml:22:5-72
+	android:name
+		ADDED from E:\Code\Android\MyApplication\objLoader\src\main\AndroidManifest.xml:22:22-69
+uses-permission#android.permission.READ_PHONE_STATE
+ADDED from E:\Code\Android\MyApplication\objLoader\src\main\AndroidManifest.xml:23:5-75
+	android:name
+		ADDED from E:\Code\Android\MyApplication\objLoader\src\main\AndroidManifest.xml:23:22-72
+uses-permission#android.permission.RECEIVE_SMS
+ADDED from E:\Code\Android\MyApplication\objLoader\src\main\AndroidManifest.xml:28:5-70
+	android:name
+		ADDED from E:\Code\Android\MyApplication\objLoader\src\main\AndroidManifest.xml:28:22-67
+uses-permission#android.permission.READ_SMS
+ADDED from E:\Code\Android\MyApplication\objLoader\src\main\AndroidManifest.xml:29:5-67
+	android:name
+		ADDED from E:\Code\Android\MyApplication\objLoader\src\main\AndroidManifest.xml:29:22-64
+uses-permission#android.permission.GET_TASKS
+ADDED from E:\Code\Android\MyApplication\objLoader\src\main\AndroidManifest.xml:30:5-68
+	android:name
+		ADDED from E:\Code\Android\MyApplication\objLoader\src\main\AndroidManifest.xml:30:22-65
+uses-permission#android.permission.ACCESS_FINE_LOCATION
+ADDED from E:\Code\Android\MyApplication\objLoader\src\main\AndroidManifest.xml:31:5-79
+	android:name
+		ADDED from E:\Code\Android\MyApplication\objLoader\src\main\AndroidManifest.xml:31:22-76
+uses-permission#android.permission.WRITE_SETTINGS
+ADDED from E:\Code\Android\MyApplication\objLoader\src\main\AndroidManifest.xml:32:5-73
+	android:name
+		ADDED from E:\Code\Android\MyApplication\objLoader\src\main\AndroidManifest.xml:32:22-70
+application
+ADDED from E:\Code\Android\MyApplication\objLoader\src\main\AndroidManifest.xml:34:5-131:19
+MERGED from [MyApplication:sMSSDK:unspecified] E:\Code\Android\MyApplication\sMSSDK\build\intermediates\bundles\default\AndroidManifest.xml:11:5-12:19
+MERGED from [com.android.support.constraint:constraint-layout:1.0.2] C:\Users\yc\.android\build-cache\55f2ddc8ca84cc4a398f974a4a196734dee55575\output\AndroidManifest.xml:9:5-20
+MERGED from [com.android.support:appcompat-v7:25.3.1] C:\Users\yc\.android\build-cache\d0928f8ffb5d248f984d90ffe3601d0e67dd1423\output\AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:support-v4:25.3.1] C:\Users\yc\.android\build-cache\f4cc810a5d1d0f67b511eaf90ca566300aeddc70\output\AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:support-fragment:25.3.1] C:\Users\yc\.android\build-cache\8b43b5bb113515b65480c6490b82f6243b80034e\output\AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:support-media-compat:25.3.1] C:\Users\yc\.android\build-cache\408d465a57b41a9a6e9d543347e1020e7546d11e\output\AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:support-core-ui:25.3.1] C:\Users\yc\.android\build-cache\51250feb2a6e8a80f6d6f9a48e279a4625525eda\output\AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:support-core-utils:25.3.1] C:\Users\yc\.android\build-cache\c61b0258c8ab4513f727c4cbfab29ae17d8d68cd\output\AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:animated-vector-drawable:25.3.1] C:\Users\yc\.android\build-cache\dcef2eeadf7e8c04fbca84a43468cdadef03e88a\output\AndroidManifest.xml:26:5-20
+MERGED from [com.android.support:support-vector-drawable:25.3.1] C:\Users\yc\.android\build-cache\ed05c00a3b295e294c5ffed2c1461d31ebe63734\output\AndroidManifest.xml:26:5-20
+MERGED from [com.android.support:support-compat:25.3.1] C:\Users\yc\.android\build-cache\df968a0ab5a91fb038dff00e50d7d287ae3cf11c\output\AndroidManifest.xml:29:5-20
+	android:label
+		ADDED from E:\Code\Android\MyApplication\objLoader\src\main\AndroidManifest.xml:37:9-41
+	android:icon
+		ADDED from E:\Code\Android\MyApplication\objLoader\src\main\AndroidManifest.xml:36:9-42
+	android:allowBackup
+		ADDED from [MyApplication:sMSSDK:unspecified] E:\Code\Android\MyApplication\sMSSDK\build\intermediates\bundles\default\AndroidManifest.xml:11:18-44
+	android:theme
+		ADDED from E:\Code\Android\MyApplication\objLoader\src\main\AndroidManifest.xml:38:9-40
+	android:name
+		ADDED from E:\Code\Android\MyApplication\objLoader\src\main\AndroidManifest.xml:35:9-37
+activity#com.mob.tools.MobUIShell
+ADDED from E:\Code\Android\MyApplication\objLoader\src\main\AndroidManifest.xml:41:9-45:70
+	android:windowSoftInputMode
+		ADDED from E:\Code\Android\MyApplication\objLoader\src\main\AndroidManifest.xml:45:13-67
+	android:configChanges
+		ADDED from E:\Code\Android\MyApplication\objLoader\src\main\AndroidManifest.xml:43:13-74
+	android:theme
+		ADDED from E:\Code\Android\MyApplication\objLoader\src\main\AndroidManifest.xml:44:13-72
+	android:name
+		ADDED from E:\Code\Android\MyApplication\objLoader\src\main\AndroidManifest.xml:42:13-52
+activity#com.example.objLoader.activity.MyLogDetailsActivity
+ADDED from E:\Code\Android\MyApplication\objLoader\src\main\AndroidManifest.xml:48:9-51:52
+	android:screenOrientation
+		ADDED from E:\Code\Android\MyApplication\objLoader\src\main\AndroidManifest.xml:51:13-49
+	android:configChanges
+		ADDED from E:\Code\Android\MyApplication\objLoader\src\main\AndroidManifest.xml:50:13-63
+	android:name
+		ADDED from E:\Code\Android\MyApplication\objLoader\src\main\AndroidManifest.xml:49:13-58
+activity#com.example.objLoader.activity.ChangePwdActivity
+ADDED from E:\Code\Android\MyApplication\objLoader\src\main\AndroidManifest.xml:54:9-57:52
+	android:screenOrientation
+		ADDED from E:\Code\Android\MyApplication\objLoader\src\main\AndroidManifest.xml:57:13-49
+	android:configChanges
+		ADDED from E:\Code\Android\MyApplication\objLoader\src\main\AndroidManifest.xml:56:13-63
+	android:name
+		ADDED from E:\Code\Android\MyApplication\objLoader\src\main\AndroidManifest.xml:55:13-55
+activity#com.example.objLoader.activity.ChangeUsernameActivity
+ADDED from E:\Code\Android\MyApplication\objLoader\src\main\AndroidManifest.xml:59:9-62:52
+	android:screenOrientation
+		ADDED from E:\Code\Android\MyApplication\objLoader\src\main\AndroidManifest.xml:62:13-49
+	android:configChanges
+		ADDED from E:\Code\Android\MyApplication\objLoader\src\main\AndroidManifest.xml:61:13-63
+	android:name
+		ADDED from E:\Code\Android\MyApplication\objLoader\src\main\AndroidManifest.xml:60:13-60
+activity#com.example.objLoader.activity.LoginActivity
+ADDED from E:\Code\Android\MyApplication\objLoader\src\main\AndroidManifest.xml:64:9-67:52
+	android:screenOrientation
+		ADDED from E:\Code\Android\MyApplication\objLoader\src\main\AndroidManifest.xml:67:13-49
+	android:configChanges
+		ADDED from E:\Code\Android\MyApplication\objLoader\src\main\AndroidManifest.xml:66:13-63
+	android:name
+		ADDED from E:\Code\Android\MyApplication\objLoader\src\main\AndroidManifest.xml:65:13-51
+activity#com.example.objLoader.activity.RegisterActivity
+ADDED from E:\Code\Android\MyApplication\objLoader\src\main\AndroidManifest.xml:69:9-72:52
+	android:screenOrientation
+		ADDED from E:\Code\Android\MyApplication\objLoader\src\main\AndroidManifest.xml:72:13-49
+	android:configChanges
+		ADDED from E:\Code\Android\MyApplication\objLoader\src\main\AndroidManifest.xml:71:13-63
+	android:name
+		ADDED from E:\Code\Android\MyApplication\objLoader\src\main\AndroidManifest.xml:70:13-54
+activity#com.example.objLoader.activity.ForgertPwdActivity
+ADDED from E:\Code\Android\MyApplication\objLoader\src\main\AndroidManifest.xml:74:9-77:52
+	android:screenOrientation
+		ADDED from E:\Code\Android\MyApplication\objLoader\src\main\AndroidManifest.xml:77:13-49
+	android:configChanges
+		ADDED from E:\Code\Android\MyApplication\objLoader\src\main\AndroidManifest.xml:76:13-63
+	android:name
+		ADDED from E:\Code\Android\MyApplication\objLoader\src\main\AndroidManifest.xml:75:13-56
+activity#com.example.objLoader.activity.AccountInfoActivity
+ADDED from E:\Code\Android\MyApplication\objLoader\src\main\AndroidManifest.xml:91:9-94:52
+	android:screenOrientation
+		ADDED from E:\Code\Android\MyApplication\objLoader\src\main\AndroidManifest.xml:94:13-49
+	android:configChanges
+		ADDED from E:\Code\Android\MyApplication\objLoader\src\main\AndroidManifest.xml:93:13-63
+	android:name
+		ADDED from E:\Code\Android\MyApplication\objLoader\src\main\AndroidManifest.xml:92:13-57
+activity#com.example.objLoader.activity.FrontPicActivity
+ADDED from E:\Code\Android\MyApplication\objLoader\src\main\AndroidManifest.xml:96:9-99:52
+	android:screenOrientation
+		ADDED from E:\Code\Android\MyApplication\objLoader\src\main\AndroidManifest.xml:99:13-49
+	android:configChanges
+		ADDED from E:\Code\Android\MyApplication\objLoader\src\main\AndroidManifest.xml:98:13-63
+	android:name
+		ADDED from E:\Code\Android\MyApplication\objLoader\src\main\AndroidManifest.xml:97:13-54
+activity#com.example.objLoader.activity.SidePicActivity
+ADDED from E:\Code\Android\MyApplication\objLoader\src\main\AndroidManifest.xml:101:9-104:52
+	android:screenOrientation
+		ADDED from E:\Code\Android\MyApplication\objLoader\src\main\AndroidManifest.xml:104:13-49
+	android:configChanges
+		ADDED from E:\Code\Android\MyApplication\objLoader\src\main\AndroidManifest.xml:103:13-63
+	android:name
+		ADDED from E:\Code\Android\MyApplication\objLoader\src\main\AndroidManifest.xml:102:13-53
+activity#com.example.objLoader.activity.MeasureActivity
+ADDED from E:\Code\Android\MyApplication\objLoader\src\main\AndroidManifest.xml:106:9-110:57
+	android:screenOrientation
+		ADDED from E:\Code\Android\MyApplication\objLoader\src\main\AndroidManifest.xml:109:13-49
+	android:windowSoftInputMode
+		ADDED from E:\Code\Android\MyApplication\objLoader\src\main\AndroidManifest.xml:110:13-54
+	android:configChanges
+		ADDED from E:\Code\Android\MyApplication\objLoader\src\main\AndroidManifest.xml:108:13-63
+	android:name
+		ADDED from E:\Code\Android\MyApplication\objLoader\src\main\AndroidManifest.xml:107:13-53
+activity#com.example.objLoader.activity.SizeActivity
+ADDED from E:\Code\Android\MyApplication\objLoader\src\main\AndroidManifest.xml:112:9-115:52
+	android:screenOrientation
+		ADDED from E:\Code\Android\MyApplication\objLoader\src\main\AndroidManifest.xml:115:13-49
+	android:configChanges
+		ADDED from E:\Code\Android\MyApplication\objLoader\src\main\AndroidManifest.xml:114:13-63
+	android:name
+		ADDED from E:\Code\Android\MyApplication\objLoader\src\main\AndroidManifest.xml:113:13-50
+activity#com.example.objLoader.activity.mywork.SplashActivity
+ADDED from E:\Code\Android\MyApplication\objLoader\src\main\AndroidManifest.xml:116:9-126:20
+	android:screenOrientation
+		ADDED from E:\Code\Android\MyApplication\objLoader\src\main\AndroidManifest.xml:119:13-49
+	android:configChanges
+		ADDED from E:\Code\Android\MyApplication\objLoader\src\main\AndroidManifest.xml:118:13-63
+	android:theme
+		ADDED from E:\Code\Android\MyApplication\objLoader\src\main\AndroidManifest.xml:120:13-63
+	android:name
+		ADDED from E:\Code\Android\MyApplication\objLoader\src\main\AndroidManifest.xml:117:13-59
+intent-filter#android.intent.action.MAIN+android.intent.category.LAUNCHER
+ADDED from E:\Code\Android\MyApplication\objLoader\src\main\AndroidManifest.xml:121:13-125:29
+action#android.intent.action.MAIN
+ADDED from E:\Code\Android\MyApplication\objLoader\src\main\AndroidManifest.xml:122:17-69
+	android:name
+		ADDED from E:\Code\Android\MyApplication\objLoader\src\main\AndroidManifest.xml:122:25-66
+category#android.intent.category.LAUNCHER
+ADDED from E:\Code\Android\MyApplication\objLoader\src\main\AndroidManifest.xml:124:17-77
+	android:name
+		ADDED from E:\Code\Android\MyApplication\objLoader\src\main\AndroidManifest.xml:124:27-74
+activity#com.example.objLoader.activity.mywork.MainActivity
+ADDED from E:\Code\Android\MyApplication\objLoader\src\main\AndroidManifest.xml:127:9-129:66
+	android:theme
+		ADDED from E:\Code\Android\MyApplication\objLoader\src\main\AndroidManifest.xml:129:13-63
+	android:name
+		ADDED from E:\Code\Android\MyApplication\objLoader\src\main\AndroidManifest.xml:128:13-57
+activity#com.example.objLoader.activity.mywork.DetailMeasureSizeActivity
+ADDED from E:\Code\Android\MyApplication\objLoader\src\main\AndroidManifest.xml:130:9-88
+	android:name
+		ADDED from E:\Code\Android\MyApplication\objLoader\src\main\AndroidManifest.xml:130:19-76
+meta-data#android.support.VERSION
+ADDED from [com.android.support:appcompat-v7:25.3.1] C:\Users\yc\.android\build-cache\d0928f8ffb5d248f984d90ffe3601d0e67dd1423\output\AndroidManifest.xml:25:5-27:34
+MERGED from [com.android.support:support-v4:25.3.1] C:\Users\yc\.android\build-cache\f4cc810a5d1d0f67b511eaf90ca566300aeddc70\output\AndroidManifest.xml:25:5-27:34
+MERGED from [com.android.support:support-fragment:25.3.1] C:\Users\yc\.android\build-cache\8b43b5bb113515b65480c6490b82f6243b80034e\output\AndroidManifest.xml:25:5-27:34
+MERGED from [com.android.support:support-media-compat:25.3.1] C:\Users\yc\.android\build-cache\408d465a57b41a9a6e9d543347e1020e7546d11e\output\AndroidManifest.xml:25:5-27:34
+MERGED from [com.android.support:support-core-ui:25.3.1] C:\Users\yc\.android\build-cache\51250feb2a6e8a80f6d6f9a48e279a4625525eda\output\AndroidManifest.xml:25:5-27:34
+MERGED from [com.android.support:support-core-utils:25.3.1] C:\Users\yc\.android\build-cache\c61b0258c8ab4513f727c4cbfab29ae17d8d68cd\output\AndroidManifest.xml:25:5-27:34
+MERGED from [com.android.support:animated-vector-drawable:25.3.1] C:\Users\yc\.android\build-cache\dcef2eeadf7e8c04fbca84a43468cdadef03e88a\output\AndroidManifest.xml:22:5-24:34
+MERGED from [com.android.support:support-vector-drawable:25.3.1] C:\Users\yc\.android\build-cache\ed05c00a3b295e294c5ffed2c1461d31ebe63734\output\AndroidManifest.xml:22:5-24:34
+MERGED from [com.android.support:support-compat:25.3.1] C:\Users\yc\.android\build-cache\df968a0ab5a91fb038dff00e50d7d287ae3cf11c\output\AndroidManifest.xml:25:5-27:34
+	android:value
+		ADDED from [com.android.support:appcompat-v7:25.3.1] C:\Users\yc\.android\build-cache\d0928f8ffb5d248f984d90ffe3601d0e67dd1423\output\AndroidManifest.xml:27:9-31
+	android:name
+		ADDED from [com.android.support:appcompat-v7:25.3.1] C:\Users\yc\.android\build-cache\d0928f8ffb5d248f984d90ffe3601d0e67dd1423\output\AndroidManifest.xml:26:9-47

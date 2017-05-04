@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical"
+    android:background="@color/color_base">
+
+    <include layout="@layout/base_title_bar"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/color_base">
+        <ImageView
+            android:id="@+id/iv_temp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginLeft="50dp"
+            android:layout_marginRight="50dp"
+            android:paddingBottom="2dp"
+            android:src="@drawable/first_process"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/iv_temp"
+            android:text="正面照"
+            android:textColor="@color/title"
+            android:layout_marginLeft="35dp"
+            android:layout_marginBottom="10dp"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/iv_temp"
+            android:layout_centerHorizontal="true"
+            android:text="侧面照"
+            android:textColor="#4a525b"
+            android:layout_marginLeft="35dp"
+            android:layout_marginBottom="5dp"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/iv_temp"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="30dp"
+            android:text="身高/体重"
+            android:textColor="#4a525b"
+            android:layout_marginBottom="5dp"/>
+    </RelativeLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="@color/white">
+        <ImageView
+            android:id="@+id/iv_front"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/front_bg"
+            android:scaleType="fitXY" />
+    </FrameLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_gravity="bottom"
+        android:background="@color/color_bg" >
+        <Button
+            android:id="@+id/btn_front_camera"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_marginLeft="30dp"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/xj_selector" />
+
+        <Button
+            android:id="@+id/btn_front_album"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_marginLeft="40dp"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/btn_front_camera"
+            android:background="@drawable/xc_selector" />
+        <TextView
+            android:id="@+id/tv_next_step"
+            android:layout_width="150dp"
+            android:layout_height="match_parent"
+            android:background="@color/yollow"
+            android:layout_alignParentRight="true"
+            android:text="@string/next"
+            android:gravity="center"
+            android:textColor="#fff"
+            android:textSize="18sp"/>
+    </RelativeLayout>
+</LinearLayout>
