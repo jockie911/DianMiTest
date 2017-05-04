@@ -108,12 +108,12 @@
         "source": "E:\\Code\\Android\\MyApplication\\objLoader\\src\\main\\res\\drawable-xxhdpi\\login_weixin.png"
     },
     {
-        "merged": "E:\\Code\\Android\\MyApplication\\objLoader\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi\\tab_selected_pressed_holo.9.png",
-        "source": "E:\\Code\\Android\\MyApplication\\objLoader\\src\\main\\res\\drawable-xxhdpi\\tab_selected_pressed_holo.9.png"
-    },
-    {
         "merged": "E:\\Code\\Android\\MyApplication\\objLoader\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi\\next_h.png",
         "source": "E:\\Code\\Android\\MyApplication\\objLoader\\src\\main\\res\\drawable-xxhdpi\\next_h.png"
+    },
+    {
+        "merged": "E:\\Code\\Android\\MyApplication\\objLoader\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi\\tab_selected_pressed_holo.9.png",
+        "source": "E:\\Code\\Android\\MyApplication\\objLoader\\src\\main\\res\\drawable-xxhdpi\\tab_selected_pressed_holo.9.png"
     },
     {
         "merged": "E:\\Code\\Android\\MyApplication\\objLoader\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi\\size_normal.png",
@@ -122,6 +122,10 @@
     {
         "merged": "E:\\Code\\Android\\MyApplication\\objLoader\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi\\back.png",
         "source": "E:\\Code\\Android\\MyApplication\\objLoader\\src\\main\\res\\drawable-xxhdpi\\back.png"
+    },
+    {
+        "merged": "E:\\Code\\Android\\MyApplication\\objLoader\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi\\third_process.png",
+        "source": "E:\\Code\\Android\\MyApplication\\objLoader\\src\\main\\res\\drawable-xxhdpi\\third_process.png"
     },
     {
         "merged": "E:\\Code\\Android\\MyApplication\\objLoader\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi\\delete_normal_2.png",
@@ -164,12 +168,12 @@
         "source": "E:\\Code\\Android\\MyApplication\\objLoader\\src\\main\\res\\drawable-xxhdpi\\delete_pressed.png"
     },
     {
-        "merged": "E:\\Code\\Android\\MyApplication\\objLoader\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi\\log_pressed.png",
-        "source": "E:\\Code\\Android\\MyApplication\\objLoader\\src\\main\\res\\drawable-xxhdpi\\log_pressed.png"
-    },
-    {
         "merged": "E:\\Code\\Android\\MyApplication\\objLoader\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi\\xj_h.png",
         "source": "E:\\Code\\Android\\MyApplication\\objLoader\\src\\main\\res\\drawable-xxhdpi\\xj_h.png"
+    },
+    {
+        "merged": "E:\\Code\\Android\\MyApplication\\objLoader\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi\\log_pressed.png",
+        "source": "E:\\Code\\Android\\MyApplication\\objLoader\\src\\main\\res\\drawable-xxhdpi\\log_pressed.png"
     },
     {
         "merged": "E:\\Code\\Android\\MyApplication\\objLoader\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi\\xc_h.png",

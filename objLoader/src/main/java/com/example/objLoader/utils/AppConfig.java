@@ -4,7 +4,7 @@ import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.SharedPreferences;
 
-import com.example.objLoader.global.MyAPP;
+import com.example.objLoader.global.BaseApp;
 
 import java.io.File;
 import java.util.Set;
@@ -26,7 +26,7 @@ public class AppConfig {
     public String APP_PATH_ROOT;
 
     private AppConfig() {
-        preferences = MyAPP.getInstance().getSharedPreferences("objview", Context.MODE_PRIVATE);
+        preferences = BaseApp.getInstance().getSharedPreferences("objview", Context.MODE_PRIVATE);
 
         APP_PATH_ROOT = FileUtil.getRootPath().getAbsolutePath() + File.separator + "objview";
         FileUtil.initDirectory(APP_PATH_ROOT);

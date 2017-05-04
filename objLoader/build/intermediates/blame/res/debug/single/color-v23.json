@@ -38,5 +38,9 @@
     {
         "merged": "E:\\Code\\Android\\MyApplication\\objLoader\\build\\intermediates\\res\\merged\\debug\\color-v23\\abc_tint_default.xml",
         "source": "C:\\Users\\yc\\.android\\build-cache\\d0928f8ffb5d248f984d90ffe3601d0e67dd1423\\output\\res\\color-v23\\abc_tint_default.xml"
+    },
+    {
+        "merged": "E:\\Code\\Android\\MyApplication\\objLoader\\build\\intermediates\\res\\merged\\debug\\color-v23\\design_tint_password_toggle.xml",
+        "source": "C:\\Users\\yc\\.android\\build-cache\\9bb9c0f4e18f768e3516e9c4152543666304976c\\output\\res\\color-v23\\design_tint_password_toggle.xml"
     }
 ]

@@ -3,7 +3,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent" >
 
-    <com.example.objLoader.view.imagecycle.CycleViewPager
+    <com.example.objLoader.wedgit.imagecycle.CycleViewPager
         android:id="@+id/pager_banner"
         android:layout_width="match_parent"
         android:layout_height="match_parent" />

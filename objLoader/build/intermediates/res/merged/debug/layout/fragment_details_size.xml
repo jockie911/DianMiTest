@@ -9,7 +9,8 @@
 	<RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="40dp"
-        android:background="#0d548c" >
+        android:background="#0d548c"
+        android:visibility="gone">
 
         <ImageView
             android:id="@+id/iv_title_back"
@@ -44,11 +45,6 @@
            	android:layout_marginRight="10dp"
              />
         </RelativeLayout>
-        <View 
-            android:layout_width="match_parent"
-            android:layout_height="3dp"
-            android:background="#cccccc"
-            />
 	<RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="40dp"
@@ -89,7 +85,5 @@
     <ListView
         android:id="@+id/lv_dtails_size" 
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        />
-
+        android:layout_height="match_parent" />
 </LinearLayout>

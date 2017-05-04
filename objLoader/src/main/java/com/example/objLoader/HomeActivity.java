@@ -7,24 +7,18 @@ import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.os.Build;
-import android.os.Bundle;
 import android.support.v4.app.ActivityCompat;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
 import android.view.View;
-import android.view.View.OnClickListener;
 import android.widget.RadioButton;
 
-import com.example.objLoader.R;
-import com.example.objLoader.activity.LoginActivity;
-import com.example.objLoader.activity.MeasureActivity;
+import com.example.objLoader.activity.MeasureWeightAndHeightActivity;
 import com.example.objLoader.activity.SizeActivity;
 import com.example.objLoader.fragment.HomeFragment;
-import com.example.objLoader.global.AbActivityManager;
 import com.example.objLoader.global.BaseActivity;
 import com.example.objLoader.utils.SharedPreferencesDAO;
 import com.example.objLoader.utils.Toast;
-import com.yolanda.nohttp.Logger;
 
 import butterknife.Bind;
 import butterknife.OnClick;
@@ -132,7 +126,7 @@ public class HomeActivity extends BaseActivity  {
 		case R.id.rb_celiang:
 			
 			switchFragment(0);
-			startActivity(new Intent(mContext, MeasureActivity.class));
+			startActivity(new Intent(mContext, MeasureWeightAndHeightActivity.class));
 			break;
 		case R.id.rb_chicun:
 			String str = SharedPreferencesDAO.getInstance(mContext).getString("json");

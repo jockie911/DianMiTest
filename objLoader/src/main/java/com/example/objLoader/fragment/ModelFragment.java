@@ -2,17 +2,12 @@ package com.example.objLoader.fragment;
 
 
 import com.example.objLoader.R;
-import com.example.objLoader.activity.MeasureActivity;
 import com.example.objLoader.bean.MeasureInfo;
-import com.example.objLoader.utils.Constants;
 import com.example.objLoader.utils.SharedPreferencesDAO;
 import com.google.gson.Gson;
 import com.tencent.smtt.sdk.WebSettings;
-import com.tencent.smtt.sdk.WebView;
-import com.tencent.smtt.sdk.WebViewClient;
 
 import android.annotation.SuppressLint;
-import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.util.Log;
@@ -44,18 +39,18 @@ public class ModelFragment extends BaseFragment {
 		String strJson = SharedPreferencesDAO.getInstance(getActivity()).getString("json");
 		objUrl = getActivity().getIntent().getExtras().getString("objUrl");
 
-		if(strJson.length() <= 0 || strJson.equals("")){
-			startActivity(new Intent(getActivity(), MeasureActivity.class));
-			getActivity().finish();
-		}else{
-			measureInfo = gson.fromJson(strJson, MeasureInfo.class);
-			objUrl = measureInfo.getData().getThreeshowurl();
+//		if(strJson.length() <= 0 || strJson.equals("")){
+//			startActivity(new Intent(getActivity(), MeasureWeightAndHeightActivity.class));
+//			getActivity().finish();
+//		}else{
+//			measureInfo = gson.fromJson(strJson, MeasureInfo.class);
+//			objUrl = measureInfo.getData().getThreeshowurl();
 			 initView();
 			 initData();
 			 return view;
-		}
+//		}
 
-		 return view;
+//		 return view;
 	}
 
 	@Override
@@ -78,7 +73,7 @@ public class ModelFragment extends BaseFragment {
 	@Override
 	protected void initData() {
 		//http://114.55.145.129/somatometry/show3d.php?objname=58352f06f06ad.obj
-		String url = Constants.SERVER + objUrl;
+		String url = /*Constants.SERVER + objUrl;*/ "http://114.55.145.129/somatometry/show3d.php?objname=58352f06f06ad.obj";
 		Log.e("url", url);
 		tencent_model_webview.loadUrl(url);
 		

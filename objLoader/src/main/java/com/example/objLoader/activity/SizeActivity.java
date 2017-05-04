@@ -3,16 +3,12 @@ package com.example.objLoader.activity;
 import java.util.ArrayList;
 import java.util.List;
 
-import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.graphics.Color;
-import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
-import android.support.v4.app.FragmentStatePagerAdapter;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v4.view.ViewPager;
-import android.support.v4.view.ViewPager.OnPageChangeListener;
 import android.view.Gravity;
 import android.view.View;
 import android.widget.RadioButton;
@@ -22,9 +18,8 @@ import com.example.objLoader.fragment.DetailsSizeFragment;
 import com.example.objLoader.fragment.ModelFragment;
 import com.example.objLoader.fragment.MyLogFragment;
 import com.example.objLoader.fragment.NullFragment;
-import com.example.objLoader.global.AbActivityManager;
 import com.example.objLoader.global.BaseActivity;
-import com.example.objLoader.global.MyAPP;
+import com.example.objLoader.global.BaseApp;
 import com.example.objLoader.utils.SharedPreferencesDAO;
 import com.example.objLoader.utils.Toast;
 
@@ -88,7 +83,7 @@ public class SizeActivity extends BaseActivity {
 			 if(isData){
 			
 			 android.widget.Toast toast;
-			 toast = android.widget.Toast.makeText(MyAPP.getInstance(),
+			 toast = android.widget.Toast.makeText(BaseApp.getInstance(),
 			 R.string.open_model, android.widget.Toast.LENGTH_SHORT);
 			 toast.setGravity(Gravity.CENTER, 0, 0);
 			 toast.show();

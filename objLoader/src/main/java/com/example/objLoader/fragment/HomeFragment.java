@@ -4,11 +4,9 @@ import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
-import java.util.Observer;
 
 import android.annotation.SuppressLint;
 import android.content.Intent;
-import android.database.Observable;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -16,14 +14,13 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.bumptech.glide.Glide;
 import com.example.objLoader.R;
 import com.example.objLoader.activity.AccountInfoActivity;
 import com.example.objLoader.activity.LoginActivity;
 import com.example.objLoader.bean.ADInfo;
 import com.example.objLoader.utils.SharedPreferencesDAO;
-import com.example.objLoader.view.imagecycle.ImageCycleView;
-import com.example.objLoader.view.imagecycle.ImageCycleView.ImageCycleViewListener;
+import com.example.objLoader.wedgit.imagecycle.ImageCycleView;
+import com.example.objLoader.wedgit.imagecycle.ImageCycleView.ImageCycleViewListener;
 import com.example.objLoader.HomeActivity;
 
 public class HomeFragment extends BaseFragment {

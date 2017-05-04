@@ -20,7 +20,8 @@ import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.ViewGroup;
 
-@SuppressLint("NewApi") public abstract class BaseFragment extends Fragment implements OnClickListener {
+@SuppressLint("NewApi")
+public abstract class BaseFragment extends Fragment implements OnClickListener {
 	@Override
 	public View onCreateView(LayoutInflater inflater, ViewGroup container,
 			Bundle savedInstanceState) {

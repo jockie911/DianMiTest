@@ -1,11 +1,6 @@
 package com.example.objLoader.global;
 
 
-import com.example.objLoader.R;
-import com.example.objLoader.nohttp.CallServer;
-import com.example.objLoader.utils.SystemBarTintManager;
-import com.jude.swipbackhelper.SwipeBackHelper;
-
 import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.pm.ActivityInfo;
@@ -15,17 +10,22 @@ import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
 import android.provider.MediaStore;
-import android.support.v4.app.FragmentActivity;
 import android.support.v7.app.AppCompatActivity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.Window;
 import android.view.WindowManager;
-import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.example.objLoader.Imp.NoDoubleClickListener;
+import com.example.objLoader.R;
+import com.example.objLoader.nohttp.CallServer;
+import com.example.objLoader.utils.SystemBarTintManager;
+import com.jude.swipbackhelper.SwipeBackHelper;
+
 import butterknife.ButterKnife;
+import butterknife.OnClick;
 
 
 public abstract class BaseActivity extends AppCompatActivity implements OnClickListener{
@@ -90,7 +90,7 @@ public abstract class BaseActivity extends AppCompatActivity implements OnClickL
 					.setSwipeBackEnable(true)
 					.setSwipeSensitivity(0.5f)
 					.setSwipeRelateEnable(true)
-					.setSwipeEdgePercent(0.1f)
+					.setSwipeEdgePercent(0.25f)
 					.setSwipeRelateOffset(500)
 					.setClosePercent(0.5f);
 		}

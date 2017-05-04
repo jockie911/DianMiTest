@@ -98,4 +98,9 @@
         <item name="android:layout_marginLeft">10dp</item>
     </style>
 
+    <style name="tablayout"><!--parent="TextAppearance.Design.Tab"-->
+        <item name="android:textSize">15sp</item>
+        <!--<item name="textAllCaps">true</item>-->
+    </style>
+
 </resources>

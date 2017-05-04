@@ -9,7 +9,7 @@
         android:layout_width="match_parent"
         android:layout_height="220dp" >
 
-        <com.example.objLoader.view.imagecycle.ImageCycleView
+        <com.example.objLoader.wedgit.imagecycle.ImageCycleView
             android:id="@+id/icy_home"
             android:layout_width="fill_parent"
             android:layout_height="220dp" />

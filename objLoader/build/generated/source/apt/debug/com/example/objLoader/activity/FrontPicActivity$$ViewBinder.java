@@ -8,10 +8,10 @@ import butterknife.ButterKnife.ViewBinder;
 public class FrontPicActivity$$ViewBinder<T extends com.example.objLoader.activity.FrontPicActivity> implements ViewBinder<T> {
   @Override public void bind(final Finder finder, final T target, Object source) {
     View view;
-    view = finder.findRequiredView(source, 2131427446, "field 'iv_front'");
-    target.iv_front = finder.castView(view, 2131427446, "field 'iv_front'");
-    view = finder.findRequiredView(source, 2131427449, "field 'tv_next_step' and method 'onClick'");
-    target.tv_next_step = finder.castView(view, 2131427449, "field 'tv_next_step'");
+    view = finder.findRequiredView(source, 2131558548, "field 'iv_front'");
+    target.iv_front = finder.castView(view, 2131558548, "field 'iv_front'");
+    view = finder.findRequiredView(source, 2131558551, "field 'tv_next_step' and method 'onClick'");
+    target.tv_next_step = finder.castView(view, 2131558551, "field 'tv_next_step'");
     view.setOnClickListener(
       new butterknife.internal.DebouncingOnClickListener() {
         @Override public void doClick(
@@ -20,8 +20,8 @@ public class FrontPicActivity$$ViewBinder<T extends com.example.objLoader.activi
           target.onClick(p0);
         }
       });
-    view = finder.findRequiredView(source, 2131427447, "field 'btn_front_camera' and method 'onClick'");
-    target.btn_front_camera = finder.castView(view, 2131427447, "field 'btn_front_camera'");
+    view = finder.findRequiredView(source, 2131558549, "field 'btn_front_camera' and method 'onClick'");
+    target.btn_front_camera = finder.castView(view, 2131558549, "field 'btn_front_camera'");
     view.setOnClickListener(
       new butterknife.internal.DebouncingOnClickListener() {
         @Override public void doClick(
@@ -30,8 +30,8 @@ public class FrontPicActivity$$ViewBinder<T extends com.example.objLoader.activi
           target.onClick(p0);
         }
       });
-    view = finder.findRequiredView(source, 2131427448, "field 'btn_front_album' and method 'onClick'");
-    target.btn_front_album = finder.castView(view, 2131427448, "field 'btn_front_album'");
+    view = finder.findRequiredView(source, 2131558550, "field 'btn_front_album' and method 'onClick'");
+    target.btn_front_album = finder.castView(view, 2131558550, "field 'btn_front_album'");
     view.setOnClickListener(
       new butterknife.internal.DebouncingOnClickListener() {
         @Override public void doClick(

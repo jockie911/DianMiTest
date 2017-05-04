@@ -8,14 +8,14 @@ import butterknife.ButterKnife.ViewBinder;
 public class ForgertPwdActivity$$ViewBinder<T extends com.example.objLoader.activity.ForgertPwdActivity> implements ViewBinder<T> {
   @Override public void bind(final Finder finder, final T target, Object source) {
     View view;
-    view = finder.findRequiredView(source, 2131427440, "field 'et_forget_pwd_mobile'");
-    target.et_forget_pwd_mobile = finder.castView(view, 2131427440, "field 'et_forget_pwd_mobile'");
-    view = finder.findRequiredView(source, 2131427441, "field 'et_forget_pwd_auth_code'");
-    target.et_forget_pwd_auth_code = finder.castView(view, 2131427441, "field 'et_forget_pwd_auth_code'");
-    view = finder.findRequiredView(source, 2131427443, "field 'et_forget_pwd_password'");
-    target.et_forget_pwd_password = finder.castView(view, 2131427443, "field 'et_forget_pwd_password'");
-    view = finder.findRequiredView(source, 2131427444, "field 'btn_forget_pwd_confirm' and method 'onClick'");
-    target.btn_forget_pwd_confirm = finder.castView(view, 2131427444, "field 'btn_forget_pwd_confirm'");
+    view = finder.findRequiredView(source, 2131558542, "field 'et_forget_pwd_mobile'");
+    target.et_forget_pwd_mobile = finder.castView(view, 2131558542, "field 'et_forget_pwd_mobile'");
+    view = finder.findRequiredView(source, 2131558543, "field 'et_forget_pwd_auth_code'");
+    target.et_forget_pwd_auth_code = finder.castView(view, 2131558543, "field 'et_forget_pwd_auth_code'");
+    view = finder.findRequiredView(source, 2131558545, "field 'et_forget_pwd_password'");
+    target.et_forget_pwd_password = finder.castView(view, 2131558545, "field 'et_forget_pwd_password'");
+    view = finder.findRequiredView(source, 2131558546, "field 'btn_forget_pwd_confirm' and method 'onClick'");
+    target.btn_forget_pwd_confirm = finder.castView(view, 2131558546, "field 'btn_forget_pwd_confirm'");
     view.setOnClickListener(
       new butterknife.internal.DebouncingOnClickListener() {
         @Override public void doClick(
@@ -24,8 +24,8 @@ public class ForgertPwdActivity$$ViewBinder<T extends com.example.objLoader.acti
           target.onClick(p0);
         }
       });
-    view = finder.findRequiredView(source, 2131427442, "field 'tv_forget_pwd_send_auth_code' and method 'onClick'");
-    target.tv_forget_pwd_send_auth_code = finder.castView(view, 2131427442, "field 'tv_forget_pwd_send_auth_code'");
+    view = finder.findRequiredView(source, 2131558544, "field 'tv_forget_pwd_send_auth_code' and method 'onClick'");
+    target.tv_forget_pwd_send_auth_code = finder.castView(view, 2131558544, "field 'tv_forget_pwd_send_auth_code'");
     view.setOnClickListener(
       new butterknife.internal.DebouncingOnClickListener() {
         @Override public void doClick(

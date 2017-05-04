@@ -26,11 +26,13 @@ dependencies {
     compile files('libs/nohttp1.0.4-include-source.jar')
     compile files('libs/tencentX5WebView.jar')
 
-    compile 'com.android.support:support-v4:25.3.1'
+    compile 'com.android.support:support-v4:25.+'
     compile 'com.google.code.gson:gson:2.3.1'
     compile 'com.android.support:appcompat-v7:25.3.1'
     compile 'com.android.support.constraint:constraint-layout:1.0.2'
     compile 'com.yarolegovich:discrete-scrollview:1.1.4'
     compile 'com.jakewharton:butterknife:7.0.1'
     compile 'com.jude:swipebackhelper:3.1.2'
+    compile 'com.android.support:design:25.+'
+//    compile 'com.github.open-android:WheelPicker:v1.0.0'
 }

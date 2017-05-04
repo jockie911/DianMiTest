@@ -18,7 +18,7 @@ import com.example.objLoader.global.BaseActivity;
 import com.example.objLoader.utils.ActionSheetDialog;
 import com.example.objLoader.utils.SharedPreferencesDAO;
 import com.example.objLoader.utils.Utils;
-import com.example.objLoader.view.CircleImageView;
+import com.example.objLoader.wedgit.CircleImageView;
 
 import java.io.File;
 

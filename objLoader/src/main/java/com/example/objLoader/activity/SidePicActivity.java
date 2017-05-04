@@ -1,24 +1,16 @@
 package com.example.objLoader.activity;
 
-import java.io.File;
-
-import android.annotation.SuppressLint;
 import android.app.AlertDialog;
 import android.app.AlertDialog.Builder;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.res.Resources.NotFoundException;
-import android.graphics.Bitmap;
-import android.graphics.BitmapFactory;
 import android.net.Uri;
-import android.os.Build;
-import android.os.Bundle;
 import android.provider.MediaStore;
 import android.provider.Settings;
 import android.util.Log;
 import android.view.Gravity;
 import android.view.LayoutInflater;
-import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup.LayoutParams;
 import android.widget.Button;
@@ -27,10 +19,10 @@ import android.widget.PopupWindow;
 import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
+import com.example.objLoader.Imp.NoDoubleClickListener;
 import com.example.objLoader.R;
 import com.example.objLoader.bean.BaseRequestBean;
 import com.example.objLoader.bean.MeasureInfo;
-import com.example.objLoader.global.AbActivityManager;
 import com.example.objLoader.global.BaseActivity;
 import com.example.objLoader.nohttp.CallServer;
 import com.example.objLoader.nohttp.HttpCallBack;
@@ -40,14 +32,15 @@ import com.example.objLoader.utils.SharedPreferencesDAO;
 import com.example.objLoader.utils.Toast;
 import com.example.objLoader.utils.Utils;
 import com.yolanda.nohttp.FileBinary;
-import com.yolanda.nohttp.Headers;
 import com.yolanda.nohttp.Logger;
 import com.yolanda.nohttp.NoHttp;
 import com.yolanda.nohttp.OnUploadListener;
 import com.yolanda.nohttp.RequestMethod;
-import com.yolanda.nohttp.download.DownloadListener;
 import com.yolanda.nohttp.rest.Request;
 import com.yolanda.nohttp.rest.Response;
+
+import java.io.File;
+import java.util.Calendar;
 
 import butterknife.Bind;
 import butterknife.OnClick;
@@ -114,33 +107,54 @@ public class SidePicActivity extends BaseActivity {
 				.findViewById(R.id.tv_upload_pic_text);
 		sideWindow = new PopupWindow(sideView, LayoutParams.MATCH_PARENT,
 				LayoutParams.WRAP_CONTENT, true);
+
+
+
+		tvTitle.setOnClickListener(new NoDoubleClickListener() {
+			@Override
+			public void onNoDoubleClick(View view) {
+
+			}
+		});
 	}
 
 	@Override
 	@OnClick({R.id.btn_side_camera,R.id.btn_side_album,R.id.tv_start_measure})
 	public void onClick(View v) {
-		switch (v.getId()) {
-		/** 打开相机 */
-		case R.id.btn_side_camera:
-
-			imageUriFromCamera = Utils.createImagePathUri(mContext);
-			Intent cameraIntent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
-			cameraIntent.putExtra(MediaStore.EXTRA_OUTPUT, imageUriFromCamera);
-			startActivityForResult(cameraIntent, CAMERA_REQUEST_CODE);
-
-			break;
-		/** 打开相册 */
-		case R.id.btn_side_album:
-			Intent photoIntent = new Intent(
-					Intent.ACTION_PICK,
-					android.provider.MediaStore.Images.Media.EXTERNAL_CONTENT_URI);// 调用android的图库
-			startActivityForResult(photoIntent, PHOTO_REQUEST_CODE);
-
-			break;
-		case R.id.tv_start_measure:
-			measure();
-			break;
+		Object tag = v.getTag(v.getId());
+		long beforeTimemiles = 0;
+		if(tag != null){
+			beforeTimemiles = (long) tag;
 		}
+		long timeInMillis = Calendar.getInstance().getTimeInMillis();
+		if(timeInMillis - beforeTimemiles > 1000 ){
+			//TODO
+			switch (v.getId()) {
+				/** 打开相机 */
+				case R.id.btn_side_camera:
+
+					imageUriFromCamera = Utils.createImagePathUri(mContext);
+					Intent cameraIntent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
+					cameraIntent.putExtra(MediaStore.EXTRA_OUTPUT, imageUriFromCamera);
+					startActivityForResult(cameraIntent, CAMERA_REQUEST_CODE);
+
+					break;
+				/** 打开相册 */
+				case R.id.btn_side_album:
+					Intent photoIntent = new Intent(
+							Intent.ACTION_PICK,
+							android.provider.MediaStore.Images.Media.EXTERNAL_CONTENT_URI);// 调用android的图库
+					startActivityForResult(photoIntent, PHOTO_REQUEST_CODE);
+					break;
+				case R.id.tv_start_measure:
+					startActivity(new Intent(SidePicActivity.this,MeasureWeightAndHeightActivity.class));
+					//			measure();
+					break;
+			}
+		}else {
+			Log.d("JTAG",timeInMillis - beforeTimemiles +"  ---- " + v.getId());
+		}
+		v.setTag(v.getId(),timeInMillis);
 	}
 
 	/**
@@ -212,31 +226,27 @@ public class SidePicActivity extends BaseActivity {
 
 			Toast.show(R.string.measureing);
 
-			measureInfo = (MeasureInfo) bean;
+//			measureInfo = (MeasureInfo) bean;
 			
-			objPath = AppConfig.getInstance().APP_PATH_ROOT + File.separator + measureInfo.getData().getObjname();
-//			objUrl = measureInfo.getData().getThreeshowurl();
-			objUrl = measureInfo.getData().getObjurl();
-				Toast.show(R.string.measureing);
-				Log.e("objUrl", objUrl);
-				Log.e("objname", measureInfo.getData().getObjname());
-				Log.e("threeshowurl", measureInfo.getData().getThreeshowurl());
-				Intent intent = new Intent(mContext, SizeActivity.class);
-				intent.putExtra("isData", true);
-				intent.putExtra("measureInfo", measureInfo);
-				intent.putExtra("time", time);
-//				intent.putExtra("objPath", objPath);
-				intent.putExtra("objUrl", objUrl);
-				startActivity(intent);
-				
-				SharedPreferencesDAO.getInstance(mContext).putString("sidePath", "");
-				SharedPreferencesDAO.getInstance(mContext).putString("frontPicPath", "");
-				MeasureActivity.activity.finish();
-				FrontPicActivity.activity.finish();
-				finish();
-				
-			
-
+//			objPath = AppConfig.getInstance().APP_PATH_ROOT + File.separator + measureInfo.getData().getObjname();
+////			objUrl = measureInfo.getData().getThreeshowurl();
+//			objUrl = measureInfo.getData().getObjurl();
+//				Toast.show(R.string.measureing);
+//				Log.e("objUrl", objUrl);
+//				Log.e("objname", measureInfo.getData().getObjname());
+//				Log.e("threeshowurl", measureInfo.getData().getThreeshowurl());
+//				Intent intent = new Intent(mContext, SizeActivity.class);
+//				intent.putExtra("isData", true);
+//				intent.putExtra("measureInfo", measureInfo);
+//				intent.putExtra("time", time);
+////				intent.putExtra("objPath", objPath);
+//				intent.putExtra("objUrl", objUrl);
+//				startActivity(intent);
+//
+//				SharedPreferencesDAO.getInstance(mContext).putString("sidePath", "");
+//				SharedPreferencesDAO.getInstance(mContext).putString("frontPicPath", "");
+//				FrontPicActivity.activity.finish();
+//				finish();
 		};
 
 		public void onSucceed(int what, Response<String> response) {

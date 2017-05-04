@@ -1,6 +1,6 @@
 package com.example.objLoader.utils;
 
-import com.example.objLoader.global.MyAPP;
+import com.example.objLoader.global.BaseApp;
 
 public class Toast {
 
@@ -9,7 +9,7 @@ public class Toast {
 	public static void show(CharSequence msg) {
 
 		if (toast == null) {
-			toast = android.widget.Toast.makeText(MyAPP.getInstance(), msg,android.widget.Toast.LENGTH_LONG);
+			toast = android.widget.Toast.makeText(BaseApp.getInstance(), msg,android.widget.Toast.LENGTH_LONG);
 		} else {
 			toast.setText(msg);
 		}
@@ -20,7 +20,7 @@ public class Toast {
 	public static void show(int stringId) {
 
 		if (toast == null) {
-			toast = android.widget.Toast.makeText(MyAPP.getInstance(), stringId,android.widget.Toast.LENGTH_LONG);
+			toast = android.widget.Toast.makeText(BaseApp.getInstance(), stringId,android.widget.Toast.LENGTH_LONG);
 		} else {
 			toast.setText(stringId);
 		}

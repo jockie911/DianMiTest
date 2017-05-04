@@ -19,7 +19,7 @@ import android.widget.TextView;
 
 import com.example.objLoader.R;
 import com.example.objLoader.activity.LoginActivity;
-import com.example.objLoader.activity.MeasureActivity;
+import com.example.objLoader.activity.MeasureWeightAndHeightActivity;
 import com.example.objLoader.adapter.MeasureInfoAdapter;
 import com.example.objLoader.bean.BaseRequestBean;
 import com.example.objLoader.bean.MeasureInfo;
@@ -31,7 +31,6 @@ import com.example.objLoader.utils.SharedPreferencesDAO;
 import com.example.objLoader.utils.Toast;
 import com.example.objLoader.utils.Utils;
 import com.google.gson.Gson;
-import com.yolanda.nohttp.Logger;
 import com.yolanda.nohttp.NoHttp;
 import com.yolanda.nohttp.RequestMethod;
 import com.yolanda.nohttp.rest.Request;
@@ -67,7 +66,7 @@ public class DetailsSizeFragment extends BaseFragment {
 		
 		
 		if(strJson.length() <= 0 || strJson.equals("")){
-			startActivity(new Intent(getActivity(), MeasureActivity.class));
+			startActivity(new Intent(getActivity(), MeasureWeightAndHeightActivity.class));
 			getActivity().finish();
 		}else if(isData){
 			measureInfo = (MeasureInfo) getActivity().getIntent().getExtras().getSerializable("measureInfo");

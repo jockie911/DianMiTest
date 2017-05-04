@@ -10,28 +10,21 @@ import cn.smssdk.utils.SMSLog;
 
 import com.example.objLoader.R;
 import com.example.objLoader.bean.BaseRequestBean;
-import com.example.objLoader.global.AbActivityManager;
 import com.example.objLoader.global.BaseActivity;
 import com.example.objLoader.nohttp.CallServer;
 import com.example.objLoader.nohttp.HttpCallBack;
 import com.example.objLoader.utils.Constants;
-import com.example.objLoader.utils.SharedPreferencesDAO;
 import com.example.objLoader.utils.Toast;
 import com.example.objLoader.utils.Utils;
-import com.example.objLoader.view.LineEditText;
 import com.yolanda.nohttp.NoHttp;
 import com.yolanda.nohttp.RequestMethod;
 import com.yolanda.nohttp.rest.Request;
 
-import android.app.Activity;
 import android.content.Intent;
-import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
 import android.text.TextUtils;
 import android.view.View;
-import android.view.View.OnClickListener;
-import android.view.Window;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;

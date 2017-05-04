@@ -1,14 +1,10 @@
 package com.example.objLoader.activity.mywork;
 
 import android.content.Intent;
-import android.os.Bundle;
 import android.support.annotation.NonNull;
-import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
 import android.view.ViewGroup;
-import android.view.WindowManager;
-import android.widget.Button;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
@@ -16,6 +12,7 @@ import com.example.objLoader.R;
 import com.example.objLoader.activity.AccountInfoActivity;
 import com.example.objLoader.activity.FrontPicActivity;
 import com.example.objLoader.activity.LoginActivity;
+import com.example.objLoader.activity.MeasureWeightAndHeightActivity;
 import com.example.objLoader.adapter.DiscreteScrollViewAdapter;
 import com.example.objLoader.global.BaseActivity;
 import com.example.objLoader.utils.SharedPreferencesDAO;
