@@ -11,6 +11,7 @@ import android.os.Build;
 import android.os.Bundle;
 import android.provider.MediaStore;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.View.OnClickListener;
@@ -18,15 +19,15 @@ import android.view.Window;
 import android.view.WindowManager;
 import android.widget.TextView;
 
-import com.example.objLoader.Imp.NoDoubleClickListener;
 import com.example.objLoader.R;
+import com.example.objLoader.istatic.IConstant;
 import com.example.objLoader.nohttp.CallServer;
 import com.example.objLoader.utils.SystemBarTintManager;
 import com.jude.swipbackhelper.SwipeBackHelper;
 
-import butterknife.ButterKnife;
-import butterknife.OnClick;
+import java.util.Calendar;
 
+import butterknife.ButterKnife;
 
 public abstract class BaseActivity extends AppCompatActivity implements OnClickListener{
 
@@ -55,16 +56,6 @@ public abstract class BaseActivity extends AppCompatActivity implements OnClickL
 
 		mContext = this;
 		AbActivityManager.getInstance().addActivity(this);
-		
-//		if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT) {
-//			setTranslucentStatus(true);
-//		}
-//		SystemBarTintManager tintManager = new SystemBarTintManager(this);
-//		tintManager.setStatusBarTintEnabled(true);
-//		tintManager.setNavigationBarTintEnabled(true);
-//		tintManager.setStatusBarTintResource(R.color.title_color);// 通知栏所需颜色
-//		tintManager.setNavigationBarTintResource(R.color.title_color);
-
 		initSwipeBack();
 	}
 
@@ -90,7 +81,7 @@ public abstract class BaseActivity extends AppCompatActivity implements OnClickL
 					.setSwipeBackEnable(true)
 					.setSwipeSensitivity(0.5f)
 					.setSwipeRelateEnable(true)
-					.setSwipeEdgePercent(0.25f)
+					.setSwipeEdgePercent(0.15f)
 					.setSwipeRelateOffset(500)
 					.setClosePercent(0.5f);
 		}
@@ -221,5 +212,18 @@ public abstract class BaseActivity extends AppCompatActivity implements OnClickL
 	protected void onResume() {
 		super.onResume();
 		getWindow().setSoftInputMode( WindowManager.LayoutParams.SOFT_INPUT_STATE_HIDDEN);
+	}
+
+	@Override
+	public void onClick(View v) {
+
+	}
+
+	protected boolean isDoubleClick(View v){
+		Object tag = v.getTag(v.getId());
+		long beforeTimemiles = tag != null ? (long) tag : 0;
+		long timeInMillis = Calendar.getInstance().getTimeInMillis();
+		v.setTag(v.getId(),timeInMillis);
+	    return timeInMillis - beforeTimemiles < IConstant.NO_DOUBLE_CLICK_TIME;
 	}
 }

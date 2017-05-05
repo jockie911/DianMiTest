@@ -113,6 +113,7 @@
     <string name="submit">提交</string>
     <string name="timeoutError">请求超时,服务器无响应</string>
     <string name="tips_for_measure">为保障量身质量及准确性，请你穿着较为贴身的义务进行拍照，或选择贴身的照片</string>
+    <string name="top_clothes">上装</string>
     <string name="uRLError">URL错误</string>
     <string name="unKnownHostError">未发现指定服务器</string>
     <string name="upload_pic_error">上传图片出错!!!</string>

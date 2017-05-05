@@ -59,7 +59,7 @@ public class LoginActivity extends BaseActivity {
 	@Override
 	@OnClick({R.id.tv_login,R.id.tv_right_title_bar,R.id.tv_forget_pwd,R.id.iv_eye_pwd})
 	public void onClick(View v) {
-		
+		if(isDoubleClick(v)) return;
 		username = et_username.getText().toString().trim();
 		password = et_password.getText().toString().trim();
 		switch (v.getId()) {

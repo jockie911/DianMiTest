@@ -73,10 +73,9 @@ public class FrontPicActivity extends BaseActivity {
 	@Override
 	@OnClick({R.id.btn_front_camera,R.id.btn_front_album,R.id.tv_next_step})
 	public void onClick(View v) {
+		if(isDoubleClick(v)) return;
 		switch (v.getId()) {
 		case R.id.btn_front_camera:
-
-			
 			imageUriFromCamera = Utils.createImagePathUri(mContext);
             Intent cameraIntent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
             cameraIntent.putExtra(MediaStore.EXTRA_OUTPUT, imageUriFromCamera);

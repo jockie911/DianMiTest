@@ -1,47 +1,37 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical" >
-    <RelativeLayout
-        android:id="@+id/rl_item_measure_info"
-        android:layout_width="match_parent"
-        android:layout_height="30dp"
-        android:background="#ffffff" >
+<RelativeLayout android:layout_width="match_parent"
+    android:layout_height="40dp"
+    android:gravity="center_vertical"
+    android:background="@color/color_base"
+    android:id="@+id/rl_item_measure_info"
+    xmlns:android="http://schemas.android.com/apk/res/android">
 
-        <TextView
-            android:id="@+id/tv_size_id"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentLeft="true"
-            android:layout_centerVertical="true"
-            android:layout_marginLeft="5dp"
-            android:text="@string/size_id"
-            android:textColor="#000000"
-            android:textSize="16sp" />
+    <TextView
+        android:id="@+id/tv_size_id"
+        android:layout_width="60dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="25dp"
+        android:text="@string/size_id"
+        android:textColor="@color/title"
+        android:textSize="16sp" />
 
-        <TextView
-            android:id="@+id/tv_size_name"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_centerVertical="true"
-			android:layout_toRightOf="@id/tv_size_id"
-			android:layout_marginLeft="20dp"
-            android:text="@string/size_project"
-            android:textColor="#000000"
-            android:textSize="16sp" />
+    <TextView
+        android:id="@+id/tv_size_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/tv_size_id"
+        android:text="@string/size_project"
+        android:textColor="@color/title"
+        android:textSize="16sp" />
 
-        <TextView
-            android:id="@+id/tv_size_values"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentRight="true"
-            android:layout_centerVertical="true"
-            android:paddingRight="5dp"
-            android:textColor="#000000"
-            android:textSize="16sp"
-            android:text="@string/size"
-             />
-        </RelativeLayout>
-
-</LinearLayout>
+    <TextView
+        android:id="@+id/tv_size_values"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="80dp"
+        android:textColor="@color/title"
+        android:textSize="16sp"
+        android:text="@string/size" />
+</RelativeLayout>

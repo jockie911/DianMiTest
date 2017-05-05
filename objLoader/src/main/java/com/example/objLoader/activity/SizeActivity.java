@@ -59,6 +59,7 @@ public class SizeActivity extends BaseActivity {
 	@OnClick({R.id.rb_mate,R.id.rb_my_log,R.id.rb_model,R.id.rb_details_size})
 	@Override
 	public void onClick(View v) {
+		if(isDoubleClick(v)) return;
 		switch (v.getId()) {
 		case R.id.rb_details_size:
 
@@ -82,7 +83,7 @@ public class SizeActivity extends BaseActivity {
 
 			 if(isData){
 			
-			 android.widget.Toast toast;
+			 android.widget.Toast toast ;
 			 toast = android.widget.Toast.makeText(BaseApp.getInstance(),
 			 R.string.open_model, android.widget.Toast.LENGTH_SHORT);
 			 toast.setGravity(Gravity.CENTER, 0, 0);

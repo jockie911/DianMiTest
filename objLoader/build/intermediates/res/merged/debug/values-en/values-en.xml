@@ -478,6 +478,7 @@
     <string name="submit">Submit</string>
     <string name="timeoutError">Request timed out, the server is not responding</string>
     <string name="tips_for_measure"/>
+    <string name="top_clothes">上装</string>
     <string name="uRLError">URL error</string>
     <string name="unKnownHostError">No server specified</string>
     <string name="upload_pic_error">Picture upload error!!!</string>

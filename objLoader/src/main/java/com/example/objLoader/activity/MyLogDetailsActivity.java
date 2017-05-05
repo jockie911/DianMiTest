@@ -183,6 +183,7 @@ public class MyLogDetailsActivity extends BaseActivity {
 	@Override
 	@OnClick({R.id.ll_my_log_size,R.id.ll_my_log_model})
 	public void onClick(View v) {
+		if(isDoubleClick(v)) return;
 		switch (v.getId()) {
 		case R.id.ll_my_log_size:
 			mPageVp.setCurrentItem(0);

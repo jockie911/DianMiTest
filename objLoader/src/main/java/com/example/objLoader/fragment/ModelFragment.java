@@ -37,8 +37,9 @@ public class ModelFragment extends BaseFragment {
 		view = inflater.inflate(R.layout.fragment_model, null);
 
 		String strJson = SharedPreferencesDAO.getInstance(getActivity()).getString("json");
-		objUrl = getActivity().getIntent().getExtras().getString("objUrl");
+//		objUrl = getActivity().getIntent().getExtras().getString("objUrl");
 
+		objUrl = "http://www.baidu.com";
 //		if(strJson.length() <= 0 || strJson.equals("")){
 //			startActivity(new Intent(getActivity(), MeasureWeightAndHeightActivity.class));
 //			getActivity().finish();

@@ -143,5 +143,6 @@
     <string name="person_center">Person center</string>
     <string name="begin_measure">Begin measure</string>
     <string name="no_present">Not ready</string>
+    <string name="top_clothes">上装</string>
 
 </resources>

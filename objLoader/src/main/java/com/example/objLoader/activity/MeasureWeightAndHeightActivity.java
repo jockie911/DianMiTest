@@ -1,10 +1,12 @@
 package com.example.objLoader.activity;
 
+import android.content.Intent;
 import android.view.View;
 
-import com.example.objLoader.Imp.NoDoubleClickListener;
 import com.example.objLoader.R;
+import com.example.objLoader.activity.mywork.DetailMeasureSizeActivity;
 import com.example.objLoader.global.BaseActivity;
+import com.example.objLoader.istatic.IConstant;
 import com.example.objLoader.utils.Toast;
 import com.example.objLoader.wedgit.wheelpicker.WheelPicker;
 
@@ -52,10 +54,15 @@ public class MeasureWeightAndHeightActivity extends BaseActivity implements View
 	@Override
 	@OnClick({R.id.tv_next_step})
 	public void onClick(View v) {
+		if(isDoubleClick(v)) return;
 		if(v.getId() == R.id.tv_next_step){
 			String height = heightList.get(pickerHeight.getCurrentItemPosition());
 			String weight = weightList.get(pickerWeight.getCurrentItemPosition());
-			Toast.show(height + " == " + weight);
+
+			Intent intent = new Intent(MeasureWeightAndHeightActivity.this, DetailMeasureSizeActivity.class);
+			intent.putExtra(IConstant.IS_SAVE,true);
+			startActivity(intent);
+
 		}
 	}
 }

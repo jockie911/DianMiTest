@@ -105,6 +105,6 @@ public class SplashActivity extends BaseActivity {
 
     @Override
     public void onClick(View v) {
-
+        if(isDoubleClick(v)) return;
     }
 }

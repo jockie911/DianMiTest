@@ -109,6 +109,7 @@ public class AccountInfoActivity extends BaseActivity {
 	@Override
     @OnClick({R.id.rl_change_pwd,R.id.rl_change_username,R.id.iv_right_title_bar,R.id.ivPic})
 	public void onClick(View v) {
+		if(isDoubleClick(v)) return;
 		switch (v.getId()) {
 		case R.id.rl_change_pwd:
 			startActivity(new Intent(this, ChangePwdActivity.class));

@@ -3,6 +3,7 @@ package com.example.objLoader.activity.mywork;
 import android.content.Intent;
 import android.support.annotation.NonNull;
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.RelativeLayout;
@@ -15,10 +16,13 @@ import com.example.objLoader.activity.LoginActivity;
 import com.example.objLoader.activity.MeasureWeightAndHeightActivity;
 import com.example.objLoader.adapter.DiscreteScrollViewAdapter;
 import com.example.objLoader.global.BaseActivity;
+import com.example.objLoader.istatic.IConstant;
 import com.example.objLoader.utils.SharedPreferencesDAO;
 import com.example.objLoader.utils.lib.DensityUtil;
 import com.yarolegovich.discretescrollview.DiscreteScrollView;
 import com.yarolegovich.discretescrollview.transform.ScaleTransformer;
+
+import java.util.Calendar;
 
 import butterknife.Bind;
 import butterknife.OnClick;
@@ -99,6 +103,7 @@ public class MainActivity extends BaseActivity {
     @Override
     @OnClick(R.id.tv_start_measure)
     public void onClick(View v) {
+        if(isDoubleClick(v)) return;
         switch (v.getId()){
             case R.id.tv_start_measure:
                 Intent intent = new Intent(MainActivity.this, FrontPicActivity.class);
@@ -114,5 +119,6 @@ public class MainActivity extends BaseActivity {
                 }
                 break;
         }
+
     }
 }

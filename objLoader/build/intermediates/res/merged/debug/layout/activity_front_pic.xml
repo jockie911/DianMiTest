@@ -4,7 +4,7 @@
     android:layout_height="match_parent"
     android:fitsSystemWindows="true"
     android:orientation="vertical"
-    android:background="@color/color_base">
+    android:background="@color/color_base_deep">
 
     <include layout="@layout/base_title_bar"/>
 
@@ -65,11 +65,11 @@
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:layout_gravity="bottom"
-        android:background="@color/color_bg" >
+        android:background="@color/color_base" >
         <Button
             android:id="@+id/btn_front_camera"
-            android:layout_width="35dp"
-            android:layout_height="35dp"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
             android:layout_marginLeft="30dp"
             android:layout_alignParentLeft="true"
             android:layout_centerVertical="true"
@@ -77,8 +77,8 @@
 
         <Button
             android:id="@+id/btn_front_album"
-            android:layout_width="35dp"
-            android:layout_height="35dp"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
             android:layout_marginLeft="40dp"
             android:layout_centerVertical="true"
             android:layout_toRightOf="@+id/btn_front_camera"

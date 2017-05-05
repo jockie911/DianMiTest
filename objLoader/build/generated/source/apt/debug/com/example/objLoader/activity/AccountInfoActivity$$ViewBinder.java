@@ -42,8 +42,8 @@ public class AccountInfoActivity$$ViewBinder<T extends com.example.objLoader.act
           target.onClick(p0);
         }
       });
-    view = finder.findRequiredView(source, 2131558603, "field 'ivRightTitleBar' and method 'onClick'");
-    target.ivRightTitleBar = finder.castView(view, 2131558603, "field 'ivRightTitleBar'");
+    view = finder.findRequiredView(source, 2131558604, "field 'ivRightTitleBar' and method 'onClick'");
+    target.ivRightTitleBar = finder.castView(view, 2131558604, "field 'ivRightTitleBar'");
     view.setOnClickListener(
       new butterknife.internal.DebouncingOnClickListener() {
         @Override public void doClick(

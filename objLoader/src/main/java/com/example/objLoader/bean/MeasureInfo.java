@@ -68,7 +68,7 @@ public class MeasureInfo extends BaseRequestBean {
 
 	}
 
-	public class Info implements Serializable {
+	public static class Info implements Serializable {
 		/**
 		 * 
 		 */

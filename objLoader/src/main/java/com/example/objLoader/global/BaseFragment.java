@@ -16,16 +16,18 @@ import butterknife.ButterKnife;
 /**
  * Created by jockie on 2016/7/8.
  */
-public abstract class BaseFragment extends Fragment {
+public abstract class BaseFragment extends Fragment{
 
     protected Context mContext;
+    protected View rootView;
+
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         mContext = BaseApp.getContext();
-        View view = inflater(inflater);
-        ButterKnife.bind(this,view);
-        return view;
+        rootView = inflater(inflater);
+        ButterKnife.bind(this, rootView);
+        return rootView;
     }
 
     @Override

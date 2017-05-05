@@ -39,8 +39,6 @@ public class RegisterActivity extends BaseActivity{
 	EditText et_register_password;
 	@Bind(R.id.et_confirm_password)
 	EditText et_confirm_password;
-	@Bind(R.id.btn_register)
-	Button btn_register;
 	@Bind(R.id.tv_send_auth_code)
 	TextView tv_send_auth_code;
 
@@ -81,6 +79,7 @@ public class RegisterActivity extends BaseActivity{
 	@Override
 	@OnClick({R.id.btn_register,R.id.tv_send_auth_code})
 	public void onClick(View v) {
+        if(isDoubleClick(v)) return;
 		mobile = et_mobile.getText().toString().trim();
 		auth_code = et_auth_code.getText().toString().trim();
 		password = et_register_password.getText().toString().trim();

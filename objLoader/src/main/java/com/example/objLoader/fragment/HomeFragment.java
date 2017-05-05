@@ -40,8 +40,6 @@ public class HomeFragment extends BaseFragment {
 		activity = (HomeActivity) getActivity();
 		homeView = inflater.inflate(R.layout.fragment_home, null);
 		
-		
-		
 		initView();
 		initData();
 		setEvent();

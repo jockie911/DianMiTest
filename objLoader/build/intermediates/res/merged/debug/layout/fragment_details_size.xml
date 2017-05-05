@@ -4,84 +4,43 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:fitsSystemWindows="true"
-    android:id="@+id/ll_details_size"
-     >
-	<RelativeLayout
+    android:id="@+id/ll_details_size">
+
+	<!--<RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="40dp"
-        android:background="#0d548c"
-        android:visibility="gone">
-
-        <ImageView
-            android:id="@+id/iv_title_back"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentLeft="true"
-            android:layout_centerVertical="true"
-            android:layout_marginLeft="10dp"
-            android:background="@drawable/white_back"
-            android:onClick="finish" />
-
-        <TextView
-            android:id="@+id/tv_title_center"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_centerVertical="true"
-            android:layout_centerHorizontal="true"
-            android:text="@string/home_size"
-            android:textColor="#ffffff"
-            android:textSize="16sp" />
-
-        <TextView
-            android:id="@+id/tv_save_details_size"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentRight="true"
-            android:layout_centerVertical="true"
-            android:paddingRight="5dp"
-            android:textColor="#ffffff"
-            android:textSize="16sp"
-            android:text="@string/save"
-           	android:layout_marginRight="10dp"
-             />
-        </RelativeLayout>
-	<RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="40dp"
-        android:background="#0d548c" >
+        android:gravity="center_vertical"
+        android:background="@color/color_base">
 
         <TextView
             android:id="@+id/tv_size_id"
-            android:layout_width="wrap_content"
+            android:layout_width="60dp"
             android:layout_height="wrap_content"
             android:layout_alignParentLeft="true"
-            android:layout_centerVertical="true"
-            android:layout_marginLeft="5dp"
+            android:layout_marginLeft="25dp"
             android:text="@string/size_id"
-            android:textColor="#ffffff"
+            android:textColor="@color/title"
             android:textSize="16sp" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_centerVertical="true"
 			android:layout_toRightOf="@id/tv_size_id"
-			android:layout_marginLeft="20dp"
             android:text="@string/size_project"
-            android:textColor="#ffffff"
+            android:textColor="@color/title"
             android:textSize="16sp" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentRight="true"
-            android:layout_centerVertical="true"
-            android:paddingRight="5dp"
-            android:textColor="#ffffff"
+            android:layout_marginRight="80dp"
+            android:textColor="@color/title"
             android:textSize="16sp"
-            android:text="@string/size"
-             />
-        </RelativeLayout>
+            android:text="@string/size" />
+        </RelativeLayout>-->
+    <include layout="@layout/item_measureinfo"/>
+
     <ListView
         android:id="@+id/lv_dtails_size" 
         android:layout_width="match_parent"

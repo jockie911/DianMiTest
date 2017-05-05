@@ -41,6 +41,7 @@ public class ChangeUsernameActivity extends BaseActivity {
 	@Override
 	@OnClick({R.id.tv_right_title_bar,R.id.iv_clear})
 	public void onClick(View v) {
+		if(isDoubleClick(v)) return;
 		username = et_change_username.getText().toString().trim();
 		
 		switch (v.getId()) {

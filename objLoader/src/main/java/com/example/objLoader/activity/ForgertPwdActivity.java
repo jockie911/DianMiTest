@@ -80,12 +80,10 @@ public class ForgertPwdActivity extends BaseActivity {
 	@Override
 	@OnClick({R.id.btn_forget_pwd_confirm,R.id.tv_forget_pwd_send_auth_code})
 	public void onClick(View v) {
-		
+		if(isDoubleClick(v)) return;
 		mobile = et_forget_pwd_mobile.getText().toString().trim();
 		auth_code = et_forget_pwd_auth_code.getText().toString().trim();
 		password = et_forget_pwd_password.getText().toString().trim();
-//		confirm_password = et_forget_pwd_confirm_password.getText().toString().trim();
-		
 		switch (v.getId()) {
 		case R.id.btn_forget_pwd_confirm:
 
@@ -199,20 +197,13 @@ public class ForgertPwdActivity extends BaseActivity {
 
 		};
 	};
-	
-	public void finish(View v){
-		this.finish();
-	}
-	
+
 	@Override
 	protected void onDestroy() {
 		super.onDestroy();
 		if(forgetPwdRequest != null){
-
 			forgetPwdRequest.cancel();
-			
 		}
-		
 	};
 	
 }

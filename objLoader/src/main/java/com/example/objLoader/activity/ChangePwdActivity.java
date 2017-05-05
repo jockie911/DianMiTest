@@ -66,6 +66,7 @@ public class ChangePwdActivity extends BaseActivity{
 	@Override
 	@OnClick({R.id.tv_right_title_bar,R.id.iv_eye_old_pws,R.id.iv_eye_new_pws})
 	public void onClick(View v) {
+		if(isDoubleClick(v)) return;
 		mobile = SharedPreferencesDAO.getInstance(mContext).getString("phone_number");
 		old_pwd = et_old_pwd.getText().toString().trim();
 		new_pwd = et_new_pwd.getText().toString().trim();

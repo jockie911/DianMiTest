@@ -16,8 +16,7 @@ import com.example.objLoader.bean.MyLog;
 import com.example.objLoader.bean.MyLog.Info;
 
 public class MyLogDetailsSizeFragment extends BaseFragment {
-	
-	
+
 	private ListView lv_my_log_details_size;
 	private View chatView;
 	private MyLog myLog;

@@ -19,7 +19,6 @@ import android.widget.PopupWindow;
 import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
-import com.example.objLoader.Imp.NoDoubleClickListener;
 import com.example.objLoader.R;
 import com.example.objLoader.bean.BaseRequestBean;
 import com.example.objLoader.bean.MeasureInfo;
@@ -107,54 +106,35 @@ public class SidePicActivity extends BaseActivity {
 				.findViewById(R.id.tv_upload_pic_text);
 		sideWindow = new PopupWindow(sideView, LayoutParams.MATCH_PARENT,
 				LayoutParams.WRAP_CONTENT, true);
-
-
-
-		tvTitle.setOnClickListener(new NoDoubleClickListener() {
-			@Override
-			public void onNoDoubleClick(View view) {
-
-			}
-		});
 	}
 
 	@Override
 	@OnClick({R.id.btn_side_camera,R.id.btn_side_album,R.id.tv_start_measure})
 	public void onClick(View v) {
-		Object tag = v.getTag(v.getId());
-		long beforeTimemiles = 0;
-		if(tag != null){
-			beforeTimemiles = (long) tag;
-		}
-		long timeInMillis = Calendar.getInstance().getTimeInMillis();
-		if(timeInMillis - beforeTimemiles > 1000 ){
+		if(isDoubleClick(v)) return;
 			//TODO
-			switch (v.getId()) {
-				/** 打开相机 */
-				case R.id.btn_side_camera:
+		switch (v.getId()) {
+			/** 打开相机 */
+			case R.id.btn_side_camera:
 
-					imageUriFromCamera = Utils.createImagePathUri(mContext);
-					Intent cameraIntent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
-					cameraIntent.putExtra(MediaStore.EXTRA_OUTPUT, imageUriFromCamera);
-					startActivityForResult(cameraIntent, CAMERA_REQUEST_CODE);
+				imageUriFromCamera = Utils.createImagePathUri(mContext);
+				Intent cameraIntent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
+				cameraIntent.putExtra(MediaStore.EXTRA_OUTPUT, imageUriFromCamera);
+				startActivityForResult(cameraIntent, CAMERA_REQUEST_CODE);
 
-					break;
-				/** 打开相册 */
-				case R.id.btn_side_album:
-					Intent photoIntent = new Intent(
-							Intent.ACTION_PICK,
-							android.provider.MediaStore.Images.Media.EXTERNAL_CONTENT_URI);// 调用android的图库
-					startActivityForResult(photoIntent, PHOTO_REQUEST_CODE);
-					break;
-				case R.id.tv_start_measure:
-					startActivity(new Intent(SidePicActivity.this,MeasureWeightAndHeightActivity.class));
-					//			measure();
-					break;
-			}
-		}else {
-			Log.d("JTAG",timeInMillis - beforeTimemiles +"  ---- " + v.getId());
+				break;
+			/** 打开相册 */
+			case R.id.btn_side_album:
+				Intent photoIntent = new Intent(
+						Intent.ACTION_PICK,
+						android.provider.MediaStore.Images.Media.EXTERNAL_CONTENT_URI);// 调用android的图库
+				startActivityForResult(photoIntent, PHOTO_REQUEST_CODE);
+				break;
+			case R.id.tv_start_measure:
+				startActivity(new Intent(SidePicActivity.this,MeasureWeightAndHeightActivity.class));
+				//			measure();
+				break;
 		}
-		v.setTag(v.getId(),timeInMillis);
 	}
 
 	/**
