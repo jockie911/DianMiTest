@@ -150,5 +150,7 @@
     <string name="top_clothes">上装</string>
     <string name="bottom_clothes">下装</string>
     <string name="shape">体型</string>
+    <string name="sava_record_name_hint">输入量身记录名称</string>
+    <string name="editor">编辑</string>
 
 </resources>

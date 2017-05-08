@@ -11,6 +11,7 @@ import android.widget.TextView;
 import com.example.objLoader.R;
 import com.example.objLoader.bean.BaseRequestBean;
 import com.example.objLoader.global.BaseActivity;
+import com.example.objLoader.istatic.IConstant;
 import com.example.objLoader.nohttp.CallServer;
 import com.example.objLoader.nohttp.HttpCallBack;
 import com.example.objLoader.utils.Constants;
@@ -128,9 +129,9 @@ public class ForgertPwdActivity extends BaseActivity {
 			
 			forgetPwdRequest = NoHttp.createStringRequest(Constants.FORGET_PWD, RequestMethod.POST);
 			
-			forgetPwdRequest.add("mobile", mobile);
-			forgetPwdRequest.add("pass", Utils.MD5(password));
-			forgetPwdRequest.add("string", Utils.MD5(mobile + Constants.MD5_KEY + Utils.MD5(password)));
+			forgetPwdRequest.add(IConstant.MOBILE, mobile);
+			forgetPwdRequest.add(IConstant.PASSWORD, Utils.MD5(password));
+			forgetPwdRequest.add(IConstant.STRING, Utils.MD5(mobile + Constants.MD5_KEY + Utils.MD5(password)));
 			
 			CallServer.getInstance().add(this, forgetPwdRequest, callBack, Constants.REGISTER_WHAT, true, false,BaseRequestBean.class);
 			

@@ -11,6 +11,7 @@ import android.widget.TextView;
 import com.example.objLoader.R;
 import com.example.objLoader.bean.BaseRequestBean;
 import com.example.objLoader.global.BaseActivity;
+import com.example.objLoader.istatic.IConstant;
 import com.example.objLoader.nohttp.CallServer;
 import com.example.objLoader.nohttp.HttpCallBack;
 import com.example.objLoader.utils.Constants;
@@ -38,6 +39,7 @@ public class LoginActivity extends BaseActivity {
 	private String username,password;
 	private Request<String> loginRequest;
 	private int pwdCount;
+	private boolean isCheckLogin; // 检查是否只是登陆，亦或是未登录跳转过来的
 
 	@Override
 	protected int getLayoutRes() {
@@ -46,9 +48,9 @@ public class LoginActivity extends BaseActivity {
 
 	@Override
 	protected void initData() {
-		SharedPreferencesDAO instance = SharedPreferencesDAO.getInstance(this);
 		tvTitle.setText(R.string.login);
 		tvRightTitle.setText(R.string.login_register);
+		isCheckLogin = getIntent().getBooleanExtra(IConstant.IS_CHECK_LOGIN, false);
 	}
 
 	@Override
@@ -92,19 +94,21 @@ public class LoginActivity extends BaseActivity {
 		
 		loginRequest = NoHttp.createStringRequest(Constants.LOGIN, RequestMethod.POST);//Constants.LOGIN
 		
-		loginRequest.add("mobile", username);
-		loginRequest.add("pass", Utils.MD5(password));
-		loginRequest.add("string", Utils.MD5(username + Constants.MD5_KEY + Utils.MD5(password)));
+		loginRequest.add(IConstant.MOBILE, username);
+		loginRequest.add(IConstant.PASSWORD, Utils.MD5(password));
+		loginRequest.add(IConstant.STRING, Utils.MD5(username + Constants.MD5_KEY + Utils.MD5(password)));
 		CallServer.getInstance().add(this, loginRequest, callBack, Constants.REGISTER_WHAT, true, false,BaseRequestBean.class);
 	}
 	
 	private HttpCallBack<String> callBack = new HttpCallBack<String>() {
 		
 		public void onSucceed(int what, BaseRequestBean bean) {
-			SharedPreferencesDAO.getInstance(LoginActivity.this).putString("phone_number", username);
-			SharedPreferencesDAO.getInstance(LoginActivity.this).putBoolean("isLogin", true);
+			SharedPreferencesDAO.getInstance(LoginActivity.this).putString(IConstant.MOBILE, username);
+			SharedPreferencesDAO.getInstance(LoginActivity.this).putBoolean(IConstant.IS_LOGIN, true);
 			Toast.show(bean.info);
-			startActivity(new Intent(LoginActivity.this,AccountInfoActivity.class));
+			if(!isCheckLogin){
+				startActivity(new Intent(LoginActivity.this,AccountInfoActivity.class));
+			}
 			finish();
 		};
 		
@@ -122,5 +126,4 @@ public class LoginActivity extends BaseActivity {
 			loginRequest.cancel();
 		}
 	};
-
 }

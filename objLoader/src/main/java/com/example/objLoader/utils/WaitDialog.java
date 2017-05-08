@@ -24,5 +24,4 @@ public class WaitDialog extends ProgressDialog {
 //		setProgressStyle(STYLE_SPINNER);
 //		setTitle("请求中，请稍候。。。");
 	}
-
 }

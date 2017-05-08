@@ -6,6 +6,7 @@ import android.net.Uri;
 import android.provider.MediaStore;
 import android.support.v4.graphics.drawable.RoundedBitmapDrawable;
 import android.support.v4.graphics.drawable.RoundedBitmapDrawableFactory;
+import android.text.TextUtils;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
@@ -14,7 +15,9 @@ import android.widget.TextView;
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.request.target.BitmapImageViewTarget;
 import com.example.objLoader.R;
+import com.example.objLoader.activity.mywork.MeasureRecordActivity;
 import com.example.objLoader.global.BaseActivity;
+import com.example.objLoader.istatic.IConstant;
 import com.example.objLoader.utils.ActionSheetDialog;
 import com.example.objLoader.utils.SharedPreferencesDAO;
 import com.example.objLoader.utils.Utils;
@@ -98,16 +101,17 @@ public class AccountInfoActivity extends BaseActivity {
 			});
 		}
 
-		mobile = SharedPreferencesDAO.getInstance(mContext).getString("phone_number");
+		mobile = SharedPreferencesDAO.getInstance(mContext).getString(IConstant.MOBILE);
 		username = SharedPreferencesDAO.getInstance(mContext).getString("username");
-		String maskNumber = mobile.substring(0, 3) + "****"
-				+ mobile.substring(7, mobile.length());
-		tv_phone_number.setText(maskNumber);
+		if(!TextUtils.isEmpty(mobile) && mobile.length() == 11){
+		  	String maskNumber = mobile.substring(0, 3) + "****" + mobile.substring(7, mobile.length());
+			tv_phone_number.setText(maskNumber);
+		}
 		tv_username.setText(username);
 	}
 
 	@Override
-    @OnClick({R.id.rl_change_pwd,R.id.rl_change_username,R.id.iv_right_title_bar,R.id.ivPic})
+    @OnClick({R.id.rl_change_pwd,R.id.rl_change_username,R.id.iv_right_title_bar,R.id.ivPic,R.id.rl_measure_record})
 	public void onClick(View v) {
 		if(isDoubleClick(v)) return;
 		switch (v.getId()) {
@@ -122,6 +126,9 @@ public class AccountInfoActivity extends BaseActivity {
 			break;
 		case R.id.ivPic:
 			showPopup();
+			break;
+		case R.id.rl_measure_record:
+			startActivity(new Intent(this, MeasureRecordActivity.class));
 			break;
 		}
 	}
@@ -141,8 +148,8 @@ public class AccountInfoActivity extends BaseActivity {
 		}).setPositiveButton(R.string.ok, new View.OnClickListener() {
 			@Override
 			public void onClick(View v) {
-				SharedPreferencesDAO.getInstance(mContext).putString("usernaem", "");
-				SharedPreferencesDAO.getInstance(mContext).putBoolean("isLogin", false);
+				SharedPreferencesDAO.getInstance(mContext).putString(IConstant.USERNAME, "");
+				SharedPreferencesDAO.getInstance(mContext).putBoolean(IConstant.IS_LOGIN, false);
 				Intent intent = new Intent(mContext, LoginActivity.class);
 				intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK);
 				startActivity(intent);
@@ -172,7 +179,7 @@ public class AccountInfoActivity extends BaseActivity {
 	@Override
 	protected void onResume() {
 		super.onResume();
-		username = SharedPreferencesDAO.getInstance(mContext).getString("username");
+		username = SharedPreferencesDAO.getInstance(mContext).getString(IConstant.USERNAME);
 		tv_username.setText(username);
 	}
 

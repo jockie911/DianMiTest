@@ -12,8 +12,16 @@ public class DetailMeasureSizeActivity$$ViewBinder<T extends com.example.objLoad
     target.tableLayout = finder.castView(view, 2131558540, "field 'tableLayout'");
     view = finder.findRequiredView(source, 2131558541, "field 'vpLove'");
     target.vpLove = finder.castView(view, 2131558541, "field 'vpLove'");
-    view = finder.findRequiredView(source, 2131558542, "field 'tvSaveRecord'");
+    view = finder.findRequiredView(source, 2131558542, "field 'tvSaveRecord' and method 'onClick'");
     target.tvSaveRecord = finder.castView(view, 2131558542, "field 'tvSaveRecord'");
+    view.setOnClickListener(
+      new butterknife.internal.DebouncingOnClickListener() {
+        @Override public void doClick(
+          android.view.View p0
+        ) {
+          target.onClick(p0);
+        }
+      });
   }
 
   @Override public void unbind(T target) {

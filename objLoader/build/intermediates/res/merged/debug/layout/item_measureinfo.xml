@@ -8,11 +8,11 @@
 
     <TextView
         android:id="@+id/tv_size_id"
-        android:layout_width="60dp"
+        android:layout_width="80dp"
         android:layout_height="wrap_content"
         android:layout_alignParentLeft="true"
-        android:layout_marginLeft="25dp"
         android:text="@string/size_id"
+        android:gravity="center_horizontal"
         android:textColor="@color/title"
         android:textSize="16sp" />
 
@@ -22,6 +22,7 @@
         android:layout_height="wrap_content"
         android:layout_toRightOf="@id/tv_size_id"
         android:text="@string/size_project"
+        android:layout_marginLeft="10dp"
         android:textColor="@color/title"
         android:textSize="16sp" />
 

@@ -52,6 +52,15 @@ public class AccountInfoActivity$$ViewBinder<T extends com.example.objLoader.act
           target.onClick(p0);
         }
       });
+    view = finder.findRequiredView(source, 2131558530, "method 'onClick'");
+    view.setOnClickListener(
+      new butterknife.internal.DebouncingOnClickListener() {
+        @Override public void doClick(
+          android.view.View p0
+        ) {
+          target.onClick(p0);
+        }
+      });
   }
 
   @Override public void unbind(T target) {

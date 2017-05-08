@@ -28,8 +28,8 @@
     <color name="color_base">#273037</color>
 
 
-    <color name="title">#b7b9bb</color>
-    <color name="yollow">#f0a53a</color>
+    <color name="title">#bfbfc0</color>
+    <color name="yollow">#ea9421</color>
 
     <!--actionDialogColor-->
     <color name="black">#000000</color>

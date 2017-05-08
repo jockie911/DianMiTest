@@ -144,6 +144,8 @@
     <string name="begin_measure">开始量身</string>
     <string name="no_present">暂未开放</string>
     <string name="top_clothes">上装</string>
+    <string name="sava_record_name_hint">输入量身记录名称</string>
+    <string name="editor">编辑</string>
 
 
 </resources>

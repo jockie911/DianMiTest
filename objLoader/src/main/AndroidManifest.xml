@@ -127,7 +127,8 @@
         <activity
             android:name=".activity.mywork.MainActivity"
             android:theme="@style/Theme.AppCompat.NoActionBar" />
-        <activity android:name=".activity.mywork.DetailMeasureSizeActivity"></activity>
+        <activity android:name=".activity.mywork.DetailMeasureSizeActivity" />
+        <activity android:name=".activity.mywork.MeasureRecordActivity"></activity>
     </application>
 
 </manifest>

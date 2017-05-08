@@ -17,6 +17,7 @@ import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.Window;
 import android.view.WindowManager;
+import android.view.inputmethod.InputMethodManager;
 import android.widget.TextView;
 
 import com.example.objLoader.R;
@@ -210,8 +211,10 @@ public abstract class BaseActivity extends AppCompatActivity implements OnClickL
 
 	@Override
 	protected void onResume() {
+		InputMethodManager imm = (InputMethodManager)getSystemService(Context.INPUT_METHOD_SERVICE);
+		if(imm != null)
+			imm.hideSoftInputFromWindow(getWindow().getDecorView().getWindowToken(), 0);
 		super.onResume();
-		getWindow().setSoftInputMode( WindowManager.LayoutParams.SOFT_INPUT_STATE_HIDDEN);
 	}
 
 	@Override

@@ -1,11 +1,9 @@
 package com.example.objLoader.utils;
 
 
-
 import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.SharedPreferences;
-import android.preference.PreferenceManager;
 /**
  * SharedPreferences操作类
  * 轻量级

@@ -1,6 +1,6 @@
 -- Merging decision tree log ---
 manifest
-ADDED from E:\Code\Android\MyApplication\objLoader\src\main\AndroidManifest.xml:2:1-133:12
+ADDED from E:\Code\Android\MyApplication\objLoader\src\main\AndroidManifest.xml:2:1-134:12
 	package
 		ADDED from E:\Code\Android\MyApplication\objLoader\src\main\AndroidManifest.xml:3:5-36
 		INJECTED from E:\Code\Android\MyApplication\objLoader\src\main\AndroidManifest.xml
@@ -108,7 +108,7 @@ ADDED from E:\Code\Android\MyApplication\objLoader\src\main\AndroidManifest.xml:
 	android:name
 		ADDED from E:\Code\Android\MyApplication\objLoader\src\main\AndroidManifest.xml:32:22-70
 application
-ADDED from E:\Code\Android\MyApplication\objLoader\src\main\AndroidManifest.xml:34:5-131:19
+ADDED from E:\Code\Android\MyApplication\objLoader\src\main\AndroidManifest.xml:34:5-132:19
 MERGED from [MyApplication:sMSSDK:unspecified] E:\Code\Android\MyApplication\sMSSDK\build\intermediates\bundles\default\AndroidManifest.xml:11:5-12:19
 MERGED from [com.android.support.constraint:constraint-layout:1.0.2] C:\Users\yc\.android\build-cache\55f2ddc8ca84cc4a398f974a4a196734dee55575\output\AndroidManifest.xml:9:5-20
 MERGED from [com.android.support:design:25.3.1] C:\Users\yc\.android\build-cache\9bb9c0f4e18f768e3516e9c4152543666304976c\output\AndroidManifest.xml:29:5-20
@@ -259,9 +259,13 @@ ADDED from E:\Code\Android\MyApplication\objLoader\src\main\AndroidManifest.xml:
 	android:name
 		ADDED from E:\Code\Android\MyApplication\objLoader\src\main\AndroidManifest.xml:128:13-57
 activity#com.example.objLoader.activity.mywork.DetailMeasureSizeActivity
-ADDED from E:\Code\Android\MyApplication\objLoader\src\main\AndroidManifest.xml:130:9-88
+ADDED from E:\Code\Android\MyApplication\objLoader\src\main\AndroidManifest.xml:130:9-79
 	android:name
 		ADDED from E:\Code\Android\MyApplication\objLoader\src\main\AndroidManifest.xml:130:19-76
+activity#com.example.objLoader.activity.mywork.MeasureRecordActivity
+ADDED from E:\Code\Android\MyApplication\objLoader\src\main\AndroidManifest.xml:131:9-84
+	android:name
+		ADDED from E:\Code\Android\MyApplication\objLoader\src\main\AndroidManifest.xml:131:19-72
 meta-data#android.support.VERSION
 ADDED from [com.android.support:design:25.3.1] C:\Users\yc\.android\build-cache\9bb9c0f4e18f768e3516e9c4152543666304976c\output\AndroidManifest.xml:25:5-27:34
 MERGED from [com.android.support:appcompat-v7:25.3.1] C:\Users\yc\.android\build-cache\d0928f8ffb5d248f984d90ffe3601d0e67dd1423\output\AndroidManifest.xml:25:5-27:34

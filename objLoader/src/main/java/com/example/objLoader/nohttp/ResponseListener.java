@@ -1,7 +1,12 @@
 package com.example.objLoader.nohttp;
 
+import android.content.Context;
+import android.content.DialogInterface;
+import android.text.TextUtils;
+
 import com.example.objLoader.R;
 import com.example.objLoader.bean.BaseRequestBean;
+import com.example.objLoader.utils.GsonTools;
 import com.example.objLoader.utils.Toast;
 import com.example.objLoader.utils.WaitDialog;
 import com.google.gson.Gson;
@@ -17,8 +22,8 @@ import com.yolanda.nohttp.rest.OnResponseListener;
 import com.yolanda.nohttp.rest.Request;
 import com.yolanda.nohttp.rest.Response;
 
-import android.content.Context;
-import android.content.DialogInterface;
+import org.json.JSONException;
+import org.json.JSONObject;
 
 public class ResponseListener<T> implements OnResponseListener<T> {
 
@@ -80,34 +85,42 @@ public class ResponseListener<T> implements OnResponseListener<T> {
 
     @Override
     public void onSucceed(int what, Response<T> response) {
-
-    	
-
 //    	callBack.onSucceed(what, response);
 //    	Logger.i("请求成功：" + response.get().toString());
 //    	callBack.onSucceed(what, bean);
     	try {
-    		
-    		bean = (BaseRequestBean) gson.fromJson(response.get().toString(),classBean);
-    		if (callBack != null && bean.iserror.equals("0")) {
+//    		bean = (BaseRequestBean) gson.fromJson(response.get().toString(),classBean);
+
+            JSONObject jsonObject = new JSONObject(response.get().toString());
+            String iserror = null;
+            if(jsonObject.has("iserror"))
+                iserror = jsonObject.getString("iserror");
+
+            if (callBack != null && /*bean.iserror*/iserror.equals("0")) {
     			Logger.d("请求成功:"+response.get().toString());
+                callBack.onSucceed(what, (T) GsonTools.changeGsonToBean(response.get().toString(), classBean));
     			callBack.onSucceed(what, response);
-    			callBack.onSucceed(what, bean);
+
+                T o = (T) GsonTools.changeGsonToBean(response.get().toString(), classBean);
+                callBack.onSucceed(what,o);
+//                callBack.onSucceed(what, bean);
     		}else {
     			Logger.d("请求失败:"+response.get().toString());
     			callBack.onFailed(what);
-    			callBack.onFailed(what, bean.info == null ? "" : bean.info);
+
+                String info = null;
+                if(jsonObject.has("info"))
+                    info = jsonObject.getString("info");
+                callBack.onFailed(what, TextUtils.isEmpty(info) ? "" : info);
     		}
-			
 		} catch (JsonSyntaxException e) {
-			
 			String errorInfo = context.getString(R.string.timeoutError);
-			
 			callBack.onFailed(what, errorInfo);
-		}
-		
-		
-		
+		} catch (JSONException e) {
+            e.printStackTrace();
+        }
+
+
     }
 
     @Override

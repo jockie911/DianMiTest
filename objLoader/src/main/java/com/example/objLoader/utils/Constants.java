@@ -1,8 +1,7 @@
 package com.example.objLoader.utils;
 
 public class Constants {
-	
-	
+
 	/**	登录what	*/
 	public static final int LOGIN_WHAT = 0;
 	
@@ -32,7 +31,7 @@ public class Constants {
 	public static final String MD5_KEY = "QW!!22*&90)";
 	public static final String SharedPreferences_Config = "ObjLoaser";
 	public static final String SERVER = "http://114.55.145.129/somatometry/";
-	
+
 	/**	登录接口	*/
 	public static final String LOGIN = SERVER + "loginuser.php";
 	
@@ -56,4 +55,8 @@ public class Constants {
 	
 	/**	获取所有保存信息	*/
 	public static final String DELETE_MY_LOG = SERVER + "deleteobj.php";
+
+	/** 获取所有的测量记录 */
+	public static final String GET_MEASURE_RECORD = SERVER + "searchobj.php";
+
 }

@@ -43,7 +43,7 @@ public class CallServer {
 	 * @param isCanCancel 请求是否能被用户取消
 	 * @param classBean 请求实体类
 	 */
-	public <T> void add(Context context, Request<T> request, HttpCallBack<T> callBack, int what, boolean isShowDialog, boolean isCanCancel, Class<?> classBean) {
+	public <T> void add(Context context, Request request, HttpCallBack<T> callBack, int what, boolean isShowDialog, boolean isCanCancel, Class<?> classBean) {
 		
 		request.setReadTimeout(10000);
 		request.setConnectTimeout(10000);
@@ -55,7 +55,6 @@ public class CallServer {
 			Toast.show(R.string.log_check_network);
 			return;
 		}
-		
 	}
 	
 	public <T> void add(Context context, Request<T> request, HttpCallBack<T> callBack, int what, boolean isShowDialog, boolean isCanCancel) {

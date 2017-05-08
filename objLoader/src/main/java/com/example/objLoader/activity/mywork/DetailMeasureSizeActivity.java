@@ -1,9 +1,12 @@
 package com.example.objLoader.activity.mywork;
 
+import android.content.Context;
 import android.support.design.widget.TabLayout;
 import android.support.v4.app.Fragment;
 import android.support.v4.view.ViewPager;
+import android.util.Log;
 import android.view.View;
+import android.view.inputmethod.InputMethodManager;
 import android.widget.TextView;
 
 import com.example.objLoader.R;
@@ -13,11 +16,14 @@ import com.example.objLoader.fragment.DetailsSizeFragment;
 import com.example.objLoader.fragment.ModelFragment;
 import com.example.objLoader.global.BaseActivity;
 import com.example.objLoader.istatic.IConstant;
+import com.example.objLoader.utils.AlertEtDialog;
+import com.example.objLoader.utils.LoginUtils;
 
 import java.util.ArrayList;
 import java.util.List;
 
 import butterknife.Bind;
+import butterknife.OnClick;
 
 public class DetailMeasureSizeActivity extends BaseActivity {
 
@@ -57,8 +63,30 @@ public class DetailMeasureSizeActivity extends BaseActivity {
         tableLayout.setupWithViewPager(vpLove);
     }
 
+    @OnClick({R.id.tv_save_record})
     @Override
     public void onClick(View v) {
         if(isDoubleClick(v)) return;
+        if(v.getId() == R.id.tv_save_record){
+            showSavaRecordDialog();
+        }
+    }
+
+    /**
+     * save current record
+     */
+    private void showSavaRecordDialog() {
+        LoginUtils.isLogin();
+
+        final AlertEtDialog builder = new AlertEtDialog(DetailMeasureSizeActivity.this).builder();
+        builder.setTitle(R.string.sava_record_name_hint);
+        builder.setNegativeButton(R.string.cancel,null);
+        builder.setPositiveButton(R.string.ok, new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                builder.getEtCentent();
+                Log.d("TAG",builder.getEtCentent());
+            }
+        }).show();
     }
 }

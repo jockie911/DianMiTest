@@ -112,7 +112,7 @@ public class MainActivity extends BaseActivity {
                 startActivity(intent);
                 break;
             case R.id.rel_person_center:
-                if(SharedPreferencesDAO.getInstance(MainActivity.this).getBoolean("isLogin")){
+                if(SharedPreferencesDAO.getInstance(MainActivity.this).getBoolean(IConstant.IS_LOGIN)){
                     startActivity(new Intent(MainActivity.this, AccountInfoActivity.class));
                 }else{
                     startActivity(new Intent(MainActivity.this, LoginActivity.class));

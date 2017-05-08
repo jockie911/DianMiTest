@@ -6,7 +6,7 @@
     density="420dpi"
     format="10"
     plugin-version="2.3.1"
-    timestamp="1493976497195"
+    timestamp="1493977310337"
     token="-201181619530598174"
     verifier="COLD_SWAP_REQUESTED" >
 
@@ -99,7 +99,7 @@
     </build>
     <build
         build-mode="COLD"
-        timestamp="1493976497195"
+        timestamp="1493977310337"
         verifier="COLD_SWAP_REQUESTED" >
         <artifact
             location="E:\Code\Android\MyApplication\objLoader\build\outputs\apk\objLoader-debug.apk"
