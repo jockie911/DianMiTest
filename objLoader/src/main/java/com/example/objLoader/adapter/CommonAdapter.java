@@ -20,7 +20,11 @@ public abstract class CommonAdapter<T> extends BaseAdapter {
 		this.layoutId = layoutId;
 		this.mContext = context;
 		this.datas = datas;
+	}
 
+	public void addData(List<T> datas){
+		this.datas = datas;
+		notifyDataSetChanged();
 	}
 
 	@Override

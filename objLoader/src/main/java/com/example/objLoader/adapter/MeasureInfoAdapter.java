@@ -1,28 +1,26 @@
 package com.example.objLoader.adapter;
 
-import java.util.List;
-
 import android.content.Context;
-import android.graphics.Color;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import com.example.objLoader.R;
-import com.example.objLoader.bean.MeasureInfo.Info;
+import com.example.objLoader.bean.MeasureRecordBean;
 
-public class MeasureInfoAdapter extends CommonAdapter<Info> {
+import java.util.List;
 
-	
+public class MeasureInfoAdapter extends CommonAdapter<MeasureRecordBean.DataBean.InfoBean> {
+
 	@SuppressWarnings("unused")
 	private TextView tv_size_id,tv_size_name,tv_size_values;
 	private RelativeLayout rl_item_measure_info;
 	
-	public MeasureInfoAdapter(Context context, List<Info> datas, int layoutId) {
+	public MeasureInfoAdapter(Context context, List<MeasureRecordBean.DataBean.InfoBean> datas, int layoutId) {
 		super(context, datas, layoutId);
 	}
 
 	@Override
-	public void convert(int position,ViewHolder holder, Info info) {
+	public void convert(int position,ViewHolder holder, MeasureRecordBean.DataBean.InfoBean info) {
 		
 		rl_item_measure_info = holder.getView(R.id.rl_item_measure_info);
 		rl_item_measure_info.setBackgroundColor(mContext.getResources().getColor(R.color.color_base));

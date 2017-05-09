@@ -8,11 +8,12 @@
 
     <TextView
         android:id="@+id/tv_size_id"
-        android:layout_width="80dp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentLeft="true"
         android:text="@string/size_id"
         android:gravity="center_horizontal"
+        android:layout_marginLeft="30dp"
         android:textColor="@color/title"
         android:textSize="16sp" />
 
@@ -20,9 +21,8 @@
         android:id="@+id/tv_size_name"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_toRightOf="@id/tv_size_id"
+        android:layout_centerHorizontal="true"
         android:text="@string/size_project"
-        android:layout_marginLeft="10dp"
         android:textColor="@color/title"
         android:textSize="16sp" />
 
@@ -31,8 +31,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentRight="true"
-        android:layout_marginRight="80dp"
+        android:layout_marginRight="30dp"
         android:textColor="@color/title"
+        android:gravity="right"
         android:textSize="16sp"
         android:text="@string/size" />
 </RelativeLayout>

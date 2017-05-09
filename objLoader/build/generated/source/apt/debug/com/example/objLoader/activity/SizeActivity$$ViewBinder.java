@@ -8,8 +8,8 @@ import butterknife.ButterKnife.ViewBinder;
 public class SizeActivity$$ViewBinder<T extends com.example.objLoader.activity.SizeActivity> implements ViewBinder<T> {
   @Override public void bind(final Finder finder, final T target, Object source) {
     View view;
-    view = finder.findRequiredView(source, 2131558596, "field 'rb_mate' and method 'onClick'");
-    target.rb_mate = finder.castView(view, 2131558596, "field 'rb_mate'");
+    view = finder.findRequiredView(source, 2131558603, "field 'rb_mate' and method 'onClick'");
+    target.rb_mate = finder.castView(view, 2131558603, "field 'rb_mate'");
     view.setOnClickListener(
       new butterknife.internal.DebouncingOnClickListener() {
         @Override public void doClick(
@@ -18,8 +18,8 @@ public class SizeActivity$$ViewBinder<T extends com.example.objLoader.activity.S
           target.onClick(p0);
         }
       });
-    view = finder.findRequiredView(source, 2131558598, "field 'rb_my_log' and method 'onClick'");
-    target.rb_my_log = finder.castView(view, 2131558598, "field 'rb_my_log'");
+    view = finder.findRequiredView(source, 2131558605, "field 'rb_my_log' and method 'onClick'");
+    target.rb_my_log = finder.castView(view, 2131558605, "field 'rb_my_log'");
     view.setOnClickListener(
       new butterknife.internal.DebouncingOnClickListener() {
         @Override public void doClick(
@@ -28,8 +28,8 @@ public class SizeActivity$$ViewBinder<T extends com.example.objLoader.activity.S
           target.onClick(p0);
         }
       });
-    view = finder.findRequiredView(source, 2131558597, "field 'rb_model' and method 'onClick'");
-    target.rb_model = finder.castView(view, 2131558597, "field 'rb_model'");
+    view = finder.findRequiredView(source, 2131558604, "field 'rb_model' and method 'onClick'");
+    target.rb_model = finder.castView(view, 2131558604, "field 'rb_model'");
     view.setOnClickListener(
       new butterknife.internal.DebouncingOnClickListener() {
         @Override public void doClick(
@@ -38,8 +38,8 @@ public class SizeActivity$$ViewBinder<T extends com.example.objLoader.activity.S
           target.onClick(p0);
         }
       });
-    view = finder.findRequiredView(source, 2131558595, "field 'rb_details_size' and method 'onClick'");
-    target.rb_details_size = finder.castView(view, 2131558595, "field 'rb_details_size'");
+    view = finder.findRequiredView(source, 2131558602, "field 'rb_details_size' and method 'onClick'");
+    target.rb_details_size = finder.castView(view, 2131558602, "field 'rb_details_size'");
     view.setOnClickListener(
       new butterknife.internal.DebouncingOnClickListener() {
         @Override public void doClick(

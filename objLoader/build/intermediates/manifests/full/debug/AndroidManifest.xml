@@ -134,6 +134,7 @@
             android:theme="@style/Theme.AppCompat.NoActionBar" />
         <activity android:name="com.example.objLoader.activity.mywork.DetailMeasureSizeActivity" />
         <activity android:name="com.example.objLoader.activity.mywork.MeasureRecordActivity" />
+        <activity android:name="com.example.objLoader.activity.PhotoCommandActivity" />
     </application>
 
 </manifest>

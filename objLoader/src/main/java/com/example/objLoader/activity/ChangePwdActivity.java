@@ -4,6 +4,7 @@ import com.example.objLoader.R;
 import com.example.objLoader.bean.BaseRequestBean;
 import com.example.objLoader.global.AbActivityManager;
 import com.example.objLoader.global.BaseActivity;
+import com.example.objLoader.istatic.IConstant;
 import com.example.objLoader.nohttp.CallServer;
 import com.example.objLoader.nohttp.HttpCallBack;
 import com.example.objLoader.utils.Constants;
@@ -104,21 +105,20 @@ public class ChangePwdActivity extends BaseActivity{
 			return;
 		}
 		changePwdRequest = NoHttp.createStringRequest(Constants.CHANGE_PWD, RequestMethod.POST);
-		changePwdRequest.add("mobile", mobile);
-		changePwdRequest.add("pass", Utils.MD5(old_pwd));
-		changePwdRequest.add("pass2",Utils.MD5(new_pwd));
-		changePwdRequest.add("string",Utils.MD5(Utils.MD5(new_pwd) + Utils.MD5(mobile + Constants.MD5_KEY + Utils.MD5(old_pwd))));
+		changePwdRequest.add(IConstant.MOBILE, mobile);
+		changePwdRequest.add(IConstant.PASSWORD, Utils.MD5(old_pwd));
+		changePwdRequest.add(IConstant.PASSWORD_NEW,Utils.MD5(new_pwd));
+		changePwdRequest.add(IConstant.STRING,Utils.MD5(Utils.MD5(new_pwd) + Utils.MD5(mobile + Constants.MD5_KEY + Utils.MD5(old_pwd))));
 		CallServer.getInstance().add(mContext, changePwdRequest, callBack, Constants.CHANGE_PWD_WHAT, true, false,BaseRequestBean.class);
 	}
 	
-	private HttpCallBack<String> callBack = new HttpCallBack<String>() {
+	private HttpCallBack<BaseRequestBean> callBack = new HttpCallBack<BaseRequestBean>() {
 	
 		public void onSucceed(int what, BaseRequestBean bean) {
 			Toast.show(bean.info);
 			startActivity(new Intent(mContext, LoginActivity.class));
 			finish();
 		};
-		
 		
 		public void onFailed(int what, String errorInfo) {
 			Toast.show(errorInfo);

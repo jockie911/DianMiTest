@@ -8,7 +8,9 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.example.objLoader.R;
+import com.example.objLoader.activity.mywork.DetailMeasureSizeActivity;
 import com.example.objLoader.global.BaseFragment;
+import com.example.objLoader.istatic.IConstant;
 
 import butterknife.Bind;
 import butterknife.ButterKnife;
@@ -33,6 +35,21 @@ public class DetailClothesModelFragment extends BaseFragment {
 
     @Override
     protected void initData() {
+        if(getActivity() != null){
+            int gender = ((DetailMeasureSizeActivity) getActivity()).getGender();
+
+            if(gender == IConstant.GENDER_FEMALE){
+                ivTopClothes.setImageResource(R.drawable.top_clothes_woman);
+                ivBottomClothes.setImageResource(R.drawable.bottom_clothes_woman);
+            }else if(gender == IConstant.GENDEER_MALE){
+                ivTopClothes.setImageResource(R.drawable.top_clothes_man);
+                ivBottomClothes.setImageResource(R.drawable.bottom_clothes_man);
+            }
+        }
+    }
+
+    @Override
+    public void onClick(View v) {
 
     }
 }

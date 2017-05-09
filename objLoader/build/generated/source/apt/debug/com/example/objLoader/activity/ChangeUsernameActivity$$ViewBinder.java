@@ -10,7 +10,7 @@ public class ChangeUsernameActivity$$ViewBinder<T extends com.example.objLoader.
     View view;
     view = finder.findRequiredView(source, 2131558537, "field 'et_change_username'");
     target.et_change_username = finder.castView(view, 2131558537, "field 'et_change_username'");
-    view = finder.findRequiredView(source, 2131558603, "method 'onClick'");
+    view = finder.findRequiredView(source, 2131558610, "method 'onClick'");
     view.setOnClickListener(
       new butterknife.internal.DebouncingOnClickListener() {
         @Override public void doClick(

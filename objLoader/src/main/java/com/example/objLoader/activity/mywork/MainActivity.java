@@ -107,8 +107,6 @@ public class MainActivity extends BaseActivity {
         switch (v.getId()){
             case R.id.tv_start_measure:
                 Intent intent = new Intent(MainActivity.this, FrontPicActivity.class);
-                intent.putExtra("height", "175");
-                intent.putExtra("weight", "70");
                 startActivity(intent);
                 break;
             case R.id.rel_person_center:

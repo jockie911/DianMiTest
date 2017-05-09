@@ -27,6 +27,8 @@
             <EditText
                 android:id="@+id/et_forget_pwd_mobile"
                 style="@style/et_login_common"
+                android:inputType="phone"
+                android:maxLength="11"
                 android:hint="@string/input_mobile"/>
         </LinearLayout>
 
@@ -44,6 +46,8 @@
                 style="@style/et_login_common"
                 android:layout_width="0dp"
                 android:layout_weight="1"
+                android:maxLength="6"
+                android:inputType="number"
                 android:hint="@string/input_auth_code"/>
             <TextView
                 android:id="@+id/tv_forget_pwd_send_auth_code"

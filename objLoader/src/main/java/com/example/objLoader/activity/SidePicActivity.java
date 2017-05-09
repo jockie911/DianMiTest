@@ -23,10 +23,12 @@ import com.example.objLoader.R;
 import com.example.objLoader.bean.BaseRequestBean;
 import com.example.objLoader.bean.MeasureInfo;
 import com.example.objLoader.global.BaseActivity;
+import com.example.objLoader.istatic.IConstant;
 import com.example.objLoader.nohttp.CallServer;
 import com.example.objLoader.nohttp.HttpCallBack;
 import com.example.objLoader.utils.AppConfig;
 import com.example.objLoader.utils.Constants;
+import com.example.objLoader.utils.JLog;
 import com.example.objLoader.utils.SharedPreferencesDAO;
 import com.example.objLoader.utils.Toast;
 import com.example.objLoader.utils.Utils;
@@ -55,15 +57,12 @@ public class SidePicActivity extends BaseActivity {
 	@Bind(R.id.tv_start_measure)
 	TextView tv_start_measure;
 
-	private String height, weight, front_pic_path = "", side_pic_path = "",
-			mobile;
+	private String side_pic_path = "", mobile;
 	private TextView tv_upload_pic_text;
 	private Request<String> uploadPicRequest;
-	private String objPath, objUrl;
 
 	private Uri imageUriFromCamera;
 	private static final int CAMERA_REQUEST_CODE = 1, PHOTO_REQUEST_CODE = 2;
-	private MeasureInfo measureInfo;
 	private PopupWindow sideWindow;
 	private String time;
 	private String picPath;
@@ -87,36 +86,25 @@ public class SidePicActivity extends BaseActivity {
 	protected void initData() {
 
 		tvTitle.setText(R.string.side_pic);
-		height = getIntent().getExtras().getString("height");
-		weight = getIntent().getExtras().getString("weight");
-		front_pic_path = getIntent().getExtras().getString("front_pic_path");
-		// if(side_pic_path.equals("") || side_pic_path.length() <= 0){
-		// return;
-		// }
-		picPath = SharedPreferencesDAO.getInstance(mContext).getString(
-				"sidePath");
 
-		Logger.i("initData()" + side_pic_path);
+		picPath = SharedPreferencesDAO.getInstance(mContext).getString(IConstant.SIDE_PIC_PATH);
+
+		JLog.d("initData()" + side_pic_path);
 
 		Glide.with(this).load(picPath).into(iv_side);
 
-		View sideView = LayoutInflater.from(mContext).inflate(
-				R.layout.pop_front, null);
-		tv_upload_pic_text = (TextView) sideView
-				.findViewById(R.id.tv_upload_pic_text);
-		sideWindow = new PopupWindow(sideView, LayoutParams.MATCH_PARENT,
-				LayoutParams.WRAP_CONTENT, true);
+		View sideView = LayoutInflater.from(mContext).inflate(R.layout.pop_front, null);
+		tv_upload_pic_text = (TextView) sideView.findViewById(R.id.tv_upload_pic_text);
+		sideWindow = new PopupWindow(sideView, LayoutParams.MATCH_PARENT, LayoutParams.WRAP_CONTENT, true);
 	}
 
 	@Override
 	@OnClick({R.id.btn_side_camera,R.id.btn_side_album,R.id.tv_start_measure})
 	public void onClick(View v) {
 		if(isDoubleClick(v)) return;
-			//TODO
 		switch (v.getId()) {
 			/** 打开相机 */
 			case R.id.btn_side_camera:
-
 				imageUriFromCamera = Utils.createImagePathUri(mContext);
 				Intent cameraIntent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
 				cameraIntent.putExtra(MediaStore.EXTRA_OUTPUT, imageUriFromCamera);
@@ -163,20 +151,20 @@ public class SidePicActivity extends BaseActivity {
 		String filePath = AppConfig.getInstance().APP_PATH_ROOT
 				+ File.separator;
 		// 正面照路径 front_pic_path
-		FileBinary frontPic = new FileBinary(new File(front_pic_path));
+//		FileBinary frontPic = new FileBinary(new File(front_pic_path));
 		// FileBinary frontPic = new FileBinary(new File(filePath +
 		// "front.jpg"));
 		// 侧面照路径 side_pic_path
 		FileBinary sidePic = new FileBinary(new File(side_pic_path));
 		// FileBinary sidePic = new FileBinary(new File(filePath + "side.jpg"));
 		// 文件上传进度
-		frontPic.setUploadListener(0, mOnUploadListener);
+//		frontPic.setUploadListener(0, mOnUploadListener);
 		sidePic.setUploadListener(1, mOnUploadListener);
 		uploadPicRequest.add("mobile", mobile);// 手机号
-		uploadPicRequest.add("height", height);// height 身高
-		uploadPicRequest.add("weight", weight);// weight 体重
+//		uploadPicRequest.add("height", height);// height 身高
+//		uploadPicRequest.add("weight", weight);// weight 体重
 		uploadPicRequest.add("timeStamp", time);
-		uploadPicRequest.add("front", frontPic);// 正面照
+//		uploadPicRequest.add("front", frontPic);// 正面照
 		uploadPicRequest.add("side", sidePic);// 侧面照
 		uploadPicRequest.add("r1x", "804");//
 		uploadPicRequest.add("r1y", "1422");//
@@ -188,11 +176,11 @@ public class SidePicActivity extends BaseActivity {
 		uploadPicRequest.add("r2h", "2340");//
 
 		uploadPicRequest.add("deviceid", Settings.Secure.getString(getContentResolver(), Settings.Secure.ANDROID_ID));// 设备号
-		uploadPicRequest.add(
-				"string",
-				Utils.MD5(time
-						+ Utils.MD5(mobile + Constants.MD5_KEY + height
-								+ weight)));
+//		uploadPicRequest.add(
+//				"string",
+//				Utils.MD5(time
+//						+ Utils.MD5(mobile + Constants.MD5_KEY + height
+//								+ weight)));
 
 		CallServer.getInstance().add(this, uploadPicRequest, callBack,
 				Constants.GET_MEASURE_INFO_WHAT, false, false,

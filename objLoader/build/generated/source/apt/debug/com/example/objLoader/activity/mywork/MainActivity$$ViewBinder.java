@@ -8,10 +8,10 @@ import butterknife.ButterKnife.ViewBinder;
 public class MainActivity$$ViewBinder<T extends com.example.objLoader.activity.mywork.MainActivity> implements ViewBinder<T> {
   @Override public void bind(final Finder finder, final T target, Object source) {
     View view;
-    view = finder.findRequiredView(source, 2131558570, "field 'rel_person_center'");
-    target.rel_person_center = finder.castView(view, 2131558570, "field 'rel_person_center'");
-    view = finder.findRequiredView(source, 2131558569, "field 'tvStartMeasure' and method 'onClick'");
-    target.tvStartMeasure = finder.castView(view, 2131558569, "field 'tvStartMeasure'");
+    view = finder.findRequiredView(source, 2131558573, "field 'rel_person_center'");
+    target.rel_person_center = finder.castView(view, 2131558573, "field 'rel_person_center'");
+    view = finder.findRequiredView(source, 2131558572, "field 'tvStartMeasure' and method 'onClick'");
+    target.tvStartMeasure = finder.castView(view, 2131558572, "field 'tvStartMeasure'");
     view.setOnClickListener(
       new butterknife.internal.DebouncingOnClickListener() {
         @Override public void doClick(
@@ -20,8 +20,8 @@ public class MainActivity$$ViewBinder<T extends com.example.objLoader.activity.m
           target.onClick(p0);
         }
       });
-    view = finder.findRequiredView(source, 2131558568, "field 'discreteScrollView'");
-    target.discreteScrollView = finder.castView(view, 2131558568, "field 'discreteScrollView'");
+    view = finder.findRequiredView(source, 2131558571, "field 'discreteScrollView'");
+    target.discreteScrollView = finder.castView(view, 2131558571, "field 'discreteScrollView'");
   }
 
   @Override public void unbind(T target) {

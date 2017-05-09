@@ -4,7 +4,6 @@ import android.os.Handler;
 import android.os.Message;
 import android.text.TextUtils;
 import android.view.View;
-import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
@@ -24,6 +23,9 @@ import com.yolanda.nohttp.rest.Request;
 
 import org.json.JSONObject;
 
+import java.util.Timer;
+import java.util.TimerTask;
+
 import butterknife.Bind;
 import butterknife.OnClick;
 import cn.smssdk.EventHandler;
@@ -38,8 +40,6 @@ public class ForgertPwdActivity extends BaseActivity {
 	EditText et_forget_pwd_auth_code;
 	@Bind(R.id.et_forget_pwd_password)
 	EditText et_forget_pwd_password;
-	@Bind(R.id.btn_forget_pwd_confirm)
-	Button btn_forget_pwd_confirm;
 	@Bind(R.id.tv_forget_pwd_send_auth_code)
 	TextView tv_forget_pwd_send_auth_code;
 
@@ -47,8 +47,9 @@ public class ForgertPwdActivity extends BaseActivity {
 	private Boolean isCodeRight = false;
 	private Boolean isCommit = true;
 	private Request<String> forgetPwdRequest;
-	
-	
+	private Timer timer;
+
+
 	EventHandler eh = new EventHandler() {
 
 		@Override
@@ -59,7 +60,6 @@ public class ForgertPwdActivity extends BaseActivity {
 			msg.obj = data;
 			mHandler.sendMessage(msg);
 		}
-
 	};
 
 	@Override
@@ -87,43 +87,37 @@ public class ForgertPwdActivity extends BaseActivity {
 		password = et_forget_pwd_password.getText().toString().trim();
 		switch (v.getId()) {
 		case R.id.btn_forget_pwd_confirm:
-
 			confirm();
-
 			break;
 		case R.id.tv_forget_pwd_send_auth_code:
-
-//			if (mobile.length() < 11) {
-//				Toast.show(R.string.right_mobile);
-//				return;
-//			} else 
-				if (!Utils.isNetworkConnected(ForgertPwdActivity.this)) { // 检查网络连接
+			if (mobile.length() < 11) {
+				Toast.show(R.string.right_mobile);
+				return;
+			} else if (!Utils.isNetworkConnected(ForgertPwdActivity.this)) { // 检查网络连接
 				Toast.show(R.string.log_check_network);
 				return;
 			} else {
-				SharedPreferencesDAO.getInstance(this).putString(
-						"phone_number", mobile);
+				SharedPreferencesDAO.getInstance(this).putString("phone_number", mobile);
 			}
 			// 发送验证码
-			SMSSDK.getVerificationCode("86", mobile);
+			timerSmsCode();
+			SMSSDK.getVerificationCode(IConstant.PHONE_AREA_CODE, mobile);
 			break;
 		}
 	}
 
 	private void confirm() {
-		
-//		if (mobile.length() < 11) {
-//			Toast.show(R.string.right_mobile);
-//			return;
-//		} 
-		
-//		if (!password.equals(confirm_password)) {
-//			Toast.show(R.string.pwd_not_right);
-//			return;
-//		}
+		if (mobile.length() < 11) {
+			Toast.show(R.string.right_mobile);
+			return;
+		}
+		if(auth_code.length() < 4){
+			Toast.show(R.string.auth_code_wrong);
+			return;
+		}
 		if (isCommit) {
 		// 提交验证码
-		SMSSDK.submitVerificationCode("86", mobile, auth_code);
+		SMSSDK.submitVerificationCode(IConstant.PHONE_AREA_CODE, mobile, auth_code);
 	}
 		if(isCodeRight){
 			
@@ -132,13 +126,11 @@ public class ForgertPwdActivity extends BaseActivity {
 			forgetPwdRequest.add(IConstant.MOBILE, mobile);
 			forgetPwdRequest.add(IConstant.PASSWORD, Utils.MD5(password));
 			forgetPwdRequest.add(IConstant.STRING, Utils.MD5(mobile + Constants.MD5_KEY + Utils.MD5(password)));
-			
 			CallServer.getInstance().add(this, forgetPwdRequest, callBack, Constants.REGISTER_WHAT, true, false,BaseRequestBean.class);
-			
-			}
+		}
 	}
 	
-	private HttpCallBack<String> callBack = new HttpCallBack<String>() {
+	private HttpCallBack<BaseRequestBean> callBack = new HttpCallBack<BaseRequestBean>() {
 		
 		public void onSucceed(int what, BaseRequestBean bean) {
 			Toast.show(bean.info);
@@ -206,5 +198,41 @@ public class ForgertPwdActivity extends BaseActivity {
 			forgetPwdRequest.cancel();
 		}
 	};
+
+	/**
+	 * 验证码提交 倒计时
+	 */
+	private void timerSmsCode(){
+		tv_forget_pwd_send_auth_code.setClickable(false);
+		timer = new Timer();
+		timer.schedule(new MyTimerTask(System.currentTimeMillis()),0,1000);
+	}
+
+	private class MyTimerTask extends TimerTask {
+
+		private long timell;
+
+		public MyTimerTask(long l) {
+			this.timell = l;
+		}
+
+		@Override
+		public void run() {
+			runOnUiThread(new Runnable() {
+				@Override
+				public void run() {
+					long l = System.currentTimeMillis();
+					int t = (int) ((l - timell)/1000);
+					if(t >= 60){
+						tv_forget_pwd_send_auth_code.setText(R.string.input_send_auth_code);
+						tv_forget_pwd_send_auth_code.setClickable(true);
+						timer.cancel();
+					}else{
+						tv_forget_pwd_send_auth_code.setText(getResources().getString(R.string.remain_time)  + (60 - t)+ "");
+					}
+				}
+			});
+		}
+	}
 	
 }

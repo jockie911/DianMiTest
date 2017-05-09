@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="50dp"
+    android:background="@color/color_base"
+    android:paddingLeft="10dp">
+
+    <CheckBox
+        android:id="@+id/item_cb"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:layout_centerVertical="true" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingLeft="15dp">
+
+        <TextView
+            android:id="@+id/item_tv_record_name"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:textColor="@color/title"
+            android:textSize="16sp"
+            android:layout_toLeftOf="@+id/item_tv_gender"
+            android:layout_marginRight="30dp"
+            android:gravity="center_vertical"/>
+        <LinearLayout
+            android:id="@+id/ll_temp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="15dp">
+            <TextView
+                android:id="@+id/item_tv_record_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#676b6f"/>
+            <TextView
+                android:id="@+id/item_tv_record_secord"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#676b6f"/>
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/item_tv_gender"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toLeftOf="@+id/ll_temp"
+            android:hint="fdsfsd"
+            android:layout_centerVertical="true"
+            android:textColor="@color/title"
+            android:textColorHint="@color/title"
+            android:layout_marginRight="30dp"/>
+
+        <View
+            android:id="@+id/item_bottom_view"
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_alignParentBottom="true"
+            android:background="@color/color_base_deep"/>
+    </RelativeLayout>
+
+</LinearLayout>

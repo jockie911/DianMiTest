@@ -1,40 +1,28 @@
 package com.example.objLoader.fragment;
 
-import android.content.Intent;
-import android.graphics.drawable.ColorDrawable;
-import android.view.Gravity;
+import android.annotation.SuppressLint;
 import android.view.LayoutInflater;
 import android.view.View;
-import android.view.ViewGroup.LayoutParams;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ListView;
 import android.widget.PopupWindow;
 
 import com.example.objLoader.R;
-import com.example.objLoader.activity.LoginActivity;
-import com.example.objLoader.activity.MeasureWeightAndHeightActivity;
+import com.example.objLoader.activity.mywork.DetailMeasureSizeActivity;
 import com.example.objLoader.adapter.MeasureInfoAdapter;
-import com.example.objLoader.bean.BaseRequestBean;
 import com.example.objLoader.bean.MeasureInfo;
 import com.example.objLoader.bean.MeasureInfo.Info;
-import com.example.objLoader.nohttp.CallServer;
-import com.example.objLoader.nohttp.HttpCallBack;
-import com.example.objLoader.utils.Constants;
-import com.example.objLoader.utils.SharedPreferencesDAO;
-import com.example.objLoader.utils.Toast;
-import com.example.objLoader.utils.Utils;
+import com.example.objLoader.bean.MeasureRecordBean;
 import com.google.gson.Gson;
-import com.yolanda.nohttp.NoHttp;
-import com.yolanda.nohttp.RequestMethod;
 import com.yolanda.nohttp.rest.Request;
 
-import java.util.ArrayList;
 import java.util.List;
 
 import butterknife.Bind;
 
-public class DetailsSizeFragment extends com.example.objLoader.global.BaseFragment implements View.OnClickListener {
+@SuppressLint("ValidFragment")
+public class DetailsSizeFragment extends com.example.objLoader.global.BaseFragment {
 
 	private PopupWindow sizeNameWindow;
 	private String sizeName;
@@ -43,15 +31,13 @@ public class DetailsSizeFragment extends com.example.objLoader.global.BaseFragme
 	private Request<String> saveSizeNameRequest;
 	private String mobile,time;
 	private MeasureInfo measureInfo;
-	private Info info;
+	private List<MeasureRecordBean.DataBean.InfoBean> info;
 	private List<Info> lists;
 	private MeasureInfoAdapter adapter;
 	private Boolean isData;
 	
 	@Bind(R.id.lv_dtails_size)
 	ListView mDetailDataLv;
-	
-	private Gson gson = new Gson();
 
 	@Override
 	protected View inflater(LayoutInflater inflater) {
@@ -87,15 +73,14 @@ public class DetailsSizeFragment extends com.example.objLoader.global.BaseFragme
 				}
 			}
 		}*/
-		lists = new ArrayList<>();
-		for (int i = 0; i < 10; i++) {
-			Info info = new Info();
-			info.setName("zhansan" + i);
-			info.setValue(110 + i + "");
-			lists.add(info);
-		}
-		adapter = new MeasureInfoAdapter(getActivity(),lists, R.layout.item_measureinfo);
+
+
+		adapter = new MeasureInfoAdapter(getActivity(),null, R.layout.item_measureinfo);
 		mDetailDataLv.setAdapter(adapter);
+		if(getActivity() != null){
+			List<MeasureRecordBean.DataBean.InfoBean> detailInfo = ((DetailMeasureSizeActivity) getActivity()).getDetailInfo();
+			adapter.addData(detailInfo);
+		}
 	}
 
 	public void onClick(View v) {

@@ -5,6 +5,7 @@ import android.view.View;
 
 import com.example.objLoader.R;
 import com.example.objLoader.activity.mywork.DetailMeasureSizeActivity;
+import com.example.objLoader.bean.MeasureRecordBean;
 import com.example.objLoader.global.BaseActivity;
 import com.example.objLoader.istatic.IConstant;
 import com.example.objLoader.utils.Toast;
@@ -61,6 +62,8 @@ public class MeasureWeightAndHeightActivity extends BaseActivity implements View
 
 			Intent intent = new Intent(MeasureWeightAndHeightActivity.this, DetailMeasureSizeActivity.class);
 			intent.putExtra(IConstant.IS_SAVE,true);
+			MeasureRecordBean.DataBean dataBean = null;
+			intent.putExtra(IConstant.ITEM_DATA,dataBean);
 			startActivity(intent);
 
 		}

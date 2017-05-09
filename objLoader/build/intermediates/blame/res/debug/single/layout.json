@@ -76,6 +76,14 @@
         "source": "E:\\Code\\Android\\MyApplication\\objLoader\\src\\main\\res\\layout\\item_measureinfo.xml"
     },
     {
+        "merged": "E:\\Code\\Android\\MyApplication\\objLoader\\build\\intermediates\\res\\merged\\debug\\layout\\fragment_photo_command.xml",
+        "source": "E:\\Code\\Android\\MyApplication\\objLoader\\src\\main\\res\\layout\\fragment_photo_command.xml"
+    },
+    {
+        "merged": "E:\\Code\\Android\\MyApplication\\objLoader\\build\\intermediates\\res\\merged\\debug\\layout\\activity_photo_command.xml",
+        "source": "E:\\Code\\Android\\MyApplication\\objLoader\\src\\main\\res\\layout\\activity_photo_command.xml"
+    },
+    {
         "merged": "E:\\Code\\Android\\MyApplication\\objLoader\\build\\intermediates\\res\\merged\\debug\\layout\\activity_forget_pwd.xml",
         "source": "E:\\Code\\Android\\MyApplication\\objLoader\\src\\main\\res\\layout\\activity_forget_pwd.xml"
     },
@@ -182,6 +190,10 @@
     {
         "merged": "E:\\Code\\Android\\MyApplication\\objLoader\\build\\intermediates\\res\\merged\\debug\\layout\\activity_side_pic.xml",
         "source": "E:\\Code\\Android\\MyApplication\\objLoader\\src\\main\\res\\layout\\activity_side_pic.xml"
+    },
+    {
+        "merged": "E:\\Code\\Android\\MyApplication\\objLoader\\build\\intermediates\\res\\merged\\debug\\layout\\item_lv_record_measure.xml",
+        "source": "E:\\Code\\Android\\MyApplication\\objLoader\\src\\main\\res\\layout\\item_lv_record_measure.xml"
     },
     {
         "merged": "E:\\Code\\Android\\MyApplication\\objLoader\\build\\intermediates\\res\\merged\\debug\\layout\\include_timepicker.xml",

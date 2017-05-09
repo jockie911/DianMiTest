@@ -26,7 +26,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@+id/iv_temp"
-            android:text="正面照"
+            android:text="@string/front_Pic"
             android:textColor="@color/title"
             android:layout_marginLeft="35dp"
             android:layout_marginBottom="10dp"/>
@@ -35,7 +35,7 @@
             android:layout_height="wrap_content"
             android:layout_below="@+id/iv_temp"
             android:layout_centerHorizontal="true"
-            android:text="侧面照"
+            android:text="@string/side_pic"
             android:textColor="@color/title"
             android:layout_marginLeft="35dp"
             android:layout_marginBottom="5dp"/>
@@ -45,7 +45,7 @@
             android:layout_below="@+id/iv_temp"
             android:layout_alignParentRight="true"
             android:layout_marginRight="30dp"
-            android:text="身高/体重"
+            android:text="@string/weight_height"
             android:textColor="#4a525b"
             android:layout_marginBottom="5dp"/>
     </RelativeLayout>

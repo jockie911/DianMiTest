@@ -1,5 +1,9 @@
 package com.example.objLoader.bean;
 
+import android.os.Parcel;
+import android.os.Parcelable;
+
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -18,7 +22,7 @@ public class MeasureRecordBean extends BaseRequestBean{
         this.data = data;
     }
 
-    public static class DataBean {
+    public static class DataBean implements Parcelable {
 
         private String id;
         private String objname;
@@ -75,7 +79,7 @@ public class MeasureRecordBean extends BaseRequestBean{
             this.info = info;
         }
 
-        public static class InfoBean {
+        public static class InfoBean implements Parcelable {
 
             private String name;
             private String value;
@@ -95,6 +99,77 @@ public class MeasureRecordBean extends BaseRequestBean{
             public void setValue(String value) {
                 this.value = value;
             }
+
+            @Override
+            public int describeContents() {
+                return 0;
+            }
+
+            @Override
+            public void writeToParcel(Parcel dest, int flags) {
+                dest.writeString(this.name);
+                dest.writeString(this.value);
+            }
+
+            public InfoBean() {
+            }
+
+            protected InfoBean(Parcel in) {
+                this.name = in.readString();
+                this.value = in.readString();
+            }
+
+            public static final Creator<InfoBean> CREATOR = new Creator<InfoBean>() {
+                @Override
+                public InfoBean createFromParcel(Parcel source) {
+                    return new InfoBean(source);
+                }
+
+                @Override
+                public InfoBean[] newArray(int size) {
+                    return new InfoBean[size];
+                }
+            };
         }
+
+        @Override
+        public int describeContents() {
+            return 0;
+        }
+
+        @Override
+        public void writeToParcel(Parcel dest, int flags) {
+            dest.writeString(this.id);
+            dest.writeString(this.objname);
+            dest.writeString(this.objurl);
+            dest.writeString(this.name);
+            dest.writeString(this.threeshowurl);
+            dest.writeList(this.info);
+        }
+
+        public DataBean() {
+        }
+
+        protected DataBean(Parcel in) {
+            this.id = in.readString();
+            this.objname = in.readString();
+            this.objurl = in.readString();
+            this.name = in.readString();
+            this.threeshowurl = in.readString();
+            this.info = new ArrayList<InfoBean>();
+            in.readList(this.info, InfoBean.class.getClassLoader());
+        }
+
+        public static final Parcelable.Creator<DataBean> CREATOR = new Parcelable.Creator<DataBean>() {
+            @Override
+            public DataBean createFromParcel(Parcel source) {
+                return new DataBean(source);
+            }
+
+            @Override
+            public DataBean[] newArray(int size) {
+                return new DataBean[size];
+            }
+        };
     }
 }

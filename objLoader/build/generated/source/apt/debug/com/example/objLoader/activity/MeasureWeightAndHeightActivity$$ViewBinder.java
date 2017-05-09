@@ -8,11 +8,11 @@ import butterknife.ButterKnife.ViewBinder;
 public class MeasureWeightAndHeightActivity$$ViewBinder<T extends com.example.objLoader.activity.MeasureWeightAndHeightActivity> implements ViewBinder<T> {
   @Override public void bind(final Finder finder, final T target, Object source) {
     View view;
-    view = finder.findRequiredView(source, 2131558572, "field 'pickerHeight'");
-    target.pickerHeight = finder.castView(view, 2131558572, "field 'pickerHeight'");
-    view = finder.findRequiredView(source, 2131558573, "field 'pickerWeight'");
-    target.pickerWeight = finder.castView(view, 2131558573, "field 'pickerWeight'");
-    view = finder.findRequiredView(source, 2131558552, "method 'onClick'");
+    view = finder.findRequiredView(source, 2131558575, "field 'pickerHeight'");
+    target.pickerHeight = finder.castView(view, 2131558575, "field 'pickerHeight'");
+    view = finder.findRequiredView(source, 2131558576, "field 'pickerWeight'");
+    target.pickerWeight = finder.castView(view, 2131558576, "field 'pickerWeight'");
+    view = finder.findRequiredView(source, 2131558554, "method 'onClick'");
     view.setOnClickListener(
       new butterknife.internal.DebouncingOnClickListener() {
         @Override public void doClick(

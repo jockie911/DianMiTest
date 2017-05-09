@@ -24,8 +24,7 @@
         android:id="@+id/sLayout_content"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:fadingEdge="none"
-         >
+        android:fadingEdge="none">
 
         <LinearLayout
             android:id="@+id/lLayout_content"
@@ -42,9 +41,8 @@
         android:layout_marginTop="8dp"
         android:background="@drawable/actionsheet_single_selector"
         android:gravity="center"
-        android:text="取消"
+        android:text="@string/cancel"
         android:textColor="@color/actionsheet_blue"
-        android:textSize="18sp"
-         />
+        android:textSize="18sp" />
 
 </LinearLayout>

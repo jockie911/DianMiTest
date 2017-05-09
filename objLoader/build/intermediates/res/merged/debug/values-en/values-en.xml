@@ -280,6 +280,7 @@
     <string name="app_name">DMe</string>
     <string name="auth_code_already">Verification code has been sent</string>
     <string name="auth_code_right">Verification code right</string>
+    <string name="auth_code_wrong">验证码格式错误</string>
     <string name="begin_measure">Begin measure</string>
     <string name="camear">Photograph</string>
     <string name="cancel">Cancel</string>
@@ -295,6 +296,7 @@
     <string name="change_username_save">Save</string>
     <string name="change_username_title">Username</string>
     <string name="clientError">Client Error</string>
+    <string name="compelete">完成</string>
     <string name="confirm">Confirm</string>
     <string name="delete">Delete</string>
     <string name="delete_log">Whether to delete the selected record</string>
@@ -361,6 +363,7 @@
     <string name="pwd_not_right">Again passwords do not match, please re-enter!</string>
     <string name="record">Recording</string>
     <string name="register_title">Register</string>
+    <string name="remain_time">剩余</string>
     <string name="right_mobile">Please enter the correct phone number</string>
     <string name="sava_record_name_hint">输入量身记录名称</string>
     <string name="save">Save</string>
@@ -485,4 +488,5 @@
     <string name="unKnownHostError">No server specified</string>
     <string name="upload_pic_error">Picture upload error!!!</string>
     <string name="username_save">Username Saved</string>
+    <string name="weight_height">身高/体重</string>
 </resources>

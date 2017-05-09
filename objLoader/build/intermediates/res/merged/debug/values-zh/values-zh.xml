@@ -10,6 +10,7 @@
     <string name="app_name">点米量身</string>
     <string name="auth_code_already">验证码已发送</string>
     <string name="auth_code_right">验证码提交正确</string>
+    <string name="auth_code_wrong">验证码格式错误</string>
     <string name="begin_measure">开始量身</string>
     <string name="camear">拍照</string>
     <string name="cancel">取消</string>
@@ -25,6 +26,7 @@
     <string name="change_username_save">保存</string>
     <string name="change_username_title">用户名</string>
     <string name="clientError">客户端发生错误</string>
+    <string name="compelete">完成</string>
     <string name="confirm">确认</string>
     <string name="delete">删除</string>
     <string name="delete_log">是否删除选中的记录</string>
@@ -91,6 +93,7 @@
     <string name="pwd_not_right">再次输入的密码不一致,请重新输入!</string>
     <string name="record">记录</string>
     <string name="register_title">注册</string>
+    <string name="remain_time">剩余</string>
     <string name="right_mobile">请输入正确的手机号码</string>
     <string name="sava_record_name_hint">输入量身记录名称</string>
     <string name="save">保存</string>
@@ -120,4 +123,5 @@
     <string name="unKnownHostError">未发现指定服务器</string>
     <string name="upload_pic_error">上传图片出错!!!</string>
     <string name="username_save">用户名已保存</string>
+    <string name="weight_height">身高/体重</string>
 </resources>

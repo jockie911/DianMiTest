@@ -136,7 +136,7 @@ public class RegisterActivity extends BaseActivity{
 		
 	}
 
-	private HttpCallBack<String> callBack = new HttpCallBack<String>() {
+	private HttpCallBack<BaseRequestBean> callBack = new HttpCallBack<BaseRequestBean>() {
 	
 		public void onSucceed(int what, BaseRequestBean bean) {
 			startActivity(new Intent(RegisterActivity.this, LoginActivity.class));
@@ -147,7 +147,6 @@ public class RegisterActivity extends BaseActivity{
 		public void onFailed(int what, String errorInfo) {
 			Toast.show(errorInfo);
 		};
-		
 	};
 	
 	

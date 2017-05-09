@@ -31,6 +31,7 @@ public class ActionSheetDialog {
 	private boolean showTitle = false;
 	private List<SheetItem> sheetItemList;
 	private Display display;
+	private View view;
 
 	public ActionSheetDialog(Context context) {
 		this.context = context;
@@ -41,7 +42,7 @@ public class ActionSheetDialog {
 
 	public ActionSheetDialog builder() {
 		// 获取Dialog布局
-		View view = LayoutInflater.from(context).inflate(
+		view = LayoutInflater.from(context).inflate(
 				R.layout.view_actionsheet, null);
 
 		// 设置Dialog最小宽度为屏幕宽度
@@ -69,8 +70,11 @@ public class ActionSheetDialog {
 		lp.x = 0;
 		lp.y = 0;
 		dialogWindow.setAttributes(lp);
-
 		return this;
+	}
+
+	public View getView(){
+		return view;
 	}
 
 	public ActionSheetDialog setTitle(String title) {

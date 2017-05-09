@@ -1,9 +1,11 @@
 package com.example.objLoader.activity.mywork;
 
 import android.content.Context;
+import android.os.Parcelable;
 import android.support.design.widget.TabLayout;
 import android.support.v4.app.Fragment;
 import android.support.v4.view.ViewPager;
+import android.text.TextUtils;
 import android.util.Log;
 import android.view.View;
 import android.view.inputmethod.InputMethodManager;
@@ -11,6 +13,7 @@ import android.widget.TextView;
 
 import com.example.objLoader.R;
 import com.example.objLoader.adapter.VpTableAdapter;
+import com.example.objLoader.bean.MeasureRecordBean;
 import com.example.objLoader.fragment.DetailClothesModelFragment;
 import com.example.objLoader.fragment.DetailsSizeFragment;
 import com.example.objLoader.fragment.ModelFragment;
@@ -36,6 +39,7 @@ public class DetailMeasureSizeActivity extends BaseActivity {
 
     protected List<String> tabTitleLists;
     protected List<Fragment> fmLists;
+    private MeasureRecordBean.DataBean itemdata;
 
     @Override
     protected int getLayoutRes() {
@@ -46,6 +50,9 @@ public class DetailMeasureSizeActivity extends BaseActivity {
     protected void initData() {
         boolean issave = getIntent().getBooleanExtra(IConstant.IS_SAVE, false);
         tvSaveRecord.setVisibility(issave ? View.VISIBLE : View.GONE);
+
+        itemdata = getIntent().getParcelableExtra(IConstant.ITEM_DATA);
+
 
         tabTitleLists = new ArrayList<>();
         tabTitleLists.add("详细尺寸");
@@ -72,6 +79,27 @@ public class DetailMeasureSizeActivity extends BaseActivity {
         }
     }
 
+    public List<MeasureRecordBean.DataBean.InfoBean> getDetailInfo(){
+        if(itemdata == null) return null;
+        return this.itemdata.getInfo();
+    }
+
+    public String get3DTreeUrl() {
+        if(itemdata == null) return "";
+        return itemdata.getThreeshowurl();
+    }
+
+    public int getGender(){
+        if(itemdata != null && itemdata.getInfo() != null){
+            String value = itemdata.getInfo().get(itemdata.getInfo().size() - 1).getValue();
+            if(TextUtils.equals("女",value)){
+                return IConstant.GENDER_FEMALE;
+            }else if(TextUtils.equals("男",value)){
+                return IConstant.GENDEER_MALE;
+            }
+        }
+        return IConstant.ZERO;
+    }
     /**
      * save current record
      */
@@ -89,4 +117,6 @@ public class DetailMeasureSizeActivity extends BaseActivity {
             }
         }).show();
     }
+
+
 }

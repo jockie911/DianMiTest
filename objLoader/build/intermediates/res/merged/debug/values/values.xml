@@ -1,30 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources xmlns:ns1="http://schemas.android.com/tools">
     <string-array name="WheelArrayDefault">
-        <item>AigeStudio</item>
-        <item>Aige</item>
-        <item>爱哥</item>
-        <item>الحب  اخي</item>
-        <item>jeg elsker</item>
-        <item>사랑해요 형</item>
-        <item>Amor de irmão</item>
-        <item>armastan</item>
-        <item>愛の兄</item>
-        <item>обичам те</item>
-        <item>любовь - братa</item>
-        <item>miłość bracie</item>
-        <item>Liebe</item>
-        <item>Lamour</item>
-        <item>rakastan sinua</item>
-        <item>láska..</item>
-        <item>dragostea.</item>
-        <item>jag älskar</item>
-        <item>ljubezen, brat.</item>
-        <item>愛哥</item>
-        <item>ชอบพี่</item>
-        <item>αγάπη μου</item>
-        <item>a szerelem.</item>
-        <item>Amore, fratello.</item>
+
     </string-array>
     <string-array name="WheelArrayWeek">
         <item>Monday</item>
@@ -2428,6 +2405,7 @@
     <string name="appbar_scrolling_view_behavior" translatable="false">android.support.design.widget.AppBarLayout$ScrollingViewBehavior</string>
     <string name="auth_code_already">验证码已发送</string>
     <string name="auth_code_right">验证码提交正确</string>
+    <string name="auth_code_wrong">验证码格式错误</string>
     <string name="begin_measure">开始量身</string>
     <string name="bottom_clothes">下装</string>
     <string name="bottom_sheet_behavior" translatable="false">android.support.design.widget.BottomSheetBehavior</string>
@@ -2446,6 +2424,7 @@
     <string name="change_username_title">用户名</string>
     <string name="character_counter_pattern" translatable="false">%1$d / %2$d</string>
     <string name="clientError">客户端发生错误</string>
+    <string name="compelete">完成</string>
     <string name="confirm">确认</string>
     <string name="delete">删除</string>
     <string name="delete_log">是否删除选中的记录</string>
@@ -2520,6 +2499,7 @@
     <string name="pwd_not_right">再次输入的密码不一致,请重新输入!</string>
     <string name="record">记录</string>
     <string name="register_title">注册</string>
+    <string name="remain_time">剩余</string>
     <string name="right_mobile">请输入正确的手机号码</string>
     <string name="sava_record_name_hint">输入量身记录名称</string>
     <string name="save">保存</string>
@@ -2647,6 +2627,7 @@
     <string name="unKnownHostError">未发现指定服务器</string>
     <string name="upload_pic_error">上传图片出错!!!</string>
     <string name="username_save">用户名已保存</string>
+    <string name="weight_height">身高/体重</string>
     <style name="ActionSheetDialogAnimation" parent="@android:style/Animation.Dialog">
         <item name="android:windowEnterAnimation">@anim/actionsheet_dialog_in</item>
         <item name="android:windowExitAnimation">@anim/actionsheet_dialog_out</item>

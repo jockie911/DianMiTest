@@ -61,14 +61,6 @@ public class SplashActivity extends BaseActivity {
 
             @Override
             public void onAnimationEnd(Animation animation) {
-//                isAniOver = true;
-//                handler.postDelayed(new Runnable() {
-//                    @Override
-//                    public void run() {
-//                        count ++ ;
-//                        setFinish();
-//                    }
-//                },500);
                 startActivity(new Intent(SplashActivity.this,MainActivity.class));
                 finish();
             }
@@ -79,28 +71,7 @@ public class SplashActivity extends BaseActivity {
             }
         });
 
-
-
-//        handler.postDelayed(new Runnable() {
-//            @Override
-//            public void run() {
-//                startActivity(new Intent(SplashActivity.this,MainActivity.class));
-//                finish();
-//            }
-//        },2000);
-    }
-
-    private android.os.Handler handler = new android.os.Handler(){
-        @Override
-        public void handleMessage(Message msg) {
-            super.handleMessage(msg);
-        }
-    };
-
-    @Override
-    protected void onDestroy() {
-        handler.removeCallbacksAndMessages(null);
-        super.onDestroy();
+        //TODO check out new version to update --> force update/choose update
     }
 
     @Override

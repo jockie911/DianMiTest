@@ -8,10 +8,10 @@ import butterknife.ButterKnife.ViewBinder;
 public class SidePicActivity$$ViewBinder<T extends com.example.objLoader.activity.SidePicActivity> implements ViewBinder<T> {
   @Override public void bind(final Finder finder, final T target, Object source) {
     View view;
-    view = finder.findRequiredView(source, 2131558592, "field 'iv_side'");
-    target.iv_side = finder.castView(view, 2131558592, "field 'iv_side'");
-    view = finder.findRequiredView(source, 2131558593, "field 'btn_side_camera' and method 'onClick'");
-    target.btn_side_camera = finder.castView(view, 2131558593, "field 'btn_side_camera'");
+    view = finder.findRequiredView(source, 2131558599, "field 'iv_side'");
+    target.iv_side = finder.castView(view, 2131558599, "field 'iv_side'");
+    view = finder.findRequiredView(source, 2131558600, "field 'btn_side_camera' and method 'onClick'");
+    target.btn_side_camera = finder.castView(view, 2131558600, "field 'btn_side_camera'");
     view.setOnClickListener(
       new butterknife.internal.DebouncingOnClickListener() {
         @Override public void doClick(
@@ -20,8 +20,8 @@ public class SidePicActivity$$ViewBinder<T extends com.example.objLoader.activit
           target.onClick(p0);
         }
       });
-    view = finder.findRequiredView(source, 2131558594, "field 'btn_side_album' and method 'onClick'");
-    target.btn_side_album = finder.castView(view, 2131558594, "field 'btn_side_album'");
+    view = finder.findRequiredView(source, 2131558601, "field 'btn_side_album' and method 'onClick'");
+    target.btn_side_album = finder.castView(view, 2131558601, "field 'btn_side_album'");
     view.setOnClickListener(
       new butterknife.internal.DebouncingOnClickListener() {
         @Override public void doClick(
@@ -30,8 +30,8 @@ public class SidePicActivity$$ViewBinder<T extends com.example.objLoader.activit
           target.onClick(p0);
         }
       });
-    view = finder.findRequiredView(source, 2131558569, "field 'tv_start_measure' and method 'onClick'");
-    target.tv_start_measure = finder.castView(view, 2131558569, "field 'tv_start_measure'");
+    view = finder.findRequiredView(source, 2131558572, "field 'tv_start_measure' and method 'onClick'");
+    target.tv_start_measure = finder.castView(view, 2131558572, "field 'tv_start_measure'");
     view.setOnClickListener(
       new butterknife.internal.DebouncingOnClickListener() {
         @Override public void doClick(

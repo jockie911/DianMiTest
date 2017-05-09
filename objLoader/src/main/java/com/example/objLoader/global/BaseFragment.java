@@ -8,7 +8,10 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.example.objLoader.istatic.IConstant;
+
 import java.util.ArrayList;
+import java.util.Calendar;
 import java.util.List;
 
 import butterknife.ButterKnife;
@@ -16,7 +19,7 @@ import butterknife.ButterKnife;
 /**
  * Created by jockie on 2016/7/8.
  */
-public abstract class BaseFragment extends Fragment{
+public abstract class BaseFragment extends Fragment implements View.OnClickListener{
 
     protected Context mContext;
     protected View rootView;
@@ -80,5 +83,13 @@ public abstract class BaseFragment extends Fragment{
     protected List<Fragment> mFragment = new ArrayList<>();
     protected List<Fragment> getFragment(){
         return mFragment;
+    }
+
+    protected boolean isDoubleClick(View v){
+        Object tag = v.getTag(v.getId());
+        long beforeTimemiles = tag != null ? (long) tag : 0;
+        long timeInMillis = Calendar.getInstance().getTimeInMillis();
+        v.setTag(v.getId(),timeInMillis);
+        return timeInMillis - beforeTimemiles < IConstant.NO_DOUBLE_CLICK_TIME;
     }
 }

@@ -3,7 +3,6 @@ package com.example.objLoader.activity;
 import android.content.Intent;
 import android.text.InputType;
 import android.view.View;
-import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -100,7 +99,7 @@ public class LoginActivity extends BaseActivity {
 		CallServer.getInstance().add(this, loginRequest, callBack, Constants.REGISTER_WHAT, true, false,BaseRequestBean.class);
 	}
 	
-	private HttpCallBack<String> callBack = new HttpCallBack<String>() {
+	private HttpCallBack<BaseRequestBean> callBack = new HttpCallBack<BaseRequestBean>() {
 		
 		public void onSucceed(int what, BaseRequestBean bean) {
 			SharedPreferencesDAO.getInstance(LoginActivity.this).putString(IConstant.MOBILE, username);
@@ -110,9 +109,6 @@ public class LoginActivity extends BaseActivity {
 				startActivity(new Intent(LoginActivity.this,AccountInfoActivity.class));
 			}
 			finish();
-		};
-		
-		public void onSucceed(int what, com.yolanda.nohttp.rest.Response<String> response) {
 		};
 		
 		public void onFailed(int what, String errorInfo) {

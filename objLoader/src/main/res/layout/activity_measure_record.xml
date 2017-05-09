@@ -1,14 +1,43 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/color_base_deep"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical"
     tools:context="com.example.objLoader.activity.mywork.MeasureRecordActivity">
 
-    <include layout="@layout/base_title_bar"/>
+    <include android:id="@+id/temp"
+        layout="@layout/base_title_bar"/>
 
     <ListView
+        android:id="@+id/lv_record_measure"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
-</LinearLayout>
+        android:layout_height="wrap_content"
+        android:dividerHeight="0dp"
+        android:divider="@null"
+        android:layout_below="@+id/temp"
+        android:layout_marginTop="20dp"/>
+
+    <RelativeLayout
+        android:id="@+id/rel_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@color/color_base"
+        android:layout_alignParentBottom="true"
+        android:paddingLeft="10dp"
+        android:visibility="invisible"
+        android:paddingRight="10dp">
+        <TextView
+            android:id="@+id/tv_delete_record"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_centerInParent="true"
+            android:text="@string/delete"
+            android:gravity="center"
+            android:textSize="16sp"
+            android:textColor="@color/yollow"
+            android:background="@drawable/login_unbtn_round"/>
+    </RelativeLayout>
+</RelativeLayout>
