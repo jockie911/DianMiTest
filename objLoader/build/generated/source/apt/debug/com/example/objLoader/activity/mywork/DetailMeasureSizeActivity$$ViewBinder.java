@@ -8,12 +8,12 @@ import butterknife.ButterKnife.ViewBinder;
 public class DetailMeasureSizeActivity$$ViewBinder<T extends com.example.objLoader.activity.mywork.DetailMeasureSizeActivity> implements ViewBinder<T> {
   @Override public void bind(final Finder finder, final T target, Object source) {
     View view;
-    view = finder.findRequiredView(source, 2131558540, "field 'tableLayout'");
-    target.tableLayout = finder.castView(view, 2131558540, "field 'tableLayout'");
-    view = finder.findRequiredView(source, 2131558541, "field 'vpLove'");
-    target.vpLove = finder.castView(view, 2131558541, "field 'vpLove'");
-    view = finder.findRequiredView(source, 2131558542, "field 'tvSaveRecord' and method 'onClick'");
-    target.tvSaveRecord = finder.castView(view, 2131558542, "field 'tvSaveRecord'");
+    view = finder.findRequiredView(source, 2131624076, "field 'tableLayout'");
+    target.tableLayout = finder.castView(view, 2131624076, "field 'tableLayout'");
+    view = finder.findRequiredView(source, 2131624077, "field 'vpLove'");
+    target.vpLove = finder.castView(view, 2131624077, "field 'vpLove'");
+    view = finder.findRequiredView(source, 2131624078, "field 'tvSaveRecord' and method 'onClick'");
+    target.tvSaveRecord = finder.castView(view, 2131624078, "field 'tvSaveRecord'");
     view.setOnClickListener(
       new butterknife.internal.DebouncingOnClickListener() {
         @Override public void doClick(

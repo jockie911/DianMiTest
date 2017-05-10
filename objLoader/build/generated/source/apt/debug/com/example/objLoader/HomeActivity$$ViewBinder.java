@@ -8,8 +8,8 @@ import butterknife.ButterKnife.ViewBinder;
 public class HomeActivity$$ViewBinder<T extends com.example.objLoader.HomeActivity> implements ViewBinder<T> {
   @Override public void bind(final Finder finder, final T target, Object source) {
     View view;
-    view = finder.findRequiredView(source, 2131558557, "field 'rb_celiang' and method 'onClick'");
-    target.rb_celiang = finder.castView(view, 2131558557, "field 'rb_celiang'");
+    view = finder.findRequiredView(source, 2131624093, "field 'rb_celiang' and method 'onClick'");
+    target.rb_celiang = finder.castView(view, 2131624093, "field 'rb_celiang'");
     view.setOnClickListener(
       new butterknife.internal.DebouncingOnClickListener() {
         @Override public void doClick(
@@ -18,8 +18,8 @@ public class HomeActivity$$ViewBinder<T extends com.example.objLoader.HomeActivi
           target.onClick(p0);
         }
       });
-    view = finder.findRequiredView(source, 2131558558, "field 'rb_chicun' and method 'onClick'");
-    target.rb_chicun = finder.castView(view, 2131558558, "field 'rb_chicun'");
+    view = finder.findRequiredView(source, 2131624094, "field 'rb_chicun' and method 'onClick'");
+    target.rb_chicun = finder.castView(view, 2131624094, "field 'rb_chicun'");
     view.setOnClickListener(
       new butterknife.internal.DebouncingOnClickListener() {
         @Override public void doClick(
@@ -28,8 +28,8 @@ public class HomeActivity$$ViewBinder<T extends com.example.objLoader.HomeActivi
           target.onClick(p0);
         }
       });
-    view = finder.findRequiredView(source, 2131558559, "field 'rb_youxi' and method 'onClick'");
-    target.rb_youxi = finder.castView(view, 2131558559, "field 'rb_youxi'");
+    view = finder.findRequiredView(source, 2131624095, "field 'rb_youxi' and method 'onClick'");
+    target.rb_youxi = finder.castView(view, 2131624095, "field 'rb_youxi'");
     view.setOnClickListener(
       new butterknife.internal.DebouncingOnClickListener() {
         @Override public void doClick(
@@ -38,8 +38,8 @@ public class HomeActivity$$ViewBinder<T extends com.example.objLoader.HomeActivi
           target.onClick(p0);
         }
       });
-    view = finder.findRequiredView(source, 2131558560, "field 'rb_dingzhi' and method 'onClick'");
-    target.rb_dingzhi = finder.castView(view, 2131558560, "field 'rb_dingzhi'");
+    view = finder.findRequiredView(source, 2131624096, "field 'rb_dingzhi' and method 'onClick'");
+    target.rb_dingzhi = finder.castView(view, 2131624096, "field 'rb_dingzhi'");
     view.setOnClickListener(
       new butterknife.internal.DebouncingOnClickListener() {
         @Override public void doClick(
@@ -48,8 +48,8 @@ public class HomeActivity$$ViewBinder<T extends com.example.objLoader.HomeActivi
           target.onClick(p0);
         }
       });
-    view = finder.findRequiredView(source, 2131558561, "field 'rb_shop' and method 'onClick'");
-    target.rb_shop = finder.castView(view, 2131558561, "field 'rb_shop'");
+    view = finder.findRequiredView(source, 2131624097, "field 'rb_shop' and method 'onClick'");
+    target.rb_shop = finder.castView(view, 2131624097, "field 'rb_shop'");
     view.setOnClickListener(
       new butterknife.internal.DebouncingOnClickListener() {
         @Override public void doClick(

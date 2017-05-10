@@ -340,6 +340,10 @@
         "source": "E:\\Code\\Android\\MyApplication\\objLoader\\src\\main\\res\\layout\\activity_front_pic.xml"
     },
     {
+        "merged": "E:\\Code\\Android\\MyApplication\\objLoader\\build\\intermediates\\res\\merged\\debug\\layout\\custom_camera_container.xml",
+        "source": "E:\\Code\\Android\\MyApplication\\objLoader\\src\\main\\res\\layout\\custom_camera_container.xml"
+    },
+    {
         "merged": "E:\\Code\\Android\\MyApplication\\objLoader\\build\\intermediates\\res\\merged\\debug\\layout\\include_optionspicker.xml",
         "source": "E:\\Code\\Android\\MyApplication\\objLoader\\src\\main\\res\\layout\\include_optionspicker.xml"
     },

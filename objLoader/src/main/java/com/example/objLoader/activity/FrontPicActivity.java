@@ -2,6 +2,8 @@ package com.example.objLoader.activity;
 
 
 import android.content.Intent;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.net.Uri;
 import android.provider.MediaStore;
 import android.support.v4.app.FragmentTransaction;
@@ -13,12 +15,17 @@ import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
 import com.example.objLoader.R;
+import com.example.objLoader.bean.PicPathEvent;
 import com.example.objLoader.fragment.PhotoCommandFragment;
 import com.example.objLoader.global.BaseActivity;
 import com.example.objLoader.istatic.IConstant;
 import com.example.objLoader.utils.SharedPreferencesDAO;
 import com.example.objLoader.utils.Toast;
 import com.example.objLoader.utils.Utils;
+
+import org.greenrobot.eventbus.EventBus;
+import org.greenrobot.eventbus.Subscribe;
+import org.greenrobot.eventbus.ThreadMode;
 
 import java.io.File;
 
@@ -60,6 +67,8 @@ public class FrontPicActivity extends BaseActivity {
 	@Override
 	protected void initData() {
 		activity = this;
+		if(!EventBus.getDefault().isRegistered(this))
+			EventBus.getDefault().register(this);
 		photoCommandFragment = new PhotoCommandFragment(IConstant.FRONT_PIC_PATH);
 
 		tvTitle.setText(R.string.front_Pic);
@@ -67,8 +76,10 @@ public class FrontPicActivity extends BaseActivity {
 		frontPath = SharedPreferencesDAO.getInstance(mContext).getString(IConstant.FRONT_PIC_PATH);
 		if(!TextUtils.isEmpty(frontPath)){
 			File file = new File(frontPath);
-			if(file.isFile() && file.length() > 0)
-				Glide.with(this).load(file).into(iv_front);
+
+			Bitmap bitmap = BitmapFactory.decodeFile(frontPath);
+
+			iv_front.setImageBitmap(bitmap);
 		}
 	}
 
@@ -142,5 +153,29 @@ public class FrontPicActivity extends BaseActivity {
 			fragmentTransaction.hide(photoCommandFragment);
 		}
 		fragmentTransaction.commit();
+	}
+
+	/**
+	 * 正面选择相机成功返回照片
+	 */
+	@Subscribe(threadMode = ThreadMode.MAIN)
+	public void setPicSuccessAndCloseCameraSurfaceView(PicPathEvent obj){
+		File file = new File(obj.getPath());
+
+		long s = file.length();
+
+		String absolutePath = file.getAbsolutePath();
+		if(file.length() > 0){
+
+			Glide.with(this).load(file).into(iv_front);
+		}
+		initShowFragment(false);
+	}
+
+	@Override
+	protected void onDestroy() {
+		if(EventBus.getDefault().isRegistered(this))
+			EventBus.getDefault().unregister(this);
+		super.onDestroy();
 	}
 }

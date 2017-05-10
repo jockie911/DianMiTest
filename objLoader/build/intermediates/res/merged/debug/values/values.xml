@@ -687,6 +687,7 @@
             <enum name="mini" value="1"/>
         </attr><attr name="elevation"/><attr format="dimension" name="pressedTranslationZ"/><attr format="dimension" name="borderWidth"/><attr format="boolean" name="useCompatPadding"/></declare-styleable>
     <declare-styleable name="FloatingActionButton_Behavior_Layout"><attr format="boolean" name="behavior_autoHide"/></declare-styleable>
+    <declare-styleable name="FocusImageView"><attr format="integer" name="focus_focusing_id"/><attr format="integer" name="focus_success_id"/><attr format="integer" name="focus_fail_id"/></declare-styleable>
     <declare-styleable name="ForegroundLinearLayout"><attr name="android:foreground"/><attr name="android:foregroundGravity"/><attr format="boolean" name="foregroundInsidePadding"/></declare-styleable>
     <declare-styleable name="LinearConstraintLayout"><attr name="android:orientation"/></declare-styleable>
     <declare-styleable name="LinearLayoutCompat"><attr name="android:orientation"/><attr name="android:gravity"/><attr name="android:baselineAligned"/><attr name="android:baselineAlignedChildIndex"/><attr name="android:weightSum"/><attr format="boolean" name="measureWithLargestChild"/><attr name="divider"/><attr name="showDividers">
@@ -2494,6 +2495,9 @@
     <string name="pickerview_month">月</string>
     <string name="pickerview_seconds">秒</string>
     <string name="pickerview_year">年</string>
+    <string name="product_count_in_meila">%s件收录，国内最大的妆品信息库</string>
+    <string name="product_ingredients">查看成分分析</string>
+    <string name="product_more_detail">更多详情</string>
     <string name="pwd_equals">两次密码输入不一致,请重新输入</string>
     <string name="pwd_lenght">请输入密码(6-12个字母、数字)</string>
     <string name="pwd_not_right">再次输入的密码不一致,请重新输入!</string>
@@ -2621,8 +2625,17 @@
     <string name="status_bar_notification_info_overflow">999+</string>
     <string name="submit">提交</string>
     <string name="timeoutError">请求超时,服务器无响应</string>
+    <string name="tips_camera_forbidden">相机被禁用 请修改应用权限</string>
+    <string name="tips_camera_not_exist">不存在相机设备</string>
     <string name="tips_for_measure">为保障量身质量及准确性，请你穿着较为贴身的义务进行拍照，或选择贴身的照片</string>
+    <string name="tips_sdcard_notexist">SD卡不存在</string>
     <string name="top_clothes">上装</string>
+    <string name="topic_camera_back">后镜头</string>
+    <string name="topic_camera_flashlight_auto">自动</string>
+    <string name="topic_camera_flashlight_off">关闭</string>
+    <string name="topic_camera_flashlight_on">开启</string>
+    <string name="topic_camera_front">前镜头</string>
+    <string name="topic_camera_takephoto_failure">拍照竟然失败了！</string>
     <string name="uRLError">URL错误</string>
     <string name="unKnownHostError">未发现指定服务器</string>
     <string name="upload_pic_error">上传图片出错!!!</string>

@@ -4,11 +4,18 @@ import android.annotation.SuppressLint;
 import android.text.TextUtils;
 import android.view.LayoutInflater;
 import android.view.View;
+import android.widget.ImageView;
 
+import com.bumptech.glide.Glide;
 import com.example.objLoader.R;
 import com.example.objLoader.activity.FrontPicActivity;
 import com.example.objLoader.activity.SidePicActivity;
 import com.example.objLoader.istatic.IConstant;
+import com.example.objLoader.wedgit.CameraSurfaceView;
+import com.example.objLoader.wedgit.camera.CameraManager;
+import com.example.objLoader.wedgit.camera.SquareCameraContainer;
+
+import java.io.File;
 
 import butterknife.Bind;
 import butterknife.OnClick;
@@ -19,6 +26,13 @@ import butterknife.OnClick;
 
 @SuppressLint("ValidFragment")
 public class PhotoCommandFragment extends com.example.objLoader.global.BaseFragment {
+
+    @Bind(R.id.iv_take_photo)
+    ImageView ivTakePhoto;
+//    @Bind(R.id.camera_surfaceview)
+//    CameraSurfaceView cameraSurfaceView;
+    @Bind(R.id.cameraContainer)
+    SquareCameraContainer mCameraContainer;
 
     private String frontOrSide;
 
@@ -34,10 +48,14 @@ public class PhotoCommandFragment extends com.example.objLoader.global.BaseFragm
 
     @Override
     protected void initData() {
+        mCameraContainer.bindActivity((FrontPicActivity) getActivity());
 
+        CameraManager mCameraManager = CameraManager.getInstance(getActivity());
+
+//        mCameraManager.bindOptionMenuView();
     }
 
-    @OnClick({R.id.iv_close})
+    @OnClick({R.id.iv_close,R.id.iv_take_photo})
     @Override
     public void onClick(View v) {
         if(isDoubleClick(v)) return;
@@ -50,6 +68,9 @@ public class PhotoCommandFragment extends com.example.objLoader.global.BaseFragm
 //                        ((SidePicActivity)getActivity()).initShowFragment(false);
                     }
                 }
+                break;
+            case R.id.iv_take_photo:
+//                cameraSurfaceView.takePhoto();
                 break;
         }
     }

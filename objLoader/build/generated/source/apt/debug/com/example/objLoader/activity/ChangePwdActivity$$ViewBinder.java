@@ -8,12 +8,12 @@ import butterknife.ButterKnife.ViewBinder;
 public class ChangePwdActivity$$ViewBinder<T extends com.example.objLoader.activity.ChangePwdActivity> implements ViewBinder<T> {
   @Override public void bind(final Finder finder, final T target, Object source) {
     View view;
-    view = finder.findRequiredView(source, 2131558532, "field 'et_old_pwd'");
-    target.et_old_pwd = finder.castView(view, 2131558532, "field 'et_old_pwd'");
-    view = finder.findRequiredView(source, 2131558535, "field 'et_new_pwd'");
-    target.et_new_pwd = finder.castView(view, 2131558535, "field 'et_new_pwd'");
-    view = finder.findRequiredView(source, 2131558533, "field 'ivEyeOldPwd' and method 'onClick'");
-    target.ivEyeOldPwd = finder.castView(view, 2131558533, "field 'ivEyeOldPwd'");
+    view = finder.findRequiredView(source, 2131624068, "field 'et_old_pwd'");
+    target.et_old_pwd = finder.castView(view, 2131624068, "field 'et_old_pwd'");
+    view = finder.findRequiredView(source, 2131624071, "field 'et_new_pwd'");
+    target.et_new_pwd = finder.castView(view, 2131624071, "field 'et_new_pwd'");
+    view = finder.findRequiredView(source, 2131624069, "field 'ivEyeOldPwd' and method 'onClick'");
+    target.ivEyeOldPwd = finder.castView(view, 2131624069, "field 'ivEyeOldPwd'");
     view.setOnClickListener(
       new butterknife.internal.DebouncingOnClickListener() {
         @Override public void doClick(
@@ -22,8 +22,8 @@ public class ChangePwdActivity$$ViewBinder<T extends com.example.objLoader.activ
           target.onClick(p0);
         }
       });
-    view = finder.findRequiredView(source, 2131558536, "field 'ivEyeNewPwd' and method 'onClick'");
-    target.ivEyeNewPwd = finder.castView(view, 2131558536, "field 'ivEyeNewPwd'");
+    view = finder.findRequiredView(source, 2131624072, "field 'ivEyeNewPwd' and method 'onClick'");
+    target.ivEyeNewPwd = finder.castView(view, 2131624072, "field 'ivEyeNewPwd'");
     view.setOnClickListener(
       new butterknife.internal.DebouncingOnClickListener() {
         @Override public void doClick(
@@ -32,7 +32,7 @@ public class ChangePwdActivity$$ViewBinder<T extends com.example.objLoader.activ
           target.onClick(p0);
         }
       });
-    view = finder.findRequiredView(source, 2131558610, "method 'onClick'");
+    view = finder.findRequiredView(source, 2131624146, "method 'onClick'");
     view.setOnClickListener(
       new butterknife.internal.DebouncingOnClickListener() {
         @Override public void doClick(

@@ -8,11 +8,11 @@ import butterknife.ButterKnife.ViewBinder;
 public class MeasureRecordActivity$$ViewBinder<T extends com.example.objLoader.activity.mywork.MeasureRecordActivity> implements ViewBinder<T> {
   @Override public void bind(final Finder finder, final T target, Object source) {
     View view;
-    view = finder.findRequiredView(source, 2131558578, "field 'lvRecordMeasure'");
-    target.lvRecordMeasure = finder.castView(view, 2131558578, "field 'lvRecordMeasure'");
-    view = finder.findRequiredView(source, 2131558579, "field 'relBottom'");
-    target.relBottom = finder.castView(view, 2131558579, "field 'relBottom'");
-    view = finder.findRequiredView(source, 2131558610, "method 'onClick'");
+    view = finder.findRequiredView(source, 2131624114, "field 'lvRecordMeasure'");
+    target.lvRecordMeasure = finder.castView(view, 2131624114, "field 'lvRecordMeasure'");
+    view = finder.findRequiredView(source, 2131624115, "field 'relBottom'");
+    target.relBottom = finder.castView(view, 2131624115, "field 'relBottom'");
+    view = finder.findRequiredView(source, 2131624146, "method 'onClick'");
     view.setOnClickListener(
       new butterknife.internal.DebouncingOnClickListener() {
         @Override public void doClick(
@@ -21,7 +21,7 @@ public class MeasureRecordActivity$$ViewBinder<T extends com.example.objLoader.a
           target.onClick(p0);
         }
       });
-    view = finder.findRequiredView(source, 2131558580, "method 'onClick'");
+    view = finder.findRequiredView(source, 2131624116, "method 'onClick'");
     view.setOnClickListener(
       new butterknife.internal.DebouncingOnClickListener() {
         @Override public void doClick(

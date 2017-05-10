@@ -16,6 +16,10 @@
         "source": "C:\\Users\\yc\\.android\\build-cache\\d0928f8ffb5d248f984d90ffe3601d0e67dd1423\\output\\res\\anim\\abc_slide_out_top.xml"
     },
     {
+        "merged": "E:\\Code\\Android\\MyApplication\\objLoader\\build\\intermediates\\res\\merged\\debug\\anim\\focusview_show.xml",
+        "source": "E:\\Code\\Android\\MyApplication\\objLoader\\src\\main\\res\\anim\\focusview_show.xml"
+    },
+    {
         "merged": "E:\\Code\\Android\\MyApplication\\objLoader\\build\\intermediates\\res\\merged\\debug\\anim\\actionsheet_dialog_out.xml",
         "source": "E:\\Code\\Android\\MyApplication\\objLoader\\src\\main\\res\\anim\\actionsheet_dialog_out.xml"
     },

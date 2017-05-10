@@ -21,6 +21,8 @@ public class IConstant {
 
     public static String FRONT_PIC_PATH = "frontPicPath";
     public static String SIDE_PIC_PATH = "sidePicPath";
+    public static final String SD_CARD = "/sdcard/yc";
+    public static final String JPG = ".jpg";
 
     public static final String ITEM_DATA = "itemdata";
 
