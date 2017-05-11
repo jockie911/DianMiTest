@@ -4,7 +4,9 @@ import android.annotation.SuppressLint;
 import android.text.TextUtils;
 import android.view.LayoutInflater;
 import android.view.View;
+import android.widget.ImageButton;
 import android.widget.ImageView;
+import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
 import com.example.objLoader.R;
@@ -27,14 +29,15 @@ import butterknife.OnClick;
 @SuppressLint("ValidFragment")
 public class PhotoCommandFragment extends com.example.objLoader.global.BaseFragment {
 
-    @Bind(R.id.iv_take_photo)
-    ImageView ivTakePhoto;
-//    @Bind(R.id.camera_surfaceview)
-//    CameraSurfaceView cameraSurfaceView;
     @Bind(R.id.cameraContainer)
     SquareCameraContainer mCameraContainer;
+    @Bind(R.id.tv_flashlight)
+    TextView mFlashLight;
+    @Bind(R.id.ib_take_photo)
+    ImageButton mTakePhoto;
 
     private String frontOrSide;
+    private CameraManager mCameraManager;
 
     @SuppressLint("ValidFragment")
     public PhotoCommandFragment(String frontOrSide) {
@@ -43,24 +46,26 @@ public class PhotoCommandFragment extends com.example.objLoader.global.BaseFragm
 
     @Override
     protected View inflater(LayoutInflater inflater) {
-        return inflater.inflate(R.layout.fragment_photo_command,null);
+        return inflater.inflate(R.layout.fragment_photo_command,null,true);
     }
 
     @Override
     protected void initData() {
         mCameraContainer.bindActivity((FrontPicActivity) getActivity());
 
-        CameraManager mCameraManager = CameraManager.getInstance(getActivity());
+        mCameraManager = CameraManager.getInstance(getActivity());
 
-//        mCameraManager.bindOptionMenuView();
+        mCameraManager.bindOptionMenuView(mFlashLight,null);
+
+        mCameraContainer.bindActivity((FrontPicActivity) getActivity());
     }
 
-    @OnClick({R.id.iv_close,R.id.iv_take_photo})
+    @OnClick({R.id.ib_close,R.id.ib_take_photo,R.id.tv_flashlight})
     @Override
     public void onClick(View v) {
         if(isDoubleClick(v)) return;
         switch (v.getId()){
-            case R.id.iv_close:
+            case R.id.ib_close:
                 if(getActivity() != null){
                     if(isFromFront()){
                         ((FrontPicActivity)getActivity()).initShowFragment(false);
@@ -69,8 +74,14 @@ public class PhotoCommandFragment extends com.example.objLoader.global.BaseFragm
                     }
                 }
                 break;
-            case R.id.iv_take_photo:
+            case R.id.ib_take_photo:
 //                cameraSurfaceView.takePhoto();
+                mCameraContainer.takePicture();
+
+//                ((FrontPicActivity)getActivity()).setCurrentBitmp();
+                break;
+            case R.id.tv_flashlight:
+                mCameraContainer.switchFlashMode();
                 break;
         }
     }
@@ -81,5 +92,38 @@ public class PhotoCommandFragment extends com.example.objLoader.global.BaseFragm
      */
     private boolean isFromFront(){
         return TextUtils.equals(frontOrSide, IConstant.FRONT_PIC_PATH);
+    }
+
+    @Override
+    public void onStart() {
+        super.onStart();
+        if(mCameraContainer != null)
+            mCameraContainer.onStart();
+    }
+
+    @Override
+    public void onStop() {
+        super.onStop();
+        if(mCameraContainer != null)
+            mCameraContainer.onStop();
+    }
+
+//    @Override
+//    public void onHiddenChanged(boolean hidden) {
+//        super.onHiddenChanged(hidden);
+//        if(hidden){
+//            if(mCameraContainer != null)
+//                mCameraContainer.onStop();
+//        }else{
+//            if(mCameraContainer != null)
+//                mCameraContainer.onStart();
+//        }
+//    }
+
+    @Override
+    public void onDestroy() {
+        super.onDestroy();
+        mCameraManager.unbinding();
+        mCameraManager.releaseActivityCamera();
     }
 }

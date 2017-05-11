@@ -2,6 +2,7 @@ package com.example.objLoader.activity;
 
 import android.content.Intent;
 import android.text.InputType;
+import android.text.TextUtils;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.ImageView;
@@ -68,10 +69,10 @@ public class LoginActivity extends BaseActivity {
 			login();
 			break;
 		case R.id.tv_right_title_bar:
-			startActivity(new Intent(LoginActivity.this, RegisterActivity.class));
+			startActivity(false);
 			break;
 		case R.id.tv_forget_pwd:
-			startActivity(new Intent(LoginActivity.this, ForgertPwdActivity.class));
+			startActivity(true);
 			break;
 		case R.id.iv_eye_pwd:
 			changeEdittextPwdStatus(++ pwdCount);
@@ -79,10 +80,19 @@ public class LoginActivity extends BaseActivity {
 		}
 	}
 
+	private void startActivity(boolean isForgetPsw){
+		Intent intent = new Intent(LoginActivity.this, RegisterAndForgetActivity.class);
+		intent.putExtra(IConstant.REGISTER_OR_FORGET,isForgetPsw);
+		startActivity(intent);
+
+	}
+
 	private void changeEdittextPwdStatus(int count) {
-		ivEyePwd.setImageResource(count % 2 == 0 ? R.drawable.opened_eye:R.drawable.closed_eye);
-		et_password.setInputType(count % 2 == 0 ? InputType.TYPE_TEXT_VARIATION_VISIBLE_PASSWORD :
+		ivEyePwd.setImageResource(count % 2 == 1 ? R.drawable.opened_eye:R.drawable.closed_eye);
+		et_password.setInputType(count % 2 == 1 ? InputType.TYPE_TEXT_VARIATION_VISIBLE_PASSWORD :
 				InputType.TYPE_CLASS_TEXT | InputType.TYPE_TEXT_VARIATION_PASSWORD);
+		String s = et_password.getText().toString();
+		et_password.setSelection(TextUtils.isEmpty(s)? 0 : s.length());
 	}
 
 	private void login() {

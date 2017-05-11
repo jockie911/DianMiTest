@@ -9,7 +9,6 @@ import android.hardware.Camera;
 import android.hardware.SensorManager;
 import android.os.Build;
 import android.util.AttributeSet;
-import android.util.DisplayMetrics;
 import android.util.Log;
 import android.view.OrientationEventListener;
 import android.view.Surface;
@@ -20,6 +19,7 @@ import android.widget.FrameLayout;
 import com.example.objLoader.R;
 import com.example.objLoader.activity.FrontPicActivity;
 import com.example.objLoader.global.BaseApp;
+import com.example.objLoader.utils.JLog;
 
 import java.io.IOException;
 import java.util.ArrayList;
@@ -27,9 +27,6 @@ import java.util.List;
 
 /**
  * 相机控件
- *
- * @author jerry
- * @date 2015-09-24
  */
 public class CameraView extends SurfaceView implements SurfaceHolder.Callback, ICameraOperation, IActivityLifiCycle {
     public static final String TAG = "CameraView";
@@ -111,7 +108,7 @@ public class CameraView extends SurfaceView implements SurfaceHolder.Callback, I
 
         //让surfaceView的中心和FrameLayout的中心对齐
         FrameLayout.LayoutParams params = (FrameLayout.LayoutParams) getLayoutParams();
-        params.topMargin = -(height - width) / 2;
+//        params.topMargin = -(height - width) / 2;
         params.width = width;
         params.height = height;
         setLayoutParams(params);
@@ -391,6 +388,7 @@ public class CameraView extends SurfaceView implements SurfaceHolder.Callback, I
             top = top < -1000 ? -1000 : top;
             right = right > 1000 ? 1000 : right;
             bottom = bottom > 1000 ? 1000 : bottom;
+            JLog.d(TAG,left + " - " + top + " - " + right + " - " + bottom);
             areas.add(new Camera.Area(new Rect(left, top, right, bottom), 100));
             parameters.setFocusAreas(areas);
             try {
@@ -400,6 +398,7 @@ public class CameraView extends SurfaceView implements SurfaceHolder.Callback, I
             } catch (Exception e) {
                 // TODO: handle exception
                 e.printStackTrace();
+                JLog.d(TAG,"printStackTrace =  " + e.getMessage());
                 return false;
             }
         }

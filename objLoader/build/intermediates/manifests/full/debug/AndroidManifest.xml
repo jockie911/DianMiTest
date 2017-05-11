@@ -75,7 +75,7 @@
             android:screenOrientation="portrait" />
         <!-- 注册 -->
         <activity
-            android:name="com.example.objLoader.activity.RegisterActivity"
+            android:name="com.example.objLoader.activity.RegisterAndForgetActivity"
             android:configChanges="orientation|keyboardHidden"
             android:screenOrientation="portrait" />
         <!-- 忘记密码 -->

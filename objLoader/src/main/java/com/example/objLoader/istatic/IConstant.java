@@ -8,6 +8,9 @@ public class IConstant {
 
     public static final String USERNAME = "username";
     public static final String PHONE_AREA_CODE = "86";
+
+    public static final String REGISTER_OR_FORGET = "register_or_forget";
+
     public static long NO_DOUBLE_CLICK_TIME = 500;
 
 

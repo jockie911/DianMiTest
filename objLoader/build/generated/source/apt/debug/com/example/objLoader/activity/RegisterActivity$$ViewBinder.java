@@ -5,7 +5,7 @@ import android.view.View;
 import butterknife.ButterKnife.Finder;
 import butterknife.ButterKnife.ViewBinder;
 
-public class RegisterActivity$$ViewBinder<T extends com.example.objLoader.activity.RegisterActivity> implements ViewBinder<T> {
+public class RegisterActivity$$ViewBinder<T extends RegisterAndForgetActivity> implements ViewBinder<T> {
   @Override public void bind(final Finder finder, final T target, Object source) {
     View view;
     view = finder.findRequiredView(source, 2131624128, "field 'et_mobile'");

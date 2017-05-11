@@ -50,6 +50,7 @@
                 android:layout_weight="1"
                 android:layout_width="0dp"
                 style="@style/et_login_common"
+                android:inputType="textPassword"
                 android:hint="@string/input_password"/>
             <ImageView
                 android:id="@+id/iv_eye_pwd"

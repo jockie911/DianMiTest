@@ -28,6 +28,8 @@
             <EditText
                 android:id="@+id/et_mobile"
                 style="@style/et_login_common"
+                android:maxLength="11"
+                android:inputType="phone"
                 android:hint="@string/input_mobile"/>
         </LinearLayout>
 
@@ -51,6 +53,8 @@
                 style="@style/et_login_common"
                 android:layout_width="0dp"
                 android:layout_weight="1"
+                android:maxLength="6"
+                android:inputType="number"
                 android:hint="@string/input_auth_code"/>
             <TextView
                 android:id="@+id/tv_send_auth_code"
@@ -82,8 +86,16 @@
             <EditText
                 android:id="@+id/et_register_password"
                 style="@style/et_login_common"
+                android:layout_weight="1"
+                android:layout_width="0dp"
                 android:inputType="textPassword"
                 android:hint="@string/input_pwd"/>
+            <ImageView
+                android:id="@+id/iv_eye_pwd"
+                android:layout_width="40dp"
+                android:layout_height="match_parent"
+                android:src="@drawable/closed_eye"
+                android:paddingRight="15dp"/>
         </LinearLayout>
 
         <com.example.objLoader.wedgit.LineEditText

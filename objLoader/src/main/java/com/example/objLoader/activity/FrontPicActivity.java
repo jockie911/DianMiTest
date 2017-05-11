@@ -18,6 +18,7 @@ import com.example.objLoader.R;
 import com.example.objLoader.bean.PicPathEvent;
 import com.example.objLoader.fragment.PhotoCommandFragment;
 import com.example.objLoader.global.BaseActivity;
+import com.example.objLoader.global.BaseApp;
 import com.example.objLoader.istatic.IConstant;
 import com.example.objLoader.utils.SharedPreferencesDAO;
 import com.example.objLoader.utils.Toast;
@@ -77,9 +78,9 @@ public class FrontPicActivity extends BaseActivity {
 		if(!TextUtils.isEmpty(frontPath)){
 			File file = new File(frontPath);
 
-			Bitmap bitmap = BitmapFactory.decodeFile(frontPath);
-
-			iv_front.setImageBitmap(bitmap);
+//			Bitmap bitmap = BitmapFactory.decodeFile(frontPath);
+//
+//			iv_front.setImageBitmap(bitmap);
 		}
 	}
 
@@ -160,14 +161,21 @@ public class FrontPicActivity extends BaseActivity {
 	 */
 	@Subscribe(threadMode = ThreadMode.MAIN)
 	public void setPicSuccessAndCloseCameraSurfaceView(PicPathEvent obj){
-		File file = new File(obj.getPath());
+//		File file = new File(obj.getPath());
+//
+//		long s = file.length();
+//
+//		String absolutePath = file.getAbsolutePath();
+//		if(file.length() > 0){
+//
+//			Glide.with(this).load(file).into(iv_front);
+//		}
+//		initShowFragment(false);
 
-		long s = file.length();
+		Bitmap bitmap = BaseApp.getInstance().getCameraBitmap();
 
-		String absolutePath = file.getAbsolutePath();
-		if(file.length() > 0){
-
-			Glide.with(this).load(file).into(iv_front);
+		if (bitmap != null) {
+			iv_front.setImageBitmap(bitmap);
 		}
 		initShowFragment(false);
 	}
@@ -178,4 +186,13 @@ public class FrontPicActivity extends BaseActivity {
 			EventBus.getDefault().unregister(this);
 		super.onDestroy();
 	}
+
+//	public void setCurrentBitmp() {
+//		Bitmap bitmap = BaseApp.getInstance().getCameraBitmap();
+//
+//		if (bitmap != null) {
+//			iv_front.setImageBitmap(bitmap);
+//		}
+//		initShowFragment(false);
+//	}
 }

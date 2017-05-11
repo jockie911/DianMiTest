@@ -44,7 +44,8 @@ public class CameraManager implements ICameraHelper {
     public static final int[] RES_DRAWABLE_FLASHLIGHT = {R.drawable.selector_btn_flashlight_auto, R.drawable.selector_btn_flashlight_on, R.drawable.selector_btn_flashlight_off};
     public static final int[] RES_DRAWABLE_CAMERA_DIRECTION = {R.drawable.selector_btn_camera_back, R.drawable.selector_btn_camera_front};
 
-    public static final int[] RES_STRING_FLASHLIGHT = {R.string.topic_camera_flashlight_auto, R.string.topic_camera_flashlight_on, R.string.topic_camera_flashlight_off};
+//    public static final int[] RES_STRING_FLASHLIGHT = {R.string.topic_camera_flashlight_auto, R.string.topic_camera_flashlight_on, R.string.topic_camera_flashlight_off};
+    public static final String[] RES_STRING_FLASHLIGHT = {"","",""};
     public static final int[] RES_STRING_CAMERA_DIRECTION = {R.string.topic_camera_back, R.string.topic_camera_front};
 
     public static final int LEN_PIC = 64;   //图片的边长   px

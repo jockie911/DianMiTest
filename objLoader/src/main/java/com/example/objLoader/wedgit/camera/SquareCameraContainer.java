@@ -26,7 +26,11 @@ import android.widget.Toast;
 
 import com.example.objLoader.R;
 import com.example.objLoader.activity.FrontPicActivity;
+import com.example.objLoader.bean.PicPathEvent;
 import com.example.objLoader.global.BaseApp;
+import com.example.objLoader.utils.JLog;
+
+import org.greenrobot.eventbus.EventBus;
 
 import java.io.ByteArrayInputStream;
 import java.io.IOException;
@@ -92,10 +96,7 @@ public class SquareCameraContainer extends FrameLayout implements ICameraOperati
         mSensorControler.setCameraFocusListener(new SensorControler.CameraFocusListener() {
             @Override
             public void onFocus() {
-                int screenWidth = BaseApp.mScreenWidth;
-                Point point = new Point(screenWidth / 2, screenWidth / 2);
-
-                onCameraFocus(point);
+                setCameraFocus();
             }
         });
         mCameraView.setOnCameraPrepareListener(new CameraView.OnCameraPrepareListener() {
@@ -114,9 +115,7 @@ public class SquareCameraContainer extends FrameLayout implements ICameraOperati
                     mHandler.postDelayed(new Runnable() {
                         @Override
                         public void run() {
-                            int screenWidth = BaseApp.mScreenWidth;
-                            Point point = new Point(screenWidth / 2, screenWidth / 2);
-                            onCameraFocus(point);
+                            setCameraFocus();
                         }
                     }, 800);
                 }
@@ -129,9 +128,7 @@ public class SquareCameraContainer extends FrameLayout implements ICameraOperati
                     mHandler.postDelayed(new Runnable() {
                         @Override
                         public void run() {
-                            int screenWidth = BaseApp.mScreenWidth;
-                            Point point = new Point(screenWidth / 2, screenWidth / 2);
-                            onCameraFocus(point);
+                            setCameraFocus();
                         }
                     }, 300);
                 }
@@ -142,6 +139,12 @@ public class SquareCameraContainer extends FrameLayout implements ICameraOperati
 
 //        //音效初始化
 //        mSoundPool = getSoundPool();
+    }
+
+    private void setCameraFocus() {
+        int screenWidth = BaseApp.mScreenWidth;
+        Point point = new Point(screenWidth / 2, getMeasuredHeight()/ 2);
+        onCameraFocus(point);
     }
 
     private SoundPool getSoundPool(){
@@ -172,11 +175,12 @@ public class SquareCameraContainer extends FrameLayout implements ICameraOperati
 
     @Override
     protected void onMeasure(int widthMeasureSpec, int heightMeasureSpec) {
+        //TODO jiang
         super.onMeasure(widthMeasureSpec, heightMeasureSpec);
-        int len = BaseApp.mScreenWidth;
-
-        //保证View是正方形
-        setMeasuredDimension(len, len);
+//        int len = BaseApp.mScreenWidth;
+//
+//        //保证View是正方形
+//        setMeasuredDimension(len, len);
     }
 
     /**
@@ -199,6 +203,8 @@ public class SquareCameraContainer extends FrameLayout implements ICameraOperati
             // 手指压下屏幕
             case MotionEvent.ACTION_DOWN:
                 mode = MODE_INIT;
+
+                JLog.d(" event.x = " + event.getX() + " /  event.y " + event.getY());
                 break;
             case MotionEvent.ACTION_POINTER_DOWN:
                 //如果mZoomSeekBar为null 表示该设备不支持缩放 直接跳过设置mode Move指令也无法执行
@@ -262,7 +268,6 @@ public class SquareCameraContainer extends FrameLayout implements ICameraOperati
         }
         float x = event.getX(0) - event.getX(1);
         float y = event.getY(0) - event.getY(1);
-//        return FloatMath.sqrt(x * x + y * y);
         return (float) Math.sqrt(x * x + y * y);
     }
 
@@ -382,7 +387,7 @@ public class SquareCameraContainer extends FrameLayout implements ICameraOperati
         public void onPictureTaken(final byte[] data, Camera camera) {
             //TODO jiang
 //            mActivity.rest();
-
+            EventBus.getDefault().post(new PicPathEvent(""));
             Log.i(TAG, "pictureCallback");
 
             new SavePicTask(data, mCameraView.isBackCamera()).start();
@@ -620,6 +625,7 @@ public class SquareCameraContainer extends FrameLayout implements ICameraOperati
 //            bitmap.recycle();
 
 
+            //TODO jiang sava the pic
             Log.i(TAG, "saveToSDCard afterSave time:" + (System.currentTimeMillis() - lastTime));
             return true;
         }
@@ -706,7 +712,7 @@ public class SquareCameraContainer extends FrameLayout implements ICameraOperati
                 fileScan(mImagePath);
 //                releaseCamera();    //不要在这个地方释放相机资源   这里是浪费时间的最大元凶  约1500ms左右
 
-                //TODO jiang
+                //TODO jiang this is finish
 //                mActivity.postTakePhoto();
                 Log.i(TAG, "TASK:" + (System.currentTimeMillis() - lastTime));
             } else {

@@ -1,16 +1,10 @@
 package com.example.objLoader.wedgit.camera;
 
-import android.app.Activity;
 import android.content.Context;
-import android.database.Cursor;
 import android.graphics.Bitmap;
 import android.graphics.Bitmap.CompressFormat;
-import android.net.Uri;
 import android.os.Environment;
-import android.provider.MediaStore;
-import android.provider.Settings;
 import android.util.Log;
-
 
 import java.io.BufferedOutputStream;
 import java.io.BufferedReader;
@@ -32,7 +26,7 @@ public class FileUtil {
     public static File updateDir = null;
     public static File updateFile = null;
 
-    public static final String FOLDER = "SweetCamera";
+    public static final String FOLDER = "DianMi";
 
     /***
      * 创建文件

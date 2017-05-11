@@ -48,7 +48,7 @@
     <string name="measure_input_height">Please enter a height</string>
     <string name="measure_input_weight">Please enter your weight</string>
 
-    <!-- RegisterActivity -->
+    <!-- RegisterAndForgetActivity -->
     <string name="register_title">Register</string>
 
     <!-- SidePicActivity -->

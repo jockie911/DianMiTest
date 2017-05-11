@@ -5,9 +5,9 @@ import android.hardware.Sensor;
 import android.hardware.SensorEvent;
 import android.hardware.SensorEventListener;
 import android.hardware.SensorManager;
-import android.util.Log;
 
 import com.example.objLoader.global.BaseApp;
+import com.example.objLoader.utils.JLog;
 
 import java.util.Calendar;
 
@@ -104,16 +104,16 @@ public class SensorControler implements IActivityLifiCycle, SensorEventListener 
                 int px = Math.abs(mX - x);
                 int py = Math.abs(mY - y);
                 int pz = Math.abs(mZ - z);
-//                Log.d(TAG, "pX:" + px + "  pY:" + py + "  pZ:" + pz + "    stamp:"
+//                JLog.d(TAG, "pX:" + px + "  pY:" + py + "  pZ:" + pz + "    stamp:"
 //                        + stamp + "  second:" + second);
                 double value = Math.sqrt(px * px + py * py + pz * pz);
                 if (value > 1.4) {
 //                    textviewF.setText("检测手机在移动..");
-//                    Log.i(TAG,"mobile moving");
+//                    JLog.i(TAG,"mobile moving");
                     STATUE = STATUS_MOVE;
                 } else {
 //                    textviewF.setText("检测手机静止..");
-//                    Log.i(TAG,"mobile static");
+//                    JLog.i(TAG,"mobile static");
                     //上一次状态是move，记录静态时间点
                     if (STATUE == STATUS_MOVE) {
                         lastStaticStamp = stamp;
@@ -129,7 +129,7 @@ public class SensorControler implements IActivityLifiCycle, SensorEventListener 
                                 if (mCameraFocusListener != null) {
                                     mCameraFocusListener.onFocus();
                                 }
-//                                Log.i(TAG,"mobile focusing");
+//                                JLog.i(TAG,"mobile focusing");
                             }
                         }
                     }
@@ -173,7 +173,7 @@ public class SensorControler implements IActivityLifiCycle, SensorEventListener 
     public void lockFocus() {
         isFocusing = true;
         foucsing--;
-        Log.i(TAG, "lockFocus");
+        JLog.i(TAG, "lockFocus");
     }
 
     /**
@@ -182,7 +182,7 @@ public class SensorControler implements IActivityLifiCycle, SensorEventListener 
     public void unlockFocus() {
         isFocusing = false;
         foucsing++;
-        Log.i(TAG, "unlockFocus");
+        JLog.i(TAG, "unlockFocus");
     }
 
     public void restFoucs() {

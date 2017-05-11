@@ -182,14 +182,14 @@ ADDED from E:\Code\Android\MyApplication\objLoader\src\main\AndroidManifest.xml:
 		ADDED from E:\Code\Android\MyApplication\objLoader\src\main\AndroidManifest.xml:68:13-63
 	android:name
 		ADDED from E:\Code\Android\MyApplication\objLoader\src\main\AndroidManifest.xml:67:13-51
-activity#com.example.objLoader.activity.RegisterActivity
+activity#com.example.objLoader.activity.RegisterAndForgetActivity
 ADDED from E:\Code\Android\MyApplication\objLoader\src\main\AndroidManifest.xml:71:9-74:52
 	android:screenOrientation
 		ADDED from E:\Code\Android\MyApplication\objLoader\src\main\AndroidManifest.xml:74:13-49
 	android:configChanges
 		ADDED from E:\Code\Android\MyApplication\objLoader\src\main\AndroidManifest.xml:73:13-63
 	android:name
-		ADDED from E:\Code\Android\MyApplication\objLoader\src\main\AndroidManifest.xml:72:13-54
+		ADDED from E:\Code\Android\MyApplication\objLoader\src\main\AndroidManifest.xml:72:13-63
 activity#com.example.objLoader.activity.ForgertPwdActivity
 ADDED from E:\Code\Android\MyApplication\objLoader\src\main\AndroidManifest.xml:76:9-79:52
 	android:screenOrientation
