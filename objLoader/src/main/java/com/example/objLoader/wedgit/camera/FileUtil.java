@@ -26,7 +26,7 @@ public class FileUtil {
     public static File updateDir = null;
     public static File updateFile = null;
 
-    public static final String FOLDER = "DianMi";
+    public static final String FOLDER = "dianmi";
 
     /***
      * 创建文件
@@ -70,7 +70,7 @@ public class FileUtil {
      * @return
      */
     public static String getCameraImageFolder() {
-        return getAppFoler() + "/" + "cameraImg";
+        return getAppFoler() + "/" + "youcai";
     }
 
     /**
@@ -79,7 +79,7 @@ public class FileUtil {
      * @return
      */
     public static String getCameraImgPath() {
-        return getCameraImageFolder() + "/" + System.currentTimeMillis() + ".jpg";
+        return getCameraImageFolder() + "/yc" + System.currentTimeMillis() + ".jpg";
     }
 
     /**

@@ -173,6 +173,7 @@
     <string name="product_more_detail">更多详情</string>
     <string name="product_ingredients">查看成分分析</string>
     <string name="product_count_in_meila">%s件收录，国内最大的妆品信息库</string>
+    <string name="main_app_telling">app只会选取所有照片的外形部分，不记录照片内容</string>
     <!--<string name="topic_camera_photo_save">拍照文件存储失败了！</string>-->
 
 </resources>

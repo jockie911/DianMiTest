@@ -5,6 +5,11 @@
         <attr name="border_color" format="color" />
     </declare-styleable>
 
+    <declare-styleable name="ShapeView">
+        <attr name="is_front" format="boolean" />
+        <attr name="is_male" format="boolean" />
+    </declare-styleable>
+
     <declare-styleable name="WheelPicker">
         <attr name="wheel_data" format="reference" />
         <attr name="wheel_selected_item_position" format="integer" />

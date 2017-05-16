@@ -47,46 +47,6 @@ public class HomeActivity extends BaseActivity  {
 	}
 
 
-	private void requestPermissions(){
-
-        PackageManager pkgManager = getPackageManager();
-        // 写SD卡权限
-        boolean sdCardWritePermission = pkgManager.checkPermission(android.Manifest.permission.WRITE_EXTERNAL_STORAGE, getPackageName()) == PackageManager.PERMISSION_GRANTED;
-        // 读SD卡权限
-        boolean sdCaredReadPermission =  pkgManager.checkPermission(android.Manifest.permission.READ_EXTERNAL_STORAGE, getPackageName()) == PackageManager.PERMISSION_GRANTED;
-        // read phone state用于获取 imei 设备信息
-        boolean phoneSatePermission = pkgManager.checkPermission(Manifest.permission.READ_PHONE_STATE, getPackageName()) == PackageManager.PERMISSION_GRANTED;
-        // 打开相机
-        boolean openCameraPermission = pkgManager.checkPermission(Manifest.permission.CAMERA, getPackageName()) == PackageManager.PERMISSION_GRANTED;
-        
-        if (Build.VERSION.SDK_INT >= 23) {
-            ArrayList<String> list=new ArrayList<String>();
-            
-            if (!sdCardWritePermission){
-            	list.add(Manifest.permission.WRITE_EXTERNAL_STORAGE);
-            }
-            
-            if (!sdCaredReadPermission){
-                list.add(Manifest.permission.READ_EXTERNAL_STORAGE);
-            }
-            
-            if (!phoneSatePermission){
-                list.add(Manifest.permission.READ_PHONE_STATE);
-            }
-
-            if (!openCameraPermission){
-                list.add(Manifest.permission.CAMERA);
-            }
-            
-            if (list.size()>0){
-                String[] permissions=new String[list.size()];
-                permissions=list.toArray(permissions);
-                ActivityCompat.requestPermissions(
-                        this, permissions, 0);
-            }
-        }
-    }
-
 	@Override
 	protected void initData() {
 		fragmentManager = getSupportFragmentManager();
@@ -176,8 +136,7 @@ public class HomeActivity extends BaseActivity  {
 	@SuppressLint("Override") @Override
 	public void onRequestPermissionsResult(int requestCode, String[] permissions, int[] grantResults) {
 		super.onRequestPermissionsResult(requestCode, permissions, grantResults);
-		
-		
+
 		  //定位到这个权限
         if (requestCode==1){
             

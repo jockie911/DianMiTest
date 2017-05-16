@@ -108,22 +108,24 @@ public class PhotoCommandFragment extends com.example.objLoader.global.BaseFragm
             mCameraContainer.onStop();
     }
 
-//    @Override
-//    public void onHiddenChanged(boolean hidden) {
-//        super.onHiddenChanged(hidden);
-//        if(hidden){
-//            if(mCameraContainer != null)
-//                mCameraContainer.onStop();
-//        }else{
-//            if(mCameraContainer != null)
-//                mCameraContainer.onStart();
-//        }
-//    }
+    @Override
+    public void onHiddenChanged(boolean hidden) {
+        super.onHiddenChanged(hidden);
+        if(hidden){
+            if(mCameraContainer != null)
+                mCameraContainer.onStop();
+        }else{
+            if(mCameraContainer != null)
+                mCameraContainer.onStart();
+        }
+    }
 
     @Override
     public void onDestroy() {
         super.onDestroy();
-        mCameraManager.unbinding();
-        mCameraManager.releaseActivityCamera();
+        if(mCameraManager != null){
+            mCameraManager.unbinding();
+            mCameraManager.releaseActivityCamera();
+        }
     }
 }

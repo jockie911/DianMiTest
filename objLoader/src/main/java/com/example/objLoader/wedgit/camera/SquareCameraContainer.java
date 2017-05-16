@@ -28,7 +28,9 @@ import com.example.objLoader.R;
 import com.example.objLoader.activity.FrontPicActivity;
 import com.example.objLoader.bean.PicPathEvent;
 import com.example.objLoader.global.BaseApp;
+import com.example.objLoader.istatic.IConstant;
 import com.example.objLoader.utils.JLog;
+import com.example.objLoader.utils.SharedPreferencesDAO;
 
 import org.greenrobot.eventbus.EventBus;
 
@@ -174,7 +176,8 @@ public class SquareCameraContainer extends FrameLayout implements ICameraOperati
     }
 
     @Override
-    protected void onMeasure(int widthMeasureSpec, int heightMeasureSpec) {
+    protected void onMeasure
+            (int widthMeasureSpec, int heightMeasureSpec) {
         //TODO jiang
         super.onMeasure(widthMeasureSpec, heightMeasureSpec);
 //        int len = BaseApp.mScreenWidth;
@@ -387,9 +390,7 @@ public class SquareCameraContainer extends FrameLayout implements ICameraOperati
         public void onPictureTaken(final byte[] data, Camera camera) {
             //TODO jiang
 //            mActivity.rest();
-            EventBus.getDefault().post(new PicPathEvent(""));
             Log.i(TAG, "pictureCallback");
-
             new SavePicTask(data, mCameraView.isBackCamera()).start();
         }
     };
@@ -430,24 +431,23 @@ public class SquareCameraContainer extends FrameLayout implements ICameraOperati
 
     @Override
     public void onStart() {
-        mSensorControler.onStart();
-
+        if(mSensorControler != null)
+            mSensorControler.onStart();
         if (mCameraView != null) {
             mCameraView.onStart();
         }
-
         mSoundPool = getSoundPool();
     }
 
     @Override
     public void onStop() {
-        mSensorControler.onStop();
-
+        if(mSensorControler != null)
+            mSensorControler.onStop();
         if (mCameraView != null) {
             mCameraView.onStop();
         }
-
-        mSoundPool.release();
+        if(mSoundPool != null)
+            mSoundPool.release();
         mSoundPool = null;
     }
 
@@ -486,11 +486,9 @@ public class SquareCameraContainer extends FrameLayout implements ICameraOperati
         Canvas canvas = new Canvas(bmp);
         canvas.drawBitmap(bitmap, matrix, paint);
 
-
         if (null != bitmap) {
             bitmap.recycle();
         }
-
         return bmp;
     }
 
@@ -550,10 +548,12 @@ public class SquareCameraContainer extends FrameLayout implements ICameraOperati
     }
 
     public void fileScan(String filePath) {
-        Uri data = Uri.parse("file://" + filePath);
-        Intent intent = new Intent(Intent.ACTION_MEDIA_SCANNER_SCAN_FILE, data);
+        Uri uri = Uri.parse("file://" + filePath);
+        Intent intent = new Intent(Intent.ACTION_MEDIA_SCANNER_SCAN_FILE, uri);
         intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-        BaseApp.getContext().sendBroadcast(intent);
+        getContext().sendBroadcast(intent);
+
+        EventBus.getDefault().post(new PicPathEvent(""));
     }
 
     long lastTime;
@@ -596,6 +596,8 @@ public class SquareCameraContainer extends FrameLayout implements ICameraOperati
 
             //ADD 生成保存图片的路径
             mImagePath = FileUtil.getCameraImgPath();
+
+            SharedPreferencesDAO.getInstance(getContext()).putString(IConstant.FRONT_PIC_PATH,mImagePath);
             Log.i(TAG, "ImagePath:" + mImagePath);
 
             //保存到SD卡
@@ -624,7 +626,6 @@ public class SquareCameraContainer extends FrameLayout implements ICameraOperati
             BaseApp.getInstance().setCameraBitmap(bitmap);
 //            bitmap.recycle();
 
-
             //TODO jiang sava the pic
             Log.i(TAG, "saveToSDCard afterSave time:" + (System.currentTimeMillis() - lastTime));
             return true;
@@ -643,7 +644,7 @@ public class SquareCameraContainer extends FrameLayout implements ICameraOperati
             try {
                 BitmapFactory.Options options = new BitmapFactory.Options();
                 options.inJustDecodeBounds = false;
-                options.inSampleSize = sampleSize;
+//                options.inSampleSize = sampleSize;
                 options.inPreferredConfig = Bitmap.Config.RGB_565;
                 options.inPurgeable = true;
                 options.inInputShareable = true;
@@ -718,10 +719,8 @@ public class SquareCameraContainer extends FrameLayout implements ICameraOperati
             } else {
                 Log.e(TAG, "photo save failed!");
                 Toast.makeText(mContext, R.string.topic_camera_takephoto_failure, Toast.LENGTH_SHORT).show();
-
                 //TODO jiang
 //                mActivity.rest();
-
                 mCameraView.startPreview();
             }
         }

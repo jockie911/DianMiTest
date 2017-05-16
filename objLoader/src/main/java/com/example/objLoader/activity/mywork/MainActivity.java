@@ -35,6 +35,8 @@ public class MainActivity extends BaseActivity {
     TextView tvStartMeasure;
     @Bind(R.id.scrollview)
     DiscreteScrollView discreteScrollView;
+    @Bind(R.id.rel_start_measure)
+    RelativeLayout relStartmeasure;
 
     @Override
     protected int getLayoutRes() {
@@ -48,6 +50,7 @@ public class MainActivity extends BaseActivity {
 
     @Override
     protected void initData() {
+        requestPermissions();
         rel_person_center.setOnClickListener(this);
 
         int width = getWindow().getWindowManager().getDefaultDisplay().getWidth();
@@ -65,7 +68,6 @@ public class MainActivity extends BaseActivity {
             @Override
             public void onScrollStart(@NonNull RecyclerView.ViewHolder currentItemHolder, int adapterPosition) {
                 setButtonStartBgInvalid(false);
-                tvStartMeasure.setClickable(false);
             }
 
             @Override
@@ -88,24 +90,23 @@ public class MainActivity extends BaseActivity {
         if(position == 0){
             setButtonStartBgInvalid(true);
             tvStartMeasure.setText(R.string.begin_measure);
-            tvStartMeasure.setClickable(true);
         }else{
             setButtonStartBgInvalid(false);
             tvStartMeasure.setText(R.string.no_present);
-            tvStartMeasure.setClickable(false);
         }
     }
 
     public void setButtonStartBgInvalid(boolean invalid){
-        tvStartMeasure.setBackgroundResource(invalid?R.drawable.start_button : R.drawable.start_button_invalid);
+        relStartmeasure.setBackgroundResource(invalid?R.drawable.start_button : R.drawable.start_button_invalid);
+        relStartmeasure.setClickable(invalid);
     }
 
     @Override
-    @OnClick(R.id.tv_start_measure)
+    @OnClick(R.id.rel_start_measure)
     public void onClick(View v) {
         if(isDoubleClick(v)) return;
         switch (v.getId()){
-            case R.id.tv_start_measure:
+            case R.id.rel_start_measure:
                 Intent intent = new Intent(MainActivity.this, FrontPicActivity.class);
                 startActivity(intent);
                 break;

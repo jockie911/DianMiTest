@@ -23,6 +23,7 @@ import com.yolanda.nohttp.RequestMethod;
 import com.yolanda.nohttp.rest.Request;
 
 import android.content.Intent;
+import android.graphics.Color;
 import android.os.Handler;
 import android.os.Message;
 import android.text.InputType;
@@ -49,6 +50,8 @@ public class RegisterAndForgetActivity extends BaseActivity{
 	TextView tv_send_auth_code;
 	@Bind(R.id.iv_eye_pwd)
 	ImageView ivEyePwd;
+	@Bind(R.id.tv_register)
+	TextView tvRegister;
 
 	private String mobile,auth_code,password,confirm_password;
 	private Boolean isCodeRight = false;
@@ -85,10 +88,11 @@ public class RegisterAndForgetActivity extends BaseActivity{
 
 		SMSSDK.registerEventHandler(eh);
 		tvTitle.setText(isForgetpsw?R.string.forget_pwd_find_pwd : R.string.register_title);
+		tvRegister.setText(isForgetpsw?R.string.submit:R.string.ok);
 	}
 
 	@Override
-	@OnClick({R.id.btn_register,R.id.tv_send_auth_code,R.id.iv_eye_pwd})
+	@OnClick({R.id.tv_register,R.id.tv_send_auth_code,R.id.iv_eye_pwd})
 	public void onClick(View v) {
         if(isDoubleClick(v)) return;
 		mobile = et_mobile.getText().toString().trim();
@@ -97,7 +101,7 @@ public class RegisterAndForgetActivity extends BaseActivity{
 		confirm_password = et_confirm_password.getText().toString().trim();
 		
 		switch (v.getId()) {
-			case R.id.btn_register:
+			case R.id.tv_register:
 				register();
 				break;
 			case R.id.tv_send_auth_code:
@@ -126,36 +130,28 @@ public class RegisterAndForgetActivity extends BaseActivity{
 	}
 
 	private void register() {
-		
-//		if (mobile.length() < 11) {
-//			Toast.show(R.string.right_mobile);
-//			return;
-//		} 
-		
-//		if (!password.equals(confirm_password)) {
-//			Toast.show(R.string.pwd_not_right);
-//			return;
-//		}
-		
+		if (mobile.length() < 11) {
+			Toast.show(R.string.right_mobile);
+			return;
+		}
 		if (isCommit) {
 			// 提交验证码
 			SMSSDK.submitVerificationCode(IConstant.PHONE_AREA_CODE, mobile, auth_code);
 		}
 		if(isCodeRight){
-			registerRuquest = NoHttp.createStringRequest(Constants.REGISTER, RequestMethod.POST);
-			
-			registerRuquest.add(IConstant.MOBILE, mobile);
-			registerRuquest.add(IConstant.PASSWORD, Utils.MD5(password));
-			registerRuquest.add(IConstant.STRING, Utils.MD5(mobile + Constants.MD5_KEY + Utils.MD5(password)));
-			CallServer.getInstance().add(this, registerRuquest, callBack,Constants.REGISTER_WHAT, true, false,BaseRequestBean.class);
+//			registerRuquest = NoHttp.createStringRequest(isForgetpsw?Constants.FORGET_PWD : Constants.REGISTER, RequestMethod.POST);
+//
+//			registerRuquest.add(IConstant.MOBILE, mobile);
+//			registerRuquest.add(IConstant.PASSWORD, Utils.MD5(password));
+//			registerRuquest.add(IConstant.STRING, Utils.MD5(mobile + Constants.MD5_KEY + Utils.MD5(password)));
+//			CallServer.getInstance().add(this, registerRuquest, callBack,Constants.REGISTER_WHAT, true, false,BaseRequestBean.class);
 		}
-		
 	}
 
 	private HttpCallBack<BaseRequestBean> callBack = new HttpCallBack<BaseRequestBean>() {
 	
 		public void onSucceed(int what, BaseRequestBean bean) {
-			startActivity(new Intent(RegisterAndForgetActivity.this, LoginActivity.class));
+//			startActivity(new Intent(RegisterAndForgetActivity.this, LoginActivity.class));
 			Toast.show(bean.info);
 			finish();
 		};
@@ -177,26 +173,25 @@ public class RegisterAndForgetActivity extends BaseActivity{
 				System.out.println("--------result" + event);
 				// 短信注册成功后，返回MainActivity,然后提示新好友
 				if (event == SMSSDK.EVENT_SUBMIT_VERIFICATION_CODE) {// 提交验证码成功
-
 					Toast.show(R.string.auth_code_right);
 					isCodeRight = true;
 					isCommit = false;
+
+					registerRuquest = NoHttp.createStringRequest(isForgetpsw?Constants.FORGET_PWD : Constants.REGISTER, RequestMethod.POST);
+					registerRuquest.add(IConstant.MOBILE, mobile);
+					registerRuquest.add(IConstant.PASSWORD, Utils.MD5(password));
+					registerRuquest.add(IConstant.STRING, Utils.MD5(mobile + Constants.MD5_KEY + Utils.MD5(password)));
+					CallServer.getInstance().add(RegisterAndForgetActivity.this, registerRuquest, callBack,Constants.REGISTER_WHAT, true, false,BaseRequestBean.class);
 				} else if (event == SMSSDK.EVENT_GET_VERIFICATION_CODE) {
 					// 已经验证
 					Toast.show(R.string.auth_code_already);
-
 				}
-
 			} else {
-
 				isCodeRight = false;
 				isCommit = true;
 
-				// ((Throwable) data).printStackTrace();
-				// Toast.makeText(MainActivity.this, "验证码错误",
-				// Toast.LENGTH_SHORT).show();
-				// Toast.makeText(MainActivity.this, "123",
-				// Toast.LENGTH_SHORT).show();
+				 ((Throwable) data).printStackTrace();
+				 Toast.show(R.string.auth_code_wrong);
 				int status = 0;
 				try {
 					((Throwable) data).printStackTrace();
@@ -234,6 +229,8 @@ public class RegisterAndForgetActivity extends BaseActivity{
 	 */
 	private void timerSmsCode(){
 		tv_send_auth_code.setClickable(false);
+		tv_send_auth_code.setBackgroundResource(R.drawable.btn_auth_code_default);
+		tv_send_auth_code.setTextColor(Color.parseColor("#99999999"));
 		timer = new Timer();
 		timer.schedule(new MyTimerTask(System.currentTimeMillis()),0,1000);
 	}
@@ -256,6 +253,8 @@ public class RegisterAndForgetActivity extends BaseActivity{
 					if(t >= 60){
 						tv_send_auth_code.setText(R.string.input_send_auth_code);
 						tv_send_auth_code.setClickable(true);
+						tv_send_auth_code.setBackgroundResource(R.drawable.btn_auth_code);
+						tv_send_auth_code.setTextColor(getResources().getColor(R.color.yollow));
 						timer.cancel();
 					}else{
 						tv_send_auth_code.setText(getResources().getString(R.string.remain_time)  + (60 - t)+ "");

@@ -90,7 +90,7 @@
             android:id="@+id/tv_start_measure"
             android:layout_width="150dp"
             android:layout_height="match_parent"
-            android:background="@color/yollow"
+            android:background="#eb9421"
             android:layout_alignParentRight="true"
             android:text="@string/side_start_measure"
             android:gravity="center"

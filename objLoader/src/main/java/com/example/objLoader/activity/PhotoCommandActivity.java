@@ -19,5 +19,6 @@ public class PhotoCommandActivity extends BaseActivity {
     @Override
     protected void initData() {
 
+
     }
 }

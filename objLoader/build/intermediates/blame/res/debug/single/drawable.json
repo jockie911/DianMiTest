@@ -64,6 +64,10 @@
         "source": "E:\\Code\\Android\\MyApplication\\objLoader\\src\\main\\res\\drawable\\delete_my_log.xml"
     },
     {
+        "merged": "E:\\Code\\Android\\MyApplication\\objLoader\\build\\intermediates\\res\\merged\\debug\\drawable\\btn_auth_code_default.xml",
+        "source": "E:\\Code\\Android\\MyApplication\\objLoader\\src\\main\\res\\drawable\\btn_auth_code_default.xml"
+    },
+    {
         "merged": "E:\\Code\\Android\\MyApplication\\objLoader\\build\\intermediates\\res\\merged\\debug\\drawable\\shop.xml",
         "source": "E:\\Code\\Android\\MyApplication\\objLoader\\src\\main\\res\\drawable\\shop.xml"
     },

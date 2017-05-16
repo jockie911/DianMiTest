@@ -150,5 +150,6 @@
     <string name="auth_code_wrong">验证码格式错误</string>
     <string name="compelete">完成</string>
     <string name="weight_height">身高/体重</string>
+    <string name="main_app_telling">App will only select all form part of the picture, do not record pictures content</string>
 
 </resources>

@@ -1,15 +1,18 @@
 package com.example.objLoader.global;
 
 
+import android.Manifest;
 import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.pm.ActivityInfo;
+import android.content.pm.PackageManager;
 import android.database.Cursor;
 import android.graphics.Color;
 import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
 import android.provider.MediaStore;
+import android.support.v4.app.ActivityCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -26,6 +29,7 @@ import com.example.objLoader.nohttp.CallServer;
 import com.example.objLoader.utils.SystemBarTintManager;
 import com.jude.swipbackhelper.SwipeBackHelper;
 
+import java.util.ArrayList;
 import java.util.Calendar;
 
 import butterknife.ButterKnife;
@@ -222,11 +226,55 @@ public abstract class BaseActivity extends AppCompatActivity implements OnClickL
 
 	}
 
+	/**
+	 * 避免快速操作造成连续点击
+	 * @param v
+	 * @return
+	 */
 	protected boolean isDoubleClick(View v){
 		Object tag = v.getTag(v.getId());
 		long beforeTimemiles = tag != null ? (long) tag : 0;
 		long timeInMillis = Calendar.getInstance().getTimeInMillis();
 		v.setTag(v.getId(),timeInMillis);
 	    return timeInMillis - beforeTimemiles < IConstant.NO_DOUBLE_CLICK_TIME;
+	}
+
+	protected void requestPermissions(boolean ...onlyRequestCamera){
+
+		PackageManager pkgManager = getPackageManager();
+		// 写SD卡权限
+		boolean sdCardWritePermission = pkgManager.checkPermission(android.Manifest.permission.WRITE_EXTERNAL_STORAGE, getPackageName()) == PackageManager.PERMISSION_GRANTED;
+		// 读SD卡权限
+		boolean sdCaredReadPermission =  pkgManager.checkPermission(android.Manifest.permission.READ_EXTERNAL_STORAGE, getPackageName()) == PackageManager.PERMISSION_GRANTED;
+		// read phone state用于获取 imei 设备信息
+		boolean phoneSatePermission = pkgManager.checkPermission(Manifest.permission.READ_PHONE_STATE, getPackageName()) == PackageManager.PERMISSION_GRANTED;
+		// 打开相机
+		boolean openCameraPermission = pkgManager.checkPermission(Manifest.permission.CAMERA, getPackageName()) == PackageManager.PERMISSION_GRANTED;
+
+		if (Build.VERSION.SDK_INT >= 23) {
+			ArrayList<String> list=new ArrayList<>();
+
+			if (!sdCardWritePermission ){
+				list.add(Manifest.permission.WRITE_EXTERNAL_STORAGE);
+			}
+
+			if (!sdCaredReadPermission ){
+				list.add(Manifest.permission.READ_EXTERNAL_STORAGE);
+			}
+
+			if (!phoneSatePermission && onlyRequestCamera.length == 0){
+				list.add(Manifest.permission.READ_PHONE_STATE);
+			}
+
+			if (!openCameraPermission){
+				list.add(Manifest.permission.CAMERA);
+			}
+			if (list.size()>0){
+				String[] permissions=new String[list.size()];
+				permissions=list.toArray(permissions);
+				ActivityCompat.requestPermissions(
+						this, permissions, 0);
+			}
+		}
 	}
 }

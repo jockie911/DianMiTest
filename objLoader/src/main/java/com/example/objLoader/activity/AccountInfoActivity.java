@@ -44,9 +44,6 @@ public class AccountInfoActivity extends BaseActivity {
     ImageView ivRightTitleBar;
 
 	private String username,mobile;
-	//图片路径
-	private String side_pic_path;
-
 	private Uri imageUriFromCamera;
 	private static final int CAMERA_REQUEST_CODE = 1,PHOTO_REQUEST_CODE = 2;
 

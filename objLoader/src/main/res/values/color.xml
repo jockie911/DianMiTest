@@ -23,13 +23,15 @@
     <color name="color_error">#f44336</color>
 
 
-    <color name="color_bg">#333e47</color>
+    <!--<color name="color_bg">#333e47</color>-->
+    <color name="color_bg">#272F37</color>
     <color name="color_base_deep">#1F262E</color>
     <color name="color_base">#273037</color>
 
 
-    <color name="title">#bfbfc0</color>
-    <color name="yollow">#ea9421</color>
+    <!--<color name="title">#bfbfc0</color>-->
+    <color name="title">#96ffffff</color>
+    <color name="yollow">#96EB942E</color>
 
     <!--actionDialogColor-->
     <color name="black">#000000</color>

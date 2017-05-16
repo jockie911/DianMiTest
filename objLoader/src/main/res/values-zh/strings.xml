@@ -150,6 +150,7 @@
     <string name="auth_code_wrong">验证码格式错误</string>
     <string name="compelete">完成</string>
     <string name="weight_height">身高/体重</string>
+    <string name="main_app_telling">app只会选取所有照片的外形部分，不记录照片内容</string>
 
 
 </resources>

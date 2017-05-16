@@ -59,7 +59,7 @@ public class LoginActivity extends BaseActivity {
 	}
 
 	@Override
-	@OnClick({R.id.tv_login,R.id.tv_right_title_bar,R.id.tv_forget_pwd,R.id.iv_eye_pwd})
+	@OnClick({R.id.tv_login,R.id.tv_right_title_bar,R.id.tv_forget_pwd,R.id.iv_eye_pwd,R.id.iv_login_weixin})
 	public void onClick(View v) {
 		if(isDoubleClick(v)) return;
 		username = et_username.getText().toString().trim();
@@ -77,7 +77,14 @@ public class LoginActivity extends BaseActivity {
 		case R.id.iv_eye_pwd:
 			changeEdittextPwdStatus(++ pwdCount);
 			break;
+		case R.id.iv_login_weixin:
+			loginWX();
+			break;
 		}
+	}
+
+	private void loginWX() {
+		//TODO
 	}
 
 	private void startActivity(boolean isForgetPsw){
@@ -106,7 +113,7 @@ public class LoginActivity extends BaseActivity {
 		loginRequest.add(IConstant.MOBILE, username);
 		loginRequest.add(IConstant.PASSWORD, Utils.MD5(password));
 		loginRequest.add(IConstant.STRING, Utils.MD5(username + Constants.MD5_KEY + Utils.MD5(password)));
-		CallServer.getInstance().add(this, loginRequest, callBack, Constants.REGISTER_WHAT, true, false,BaseRequestBean.class);
+		CallServer.getInstance().add(this, loginRequest, callBack, Constants.REGISTER_WHAT, false, false,BaseRequestBean.class);
 	}
 	
 	private HttpCallBack<BaseRequestBean> callBack = new HttpCallBack<BaseRequestBean>() {

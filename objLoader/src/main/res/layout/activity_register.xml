@@ -56,16 +56,19 @@
                 android:maxLength="6"
                 android:inputType="number"
                 android:hint="@string/input_auth_code"/>
+
             <TextView
                 android:id="@+id/tv_send_auth_code"
-                android:layout_width="wrap_content"
+                android:layout_width="90dp"
                 android:layout_height="wrap_content"
-                android:text="@string/input_send_auth_code"
-                android:textColor="#FF8201"
                 android:layout_centerVertical="true"
-                android:background="@drawable/btn_auth_code"
                 android:layout_marginRight="15dp"
-                android:padding="5dp"/>
+                android:background="@drawable/btn_auth_code"
+                android:gravity="center"
+                android:paddingBottom="5dp"
+                android:paddingTop="5dp"
+                android:text="@string/input_send_auth_code"
+                android:textColor="@color/yollow" />
         </LinearLayout>
 
         <View
@@ -118,14 +121,14 @@
     </LinearLayout>
 
     <TextView
-        android:id="@+id/btn_register"
-        android:layout_width="140dp"
+        android:id="@+id/tv_register"
+        android:layout_width="200dp"
         android:layout_height="40dp"
         android:layout_gravity="center_horizontal"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="120dp"
         android:background="@drawable/login_unbtn_round"
         android:gravity="center"
         android:text="@string/submit"
-        android:textColor="#FF8201"
+        android:textColor="@color/yollow"
         android:textSize="16sp" />
 </LinearLayout>

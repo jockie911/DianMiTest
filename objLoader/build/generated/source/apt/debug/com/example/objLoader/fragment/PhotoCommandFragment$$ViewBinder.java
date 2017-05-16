@@ -8,10 +8,10 @@ import butterknife.ButterKnife.ViewBinder;
 public class PhotoCommandFragment$$ViewBinder<T extends com.example.objLoader.fragment.PhotoCommandFragment> implements ViewBinder<T> {
   @Override public void bind(final Finder finder, final T target, Object source) {
     View view;
-    view = finder.findRequiredView(source, 2131624185, "field 'mCameraContainer'");
-    target.mCameraContainer = finder.castView(view, 2131624185, "field 'mCameraContainer'");
-    view = finder.findRequiredView(source, 2131624186, "field 'mFlashLight' and method 'onClick'");
-    target.mFlashLight = finder.castView(view, 2131624186, "field 'mFlashLight'");
+    view = finder.findRequiredView(source, 2131689722, "field 'mCameraContainer'");
+    target.mCameraContainer = finder.castView(view, 2131689722, "field 'mCameraContainer'");
+    view = finder.findRequiredView(source, 2131689723, "field 'mFlashLight' and method 'onClick'");
+    target.mFlashLight = finder.castView(view, 2131689723, "field 'mFlashLight'");
     view.setOnClickListener(
       new butterknife.internal.DebouncingOnClickListener() {
         @Override public void doClick(
@@ -20,8 +20,8 @@ public class PhotoCommandFragment$$ViewBinder<T extends com.example.objLoader.fr
           target.onClick(p0);
         }
       });
-    view = finder.findRequiredView(source, 2131624188, "field 'mTakePhoto' and method 'onClick'");
-    target.mTakePhoto = finder.castView(view, 2131624188, "field 'mTakePhoto'");
+    view = finder.findRequiredView(source, 2131689725, "field 'mTakePhoto' and method 'onClick'");
+    target.mTakePhoto = finder.castView(view, 2131689725, "field 'mTakePhoto'");
     view.setOnClickListener(
       new butterknife.internal.DebouncingOnClickListener() {
         @Override public void doClick(
@@ -30,7 +30,7 @@ public class PhotoCommandFragment$$ViewBinder<T extends com.example.objLoader.fr
           target.onClick(p0);
         }
       });
-    view = finder.findRequiredView(source, 2131624187, "method 'onClick'");
+    view = finder.findRequiredView(source, 2131689724, "method 'onClick'");
     view.setOnClickListener(
       new butterknife.internal.DebouncingOnClickListener() {
         @Override public void doClick(

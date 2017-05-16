@@ -1,7 +1,9 @@
 package com.example.objLoader.activity;
 
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
+import android.content.pm.PackageManager;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.net.Uri;
@@ -70,17 +72,11 @@ public class FrontPicActivity extends BaseActivity {
 		activity = this;
 		if(!EventBus.getDefault().isRegistered(this))
 			EventBus.getDefault().register(this);
-		photoCommandFragment = new PhotoCommandFragment(IConstant.FRONT_PIC_PATH);
-
 		tvTitle.setText(R.string.front_Pic);
 
 		frontPath = SharedPreferencesDAO.getInstance(mContext).getString(IConstant.FRONT_PIC_PATH);
 		if(!TextUtils.isEmpty(frontPath)){
-			File file = new File(frontPath);
-
-//			Bitmap bitmap = BitmapFactory.decodeFile(frontPath);
-//
-//			iv_front.setImageBitmap(bitmap);
+			Glide.with(this).load(frontPath).into(iv_front);
 		}
 	}
 
@@ -90,10 +86,7 @@ public class FrontPicActivity extends BaseActivity {
 		if(isDoubleClick(v)) return;
 		switch (v.getId()) {
 		case R.id.btn_front_camera:
-//			imageUriFromCamera = Utils.createImagePathUri(mContext);
-//            Intent cameraIntent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
-//            cameraIntent.putExtra(MediaStore.EXTRA_OUTPUT, imageUriFromCamera);
-//            startActivityForResult(cameraIntent, IConstant.CAMERA_REQUEST_CODE);
+			requestPermissions(true);
 			initShowFragment(true);
 			break;
 		case R.id.btn_front_album:
@@ -112,7 +105,6 @@ public class FrontPicActivity extends BaseActivity {
 			Intent intent = new Intent(mContext, SidePicActivity.class);
 			intent.putExtra(IConstant.FRONT_PIC_PATH, front_pic_path);
 			startActivity(intent);
-
 			break;
 		}
 	}
@@ -143,6 +135,9 @@ public class FrontPicActivity extends BaseActivity {
 	}
 
 	public void initShowFragment(boolean isShow){
+		if(photoCommandFragment == null)
+			photoCommandFragment = new PhotoCommandFragment(IConstant.FRONT_PIC_PATH);
+
 		FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
 		if(isShow){
 			if(!photoCommandFragment.isAdded()){
@@ -187,12 +182,18 @@ public class FrontPicActivity extends BaseActivity {
 		super.onDestroy();
 	}
 
-//	public void setCurrentBitmp() {
-//		Bitmap bitmap = BaseApp.getInstance().getCameraBitmap();
-//
-//		if (bitmap != null) {
-//			iv_front.setImageBitmap(bitmap);
-//		}
-//		initShowFragment(false);
-//	}
+	@SuppressLint("Override") @Override
+	public void onRequestPermissionsResult(int requestCode, String[] permissions, int[] grantResults) {
+		super.onRequestPermissionsResult(requestCode, permissions, grantResults);
+		//定位到这个权限
+		if (requestCode==1){
+			if (grantResults[0]== PackageManager.PERMISSION_GRANTED){
+                Toast.show("权限申请成功");
+
+			}else{
+               Toast.show("权限申请失败");
+			}
+		}
+
+	}
 }

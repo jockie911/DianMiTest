@@ -140,7 +140,7 @@
         android:layout_width="match_parent"
         android:layout_height="45dp"
         android:textColor="@color/white"
-        android:background="@color/yollow"
+        android:background="#eb9421"
         android:textSize="20sp"
         android:gravity="center"
         android:text="@string/next" />

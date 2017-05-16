@@ -3,15 +3,13 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:gravity="center"
-    android:background="#00000000"
-    android:fitsSystemWindows="true"
-    >
+    android:background="#2a000000"
+    android:fitsSystemWindows="true">
 
     <ProgressBar
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        style="?android:attr/progressBarStyleLargeInverse"
-        
-        />
-
+        android:padding="10dp"
+        android:background="@drawable/shape_save_record_bg"
+        style="?android:attr/progressBarStyleLargeInverse" />
 </RelativeLayout>

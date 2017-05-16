@@ -43,7 +43,7 @@
         android:id="@+id/tv_save_record"
         android:layout_width="match_parent"
         android:layout_height="45dp"
-        android:background="@color/yollow"
+        android:background="#eb9421"
         android:text="@string/save"
         android:textColor="@color/white"
         android:gravity="center"
