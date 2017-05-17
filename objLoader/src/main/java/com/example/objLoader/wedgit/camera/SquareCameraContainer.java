@@ -13,6 +13,7 @@ import android.hardware.Camera;
 import android.media.AudioManager;
 import android.media.SoundPool;
 import android.net.Uri;
+import android.os.Environment;
 import android.os.Handler;
 import android.os.Message;
 import android.os.SystemClock;
@@ -27,6 +28,7 @@ import android.widget.Toast;
 import com.example.objLoader.R;
 import com.example.objLoader.activity.FrontPicActivity;
 import com.example.objLoader.bean.PicPathEvent;
+import com.example.objLoader.global.BaseActivity;
 import com.example.objLoader.global.BaseApp;
 import com.example.objLoader.istatic.IConstant;
 import com.example.objLoader.utils.JLog;
@@ -34,14 +36,17 @@ import com.example.objLoader.utils.SharedPreferencesDAO;
 
 import org.greenrobot.eventbus.EventBus;
 
+import java.io.BufferedOutputStream;
 import java.io.ByteArrayInputStream;
+import java.io.File;
+import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
 
 /**
  * 正方形的CamerContainer
  */
-public class SquareCameraContainer extends FrameLayout implements ICameraOperation, IActivityLifiCycle {
+public class SquareCameraContainer<T extends BaseActivity> extends FrameLayout implements ICameraOperation, IActivityLifiCycle {
     public static final String TAG = "SquareCameraContainer";
 
     private Context mContext;
@@ -61,7 +66,7 @@ public class SquareCameraContainer extends FrameLayout implements ICameraOperati
     private SeekBar mZoomSeekBar;
 
     //TODO jiang
-    private FrontPicActivity mActivity;
+    private T mActivity;
 
     private SoundPool mSoundPool;
 
@@ -74,6 +79,8 @@ public class SquareCameraContainer extends FrameLayout implements ICameraOperati
     private SensorControler mSensorControler;
 
     public static final int RESETMASK_DELY = 1000; //一段时间后遮罩层一定要隐藏
+    private boolean isFrontTakePhoto;
+    private int gender;
 
     public SquareCameraContainer(Context context) {
         super(context);
@@ -168,8 +175,15 @@ public class SquareCameraContainer extends FrameLayout implements ICameraOperati
         this.mImagePath = mImagePath;
     }
 
-    public void bindActivity(FrontPicActivity activity) {
+    /**
+     * @param activity
+     * @param isFrontTakePhoto is photo front
+     * @param gender
+     */
+    public void bindActivity(T activity, boolean isFrontTakePhoto, int gender) {
         this.mActivity = activity;
+        this.isFrontTakePhoto = isFrontTakePhoto;
+        this.gender = gender;
         if (mCameraView != null) {
             mCameraView.bindActivity(activity);
         }
@@ -388,9 +402,12 @@ public class SquareCameraContainer extends FrameLayout implements ICameraOperati
     private final Camera.PictureCallback pictureCallback = new Camera.PictureCallback() {
         @Override
         public void onPictureTaken(final byte[] data, Camera camera) {
-            //TODO jiang
-//            mActivity.rest();
-            Log.i(TAG, "pictureCallback");
+            //TODO jiang  --> take photo success ,judge the photo is requied
+            if(isFrontTakePhoto){
+
+            }else{
+
+            }
             new SavePicTask(data, mCameraView.isBackCamera()).start();
         }
     };
@@ -468,33 +485,28 @@ public class SquareCameraContainer extends FrameLayout implements ICameraOperati
      * @return
      */
     public Bitmap rotateBitmap(Bitmap bitmap, boolean isBackCamera) {
-        System.gc();
-        int degrees = isBackCamera ? 0 : 0;
-        degrees = mCameraView.getPicRotation();
-        if (null == bitmap) {
-            return bitmap;
-        }
+        int degrees = mCameraView.getPicRotation();
+        Bitmap returnBm = null;
+        // 根据旋转角度，生成旋转矩阵
         Matrix matrix = new Matrix();
-        matrix.setRotate(degrees, bitmap.getWidth() / 2, bitmap.getHeight() / 2);
-        if (!isBackCamera) {
-            matrix.postScale(-1, 1, bitmap.getWidth() / 2, bitmap.getHeight() / 2);   //镜像水平翻转
+        matrix.postRotate(degrees);
+        try {
+            // 将原始图片按照旋转矩阵进行旋转，并得到新的图片
+            returnBm = Bitmap.createBitmap(bitmap, 0, 0, bitmap.getWidth(), bitmap.getHeight(), matrix, true);
+        } catch (OutOfMemoryError e) {
         }
-//            Bitmap bmp = Bitmap.createBitmap(bitmap,0,0,bitmap.getWidth(),bitmap.getHeight(),matrix,!isBackCamera);
-        //不需要透明度 使用RGB_565
-        Bitmap bmp = Bitmap.createBitmap(bitmap.getWidth(), bitmap.getHeight(), Bitmap.Config.RGB_565);
-        Paint paint = new Paint();
-        Canvas canvas = new Canvas(bmp);
-        canvas.drawBitmap(bitmap, matrix, paint);
-
-        if (null != bitmap) {
+        if (returnBm == null) {
+            returnBm = bitmap;
+        }
+        if (bitmap != returnBm) {
             bitmap.recycle();
         }
-        return bmp;
+        return returnBm;
     }
 
 
     /**
-     * 获取以中心点为中心的正方形区域
+     * 获取以中心点为中心的正方形区域 ...
      *
      * @param data
      * @return
@@ -511,7 +523,8 @@ public class SquareCameraContainer extends FrameLayout implements ICameraOperati
         int centerY = height / 2;
 
         int PHOTO_LEN = Math.min(width, height);
-        return new Rect(centerX - PHOTO_LEN / 2, centerY - PHOTO_LEN / 2, centerX + PHOTO_LEN / 2, centerY + PHOTO_LEN / 2);
+//        return new Rect(centerX - PHOTO_LEN / 2, centerY - PHOTO_LEN / 2, centerX + PHOTO_LEN / 2, centerY + PHOTO_LEN / 2);
+        return new Rect(0,0,width,height);
     }
 
     /**
@@ -553,7 +566,8 @@ public class SquareCameraContainer extends FrameLayout implements ICameraOperati
         intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
         getContext().sendBroadcast(intent);
 
-        EventBus.getDefault().post(new PicPathEvent(""));
+        SharedPreferencesDAO.getInstance(getContext()).putString(isFrontTakePhoto?IConstant.FRONT_PIC_PATH : IConstant.SIDE_PIC_PATH,mImagePath);
+        EventBus.getDefault().post(new PicPathEvent(isFrontTakePhoto));
     }
 
     long lastTime;
@@ -593,11 +607,8 @@ public class SquareCameraContainer extends FrameLayout implements ICameraOperati
          */
         public boolean saveToSDCard(byte[] data) {
             lastTime = System.currentTimeMillis();
-
             //ADD 生成保存图片的路径
             mImagePath = FileUtil.getCameraImgPath();
-
-            SharedPreferencesDAO.getInstance(getContext()).putString(IConstant.FRONT_PIC_PATH,mImagePath);
             Log.i(TAG, "ImagePath:" + mImagePath);
 
             //保存到SD卡
@@ -608,7 +619,6 @@ public class SquareCameraContainer extends FrameLayout implements ICameraOperati
 
             if (!FileUtil.checkSDcard()) {
                 Toast.makeText(mContext, R.string.tips_sdcard_notexist, Toast.LENGTH_LONG).show();
-
                 return false;
             }
 
@@ -623,6 +633,7 @@ public class SquareCameraContainer extends FrameLayout implements ICameraOperati
 
             Log.i(TAG, "saveToSDCard beforeSave time:" + (System.currentTimeMillis() - lastTime));
             BitmapUtils.saveBitmap(bitmap, mImagePath);
+
             BaseApp.getInstance().setCameraBitmap(bitmap);
 //            bitmap.recycle();
 
@@ -715,7 +726,7 @@ public class SquareCameraContainer extends FrameLayout implements ICameraOperati
 
                 //TODO jiang this is finish
 //                mActivity.postTakePhoto();
-                Log.i(TAG, "TASK:" + (System.currentTimeMillis() - lastTime));
+                Log.i(TAG, "TASK:" + (System.currentTimeMillis() - lastTime) + "  /mImagePath :" + mImagePath);
             } else {
                 Log.e(TAG, "photo save failed!");
                 Toast.makeText(mContext, R.string.topic_camera_takephoto_failure, Toast.LENGTH_SHORT).show();

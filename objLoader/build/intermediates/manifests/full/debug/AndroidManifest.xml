@@ -53,10 +53,7 @@
             android:windowSoftInputMode="stateHidden|adjustResize" />
 
         <!-- 查看我的记录详情 -->
-        <activity
-            android:name="com.example.objLoader.activity.MyLogDetailsActivity"
-            android:configChanges="orientation|keyboardHidden"
-            android:screenOrientation="portrait" />
+
 
         <!-- 更换密码 -->
         <activity
@@ -118,11 +115,7 @@
             android:windowSoftInputMode="stateHidden" />
         <!-- 尺寸 -->
         <activity
-            android:name="com.example.objLoader.activity.SizeActivity"
-            android:configChanges="orientation|keyboardHidden"
-            android:screenOrientation="portrait" />
-        <activity
-            android:name="com.example.objLoader.activity.mywork.SplashActivity"
+            android:name="com.example.objLoader.activity.SplashActivity"
             android:configChanges="orientation|keyboardHidden"
             android:screenOrientation="portrait"
             android:theme="@style/Theme.AppCompat.NoActionBar" >
@@ -133,13 +126,12 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="com.example.objLoader.activity.mywork.MainActivity"
+            android:name="com.example.objLoader.activity.MainActivity"
             android:theme="@style/Theme.AppCompat.NoActionBar" />
         <activity
-            android:name="com.example.objLoader.activity.mywork.DetailMeasureSizeActivity"
+            android:name="com.example.objLoader.activity.DetailMeasureSizeActivity"
             android:windowSoftInputMode="adjustPan" />
-        <activity android:name="com.example.objLoader.activity.mywork.MeasureRecordActivity" />
-        <activity android:name="com.example.objLoader.activity.PhotoCommandActivity" />
+        <activity android:name="com.example.objLoader.activity.MeasureRecordActivity" />
     </application>
 
 </manifest>

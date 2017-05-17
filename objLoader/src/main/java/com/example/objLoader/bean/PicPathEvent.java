@@ -6,10 +6,15 @@ package com.example.objLoader.bean;
 
 public class PicPathEvent {
 
+    private boolean isFrontTakePhoto;
     private String path;
 
     public PicPathEvent(String filePath) {
         path = filePath;
+    }
+
+    public PicPathEvent(boolean isFrontTakePhoto) {
+        this.isFrontTakePhoto = isFrontTakePhoto;
     }
 
     public String getPath() {
@@ -18,5 +23,9 @@ public class PicPathEvent {
 
     public void setPath(String path) {
         this.path = path;
+    }
+
+    public boolean isFrontTakePhoto() {
+        return isFrontTakePhoto;
     }
 }

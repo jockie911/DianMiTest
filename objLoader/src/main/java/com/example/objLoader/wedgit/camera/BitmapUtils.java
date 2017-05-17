@@ -47,6 +47,9 @@ public class BitmapUtils {
         String fileName = absolutePath;
         File f = new File(fileName);
         try {
+            if(!f.getParentFile().exists()){
+                f.getParentFile().mkdirs();
+            }
             f.createNewFile();
             FileOutputStream fOut = new FileOutputStream(f);
             b.compress(format, quality, fOut);

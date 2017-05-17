@@ -31,6 +31,7 @@ public class FocusImageView extends ImageView {
 	private int mFocusFailedImg=NO_ID;
 	private Animation mAnimation;
 	private Handler mHandler;
+
 	public FocusImageView(Context context) {
 		super(context);
 		mAnimation= AnimationUtils.loadAnimation(getContext(), R.anim.focusview_show);

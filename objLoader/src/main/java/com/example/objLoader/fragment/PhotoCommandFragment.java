@@ -5,25 +5,22 @@ import android.text.TextUtils;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.ImageButton;
-import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.bumptech.glide.Glide;
 import com.example.objLoader.R;
 import com.example.objLoader.activity.FrontPicActivity;
 import com.example.objLoader.activity.SidePicActivity;
+import com.example.objLoader.global.BaseActivity;
 import com.example.objLoader.istatic.IConstant;
-import com.example.objLoader.wedgit.CameraSurfaceView;
 import com.example.objLoader.wedgit.camera.CameraManager;
 import com.example.objLoader.wedgit.camera.SquareCameraContainer;
-
-import java.io.File;
 
 import butterknife.Bind;
 import butterknife.OnClick;
 
 /**
  * Created by yc on 2017/5/9.
+ * frontPic and sidePic with photo use this fragment,only gender and frontOrSide controll all
  */
 
 @SuppressLint("ValidFragment")
@@ -36,12 +33,18 @@ public class PhotoCommandFragment extends com.example.objLoader.global.BaseFragm
     @Bind(R.id.ib_take_photo)
     ImageButton mTakePhoto;
 
-    private String frontOrSide;
+    private int gender;
+    private boolean isFrontTakePhoto;
     private CameraManager mCameraManager;
 
+    /**
+     * @param isFrontTakePhoto is photo front
+     * @param gender
+     */
     @SuppressLint("ValidFragment")
-    public PhotoCommandFragment(String frontOrSide) {
-        this.frontOrSide = frontOrSide;
+    public PhotoCommandFragment(boolean isFrontTakePhoto,int gender) {
+        this.isFrontTakePhoto = isFrontTakePhoto;
+        this.gender = gender;
     }
 
     @Override
@@ -51,13 +54,12 @@ public class PhotoCommandFragment extends com.example.objLoader.global.BaseFragm
 
     @Override
     protected void initData() {
-        mCameraContainer.bindActivity((FrontPicActivity) getActivity());
+        mCameraContainer.bindActivity((BaseActivity) getActivity(),isFrontTakePhoto,gender);
 
         mCameraManager = CameraManager.getInstance(getActivity());
 
         mCameraManager.bindOptionMenuView(mFlashLight,null);
 
-        mCameraContainer.bindActivity((FrontPicActivity) getActivity());
     }
 
     @OnClick({R.id.ib_close,R.id.ib_take_photo,R.id.tv_flashlight})
@@ -67,10 +69,10 @@ public class PhotoCommandFragment extends com.example.objLoader.global.BaseFragm
         switch (v.getId()){
             case R.id.ib_close:
                 if(getActivity() != null){
-                    if(isFromFront()){
+                    if(getActivity() instanceof FrontPicActivity){
                         ((FrontPicActivity)getActivity()).initShowFragment(false);
-                    }else{
-//                        ((SidePicActivity)getActivity()).initShowFragment(false);
+                    }else if(getActivity() instanceof SidePicActivity){
+                        ((SidePicActivity)getActivity()).initShowFragment(false);
                     }
                 }
                 break;
@@ -84,14 +86,6 @@ public class PhotoCommandFragment extends com.example.objLoader.global.BaseFragm
                 mCameraContainer.switchFlashMode();
                 break;
         }
-    }
-
-    /**
-     * true 正面照| false 侧面照
-     * @return
-     */
-    private boolean isFromFront(){
-        return TextUtils.equals(frontOrSide, IConstant.FRONT_PIC_PATH);
     }
 
     @Override

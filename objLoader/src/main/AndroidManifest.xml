@@ -47,10 +47,6 @@
             android:windowSoftInputMode="stateHidden|adjustResize" />
 
         <!-- 查看我的记录详情 -->
-        <activity
-            android:name=".activity.MyLogDetailsActivity"
-            android:configChanges="orientation|keyboardHidden"
-            android:screenOrientation="portrait" />
 
         <!-- 更换密码 -->
         <activity
@@ -112,11 +108,7 @@
             android:windowSoftInputMode="stateHidden" />
         <!-- 尺寸 -->
         <activity
-            android:name=".activity.SizeActivity"
-            android:configChanges="orientation|keyboardHidden"
-            android:screenOrientation="portrait" />
-        <activity
-            android:name=".activity.mywork.SplashActivity"
+            android:name=".activity.SplashActivity"
             android:configChanges="orientation|keyboardHidden"
             android:screenOrientation="portrait"
             android:theme="@style/Theme.AppCompat.NoActionBar">
@@ -127,12 +119,11 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".activity.mywork.MainActivity"
+            android:name=".activity.MainActivity"
             android:theme="@style/Theme.AppCompat.NoActionBar" />
-        <activity android:name=".activity.mywork.DetailMeasureSizeActivity"
+        <activity android:name=".activity.DetailMeasureSizeActivity"
             android:windowSoftInputMode="adjustPan"/>
-        <activity android:name=".activity.mywork.MeasureRecordActivity" />
-        <activity android:name=".activity.PhotoCommandActivity"/>
+        <activity android:name=".activity.MeasureRecordActivity" />
     </application>
 
 </manifest>

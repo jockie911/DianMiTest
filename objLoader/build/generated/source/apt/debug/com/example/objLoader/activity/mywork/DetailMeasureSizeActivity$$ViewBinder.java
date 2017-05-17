@@ -2,10 +2,13 @@
 package com.example.objLoader.activity.mywork;
 
 import android.view.View;
+
+import com.example.objLoader.activity.DetailMeasureSizeActivity;
+
 import butterknife.ButterKnife.Finder;
 import butterknife.ButterKnife.ViewBinder;
 
-public class DetailMeasureSizeActivity$$ViewBinder<T extends com.example.objLoader.activity.mywork.DetailMeasureSizeActivity> implements ViewBinder<T> {
+public class DetailMeasureSizeActivity$$ViewBinder<T extends DetailMeasureSizeActivity> implements ViewBinder<T> {
   @Override public void bind(final Finder finder, final T target, Object source) {
     View view;
     view = finder.findRequiredView(source, 2131689612, "field 'tableLayout'");

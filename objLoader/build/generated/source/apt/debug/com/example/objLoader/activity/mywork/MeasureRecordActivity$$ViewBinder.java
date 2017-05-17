@@ -2,10 +2,13 @@
 package com.example.objLoader.activity.mywork;
 
 import android.view.View;
+
+import com.example.objLoader.activity.MeasureRecordActivity;
+
 import butterknife.ButterKnife.Finder;
 import butterknife.ButterKnife.ViewBinder;
 
-public class MeasureRecordActivity$$ViewBinder<T extends com.example.objLoader.activity.mywork.MeasureRecordActivity> implements ViewBinder<T> {
+public class MeasureRecordActivity$$ViewBinder<T extends MeasureRecordActivity> implements ViewBinder<T> {
   @Override public void bind(final Finder finder, final T target, Object source) {
     View view;
     view = finder.findRequiredView(source, 2131689651, "field 'lvRecordMeasure'");

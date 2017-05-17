@@ -99,9 +99,8 @@ public class ResponseListener<T> implements OnResponseListener<T> {
     			Logger.d("请求成功:"+response.get().toString());
                 callBack.onSucceed(what, (T) GsonTools.changeGsonToBean(response.get().toString(), classBean));
     			callBack.onSucceed(what, response);
-
-                T o = (T) GsonTools.changeGsonToBean(response.get().toString(), classBean);
-                callBack.onSucceed(what,o);
+//                T o = (T) GsonTools.changeGsonToBean(response.get().toString(), classBean);
+//                callBack.onSucceed(what,o);
 //                callBack.onSucceed(what, bean);
     		}else {
     			Logger.d("请求失败:"+response.get().toString());

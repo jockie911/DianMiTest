@@ -6,57 +6,45 @@
     density="420dpi"
     format="10"
     plugin-version="2.3.1"
-    timestamp="1494931407219"
+    timestamp="1495013680879"
     token="-201181619530598174"
     verifier="COLD_SWAP_REQUESTED" >
 
     <task
         name="javac"
-        duration="2069" />
+        duration="982" />
     <task
         name="instant-run-dex"
         duration="0" />
     <task
         name="instant-run-transform"
-        duration="133" />
+        duration="28" />
     <task
         name="verifier"
-        duration="39" />
+        duration="16" />
 
     <artifact
-        location="E:\Code\Android\MyApplication\objLoader\build\intermediates\split-apk\debug\slices\slice_5.apk"
+        location="E:\Code\Android\MyApplication\objLoader\build\intermediates\split-apk\debug\slices\slice_0.apk"
         type="SPLIT" />
     <artifact
-        location="E:\Code\Android\MyApplication\objLoader\build\intermediates\split-apk\debug\slices\slice_2.apk"
-        type="SPLIT" />
-    <artifact
-        location="E:\Code\Android\MyApplication\objLoader\build\intermediates\split-apk\debug\slices\slice_3.apk"
+        location="E:\Code\Android\MyApplication\objLoader\build\intermediates\split-apk\debug\slices\slice_6.apk"
         type="SPLIT" />
 
     <build
         build-mode="FULL"
-        timestamp="1494928614946"
+        timestamp="1495010936000"
         verifier="FULL_BUILD_REQUESTED" >
         <artifact
-            location="E:\Code\Android\MyApplication\objLoader\build\intermediates\split-apk\debug\slices\slice_1.apk"
-            type="SPLIT" />
-        <artifact
-            location="E:\Code\Android\MyApplication\objLoader\build\intermediates\split-apk\debug\slices\slice_6.apk"
-            type="SPLIT" />
-        <artifact
-            location="E:\Code\Android\MyApplication\objLoader\build\intermediates\split-apk\debug\slices\slice_5.apk"
-            type="SPLIT" />
-        <artifact
-            location="E:\Code\Android\MyApplication\objLoader\build\intermediates\split-apk\debug\slices\slice_3.apk"
-            type="SPLIT" />
-        <artifact
-            location="E:\Code\Android\MyApplication\objLoader\build\intermediates\split-apk\debug\slices\slice_8.apk"
+            location="E:\Code\Android\MyApplication\objLoader\build\intermediates\split-apk\debug\slices\slice_2.apk"
             type="SPLIT" />
         <artifact
             location="E:\Code\Android\MyApplication\objLoader\build\intermediates\split-apk\debug\slices\slice_7.apk"
             type="SPLIT" />
         <artifact
-            location="E:\Code\Android\MyApplication\objLoader\build\intermediates\split-apk\debug\slices\slice_2.apk"
+            location="E:\Code\Android\MyApplication\objLoader\build\intermediates\split-apk\debug\slices\slice_1.apk"
+            type="SPLIT" />
+        <artifact
+            location="E:\Code\Android\MyApplication\objLoader\build\intermediates\split-apk\debug\slices\slice_3.apk"
             type="SPLIT" />
         <artifact
             location="E:\Code\Android\MyApplication\objLoader\build\intermediates\split-apk\debug\slices\slice_0.apk"
@@ -65,10 +53,19 @@
             location="E:\Code\Android\MyApplication\objLoader\build\intermediates\split-apk\debug\dep\dependencies.apk"
             type="SPLIT" />
         <artifact
+            location="E:\Code\Android\MyApplication\objLoader\build\intermediates\split-apk\debug\slices\slice_5.apk"
+            type="SPLIT" />
+        <artifact
             location="E:\Code\Android\MyApplication\objLoader\build\intermediates\split-apk\debug\slices\slice_4.apk"
             type="SPLIT" />
         <artifact
+            location="E:\Code\Android\MyApplication\objLoader\build\intermediates\split-apk\debug\slices\slice_6.apk"
+            type="SPLIT" />
+        <artifact
             location="E:\Code\Android\MyApplication\objLoader\build\intermediates\split-apk\debug\slices\slice_9.apk"
+            type="SPLIT" />
+        <artifact
+            location="E:\Code\Android\MyApplication\objLoader\build\intermediates\split-apk\debug\slices\slice_8.apk"
             type="SPLIT" />
         <artifact
             location="E:\Code\Android\MyApplication\objLoader\build\outputs\apk\objLoader-debug.apk"
@@ -76,24 +73,33 @@
     </build>
     <build
         build-mode="COLD"
-        timestamp="1494928922856"
-        verifier="COLD_SWAP_REQUESTED" >
-        <artifact
-            location="E:\Code\Android\MyApplication\objLoader\build\intermediates\split-apk\debug\slices\slice_6.apk"
-            type="SPLIT" />
-    </build>
-    <build
-        build-mode="COLD"
-        timestamp="1494931407219"
+        timestamp="1495013260697"
         verifier="COLD_SWAP_REQUESTED" >
         <artifact
             location="E:\Code\Android\MyApplication\objLoader\build\intermediates\split-apk\debug\slices\slice_5.apk"
             type="SPLIT" />
         <artifact
+            location="E:\Code\Android\MyApplication\objLoader\build\intermediates\split-apk\debug\slices\slice_3.apk"
+            type="SPLIT" />
+        <artifact
             location="E:\Code\Android\MyApplication\objLoader\build\intermediates\split-apk\debug\slices\slice_2.apk"
             type="SPLIT" />
         <artifact
-            location="E:\Code\Android\MyApplication\objLoader\build\intermediates\split-apk\debug\slices\slice_3.apk"
+            location="E:\Code\Android\MyApplication\objLoader\build\intermediates\split-apk\debug\slices\slice_1.apk"
+            type="SPLIT" />
+        <artifact
+            location="E:\Code\Android\MyApplication\objLoader\build\outputs\apk\objLoader-debug.apk"
+            type="SPLIT_MAIN" />
+    </build>
+    <build
+        build-mode="COLD"
+        timestamp="1495013680879"
+        verifier="COLD_SWAP_REQUESTED" >
+        <artifact
+            location="E:\Code\Android\MyApplication\objLoader\build\intermediates\split-apk\debug\slices\slice_0.apk"
+            type="SPLIT" />
+        <artifact
+            location="E:\Code\Android\MyApplication\objLoader\build\intermediates\split-apk\debug\slices\slice_6.apk"
             type="SPLIT" />
     </build>
 

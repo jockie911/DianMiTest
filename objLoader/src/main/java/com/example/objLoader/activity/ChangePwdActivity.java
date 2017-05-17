@@ -1,8 +1,14 @@
 package com.example.objLoader.activity;
 
+import android.content.Intent;
+import android.text.InputType;
+import android.text.TextUtils;
+import android.view.View;
+import android.widget.EditText;
+import android.widget.ImageView;
+
 import com.example.objLoader.R;
 import com.example.objLoader.bean.BaseRequestBean;
-import com.example.objLoader.global.AbActivityManager;
 import com.example.objLoader.global.BaseActivity;
 import com.example.objLoader.istatic.IConstant;
 import com.example.objLoader.nohttp.CallServer;
@@ -11,20 +17,9 @@ import com.example.objLoader.utils.Constants;
 import com.example.objLoader.utils.SharedPreferencesDAO;
 import com.example.objLoader.utils.Toast;
 import com.example.objLoader.utils.Utils;
-import com.example.objLoader.HomeActivity;
 import com.yolanda.nohttp.NoHttp;
 import com.yolanda.nohttp.RequestMethod;
 import com.yolanda.nohttp.rest.Request;
-
-import android.content.Intent;
-import android.os.Bundle;
-import android.text.InputType;
-import android.text.TextUtils;
-import android.view.MotionEvent;
-import android.view.View;
-import android.widget.EditText;
-import android.widget.ImageView;
-import android.widget.TextView;
 
 import butterknife.Bind;
 import butterknife.OnClick;

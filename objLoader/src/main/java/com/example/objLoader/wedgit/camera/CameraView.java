@@ -17,7 +17,7 @@ import android.view.SurfaceView;
 import android.widget.FrameLayout;
 
 import com.example.objLoader.R;
-import com.example.objLoader.activity.FrontPicActivity;
+import com.example.objLoader.global.BaseActivity;
 import com.example.objLoader.global.BaseApp;
 import com.example.objLoader.utils.JLog;
 
@@ -28,7 +28,7 @@ import java.util.List;
 /**
  * 相机控件
  */
-public class CameraView extends SurfaceView implements SurfaceHolder.Callback, ICameraOperation, IActivityLifiCycle {
+public class CameraView<T extends BaseActivity> extends SurfaceView implements SurfaceHolder.Callback, ICameraOperation, IActivityLifiCycle {
     public static final String TAG = "CameraView";
 
     private CameraManager.CameraDirection mCameraId; //0后置  1前置
@@ -43,7 +43,7 @@ public class CameraView extends SurfaceView implements SurfaceHolder.Callback, I
     private int mLayoutOrientation;
     private CameraOrientationListener mOrientationListener;
 
-    private FrontPicActivity mActivity;
+    private T mActivity;
     /**
      * 当前缩放
      */
@@ -82,7 +82,7 @@ public class CameraView extends SurfaceView implements SurfaceHolder.Callback, I
         mOrientationListener.enable();
     }
 
-    public void bindActivity(FrontPicActivity activity) {
+    public void bindActivity(T activity) {
         this.mActivity = activity;
     }
 
@@ -182,7 +182,8 @@ public class CameraView extends SurfaceView implements SurfaceHolder.Callback, I
      * 释放相机
      */
     public void releaseCamera() {
-        mCameraManager.releaseCamera(mCamera);
+        if(mCameraManager != null)
+            mCameraManager.releaseCamera(mCamera);
         mCamera = null;
     }
 
@@ -325,7 +326,7 @@ public class CameraView extends SurfaceView implements SurfaceHolder.Callback, I
             //重置对焦计数
             mSensorControler.restFoucs();
         } catch (Exception e) {
-            Utils.displayToastCenter((Activity) mContext, R.string.tips_camera_forbidden);
+            Utils.displayToastCenter((T) mContext, R.string.tips_camera_forbidden);
             e.printStackTrace();
         }
         if (mCamera != null) {

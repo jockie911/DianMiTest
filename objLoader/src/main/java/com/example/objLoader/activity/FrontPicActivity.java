@@ -5,9 +5,6 @@ import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.graphics.Bitmap;
-import android.graphics.BitmapFactory;
-import android.net.Uri;
-import android.provider.MediaStore;
 import android.support.v4.app.FragmentTransaction;
 import android.text.TextUtils;
 import android.view.View;
@@ -24,13 +21,10 @@ import com.example.objLoader.global.BaseApp;
 import com.example.objLoader.istatic.IConstant;
 import com.example.objLoader.utils.SharedPreferencesDAO;
 import com.example.objLoader.utils.Toast;
-import com.example.objLoader.utils.Utils;
 
 import org.greenrobot.eventbus.EventBus;
 import org.greenrobot.eventbus.Subscribe;
 import org.greenrobot.eventbus.ThreadMode;
-
-import java.io.File;
 
 import butterknife.Bind;
 import butterknife.OnClick;
@@ -49,12 +43,9 @@ public class FrontPicActivity extends BaseActivity {
 	private String front_pic_path = "";
 	public static FrontPicActivity activity;
 
-	private Uri imageUriFromCamera;
-	/**拍摄照片地址*/
-	private String photoPath;
-	/**相册照片地址*/
 	private String albumPath;
 	private String frontPath;
+	private int GENDER ;
 	private PhotoCommandFragment photoCommandFragment;
 
 	@Override
@@ -78,6 +69,7 @@ public class FrontPicActivity extends BaseActivity {
 		if(!TextUtils.isEmpty(frontPath)){
 			Glide.with(this).load(frontPath).into(iv_front);
 		}
+		GENDER = getIntent().getIntExtra(IConstant.GENDER, 0);
 	}
 
 	@Override
@@ -95,15 +87,12 @@ public class FrontPicActivity extends BaseActivity {
 			break;
 		case R.id.tv_next_step:
 			frontPath = SharedPreferencesDAO.getInstance(mContext).getString(IConstant.FRONT_PIC_PATH);
-			if(frontPath.equals("") || frontPath.length() <= 0){
+			if(TextUtils.isEmpty(frontPath)){
 				Toast.show(R.string.selector_front_pic);
 				return;
-			}else{
-				front_pic_path = frontPath;
 			}
-
 			Intent intent = new Intent(mContext, SidePicActivity.class);
-			intent.putExtra(IConstant.FRONT_PIC_PATH, front_pic_path);
+			intent.putExtra(IConstant.GENDER,GENDER);
 			startActivity(intent);
 			break;
 		}
@@ -112,17 +101,6 @@ public class FrontPicActivity extends BaseActivity {
 	@Override
 	protected void onActivityResult(int requestCode, int resultCode, Intent data) {
 		super.onActivityResult(requestCode, resultCode, data);
-		if (requestCode == IConstant.CAMERA_REQUEST_CODE && resultCode == RESULT_OK) {
-
-			photoPath = getRealPathFromURI(imageUriFromCamera);
-			
-			front_pic_path = photoPath;
-
-			Glide.with(mContext).load(photoPath).into(iv_front);
-
-			SharedPreferencesDAO.getInstance(mContext).putString(IConstant.FRONT_PIC_PATH, front_pic_path);
-
-		}
 		if (requestCode == IConstant.ALBUM_REQUEST_CODE && resultCode == RESULT_OK) {
 
 			albumPath = getRealPathFromURI(data.getData()); // 图片文件路径
@@ -136,8 +114,7 @@ public class FrontPicActivity extends BaseActivity {
 
 	public void initShowFragment(boolean isShow){
 		if(photoCommandFragment == null)
-			photoCommandFragment = new PhotoCommandFragment(IConstant.FRONT_PIC_PATH);
-
+			photoCommandFragment = new PhotoCommandFragment(true,GENDER);
 		FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
 		if(isShow){
 			if(!photoCommandFragment.isAdded()){
@@ -167,12 +144,14 @@ public class FrontPicActivity extends BaseActivity {
 //		}
 //		initShowFragment(false);
 
-		Bitmap bitmap = BaseApp.getInstance().getCameraBitmap();
+		if(obj.isFrontTakePhoto()){
+			Bitmap bitmap = BaseApp.getInstance().getCameraBitmap();
 
-		if (bitmap != null) {
-			iv_front.setImageBitmap(bitmap);
+			if (bitmap != null) {
+				iv_front.setImageBitmap(bitmap);
+			}
+			initShowFragment(false);
 		}
-		initShowFragment(false);
 	}
 
 	@Override

@@ -4,11 +4,9 @@ import android.content.Intent;
 import android.view.View;
 
 import com.example.objLoader.R;
-import com.example.objLoader.activity.mywork.DetailMeasureSizeActivity;
 import com.example.objLoader.bean.MeasureRecordBean;
 import com.example.objLoader.global.BaseActivity;
 import com.example.objLoader.istatic.IConstant;
-import com.example.objLoader.utils.Toast;
 import com.example.objLoader.wedgit.wheelpicker.WheelPicker;
 
 import java.util.ArrayList;

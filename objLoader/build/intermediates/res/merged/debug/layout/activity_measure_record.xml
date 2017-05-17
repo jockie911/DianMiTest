@@ -6,7 +6,7 @@
     android:background="@color/color_base_deep"
     android:fitsSystemWindows="true"
     android:orientation="vertical"
-    tools:context="com.example.objLoader.activity.mywork.MeasureRecordActivity">
+    tools:context="com.example.objLoader.activity.MeasureRecordActivity">
 
     <include android:id="@+id/temp"
         layout="@layout/base_title_bar"/>

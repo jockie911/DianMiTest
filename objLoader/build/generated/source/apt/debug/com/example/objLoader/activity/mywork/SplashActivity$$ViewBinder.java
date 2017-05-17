@@ -2,10 +2,13 @@
 package com.example.objLoader.activity.mywork;
 
 import android.view.View;
+
+import com.example.objLoader.activity.SplashActivity;
+
 import butterknife.ButterKnife.Finder;
 import butterknife.ButterKnife.ViewBinder;
 
-public class SplashActivity$$ViewBinder<T extends com.example.objLoader.activity.mywork.SplashActivity> implements ViewBinder<T> {
+public class SplashActivity$$ViewBinder<T extends SplashActivity> implements ViewBinder<T> {
   @Override public void bind(final Finder finder, final T target, Object source) {
     View view;
     view = finder.findRequiredView(source, 2131689679, "field 'ivSplash'");

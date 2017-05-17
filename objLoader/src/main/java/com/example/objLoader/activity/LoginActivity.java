@@ -3,6 +3,7 @@ package com.example.objLoader.activity;
 import android.content.Intent;
 import android.text.InputType;
 import android.text.TextUtils;
+import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.ImageView;
@@ -15,12 +16,14 @@ import com.example.objLoader.istatic.IConstant;
 import com.example.objLoader.nohttp.CallServer;
 import com.example.objLoader.nohttp.HttpCallBack;
 import com.example.objLoader.utils.Constants;
+import com.example.objLoader.utils.JLog;
 import com.example.objLoader.utils.SharedPreferencesDAO;
 import com.example.objLoader.utils.Toast;
 import com.example.objLoader.utils.Utils;
 import com.yolanda.nohttp.NoHttp;
 import com.yolanda.nohttp.RequestMethod;
 import com.yolanda.nohttp.rest.Request;
+import com.yolanda.nohttp.rest.Response;
 
 import butterknife.Bind;
 import butterknife.OnClick;
@@ -115,9 +118,14 @@ public class LoginActivity extends BaseActivity {
 		loginRequest.add(IConstant.STRING, Utils.MD5(username + Constants.MD5_KEY + Utils.MD5(password)));
 		CallServer.getInstance().add(this, loginRequest, callBack, Constants.REGISTER_WHAT, false, false,BaseRequestBean.class);
 	}
-	
+
 	private HttpCallBack<BaseRequestBean> callBack = new HttpCallBack<BaseRequestBean>() {
-		
+
+		@Override
+		public void onSucceed(int what, Response<BaseRequestBean> response) {
+			super.onSucceed(what, response);
+		}
+
 		public void onSucceed(int what, BaseRequestBean bean) {
 			SharedPreferencesDAO.getInstance(LoginActivity.this).putString(IConstant.MOBILE, username);
 			SharedPreferencesDAO.getInstance(LoginActivity.this).putBoolean(IConstant.IS_LOGIN, true);

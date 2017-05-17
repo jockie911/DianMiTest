@@ -5,14 +5,18 @@ import android.app.AlertDialog.Builder;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.res.Resources.NotFoundException;
+import android.graphics.Bitmap;
 import android.net.Uri;
 import android.provider.MediaStore;
 import android.provider.Settings;
+import android.support.v4.app.FragmentTransaction;
+import android.text.TextUtils;
 import android.util.Log;
 import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup.LayoutParams;
+import android.view.textservice.TextInfo;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.PopupWindow;
@@ -22,7 +26,10 @@ import com.bumptech.glide.Glide;
 import com.example.objLoader.R;
 import com.example.objLoader.bean.BaseRequestBean;
 import com.example.objLoader.bean.MeasureInfo;
+import com.example.objLoader.bean.PicPathEvent;
+import com.example.objLoader.fragment.PhotoCommandFragment;
 import com.example.objLoader.global.BaseActivity;
+import com.example.objLoader.global.BaseApp;
 import com.example.objLoader.istatic.IConstant;
 import com.example.objLoader.nohttp.CallServer;
 import com.example.objLoader.nohttp.HttpCallBack;
@@ -39,6 +46,10 @@ import com.yolanda.nohttp.OnUploadListener;
 import com.yolanda.nohttp.RequestMethod;
 import com.yolanda.nohttp.rest.Request;
 import com.yolanda.nohttp.rest.Response;
+
+import org.greenrobot.eventbus.EventBus;
+import org.greenrobot.eventbus.Subscribe;
+import org.greenrobot.eventbus.ThreadMode;
 
 import java.io.File;
 import java.util.Calendar;
@@ -62,7 +73,7 @@ public class SidePicActivity extends BaseActivity {
 	private Request<String> uploadPicRequest;
 
 	private Uri imageUriFromCamera;
-	private static final int CAMERA_REQUEST_CODE = 1, PHOTO_REQUEST_CODE = 2;
+	private static final int PHOTO_REQUEST_CODE = 2;
 	private PopupWindow sideWindow;
 	private String time;
 	private String picPath;
@@ -70,7 +81,8 @@ public class SidePicActivity extends BaseActivity {
 	private String photoPath;
 	/** 相册照片地址 */
 	private String albumPath;
-
+	private PhotoCommandFragment photoCommandFragment;
+	private int GENDER;
 
 	@Override
 	protected int getLayoutRes() {
@@ -84,18 +96,20 @@ public class SidePicActivity extends BaseActivity {
 
 	@Override
 	protected void initData() {
-
+		if(!EventBus.getDefault().isRegistered(this))
+			EventBus.getDefault().register(this);
 		tvTitle.setText(R.string.side_pic);
 
 		picPath = SharedPreferencesDAO.getInstance(mContext).getString(IConstant.SIDE_PIC_PATH);
-
 		JLog.d("initData()" + side_pic_path);
+		if(!TextUtils.isEmpty(picPath))
+			Glide.with(this).load(picPath).into(iv_side);
 
-		Glide.with(this).load(picPath).into(iv_side);
+	    GENDER = getIntent().getIntExtra(IConstant.GENDER,0);
 
-		View sideView = LayoutInflater.from(mContext).inflate(R.layout.pop_front, null);
-		tv_upload_pic_text = (TextView) sideView.findViewById(R.id.tv_upload_pic_text);
-		sideWindow = new PopupWindow(sideView, LayoutParams.MATCH_PARENT, LayoutParams.WRAP_CONTENT, true);
+//		View sideView = LayoutInflater.from(mContext).inflate(R.layout.pop_front, null);
+//		tv_upload_pic_text = (TextView) sideView.findViewById(R.id.tv_upload_pic_text);
+//		sideWindow = new PopupWindow(sideView, LayoutParams.MATCH_PARENT, LayoutParams.WRAP_CONTENT, true);
 	}
 
 	@Override
@@ -105,11 +119,11 @@ public class SidePicActivity extends BaseActivity {
 		switch (v.getId()) {
 			/** 打开相机 */
 			case R.id.btn_side_camera:
-				imageUriFromCamera = Utils.createImagePathUri(mContext);
-				Intent cameraIntent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
-				cameraIntent.putExtra(MediaStore.EXTRA_OUTPUT, imageUriFromCamera);
-				startActivityForResult(cameraIntent, CAMERA_REQUEST_CODE);
-
+//				imageUriFromCamera = Utils.createImagePathUri(mContext);
+//				Intent cameraIntent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
+//				cameraIntent.putExtra(MediaStore.EXTRA_OUTPUT, imageUriFromCamera);
+//				startActivityForResult(cameraIntent, CAMERA_REQUEST_CODE);
+				initShowFragment(true);
 				break;
 			/** 打开相册 */
 			case R.id.btn_side_album:
@@ -128,7 +142,7 @@ public class SidePicActivity extends BaseActivity {
 	/**
 	 * 上传图片从服务器获取测量信息
 	 */
-	private void measure() {
+	/*private void measure() {
 		picPath = SharedPreferencesDAO. getInstance(mContext).getString(
 				"sidePath");
 		if (picPath.equals("") || picPath.length() <= 0) {
@@ -137,7 +151,6 @@ public class SidePicActivity extends BaseActivity {
 		} else {
 			side_pic_path = picPath;
 		}
-		
 		tv_start_measure.setText(R.string.measuring);
 		
 		time = Utils.getTime();
@@ -186,8 +199,9 @@ public class SidePicActivity extends BaseActivity {
 				Constants.GET_MEASURE_INFO_WHAT, false, false,
 				MeasureInfo.class);
 
-	}
+	}*/
 
+/*
 	private HttpCallBack<String> callBack = new HttpCallBack<String>() {
 
 		public void onSucceed(int what, BaseRequestBean bean) {
@@ -195,7 +209,7 @@ public class SidePicActivity extends BaseActivity {
 			Toast.show(R.string.measureing);
 
 //			measureInfo = (MeasureInfo) bean;
-			
+
 //			objPath = AppConfig.getInstance().APP_PATH_ROOT + File.separator + measureInfo.getData().getObjname();
 ////			objUrl = measureInfo.getData().getThreeshowurl();
 //			objUrl = measureInfo.getData().getObjurl();
@@ -219,10 +233,10 @@ public class SidePicActivity extends BaseActivity {
 
 		public void onSucceed(int what, Response<String> response) {
 			String string = response.get().toString();
-			
+
 			SharedPreferencesDAO.getInstance(mContext).putString("json", string);
 			SharedPreferencesDAO.getInstance(mContext).putBoolean("isSave", false);
-			
+
 		};
 
 		public void onFailed(int what, String errorInfo) {
@@ -234,9 +248,11 @@ public class SidePicActivity extends BaseActivity {
 
 	private OnUploadListener mOnUploadListener = new OnUploadListener() {
 
-		/**
+		*/
+/**
 		 * 文件的上传状态记录.
-		 */
+		 *//*
+
 		private String[] uploadStatus = new String[2];
 
 		@Override
@@ -283,7 +299,7 @@ public class SidePicActivity extends BaseActivity {
 			AlertDialog.Builder builder = new Builder(mContext,R.style.AlertDialog);
 			builder.setTitle(R.string.upload_pic_error);
 			builder.setMessage(R.string.server_error);
-														
+
 			builder.setPositiveButton(R.string.confirm,
 					new DialogInterface.OnClickListener() {
 
@@ -305,21 +321,22 @@ public class SidePicActivity extends BaseActivity {
 			}
 		}
 	};
+*/
 
 	@Override
 	protected void onActivityResult(int requestCode, int resultCode, Intent data) {
 		super.onActivityResult(requestCode, resultCode, data);
-
-		if (requestCode == CAMERA_REQUEST_CODE && resultCode == RESULT_OK) {
-
-			photoPath = getRealPathFromURI(imageUriFromCamera);
-			side_pic_path = photoPath;
-			Glide.with(this).load(photoPath).into(iv_side);
-
-			SharedPreferencesDAO.getInstance(this).putString("sidePath",
-					side_pic_path);
-
-		}
+//
+//		if (requestCode == CAMERA_REQUEST_CODE && resultCode == RESULT_OK) {
+//
+//			photoPath = getRealPathFromURI(imageUriFromCamera);
+//			side_pic_path = photoPath;
+//			Glide.with(this).load(photoPath).into(iv_side);
+//
+//			SharedPreferencesDAO.getInstance(this).putString("sidePath",
+//					side_pic_path);
+//
+//		}
 		if (requestCode == PHOTO_REQUEST_CODE && resultCode == RESULT_OK) {
 
 			albumPath = getRealPathFromURI(data.getData()); // 图片文件路径
@@ -329,5 +346,44 @@ public class SidePicActivity extends BaseActivity {
 			SharedPreferencesDAO.getInstance(this).putString("sidePath",
 					side_pic_path);
 		}
+	}
+
+	public void initShowFragment(boolean isShow){
+		if(photoCommandFragment == null)
+			photoCommandFragment = new PhotoCommandFragment(false,GENDER);
+
+		FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
+		if(isShow){
+			if(!photoCommandFragment.isAdded()){
+				fragmentTransaction.add(R.id.content_container,photoCommandFragment);
+			}else{
+				fragmentTransaction.show(photoCommandFragment);
+			}
+		}else{
+			fragmentTransaction.hide(photoCommandFragment);
+		}
+		fragmentTransaction.commit();
+	}
+
+	/**
+	 * 正面选择相机成功返回照片
+	 */
+	@Subscribe(threadMode = ThreadMode.MAIN)
+	public void setPicSuccessAndCloseCameraSurfaceView(PicPathEvent obj){
+		if(!obj.isFrontTakePhoto()){
+			Bitmap bitmap = BaseApp.getInstance().getCameraBitmap();
+
+			if (bitmap != null) {
+				iv_side.setImageBitmap(bitmap);
+			}
+			initShowFragment(false);
+		}
+	}
+
+	@Override
+	protected void onDestroy() {
+		if(EventBus.getDefault().isRegistered(this))
+			EventBus.getDefault().unregister(this);
+		super.onDestroy();
 	}
 }

@@ -9,12 +9,11 @@ import android.widget.ListView;
 import android.widget.PopupWindow;
 
 import com.example.objLoader.R;
-import com.example.objLoader.activity.mywork.DetailMeasureSizeActivity;
+import com.example.objLoader.activity.DetailMeasureSizeActivity;
 import com.example.objLoader.adapter.MeasureInfoAdapter;
 import com.example.objLoader.bean.MeasureInfo;
 import com.example.objLoader.bean.MeasureInfo.Info;
 import com.example.objLoader.bean.MeasureRecordBean;
-import com.google.gson.Gson;
 import com.yolanda.nohttp.rest.Request;
 
 import java.util.List;

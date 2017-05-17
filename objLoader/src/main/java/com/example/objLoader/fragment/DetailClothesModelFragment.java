@@ -1,19 +1,16 @@
 package com.example.objLoader.fragment;
 
-import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
-import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.example.objLoader.R;
-import com.example.objLoader.activity.mywork.DetailMeasureSizeActivity;
+import com.example.objLoader.activity.DetailMeasureSizeActivity;
 import com.example.objLoader.global.BaseFragment;
 import com.example.objLoader.istatic.IConstant;
 
 import butterknife.Bind;
-import butterknife.ButterKnife;
 
 public class DetailClothesModelFragment extends BaseFragment {
 

@@ -8,6 +8,7 @@ public class IConstant {
 
     public static final String USERNAME = "username";
     public static final String PHONE_AREA_CODE = "86";
+    public static final String GENDER = "gender";
 
     public static final String REGISTER_OR_FORGET = "register_or_forget";
 
@@ -15,8 +16,8 @@ public class IConstant {
 
 
     public static int ZERO = 0;
-    public static int GENDER_FEMALE = 1;
-    public static int GENDEER_MALE = 2;
+    public static int GENDEER_MALE = 1;
+    public static int GENDER_FEMALE = 2;
 
     public static int CAMERA_REQUEST_CODE = 1;
     public static int ALBUM_REQUEST_CODE = 2;
