@@ -107,14 +107,15 @@ public class AlertDialog {
 			final OnClickListener listener) {
 		showPosBtn = true;
 		if ("".equals(text)) {
-			btn_pos.setText("确定");
+			btn_pos.setText(R.string.ok);
 		} else {
 			btn_pos.setText(text);
 		}
 		btn_pos.setOnClickListener(new OnClickListener() {
 			@Override
 			public void onClick(View v) {
-				listener.onClick(v);
+				if(listener != null)
+					listener.onClick(v);
 				dialog.dismiss();
 			}
 		});
@@ -128,7 +129,8 @@ public class AlertDialog {
 		btn_pos.setOnClickListener(new OnClickListener() {
 			@Override
 			public void onClick(View v) {
-				listener.onClick(v);
+				if(listener != null)
+					listener.onClick(v);
 				dialog.dismiss();
 			}
 		});
@@ -140,14 +142,15 @@ public class AlertDialog {
 			final OnClickListener listener) {
 		showNegBtn = true;
 		if ("".equals(text)) {
-			btn_neg.setText("取消");
+			btn_neg.setText(R.string.cancel);
 		} else {
 			btn_neg.setText(text);
 		}
 		btn_neg.setOnClickListener(new OnClickListener() {
 			@Override
 			public void onClick(View v) {
-				listener.onClick(v);
+				if(listener != null)
+					listener.onClick(v);
 				dialog.dismiss();
 			}
 		});
@@ -161,7 +164,8 @@ public class AlertDialog {
 		btn_neg.setOnClickListener(new OnClickListener() {
 			@Override
 			public void onClick(View v) {
-				listener.onClick(v);
+				if(listener != null)
+					listener.onClick(v);
 				dialog.dismiss();
 			}
 		});
@@ -183,7 +187,7 @@ public class AlertDialog {
 		}
 
 		if (!showPosBtn && !showNegBtn) {
-			btn_pos.setText("确定");
+			btn_pos.setText(R.string.ok);
 			btn_pos.setVisibility(View.VISIBLE);
 			btn_pos.setBackgroundResource(R.drawable.alertdialog_single_selector);
 			btn_pos.setOnClickListener(new OnClickListener() {

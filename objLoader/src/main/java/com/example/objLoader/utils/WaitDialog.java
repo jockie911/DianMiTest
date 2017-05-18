@@ -3,10 +3,12 @@ package com.example.objLoader.utils;
 
 
 import com.example.objLoader.R;
+import com.example.objLoader.utils.lib.DensityUtil;
 
 import android.app.ProgressDialog;
 import android.content.Context;
 import android.os.Bundle;
+import android.view.WindowManager;
 
 
 public class WaitDialog extends ProgressDialog {
@@ -15,6 +17,13 @@ public class WaitDialog extends ProgressDialog {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.wait);
+
+		WindowManager.LayoutParams attributes = getWindow().getAttributes();
+		attributes.width = DensityUtil.dip2px(getContext(),150);
+		attributes.height = DensityUtil.dip2px(getContext(),150);
+		getWindow().setAttributes(attributes);
+
+
 	}
 	
 	public WaitDialog(Context context) {

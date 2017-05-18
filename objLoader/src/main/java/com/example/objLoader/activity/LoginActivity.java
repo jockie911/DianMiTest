@@ -3,7 +3,6 @@ package com.example.objLoader.activity;
 import android.content.Intent;
 import android.text.InputType;
 import android.text.TextUtils;
-import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.ImageView;
@@ -15,10 +14,9 @@ import com.example.objLoader.global.BaseActivity;
 import com.example.objLoader.istatic.IConstant;
 import com.example.objLoader.nohttp.CallServer;
 import com.example.objLoader.nohttp.HttpCallBack;
-import com.example.objLoader.utils.Constants;
-import com.example.objLoader.utils.JLog;
+import com.example.objLoader.istatic.Constants;
 import com.example.objLoader.utils.SharedPreferencesDAO;
-import com.example.objLoader.utils.Toast;
+import com.example.objLoader.utils.ToastUtils;
 import com.example.objLoader.utils.Utils;
 import com.yolanda.nohttp.NoHttp;
 import com.yolanda.nohttp.RequestMethod;
@@ -88,6 +86,12 @@ public class LoginActivity extends BaseActivity {
 
 	private void loginWX() {
 		//TODO
+//		SendAuth.Req req = new SendAuth.Req();
+//		req.scope = "snsapi_userinfo";
+//		req.state = "wechat_wanduoduo" ;
+//		IWXAPI msgApi = WXAPIFactory.createWXAPI(this, null);
+//		msgApi.registerApp(IConstant.WXAPP_ID);
+//		msgApi.sendReq(req);
 	}
 
 	private void startActivity(boolean isForgetPsw){
@@ -107,7 +111,7 @@ public class LoginActivity extends BaseActivity {
 
 	private void login() {
 		if (username.equals("") || password.equals("")) {
-			Toast.show(R.string.login_user_pwd_not_null);
+			ToastUtils.show(R.string.login_user_pwd_not_null);
 			return;
 		}
 		
@@ -129,7 +133,7 @@ public class LoginActivity extends BaseActivity {
 		public void onSucceed(int what, BaseRequestBean bean) {
 			SharedPreferencesDAO.getInstance(LoginActivity.this).putString(IConstant.MOBILE, username);
 			SharedPreferencesDAO.getInstance(LoginActivity.this).putBoolean(IConstant.IS_LOGIN, true);
-			Toast.show(bean.info);
+			ToastUtils.show(bean.info);
 			if(!isCheckLogin){
 				startActivity(new Intent(LoginActivity.this,AccountInfoActivity.class));
 			}
@@ -137,9 +141,10 @@ public class LoginActivity extends BaseActivity {
 		};
 		
 		public void onFailed(int what, String errorInfo) {
-			Toast.show(errorInfo);
+			ToastUtils.show(errorInfo);
 		};
 	};
+
 	@Override
 	protected void onDestroy() {
 		super.onDestroy();	

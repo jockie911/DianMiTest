@@ -30,9 +30,10 @@
     <uses-permission android:name="android.permission.GET_TASKS" />
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
     <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+    <uses-permission android:name="android.permission.CAMERA" />
 
-    <uses-permission android:name="android.permission.CAMERA"/>
     <uses-feature android:name="android.hardware.camera.autofocus" />
+
     <application
         android:name=".global.BaseApp"
         android:icon="@mipmap/ic_launcher"
@@ -47,6 +48,7 @@
             android:windowSoftInputMode="stateHidden|adjustResize" />
 
         <!-- 查看我的记录详情 -->
+
 
         <!-- 更换密码 -->
         <activity
@@ -121,9 +123,11 @@
         <activity
             android:name=".activity.MainActivity"
             android:theme="@style/Theme.AppCompat.NoActionBar" />
-        <activity android:name=".activity.DetailMeasureSizeActivity"
-            android:windowSoftInputMode="adjustPan"/>
+        <activity
+            android:name=".activity.DetailMeasureSizeActivity"
+            android:windowSoftInputMode="adjustPan" />
         <activity android:name=".activity.MeasureRecordActivity" />
+        <activity android:name=".activity.SettingActivity"></activity>
     </application>
 
 </manifest>

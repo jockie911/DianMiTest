@@ -13,9 +13,9 @@ import com.example.objLoader.global.BaseActivity;
 import com.example.objLoader.istatic.IConstant;
 import com.example.objLoader.nohttp.CallServer;
 import com.example.objLoader.nohttp.HttpCallBack;
-import com.example.objLoader.utils.Constants;
+import com.example.objLoader.istatic.Constants;
 import com.example.objLoader.utils.SharedPreferencesDAO;
-import com.example.objLoader.utils.Toast;
+import com.example.objLoader.utils.ToastUtils;
 import com.example.objLoader.utils.Utils;
 import com.yolanda.nohttp.NoHttp;
 import com.yolanda.nohttp.RequestMethod;
@@ -96,7 +96,7 @@ public class ChangePwdActivity extends BaseActivity{
 
     private void changePwd() {
 		if(old_pwd.length() < 5 || new_pwd.length() < 5){
-			Toast.show(R.string.pwd_lenght);
+			ToastUtils.show(R.string.pwd_lenght);
 			return;
 		}
 		changePwdRequest = NoHttp.createStringRequest(Constants.CHANGE_PWD, RequestMethod.POST);
@@ -110,13 +110,13 @@ public class ChangePwdActivity extends BaseActivity{
 	private HttpCallBack<BaseRequestBean> callBack = new HttpCallBack<BaseRequestBean>() {
 	
 		public void onSucceed(int what, BaseRequestBean bean) {
-			Toast.show(bean.info);
+			ToastUtils.show(bean.info);
 			startActivity(new Intent(mContext, LoginActivity.class));
 			finish();
 		};
 		
 		public void onFailed(int what, String errorInfo) {
-			Toast.show(errorInfo);
+			ToastUtils.show(errorInfo);
 		};
 	};
 }

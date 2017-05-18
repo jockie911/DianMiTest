@@ -345,7 +345,7 @@ public class CameraView<T extends BaseActivity> extends SurfaceView implements S
                 e.printStackTrace();
             }
         } else {
-//            toast("切换失败，请重试！", Toast.LENGTH_LONG);
+//            toast("切换失败，请重试！", ToastUtils.LENGTH_LONG);
         }
 
         if (mSwitchCameraCallBack != null) {

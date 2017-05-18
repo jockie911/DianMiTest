@@ -13,9 +13,9 @@ import com.example.objLoader.global.BaseActivity;
 import com.example.objLoader.istatic.IConstant;
 import com.example.objLoader.nohttp.CallServer;
 import com.example.objLoader.nohttp.HttpCallBack;
-import com.example.objLoader.utils.Constants;
+import com.example.objLoader.istatic.Constants;
 import com.example.objLoader.utils.SharedPreferencesDAO;
-import com.example.objLoader.utils.Toast;
+import com.example.objLoader.utils.ToastUtils;
 import com.example.objLoader.utils.Utils;
 import com.yolanda.nohttp.NoHttp;
 import com.yolanda.nohttp.RequestMethod;
@@ -91,10 +91,10 @@ public class ForgertPwdActivity extends BaseActivity {
 			break;
 		case R.id.tv_forget_pwd_send_auth_code:
 			if (mobile.length() < 11) {
-				Toast.show(R.string.right_mobile);
+				ToastUtils.show(R.string.right_mobile);
 				return;
 			} else if (!Utils.isNetworkConnected(ForgertPwdActivity.this)) { // 检查网络连接
-				Toast.show(R.string.log_check_network);
+				ToastUtils.show(R.string.log_check_network);
 				return;
 			} else {
 				SharedPreferencesDAO.getInstance(this).putString("phone_number", mobile);
@@ -108,11 +108,11 @@ public class ForgertPwdActivity extends BaseActivity {
 
 	private void confirm() {
 		if (mobile.length() < 11) {
-			Toast.show(R.string.right_mobile);
+			ToastUtils.show(R.string.right_mobile);
 			return;
 		}
 		if(auth_code.length() < 4){
-			Toast.show(R.string.auth_code_wrong);
+			ToastUtils.show(R.string.auth_code_wrong);
 			return;
 		}
 		if (isCommit) {
@@ -133,12 +133,12 @@ public class ForgertPwdActivity extends BaseActivity {
 	private HttpCallBack<BaseRequestBean> callBack = new HttpCallBack<BaseRequestBean>() {
 		
 		public void onSucceed(int what, BaseRequestBean bean) {
-			Toast.show(bean.info);
+			ToastUtils.show(bean.info);
 			finish();
 		};
 		
 		public void onFailed(int what, String errorInfo) {
-			Toast.show(errorInfo);
+			ToastUtils.show(errorInfo);
 		};
 	};
 	
@@ -155,22 +155,22 @@ public class ForgertPwdActivity extends BaseActivity {
 				// 短信注册成功后，返回MainActivity,然后提示新好友
 				if (event == SMSSDK.EVENT_SUBMIT_VERIFICATION_CODE) {// 提交验证码成功
 
-					Toast.show(R.string.auth_code_right);
+					ToastUtils.show(R.string.auth_code_right);
 					isCodeRight = true;
 					isCommit = false;
 
 				} else if (event == SMSSDK.EVENT_GET_VERIFICATION_CODE) {
 					// 已经验证
-					Toast.show(R.string.auth_code_already);
+					ToastUtils.show(R.string.auth_code_already);
 				}
 			} else {
 				isCodeRight = false;
 				isCommit = true;
 				// ((Throwable) data).printStackTrace();
-				// Toast.makeText(MainActivity.this, "验证码错误",
-				// Toast.LENGTH_SHORT).show();
-				// Toast.makeText(MainActivity.this, "123",
-				// Toast.LENGTH_SHORT).show();
+				// ToastUtils.makeText(MainActivity.this, "验证码错误",
+				// ToastUtils.LENGTH_SHORT).show();
+				// ToastUtils.makeText(MainActivity.this, "123",
+				// ToastUtils.LENGTH_SHORT).show();
 				int status = 0;
 				try {
 					((Throwable) data).printStackTrace();
@@ -180,7 +180,7 @@ public class ForgertPwdActivity extends BaseActivity {
 					String des = object.optString("detail");
 					status = object.optInt("status");
 					if (!TextUtils.isEmpty(des)) {
-						Toast.show(des);
+						ToastUtils.show(des);
 						return;
 					}
 				} catch (Exception e) {

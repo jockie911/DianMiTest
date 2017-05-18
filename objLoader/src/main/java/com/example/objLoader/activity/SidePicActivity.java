@@ -1,22 +1,11 @@
 package com.example.objLoader.activity;
 
-import android.app.AlertDialog;
-import android.app.AlertDialog.Builder;
-import android.content.DialogInterface;
 import android.content.Intent;
-import android.content.res.Resources.NotFoundException;
 import android.graphics.Bitmap;
 import android.net.Uri;
-import android.provider.MediaStore;
-import android.provider.Settings;
 import android.support.v4.app.FragmentTransaction;
 import android.text.TextUtils;
-import android.util.Log;
-import android.view.Gravity;
-import android.view.LayoutInflater;
 import android.view.View;
-import android.view.ViewGroup.LayoutParams;
-import android.view.textservice.TextInfo;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.PopupWindow;
@@ -24,35 +13,18 @@ import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
 import com.example.objLoader.R;
-import com.example.objLoader.bean.BaseRequestBean;
-import com.example.objLoader.bean.MeasureInfo;
 import com.example.objLoader.bean.PicPathEvent;
 import com.example.objLoader.fragment.PhotoCommandFragment;
 import com.example.objLoader.global.BaseActivity;
 import com.example.objLoader.global.BaseApp;
 import com.example.objLoader.istatic.IConstant;
-import com.example.objLoader.nohttp.CallServer;
-import com.example.objLoader.nohttp.HttpCallBack;
-import com.example.objLoader.utils.AppConfig;
-import com.example.objLoader.utils.Constants;
 import com.example.objLoader.utils.JLog;
 import com.example.objLoader.utils.SharedPreferencesDAO;
-import com.example.objLoader.utils.Toast;
-import com.example.objLoader.utils.Utils;
-import com.yolanda.nohttp.FileBinary;
-import com.yolanda.nohttp.Logger;
-import com.yolanda.nohttp.NoHttp;
-import com.yolanda.nohttp.OnUploadListener;
-import com.yolanda.nohttp.RequestMethod;
 import com.yolanda.nohttp.rest.Request;
-import com.yolanda.nohttp.rest.Response;
 
 import org.greenrobot.eventbus.EventBus;
 import org.greenrobot.eventbus.Subscribe;
 import org.greenrobot.eventbus.ThreadMode;
-
-import java.io.File;
-import java.util.Calendar;
 
 import butterknife.Bind;
 import butterknife.OnClick;
@@ -146,7 +118,7 @@ public class SidePicActivity extends BaseActivity {
 		picPath = SharedPreferencesDAO. getInstance(mContext).getString(
 				"sidePath");
 		if (picPath.equals("") || picPath.length() <= 0) {
-			Toast.show(R.string.selector_side_pic);
+			ToastUtils.show(R.string.selector_side_pic);
 			return;
 		} else {
 			side_pic_path = picPath;
@@ -206,14 +178,14 @@ public class SidePicActivity extends BaseActivity {
 
 		public void onSucceed(int what, BaseRequestBean bean) {
 
-			Toast.show(R.string.measureing);
+			ToastUtils.show(R.string.measureing);
 
 //			measureInfo = (MeasureInfo) bean;
 
 //			objPath = AppConfig.getInstance().APP_PATH_ROOT + File.separator + measureInfo.getData().getObjname();
 ////			objUrl = measureInfo.getData().getThreeshowurl();
 //			objUrl = measureInfo.getData().getObjurl();
-//				Toast.show(R.string.measureing);
+//				ToastUtils.show(R.string.measureing);
 //				Log.e("objUrl", objUrl);
 //				Log.e("objname", measureInfo.getData().getObjname());
 //				Log.e("threeshowurl", measureInfo.getData().getThreeshowurl());
@@ -240,7 +212,7 @@ public class SidePicActivity extends BaseActivity {
 		};
 
 		public void onFailed(int what, String errorInfo) {
-			Toast.show(errorInfo);
+			ToastUtils.show(errorInfo);
 			sideWindow.dismiss();
 
 		};
@@ -313,9 +285,9 @@ public class SidePicActivity extends BaseActivity {
 			if (exception instanceof NotFoundException) {
 
 				if (what == 0) {
-					Toast.show(R.string.front_pic_not_found);
+					ToastUtils.show(R.string.front_pic_not_found);
 				} else {
-					Toast.show(R.string.side_pic_not_found);
+					ToastUtils.show(R.string.side_pic_not_found);
 				}
 
 			}

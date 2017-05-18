@@ -1,7 +1,6 @@
 package com.example.objLoader.fragment;
 
 import android.annotation.SuppressLint;
-import android.text.TextUtils;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.ImageButton;
@@ -12,6 +11,7 @@ import com.example.objLoader.activity.FrontPicActivity;
 import com.example.objLoader.activity.SidePicActivity;
 import com.example.objLoader.global.BaseActivity;
 import com.example.objLoader.istatic.IConstant;
+import com.example.objLoader.wedgit.ShapeView;
 import com.example.objLoader.wedgit.camera.CameraManager;
 import com.example.objLoader.wedgit.camera.SquareCameraContainer;
 
@@ -32,6 +32,8 @@ public class PhotoCommandFragment extends com.example.objLoader.global.BaseFragm
     TextView mFlashLight;
     @Bind(R.id.ib_take_photo)
     ImageButton mTakePhoto;
+    @Bind(R.id.shapeview)
+    ShapeView shapeView;
 
     private int gender;
     private boolean isFrontTakePhoto;
@@ -54,12 +56,14 @@ public class PhotoCommandFragment extends com.example.objLoader.global.BaseFragm
 
     @Override
     protected void initData() {
+        shapeView.setVisibility(isFrontTakePhoto?View.VISIBLE : View.GONE);
+        shapeView.setIsMale(gender == IConstant.GENDEER_MALE);
+
         mCameraContainer.bindActivity((BaseActivity) getActivity(),isFrontTakePhoto,gender);
 
         mCameraManager = CameraManager.getInstance(getActivity());
 
         mCameraManager.bindOptionMenuView(mFlashLight,null);
-
     }
 
     @OnClick({R.id.ib_close,R.id.ib_take_photo,R.id.tv_flashlight})
@@ -77,10 +81,7 @@ public class PhotoCommandFragment extends com.example.objLoader.global.BaseFragm
                 }
                 break;
             case R.id.ib_take_photo:
-//                cameraSurfaceView.takePhoto();
                 mCameraContainer.takePicture();
-
-//                ((FrontPicActivity)getActivity()).setCurrentBitmp();
                 break;
             case R.id.tv_flashlight:
                 mCameraContainer.switchFlashMode();

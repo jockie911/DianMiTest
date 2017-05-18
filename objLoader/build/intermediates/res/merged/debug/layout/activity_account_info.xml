@@ -96,18 +96,8 @@
             android:layout_centerVertical="true"
             android:layout_marginLeft="15dp"/>
         <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentLeft="true"
-            android:layout_centerVertical="true"
-            android:layout_marginLeft="50dp"
             android:text="@string/account_info_change_pwd"
-            android:textColor="@color/title"
-            android:textSize="16sp"
-            android:drawableRight="@drawable/jinru"
-            android:layout_alignParentRight="true"
-            android:layout_marginRight="5dp"
-            android:gravity="center_vertical"/>
+            style="@style/account_info_tv"/>
     </RelativeLayout>
     <View
         android:layout_width="15dp"
@@ -127,24 +117,15 @@
             android:layout_centerVertical="true"
             android:layout_marginLeft="15dp"/>
         <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentLeft="true"
-            android:layout_centerVertical="true"
-            android:layout_marginLeft="50dp"
             android:text="@string/account_info_measure_record"
-            android:textColor="@color/title"
-            android:textSize="16sp"
-            android:drawableRight="@drawable/jinru"
-            android:layout_alignParentRight="true"
-            android:layout_marginRight="5dp"
-            android:gravity="center_vertical"/>
+            style="@style/account_info_tv" />
     </RelativeLayout>
 
     <View
         android:layout_width="15dp"
         android:layout_height="0.5dp"
         android:background="@color/color_base"/>
+
     <RelativeLayout
         android:id="@+id/rl_measure_prorecord"
         android:layout_width="match_parent"
@@ -154,22 +135,35 @@
         <ImageView
             android:layout_width="30dp"
             android:layout_height="wrap_content"
-            android:src="@drawable/measure_protocol"
             android:layout_centerVertical="true"
-            android:layout_marginLeft="15dp"/>
+            android:layout_marginLeft="15dp"
+            android:src="@drawable/measure_protocol" />
         <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentLeft="true"
-            android:layout_centerVertical="true"
-            android:layout_marginLeft="50dp"
             android:text="@string/account_info_measure_protocol"
-            android:textColor="@color/title"
-            android:textSize="16sp"
-            android:drawableRight="@drawable/jinru"
-            android:layout_alignParentRight="true"
-            android:layout_marginRight="5dp"
-            android:gravity="center_vertical"/>
+            style="@style/account_info_tv" />
+    </RelativeLayout>
+
+
+    <View
+        android:layout_width="15dp"
+        android:layout_height="0.5dp"
+        android:background="@color/color_base"/>
+
+    <RelativeLayout
+        android:id="@+id/rel_setting"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/color_base">
+
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="15dp"
+            android:src="@drawable/measure_protocol" />
+        <TextView
+            android:text="@string/setting"
+            style="@style/account_info_tv" />
     </RelativeLayout>
 
 </LinearLayout>

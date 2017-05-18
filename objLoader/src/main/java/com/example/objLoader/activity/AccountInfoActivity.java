@@ -65,22 +65,6 @@ public class AccountInfoActivity extends BaseActivity {
 		if(headPicPath.equals("") || headPicPath.length() <= 0 ){
 			ivPic.setImageResource(R.drawable.login_default);
 		}else{
-//			// Get the dimensions of the View	视图的尺寸
-//	        int targetW = ivPic.getWidth();
-//	        int targetH = ivPic.getHeight();
-//
-//	        // Get the dimensions of the bitmap	位图的尺寸
-//	        BitmapFactory.Options bmOptions = new BitmapFactory.Options();
-//	        bmOptions.inJustDecodeBounds = true;
-//	        BitmapFactory.decodeFile(headPicPath, bmOptions);
-//	        int photoW = bmOptions.outWidth;
-//	        int photoH = bmOptions.outHeight;
-//
-//	        bmOptions.inJustDecodeBounds = false;
-//	        bmOptions.inPurgeable = true;
-//
-//	        Bitmap bitmap = BitmapFactory.decodeFile(headPicPath, bmOptions);
-//	        ivPic.setImageBitmap(bitmap);
 			File file = new File(headPicPath);
 			if (file.isFile() && file.length() > 0){
 				Glide.with(this).load(file).into(ivPic);
@@ -107,7 +91,7 @@ public class AccountInfoActivity extends BaseActivity {
 	}
 
 	@Override
-    @OnClick({R.id.rl_change_pwd,R.id.rl_change_username,R.id.iv_right_title_bar,R.id.ivPic,R.id.rl_measure_record})
+    @OnClick({R.id.rl_change_pwd,R.id.rl_change_username,R.id.iv_right_title_bar,R.id.ivPic,R.id.rl_measure_record,R.id.rel_setting})
 	public void onClick(View v) {
 		if(isDoubleClick(v)) return;
 		switch (v.getId()) {
@@ -125,6 +109,9 @@ public class AccountInfoActivity extends BaseActivity {
 			break;
 		case R.id.rl_measure_record:
 			startActivity(new Intent(this, MeasureRecordActivity.class));
+			break;
+		case R.id.rel_setting:
+			startActivity(new Intent(this, SettingActivity.class));
 			break;
 		}
 	}

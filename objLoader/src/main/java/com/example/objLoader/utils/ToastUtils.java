@@ -2,7 +2,7 @@ package com.example.objLoader.utils;
 
 import com.example.objLoader.global.BaseApp;
 
-public class Toast {
+public class ToastUtils {
 
 	private static android.widget.Toast toast;
 

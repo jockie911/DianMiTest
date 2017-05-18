@@ -7,7 +7,7 @@ import android.text.TextUtils;
 import com.example.objLoader.R;
 import com.example.objLoader.bean.BaseRequestBean;
 import com.example.objLoader.utils.GsonTools;
-import com.example.objLoader.utils.Toast;
+import com.example.objLoader.utils.ToastUtils;
 import com.example.objLoader.utils.WaitDialog;
 import com.google.gson.Gson;
 import com.google.gson.JsonSyntaxException;
@@ -129,19 +129,19 @@ public class ResponseListener<T> implements OnResponseListener<T> {
         callBack.onFailed(what, url, tag, exception, responseCode, networkMillis);
 
         if (exception instanceof ServerError) {// 服务器错误
-            Toast.show(R.string.serverError);
+            ToastUtils.show(R.string.serverError);
         } else if (exception instanceof NetworkError) {// 网络不好
-            Toast.show(R.string.networkError);
+            ToastUtils.show(R.string.networkError);
         } else if (exception instanceof TimeoutError) {// 请求超时
-            Toast.show(R.string.timeoutError);
+            ToastUtils.show(R.string.timeoutError);
         } else if (exception instanceof UnKnownHostError) {// 找不到服务器
-            Toast.show(R.string.unKnownHostError);
+            ToastUtils.show(R.string.unKnownHostError);
         } else if (exception instanceof URLError) {// URL是错的
-            Toast.show(R.string.uRLError);
+            ToastUtils.show(R.string.uRLError);
         } else if (exception instanceof NotFoundCacheError) {
-            Toast.show(R.string.notFoundCacheError);
+            ToastUtils.show(R.string.notFoundCacheError);
         } else {
-            Toast.show(R.string.error_no);
+            ToastUtils.show(R.string.error_no);
         }
 
     }

@@ -210,7 +210,7 @@ public class ShapeView extends View {
     public void setIsMale(boolean isMale){
         this.isMale = isMale;
         if(paint != null){
-            paint.setColor(Color.parseColor(isMale ? "#" : "#"));
+            paint.setColor(Color.parseColor(isMale ? malePiantColor : femalePiantColor));
         }
         invalidate();
     }

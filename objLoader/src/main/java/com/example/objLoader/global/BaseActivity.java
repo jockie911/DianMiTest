@@ -110,23 +110,6 @@ public abstract class BaseActivity extends AppCompatActivity implements OnClickL
 	protected abstract int getLayoutRes();
 
 	protected abstract void initData();
-//
-//
-//	protected abstract void initView();
-//
-//
-//	protected abstract void setEvent();
-	
-	
-	@SuppressWarnings("unchecked")
-	public <T extends View> T findViewId(int resId){
-		if(resId>0){
-			return (T) findViewById(resId);
-		}
-		return null;
-	}
-	
-	
 
 	@SuppressLint("InlinedApi")
 	private void setTranslucentStatus(boolean on) {
@@ -170,10 +153,10 @@ public abstract class BaseActivity extends AppCompatActivity implements OnClickL
 	protected void onDestroy() {
 		if(isSwipeBack())
 			SwipeBackHelper.onDestroy(this);
-		super.onDestroy();
+		closeOpenSoftInput(false);
 		// 退出APP时直接取消所有网络请求，这样会取消队列中所有的请求。
         CallServer.getInstance().cancelAll();
-
+		super.onDestroy();
 	}
 
 	@Override
@@ -211,14 +194,6 @@ public abstract class BaseActivity extends AppCompatActivity implements OnClickL
 		tintManager.setNavigationBarTintEnabled(true);
 		tintManager.setStatusBarTintResource(R.color.color_base_deep);// 通知栏所需颜色
 		tintManager.setNavigationBarTintResource(R.color.color_base_deep);
-	}
-
-	@Override
-	protected void onResume() {
-		InputMethodManager imm = (InputMethodManager)getSystemService(Context.INPUT_METHOD_SERVICE);
-		if(imm != null)
-			imm.hideSoftInputFromWindow(getWindow().getDecorView().getWindowToken(), 0);
-		super.onResume();
 	}
 
 	@Override
@@ -274,6 +249,19 @@ public abstract class BaseActivity extends AppCompatActivity implements OnClickL
 				permissions=list.toArray(permissions);
 				ActivityCompat.requestPermissions(
 						this, permissions, 0);
+			}
+		}
+	}
+
+	protected void closeOpenSoftInput(boolean isOpen){
+		InputMethodManager imm = (InputMethodManager)getSystemService(Context.INPUT_METHOD_SERVICE);
+		if(imm != null){
+			if(isOpen){
+				if(!imm.isActive()){
+					imm.toggleSoftInput(InputMethodManager.SHOW_IMPLICIT,InputMethodManager.HIDE_NOT_ALWAYS);
+				}
+			}else{
+				imm.hideSoftInputFromWindow(getWindow().getDecorView().getWindowToken(),0);
 			}
 		}
 	}

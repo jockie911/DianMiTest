@@ -270,6 +270,7 @@
 		<item>Zambia,260,92,64502|64501|64503</item>
 		<item>Zimbabwe,263,95,64801|64803|64804</item>
     </string-array>
+    <string name="about_us">关于我们</string>
     <string name="account_info_change_pwd">Change Password</string>
     <string name="account_info_log_out">Drop out</string>
     <string name="account_info_measure_protocol">Measure protocol</string>
@@ -295,12 +296,15 @@
     <string name="change_username_input_new_username">Please enter a new user name</string>
     <string name="change_username_save">Save</string>
     <string name="change_username_title">Username</string>
+    <string name="clear_cash_msg">这会清空您已经缓存的数据,下次访问的时候重新下载。</string>
+    <string name="clear_cash_title">确定清理缓存吗?</string>
     <string name="clientError">Client Error</string>
     <string name="compelete">完成</string>
     <string name="confirm">Confirm</string>
     <string name="delete">Delete</string>
     <string name="delete_log">Whether to delete the selected record</string>
     <string name="delete_my_log">Please select the record you want to delete first</string>
+    <string name="double_click_exit">再按一次退出程序</string>
     <string name="editor">编辑</string>
     <string name="error_no">Unknown mistake</string>
     <string name="first_measure">The human body measurement first, please</string>
@@ -372,6 +376,7 @@
     <string name="selector_side_pic">Please choose a side photo</string>
     <string name="serverError">Server error occurred</string>
     <string name="server_error">Server is not responding, if re-upload</string>
+    <string name="setting">设置</string>
     <string name="side_pic">According to the side</string>
     <string name="side_pic_not_found">Side photo does not exist</string>
     <string name="side_puload_pic_success">Photo uploaded completed</string>
@@ -490,4 +495,6 @@
     <string name="upload_pic_error">Picture upload error!!!</string>
     <string name="username_save">Username Saved</string>
     <string name="weight_height">身高/体重</string>
+    <string name="your_advice">意见反馈</string>
+    <string name="your_clear_cash">清理缓存</string>
 </resources>

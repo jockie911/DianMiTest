@@ -9,7 +9,7 @@ import android.view.View;
 import android.widget.TextView;
 
 import com.example.objLoader.R;
-import com.example.objLoader.utils.Toast;
+import com.example.objLoader.utils.ToastUtils;
 
 import java.lang.reflect.Method;
 import java.util.ArrayList;
@@ -431,7 +431,7 @@ public class CameraManager implements ICameraHelper {
      */
     public void openCameraActivity(Context context) {
 //        Intent intent = new Intent(context, CameraActivity.class);
-        Toast.show(this.getClass().getSimpleName() + " openCameraActivity");
+        ToastUtils.show(this.getClass().getSimpleName() + " openCameraActivity");
 //        context.startActivity(intent);
     }
 

@@ -1,4 +1,4 @@
-package com.example.objLoader.utils;
+package com.example.objLoader.istatic;
 
 public class Constants {
 

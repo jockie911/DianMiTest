@@ -7,19 +7,17 @@ import android.hardware.Camera;
 import android.os.Environment;
 import android.util.AttributeSet;
 import android.util.DisplayMetrics;
-import android.util.Log;
 import android.view.MotionEvent;
 import android.view.SurfaceHolder;
 import android.view.SurfaceView;
 import android.view.WindowManager;
-import android.widget.FrameLayout;
 import android.widget.RelativeLayout;
 
 import com.example.objLoader.bean.PicPathEvent;
 import com.example.objLoader.istatic.IConstant;
 import com.example.objLoader.utils.JLog;
 import com.example.objLoader.utils.SharedPreferencesDAO;
-import com.example.objLoader.utils.Toast;
+import com.example.objLoader.utils.ToastUtils;
 
 import org.greenrobot.eventbus.EventBus;
 
@@ -248,7 +246,7 @@ public class CameraSurfaceView extends SurfaceView implements SurfaceHolder.Call
                     JLog.d(System.currentTimeMillis() - s1 + " JTAG1");
 
                 }else{
-                    Toast.show("没有检测到内存卡");
+                    ToastUtils.show("没有检测到内存卡");
                 }
             } catch (Exception e) {
                 e.printStackTrace();

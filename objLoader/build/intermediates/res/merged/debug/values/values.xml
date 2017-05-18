@@ -2396,6 +2396,7 @@
     <string name="abc_shareactionprovider_share_with">Share with</string>
     <string name="abc_shareactionprovider_share_with_application">Share with %s</string>
     <string name="abc_toolbar_collapse_description">Collapse</string>
+    <string name="about_us">关于我们</string>
     <string name="account_info_change_pwd">修改密码</string>
     <string name="account_info_log_out">退出登陆</string>
     <string name="account_info_measure_protocol">量身协议</string>
@@ -2425,12 +2426,15 @@
     <string name="change_username_save">保存</string>
     <string name="change_username_title">用户名</string>
     <string name="character_counter_pattern" translatable="false">%1$d / %2$d</string>
+    <string name="clear_cash_msg">这会清空您已经缓存的数据,下次访问的时候重新下载。</string>
+    <string name="clear_cash_title">确定清理缓存吗?</string>
     <string name="clientError">客户端发生错误</string>
     <string name="compelete">完成</string>
     <string name="confirm">确认</string>
     <string name="delete">删除</string>
     <string name="delete_log">是否删除选中的记录</string>
     <string name="delete_my_log">请先选择需要删除的记录</string>
+    <string name="double_click_exit">再按一次退出程序</string>
     <string name="dsv_ex_msg_dont_set_lm">You should not set LayoutManager on DiscreteScrollView.class instance. Library uses a special one. Just don\'t call the method.</string>
     <string name="editor">编辑</string>
     <string name="error_no">未知错误</string>
@@ -2457,6 +2461,29 @@
     <string name="input_size_name">请输入记录的名称</string>
     <string name="input_username">请输入用户名</string>
     <string name="input_weight_height">请输入身高和体重</string>
+    <string name="leak_canary_analysis_failed">Leak analysis failed</string>
+    <string name="leak_canary_class_has_leaked">%1$s leaked %2$s</string>
+    <string name="leak_canary_could_not_save_text">LeakCanary was unable to save the analysis result.</string>
+    <string name="leak_canary_could_not_save_title">Could not save result.</string>
+    <string name="leak_canary_delete">Delete</string>
+    <string name="leak_canary_delete_all">Delete all</string>
+    <string name="leak_canary_delete_all_leaks_title">Are you sure you want to delete all leaks?</string>
+    <string name="leak_canary_display_activity_label">Leaks</string>
+    <string name="leak_canary_excluded_row">[Excluded] %s</string>
+    <string name="leak_canary_failure_report">"Please report this failure to http://github.com/square/leakcanary\n"</string>
+    <string name="leak_canary_leak_excluded">[Excluded] %1$s leaked %2$s</string>
+    <string name="leak_canary_leak_list_title">Leaks in %s</string>
+    <string name="leak_canary_no_leak_text">The GC was being lazy.</string>
+    <string name="leak_canary_no_leak_title">No leak found</string>
+    <string name="leak_canary_notification_message">Click for more details</string>
+    <string name="leak_canary_permission_not_granted">Please grant external storage permission, otherwise memory leaks will not be detected.</string>
+    <string name="leak_canary_permission_notification_text">Click to enable storage permission for %s.</string>
+    <string name="leak_canary_permission_notification_title">Leak detected, need permission</string>
+    <string name="leak_canary_share_heap_dump">Share heap dump</string>
+    <string name="leak_canary_share_leak">Share info</string>
+    <string name="leak_canary_share_with">Share with…</string>
+    <string name="leak_canary_storage_permission_activity_label">Storage permission</string>
+    <string name="leak_canary_toast_heap_dump">Dumping memory, app will freeze. Brrrr.</string>
     <string name="log_check_network">请检查网络连接!!!</string>
     <string name="login">登录</string>
     <string name="login_app_name">人体测量</string>
@@ -2514,6 +2541,7 @@
     <string name="selector_side_pic">请选择侧面照</string>
     <string name="serverError">服务器发生错误</string>
     <string name="server_error">服务器无响应,是否重新上传</string>
+    <string name="setting">设置</string>
     <string name="shape">体型</string>
     <string name="side_pic">侧面照</string>
     <string name="side_pic_not_found">侧面照不存在</string>
@@ -2643,6 +2671,8 @@
     <string name="upload_pic_error">上传图片出错!!!</string>
     <string name="username_save">用户名已保存</string>
     <string name="weight_height">身高/体重</string>
+    <string name="your_advice">意见反馈</string>
+    <string name="your_clear_cash">清理缓存</string>
     <style name="ActionSheetDialogAnimation" parent="@android:style/Animation.Dialog">
         <item name="android:windowEnterAnimation">@anim/actionsheet_dialog_in</item>
         <item name="android:windowExitAnimation">@anim/actionsheet_dialog_out</item>
@@ -4217,6 +4247,19 @@
         <item name="passwordToggleTint">@color/design_tint_password_toggle</item>
         <item name="passwordToggleContentDescription">@string/password_toggle_content_description</item>
     </style>
+    <style name="account_info_tv">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_alignParentLeft">true</item>
+        <item name="android:layout_centerVertical">true</item>
+        <item name="android:layout_marginLeft">50dp</item>
+        <item name="android:textColor">@color/title</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:drawableRight">@drawable/jinru</item>
+        <item name="android:layout_alignParentRight">true</item>
+        <item name="android:layout_marginRight">5dp</item>
+        <item name="android:gravity">center_vertical</item>
+    </style>
     <style name="checkBoxStyle" parent="@android:style/Widget.CompoundButton.CheckBox">
         <item name="android:button">@drawable/delete_my_log</item>
     </style>
@@ -4231,6 +4274,15 @@
         <item name="android:textColorHint">#9a9997</item>
         <item name="android:layout_marginLeft">10dp</item>
     </style>
+    <style name="leak_canary_LeakCanary.Base" parent="android:Theme.Holo">
+  </style>
+    <style name="leak_canary_Theme.Transparent" parent="android:Theme">
+    <item name="android:windowIsTranslucent">true</item>
+    <item name="android:windowBackground">@android:color/transparent</item>
+    <item name="android:windowContentOverlay">@null</item>
+    <item name="android:windowNoTitle">true</item>
+    <item name="android:backgroundDimEnabled">false</item>
+  </style>
     <style name="tablayout">
         <item name="android:textSize">15sp</item>
         

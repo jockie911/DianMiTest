@@ -3,6 +3,7 @@ package com.example.objLoader.activity;
 import android.content.Intent;
 import android.support.annotation.NonNull;
 import android.support.v7.widget.RecyclerView;
+import android.view.KeyEvent;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.RelativeLayout;
@@ -13,6 +14,8 @@ import com.example.objLoader.adapter.DiscreteScrollViewAdapter;
 import com.example.objLoader.global.BaseActivity;
 import com.example.objLoader.istatic.IConstant;
 import com.example.objLoader.utils.SharedPreferencesDAO;
+import com.example.objLoader.utils.ToastUtils;
+import com.example.objLoader.utils.WaitDialog;
 import com.example.objLoader.utils.lib.DensityUtil;
 import com.yarolegovich.discretescrollview.DiscreteScrollView;
 import com.yarolegovich.discretescrollview.transform.ScaleTransformer;
@@ -30,6 +33,7 @@ public class MainActivity extends BaseActivity {
     DiscreteScrollView discreteScrollView;
     @Bind(R.id.rel_start_measure)
     RelativeLayout relStartmeasure;
+    private long exitTime;
 
     @Override
     protected int getLayoutRes() {
@@ -112,5 +116,24 @@ public class MainActivity extends BaseActivity {
                 break;
         }
 
+    }
+
+    @Override
+    public boolean onKeyDown(int keyCode, KeyEvent event) {
+        if (keyCode == KeyEvent.KEYCODE_BACK) {
+            exit();
+            return false;
+        }
+        return super.onKeyDown(keyCode, event);
+    }
+
+    public void exit() {
+        if ((System.currentTimeMillis() - exitTime) > 2000) {
+            ToastUtils.show(R.string.double_click_exit);
+            exitTime = System.currentTimeMillis();
+        } else {
+            finish();
+            System.exit(0);
+        }
     }
 }

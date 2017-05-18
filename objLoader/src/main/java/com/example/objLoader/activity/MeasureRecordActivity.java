@@ -13,7 +13,7 @@ import com.example.objLoader.global.BaseActivity;
 import com.example.objLoader.istatic.IConstant;
 import com.example.objLoader.nohttp.CallServer;
 import com.example.objLoader.nohttp.HttpCallBack;
-import com.example.objLoader.utils.Constants;
+import com.example.objLoader.istatic.Constants;
 import com.example.objLoader.utils.JLog;
 import com.example.objLoader.utils.SharedPreferencesDAO;
 import com.example.objLoader.utils.Utils;

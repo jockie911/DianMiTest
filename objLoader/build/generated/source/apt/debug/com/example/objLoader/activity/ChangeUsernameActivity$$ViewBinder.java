@@ -8,9 +8,9 @@ import butterknife.ButterKnife.ViewBinder;
 public class ChangeUsernameActivity$$ViewBinder<T extends com.example.objLoader.activity.ChangeUsernameActivity> implements ViewBinder<T> {
   @Override public void bind(final Finder finder, final T target, Object source) {
     View view;
-    view = finder.findRequiredView(source, 2131689609, "field 'et_change_username'");
-    target.et_change_username = finder.castView(view, 2131689609, "field 'et_change_username'");
-    view = finder.findRequiredView(source, 2131689683, "method 'onClick'");
+    view = finder.findRequiredView(source, 2131689610, "field 'et_change_username'");
+    target.et_change_username = finder.castView(view, 2131689610, "field 'et_change_username'");
+    view = finder.findRequiredView(source, 2131689688, "method 'onClick'");
     view.setOnClickListener(
       new butterknife.internal.DebouncingOnClickListener() {
         @Override public void doClick(
@@ -19,7 +19,7 @@ public class ChangeUsernameActivity$$ViewBinder<T extends com.example.objLoader.
           target.onClick(p0);
         }
       });
-    view = finder.findRequiredView(source, 2131689610, "method 'onClick'");
+    view = finder.findRequiredView(source, 2131689611, "method 'onClick'");
     view.setOnClickListener(
       new butterknife.internal.DebouncingOnClickListener() {
         @Override public void doClick(

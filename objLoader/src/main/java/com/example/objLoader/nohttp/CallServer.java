@@ -1,7 +1,7 @@
 package com.example.objLoader.nohttp;
 
 import com.example.objLoader.R;
-import com.example.objLoader.utils.Toast;
+import com.example.objLoader.utils.ToastUtils;
 import com.example.objLoader.utils.Utils;
 import com.yolanda.nohttp.NoHttp;
 import com.yolanda.nohttp.download.DownloadQueue;
@@ -52,7 +52,7 @@ public class CallServer {
 		if(Utils.isNetworkConnected(context)){
 			queue.add(what, request, new ResponseListener<T>(request, context, callBack, isShowDialog, isCanCancel, classBean));
 		}else{
-			Toast.show(R.string.log_check_network);
+			ToastUtils.show(R.string.log_check_network);
 			return;
 		}
 	}

@@ -2,6 +2,7 @@ package com.example.objLoader.global;
 
 import cn.smssdk.SMSSDK;
 
+import com.squareup.leakcanary.LeakCanary;
 import com.yolanda.nohttp.Logger;
 import com.yolanda.nohttp.NoHttp;
 
@@ -39,6 +40,13 @@ public class BaseApp extends Application {
 				.getDisplayMetrics();
 		BaseApp.mScreenWidth = mDisplayMetrics.widthPixels;
 		BaseApp.mScreenHeight = mDisplayMetrics.heightPixels;
+
+		if (LeakCanary.isInAnalyzerProcess(this)) {
+			// This process is dedicated to LeakCanary for heap analysis.
+			// You should not init your app in this process.
+			return;
+		}
+		LeakCanary.install(this);
 	}
 
 	public static BaseApp getInstance() {

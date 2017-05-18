@@ -20,7 +20,7 @@ import com.example.objLoader.global.BaseActivity;
 import com.example.objLoader.global.BaseApp;
 import com.example.objLoader.istatic.IConstant;
 import com.example.objLoader.utils.SharedPreferencesDAO;
-import com.example.objLoader.utils.Toast;
+import com.example.objLoader.utils.ToastUtils;
 
 import org.greenrobot.eventbus.EventBus;
 import org.greenrobot.eventbus.Subscribe;
@@ -88,7 +88,7 @@ public class FrontPicActivity extends BaseActivity {
 		case R.id.tv_next_step:
 			frontPath = SharedPreferencesDAO.getInstance(mContext).getString(IConstant.FRONT_PIC_PATH);
 			if(TextUtils.isEmpty(frontPath)){
-				Toast.show(R.string.selector_front_pic);
+				ToastUtils.show(R.string.selector_front_pic);
 				return;
 			}
 			Intent intent = new Intent(mContext, SidePicActivity.class);
@@ -167,10 +167,10 @@ public class FrontPicActivity extends BaseActivity {
 		//定位到这个权限
 		if (requestCode==1){
 			if (grantResults[0]== PackageManager.PERMISSION_GRANTED){
-                Toast.show("权限申请成功");
+                ToastUtils.show("权限申请成功");
 
 			}else{
-               Toast.show("权限申请失败");
+               ToastUtils.show("权限申请失败");
 			}
 		}
 

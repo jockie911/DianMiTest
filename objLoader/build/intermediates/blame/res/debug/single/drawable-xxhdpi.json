@@ -192,6 +192,10 @@
         "source": "E:\\Code\\Android\\MyApplication\\objLoader\\src\\main\\res\\drawable-xxhdpi\\third_process.png"
     },
     {
+        "merged": "E:\\Code\\Android\\MyApplication\\objLoader\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi\\logo_main.png",
+        "source": "E:\\Code\\Android\\MyApplication\\objLoader\\src\\main\\res\\drawable-xxhdpi\\logo_main.png"
+    },
+    {
         "merged": "E:\\Code\\Android\\MyApplication\\objLoader\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi\\delete_normal_2.png",
         "source": "E:\\Code\\Android\\MyApplication\\objLoader\\src\\main\\res\\drawable-xxhdpi\\delete_normal_2.png"
     },
