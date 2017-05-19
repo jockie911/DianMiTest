@@ -4,16 +4,13 @@ import android.content.Context;
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
-import android.graphics.Canvas;
 import android.graphics.Matrix;
-import android.graphics.Paint;
 import android.graphics.Point;
 import android.graphics.Rect;
 import android.hardware.Camera;
 import android.media.AudioManager;
 import android.media.SoundPool;
 import android.net.Uri;
-import android.os.Environment;
 import android.os.Handler;
 import android.os.Message;
 import android.os.SystemClock;
@@ -26,20 +23,19 @@ import android.widget.SeekBar;
 import android.widget.Toast;
 
 import com.example.objLoader.R;
-import com.example.objLoader.activity.FrontPicActivity;
 import com.example.objLoader.bean.PicPathEvent;
 import com.example.objLoader.global.BaseActivity;
 import com.example.objLoader.global.BaseApp;
 import com.example.objLoader.istatic.IConstant;
-import com.example.objLoader.utils.JLog;
-import com.example.objLoader.utils.SharedPreferencesDAO;
+import com.example.objLoader.utils.BitmapUtils;
+import com.example.objLoader.utils.FileUtil;
+import com.example.objLoader.utils.Logger;
+import com.example.objLoader.utils.SPUtils;
+import com.example.objLoader.utils.StringUtils;
 
 import org.greenrobot.eventbus.EventBus;
 
-import java.io.BufferedOutputStream;
 import java.io.ByteArrayInputStream;
-import java.io.File;
-import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
 
@@ -221,7 +217,7 @@ public class SquareCameraContainer<T extends BaseActivity> extends FrameLayout i
             case MotionEvent.ACTION_DOWN:
                 mode = MODE_INIT;
 
-                JLog.d(" event.x = " + event.getX() + " /  event.y " + event.getY());
+                Logger.d(" event.x = " + event.getX() + " /  event.y " + event.getY());
                 break;
             case MotionEvent.ACTION_POINTER_DOWN:
                 //如果mZoomSeekBar为null 表示该设备不支持缩放 直接跳过设置mode Move指令也无法执行
@@ -566,7 +562,7 @@ public class SquareCameraContainer<T extends BaseActivity> extends FrameLayout i
         intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
         getContext().sendBroadcast(intent);
 
-        SharedPreferencesDAO.getInstance(getContext()).putString(isFrontTakePhoto?IConstant.FRONT_PIC_PATH : IConstant.SIDE_PIC_PATH,mImagePath);
+        SPUtils.getInstance(getContext()).putString(isFrontTakePhoto?IConstant.FRONT_PIC_PATH : IConstant.SIDE_PIC_PATH,mImagePath);
         EventBus.getDefault().post(new PicPathEvent(isFrontTakePhoto));
     }
 
@@ -624,7 +620,7 @@ public class SquareCameraContainer<T extends BaseActivity> extends FrameLayout i
 
             Log.i(TAG, "saveToSDCard beforefindFitBitmap time:" + (System.currentTimeMillis() - lastTime));
             //从本地读取合适的sampleSize,默认为1
-            int sampleSize = SPConfigUtil.loadInt("sampleSize", 1);
+            int sampleSize = SPUtils.getInstance(mContext).getInt("sampleSize", 1);
             Bitmap bitmap = findFitBitmap(data, getCropRect(data), sampleSize);
 
             if (bitmap == null) {
@@ -669,7 +665,7 @@ public class SquareCameraContainer<T extends BaseActivity> extends FrameLayout i
 
 
                 //未抛出异常，保存合适的sampleSize
-                SPConfigUtil.save("sampleSize", sampleSize + "");
+                SPUtils.getInstance(mContext).putInt("sampleSize", sampleSize);
 
                 Log.i(TAG, "sampleSize:" + sampleSize);
                 Log.i(TAG, "saveToSDCard afterLoad Bitmap time:" + (System.currentTimeMillis() - lastTime));

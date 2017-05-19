@@ -101,23 +101,6 @@
                 android:paddingRight="15dp"/>
         </LinearLayout>
 
-        <com.example.objLoader.wedgit.LineEditText
-            android:id="@+id/et_confirm_password"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="10dp"
-            android:layout_marginTop="100dp"
-            android:background="@null"
-            android:drawableLeft="@drawable/register_pwd"
-            android:drawablePadding="10dp"
-            android:hint="@string/input_confirm_pwd"
-            android:inputType="textPassword"
-            android:maxLines="1"
-            android:paddingBottom="5dp"
-            android:singleLine="true"
-            android:textColor="#9a9997"
-            android:textColorHint="#9a9997"
-            android:visibility="gone"/>
     </LinearLayout>
 
     <TextView

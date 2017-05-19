@@ -16,7 +16,7 @@ import com.example.objLoader.fragment.DetailsSizeFragment;
 import com.example.objLoader.fragment.ModelFragment;
 import com.example.objLoader.global.BaseActivity;
 import com.example.objLoader.istatic.IConstant;
-import com.example.objLoader.utils.AlertEtDialog;
+import com.example.objLoader.wedgit.AlertEdittextDialog;
 import com.example.objLoader.utils.LoginUtils;
 
 import java.util.ArrayList;
@@ -103,7 +103,7 @@ public class DetailMeasureSizeActivity extends BaseActivity {
     private void showSavaRecordDialog() {
         LoginUtils.isLogin();
 
-        final AlertEtDialog builder = new AlertEtDialog(DetailMeasureSizeActivity.this).builder();
+        final AlertEdittextDialog builder = new AlertEdittextDialog(DetailMeasureSizeActivity.this).builder();
         builder.setTitle(R.string.sava_record_name_hint);
         builder.setNegativeButton(R.string.cancel,null);
         builder.setPositiveButton(R.string.ok, new View.OnClickListener() {

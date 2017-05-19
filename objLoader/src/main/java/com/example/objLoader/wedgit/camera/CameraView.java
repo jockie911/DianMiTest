@@ -15,11 +15,13 @@ import android.view.Surface;
 import android.view.SurfaceHolder;
 import android.view.SurfaceView;
 import android.widget.FrameLayout;
+import android.widget.Toast;
 
 import com.example.objLoader.R;
 import com.example.objLoader.global.BaseActivity;
 import com.example.objLoader.global.BaseApp;
-import com.example.objLoader.utils.JLog;
+import com.example.objLoader.utils.Logger;
+import com.example.objLoader.utils.ToastUtils;
 
 import java.io.IOException;
 import java.util.ArrayList;
@@ -220,7 +222,7 @@ public class CameraView<T extends BaseActivity> extends SurfaceView implements S
             t.printStackTrace();
             Log.e(TAG, "photo fail after Photo Clicked");
 
-            Utils.displayToastCenter((Activity) mContext, R.string.topic_camera_takephoto_failure);
+            ToastUtils.show(R.string.topic_camera_takephoto_failure);
 
             try {
                 mCamera.startPreview();
@@ -326,7 +328,7 @@ public class CameraView<T extends BaseActivity> extends SurfaceView implements S
             //重置对焦计数
             mSensorControler.restFoucs();
         } catch (Exception e) {
-            Utils.displayToastCenter((T) mContext, R.string.tips_camera_forbidden);
+            ToastUtils.show(R.string.tips_camera_forbidden);
             e.printStackTrace();
         }
         if (mCamera != null) {
@@ -389,7 +391,7 @@ public class CameraView<T extends BaseActivity> extends SurfaceView implements S
             top = top < -1000 ? -1000 : top;
             right = right > 1000 ? 1000 : right;
             bottom = bottom > 1000 ? 1000 : bottom;
-            JLog.d(TAG,left + " - " + top + " - " + right + " - " + bottom);
+            Logger.d(TAG,left + " - " + top + " - " + right + " - " + bottom);
             areas.add(new Camera.Area(new Rect(left, top, right, bottom), 100));
             parameters.setFocusAreas(areas);
             try {
@@ -399,7 +401,7 @@ public class CameraView<T extends BaseActivity> extends SurfaceView implements S
             } catch (Exception e) {
                 // TODO: handle exception
                 e.printStackTrace();
-                JLog.d(TAG,"printStackTrace =  " + e.getMessage());
+                Logger.d(TAG,"printStackTrace =  " + e.getMessage());
                 return false;
             }
         }

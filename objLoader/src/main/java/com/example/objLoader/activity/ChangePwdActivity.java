@@ -14,7 +14,7 @@ import com.example.objLoader.istatic.IConstant;
 import com.example.objLoader.nohttp.CallServer;
 import com.example.objLoader.nohttp.HttpCallBack;
 import com.example.objLoader.istatic.Constants;
-import com.example.objLoader.utils.SharedPreferencesDAO;
+import com.example.objLoader.utils.SPUtils;
 import com.example.objLoader.utils.ToastUtils;
 import com.example.objLoader.utils.Utils;
 import com.yolanda.nohttp.NoHttp;
@@ -63,7 +63,7 @@ public class ChangePwdActivity extends BaseActivity{
 	@OnClick({R.id.tv_right_title_bar,R.id.iv_eye_old_pws,R.id.iv_eye_new_pws})
 	public void onClick(View v) {
 		if(isDoubleClick(v)) return;
-		mobile = SharedPreferencesDAO.getInstance(mContext).getString("phone_number");
+		mobile = SPUtils.getInstance(mContext).getString("phone_number");
 		old_pwd = et_old_pwd.getText().toString().trim();
 		new_pwd = et_new_pwd.getText().toString().trim();
 

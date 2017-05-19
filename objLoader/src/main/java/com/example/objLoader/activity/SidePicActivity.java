@@ -18,8 +18,8 @@ import com.example.objLoader.fragment.PhotoCommandFragment;
 import com.example.objLoader.global.BaseActivity;
 import com.example.objLoader.global.BaseApp;
 import com.example.objLoader.istatic.IConstant;
-import com.example.objLoader.utils.JLog;
-import com.example.objLoader.utils.SharedPreferencesDAO;
+import com.example.objLoader.utils.Logger;
+import com.example.objLoader.utils.SPUtils;
 import com.yolanda.nohttp.rest.Request;
 
 import org.greenrobot.eventbus.EventBus;
@@ -72,8 +72,8 @@ public class SidePicActivity extends BaseActivity {
 			EventBus.getDefault().register(this);
 		tvTitle.setText(R.string.side_pic);
 
-		picPath = SharedPreferencesDAO.getInstance(mContext).getString(IConstant.SIDE_PIC_PATH);
-		JLog.d("initData()" + side_pic_path);
+		picPath = SPUtils.getInstance(mContext).getString(IConstant.SIDE_PIC_PATH);
+		Logger.d("initData()" + side_pic_path);
 		if(!TextUtils.isEmpty(picPath))
 			Glide.with(this).load(picPath).into(iv_side);
 
@@ -115,7 +115,7 @@ public class SidePicActivity extends BaseActivity {
 	 * 上传图片从服务器获取测量信息
 	 */
 	/*private void measure() {
-		picPath = SharedPreferencesDAO. getInstance(mContext).getString(
+		picPath = SPUtils. getInstance(mContext).getString(
 				"sidePath");
 		if (picPath.equals("") || picPath.length() <= 0) {
 			ToastUtils.show(R.string.selector_side_pic);
@@ -126,8 +126,8 @@ public class SidePicActivity extends BaseActivity {
 		tv_start_measure.setText(R.string.measuring);
 		
 		time = Utils.getTime();
-		SharedPreferencesDAO.getInstance(mContext).putString("time", time);
-		mobile = SharedPreferencesDAO.getInstance(mContext).getString(
+		SPUtils.getInstance(mContext).putString("time", time);
+		mobile = SPUtils.getInstance(mContext).getString(
 				"phone_number");
 		uploadPicRequest = NoHttp.createStringRequest(
 				Constants.GET_MEASURE_INFO, RequestMethod.POST);
@@ -197,8 +197,8 @@ public class SidePicActivity extends BaseActivity {
 //				intent.putExtra("objUrl", objUrl);
 //				startActivity(intent);
 //
-//				SharedPreferencesDAO.getInstance(mContext).putString("sidePath", "");
-//				SharedPreferencesDAO.getInstance(mContext).putString("frontPicPath", "");
+//				SPUtils.getInstance(mContext).putString("sidePath", "");
+//				SPUtils.getInstance(mContext).putString("frontPicPath", "");
 //				FrontPicActivity.activity.finish();
 //				finish();
 		};
@@ -206,8 +206,8 @@ public class SidePicActivity extends BaseActivity {
 		public void onSucceed(int what, Response<String> response) {
 			String string = response.get().toString();
 
-			SharedPreferencesDAO.getInstance(mContext).putString("json", string);
-			SharedPreferencesDAO.getInstance(mContext).putBoolean("isSave", false);
+			SPUtils.getInstance(mContext).putString("json", string);
+			SPUtils.getInstance(mContext).putBoolean("isSave", false);
 
 		};
 
@@ -305,7 +305,7 @@ public class SidePicActivity extends BaseActivity {
 //			side_pic_path = photoPath;
 //			Glide.with(this).load(photoPath).into(iv_side);
 //
-//			SharedPreferencesDAO.getInstance(this).putString("sidePath",
+//			SPUtils.getInstance(this).putString("sidePath",
 //					side_pic_path);
 //
 //		}
@@ -315,7 +315,7 @@ public class SidePicActivity extends BaseActivity {
 			side_pic_path = albumPath;
 			Glide.with(this).load(albumPath).into(iv_side);
 
-			SharedPreferencesDAO.getInstance(this).putString("sidePath",
+			SPUtils.getInstance(this).putString("sidePath",
 					side_pic_path);
 		}
 	}

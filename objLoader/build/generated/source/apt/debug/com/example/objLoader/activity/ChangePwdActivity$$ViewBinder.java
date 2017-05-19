@@ -32,7 +32,7 @@ public class ChangePwdActivity$$ViewBinder<T extends com.example.objLoader.activ
           target.onClick(p0);
         }
       });
-    view = finder.findRequiredView(source, 2131689688, "method 'onClick'");
+    view = finder.findRequiredView(source, 2131689687, "method 'onClick'");
     view.setOnClickListener(
       new butterknife.internal.DebouncingOnClickListener() {
         @Override public void doClick(

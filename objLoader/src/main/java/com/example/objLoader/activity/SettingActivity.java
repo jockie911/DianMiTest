@@ -5,7 +5,7 @@ import android.widget.TextView;
 
 import com.example.objLoader.R;
 import com.example.objLoader.global.BaseActivity;
-import com.example.objLoader.utils.AlertDialog;
+import com.example.objLoader.wedgit.AlertDialog;
 import com.example.objLoader.utils.DataCleanManager;
 
 import butterknife.Bind;

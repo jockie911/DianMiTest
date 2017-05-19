@@ -17,7 +17,7 @@ public class LoginUtils {
      * @return
      */
     public static boolean isLogin(Boolean... isCheckLogin){
-        boolean aBoolean = SharedPreferencesDAO.getInstance(BaseApp.getContext()).getBoolean(IConstant.IS_LOGIN);
+        boolean aBoolean = SPUtils.getInstance(BaseApp.getContext()).getBoolean(IConstant.IS_LOGIN);
         if(!aBoolean){
             Intent intent = new Intent(BaseApp.getContext(), LoginActivity.class);
             if(isCheckLogin.length > 0)

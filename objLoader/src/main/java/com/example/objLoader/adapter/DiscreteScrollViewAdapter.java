@@ -6,6 +6,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
+import android.widget.TextView;
 
 import com.example.objLoader.R;
 
@@ -41,6 +42,7 @@ public class DiscreteScrollViewAdapter extends RecyclerView.Adapter<DiscreteScro
 
         holder.itemiv.setBackgroundResource(position == 0 ? R.drawable.woman_top : R.drawable.man_top);
         holder.itemRelBottom.setBackgroundResource(position == 0 ? R.drawable.woman_bottom : R.drawable.man_bottom);
+        holder.itemTvGenger.setText(position == 0 ? R.string.female : R.string.male);
     }
 
     @Override
@@ -52,11 +54,13 @@ public class DiscreteScrollViewAdapter extends RecyclerView.Adapter<DiscreteScro
 
         private final ImageView itemiv;
         private final RelativeLayout itemRelBottom;
+        private final TextView itemTvGenger;
 
         public ViewHolder(View itemView) {
             super(itemView);
             itemiv = (ImageView) itemView.findViewById(R.id.item_iv_top);
             itemRelBottom = (RelativeLayout) itemView.findViewById(R.id.item_rel_bottom);
+            itemTvGenger = (TextView) itemView.findViewById(R.id.item_tv_gender);
         }
     }
 }

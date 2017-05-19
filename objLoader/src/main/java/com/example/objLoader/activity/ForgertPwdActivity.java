@@ -14,7 +14,7 @@ import com.example.objLoader.istatic.IConstant;
 import com.example.objLoader.nohttp.CallServer;
 import com.example.objLoader.nohttp.HttpCallBack;
 import com.example.objLoader.istatic.Constants;
-import com.example.objLoader.utils.SharedPreferencesDAO;
+import com.example.objLoader.utils.SPUtils;
 import com.example.objLoader.utils.ToastUtils;
 import com.example.objLoader.utils.Utils;
 import com.yolanda.nohttp.NoHttp;
@@ -97,7 +97,7 @@ public class ForgertPwdActivity extends BaseActivity {
 				ToastUtils.show(R.string.log_check_network);
 				return;
 			} else {
-				SharedPreferencesDAO.getInstance(this).putString("phone_number", mobile);
+				SPUtils.getInstance(this).putString("phone_number", mobile);
 			}
 			// 发送验证码
 			timerSmsCode();

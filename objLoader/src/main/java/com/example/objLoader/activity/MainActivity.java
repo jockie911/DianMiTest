@@ -13,10 +13,9 @@ import com.example.objLoader.R;
 import com.example.objLoader.adapter.DiscreteScrollViewAdapter;
 import com.example.objLoader.global.BaseActivity;
 import com.example.objLoader.istatic.IConstant;
-import com.example.objLoader.utils.SharedPreferencesDAO;
+import com.example.objLoader.utils.SPUtils;
 import com.example.objLoader.utils.ToastUtils;
-import com.example.objLoader.utils.WaitDialog;
-import com.example.objLoader.utils.lib.DensityUtil;
+import com.example.objLoader.utils.DensityUtil;
 import com.yarolegovich.discretescrollview.DiscreteScrollView;
 import com.yarolegovich.discretescrollview.transform.ScaleTransformer;
 
@@ -56,9 +55,9 @@ public class MainActivity extends BaseActivity {
         layoutParams.width = realWidth;
         tvStartMeasure.setLayoutParams(layoutParams);
         discreteScrollView.setAdapter(new DiscreteScrollViewAdapter(realWidth));
-        discreteScrollView.setItemTransitionTimeMillis(150);
+        discreteScrollView.setItemTransitionTimeMillis(100);
         discreteScrollView.setItemTransformer(new ScaleTransformer.Builder()
-                .setMinScale(0.8f)
+                .setMinScale(0.7f)
                 .build());
 
         discreteScrollView.setScrollStateChangeListener(new DiscreteScrollView.ScrollStateChangeListener<RecyclerView.ViewHolder>() {
@@ -108,7 +107,7 @@ public class MainActivity extends BaseActivity {
                 startActivity(intent);
                 break;
             case R.id.rel_person_center:
-                if(SharedPreferencesDAO.getInstance(MainActivity.this).getBoolean(IConstant.IS_LOGIN)){
+                if(SPUtils.getInstance(MainActivity.this).getBoolean(IConstant.IS_LOGIN)){
                     startActivity(new Intent(MainActivity.this, AccountInfoActivity.class));
                 }else{
                     startActivity(new Intent(MainActivity.this, LoginActivity.class));

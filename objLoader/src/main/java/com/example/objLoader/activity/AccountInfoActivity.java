@@ -17,9 +17,10 @@ import com.bumptech.glide.request.target.BitmapImageViewTarget;
 import com.example.objLoader.R;
 import com.example.objLoader.global.BaseActivity;
 import com.example.objLoader.istatic.IConstant;
-import com.example.objLoader.utils.ActionSheetDialog;
-import com.example.objLoader.utils.SharedPreferencesDAO;
+import com.example.objLoader.utils.SPUtils;
+import com.example.objLoader.wedgit.ActionSheetDialog;
 import com.example.objLoader.utils.Utils;
+import com.example.objLoader.wedgit.AlertDialog;
 import com.example.objLoader.wedgit.CircleImageView;
 
 import java.io.File;
@@ -61,7 +62,7 @@ public class AccountInfoActivity extends BaseActivity {
 		ivRightTitleBar.setImageResource(R.drawable.exit);
 		tvTitle.setText(R.string.account_info_title);
 
-		String headPicPath = SharedPreferencesDAO.getInstance(mContext).getString("head_pic_path");
+		String headPicPath = SPUtils.getInstance(mContext).getString("head_pic_path");
 		if(headPicPath.equals("") || headPicPath.length() <= 0 ){
 			ivPic.setImageResource(R.drawable.login_default);
 		}else{
@@ -81,8 +82,8 @@ public class AccountInfoActivity extends BaseActivity {
 			});
 		}
 
-		mobile = SharedPreferencesDAO.getInstance(mContext).getString(IConstant.MOBILE);
-		username = SharedPreferencesDAO.getInstance(mContext).getString("username");
+		mobile = SPUtils.getInstance(mContext).getString(IConstant.MOBILE);
+		username = SPUtils.getInstance(mContext).getString("username");
 		if(!TextUtils.isEmpty(mobile) && mobile.length() == 11){
 		  	String maskNumber = mobile.substring(0, 3) + "****" + mobile.substring(7, mobile.length());
 			tv_phone_number.setText(maskNumber);
@@ -120,7 +121,7 @@ public class AccountInfoActivity extends BaseActivity {
 	 * tell user weather choosed logout
 	 */
 	private void showDialogLogout() {
-		final com.example.objLoader.utils.AlertDialog builder = new com.example.objLoader.utils.AlertDialog(this).builder();
+		final AlertDialog builder = new AlertDialog(this).builder();
 		builder.setTitle(R.string.logout);
 		builder.setMsg(R.string.logout_msg);
 		builder.setNegativeButton(R.string.cancel, new View.OnClickListener() {
@@ -131,8 +132,8 @@ public class AccountInfoActivity extends BaseActivity {
 		}).setPositiveButton(R.string.ok, new View.OnClickListener() {
 			@Override
 			public void onClick(View v) {
-				SharedPreferencesDAO.getInstance(mContext).putString(IConstant.USERNAME, "");
-				SharedPreferencesDAO.getInstance(mContext).putBoolean(IConstant.IS_LOGIN, false);
+				SPUtils.getInstance(mContext).putString(IConstant.USERNAME, "");
+				SPUtils.getInstance(mContext).putBoolean(IConstant.IS_LOGIN, false);
 				Intent intent = new Intent(mContext, LoginActivity.class);
 				intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK);
 				startActivity(intent);
@@ -162,7 +163,7 @@ public class AccountInfoActivity extends BaseActivity {
 	@Override
 	protected void onResume() {
 		super.onResume();
-		username = SharedPreferencesDAO.getInstance(mContext).getString(IConstant.USERNAME);
+		username = SPUtils.getInstance(mContext).getString(IConstant.USERNAME);
 		tv_username.setText(username);
 	}
 
@@ -173,11 +174,11 @@ public class AccountInfoActivity extends BaseActivity {
 		String head_pic_path ;
 		if (requestCode == CAMERA_REQUEST_CODE && resultCode == RESULT_OK) {
 			head_pic_path = Utils.setImg(getRealPathFromURI(imageUriFromCamera),ivPic);
-			SharedPreferencesDAO.getInstance(mContext).putString("head_pic_path", head_pic_path);
+			SPUtils.getInstance(mContext).putString("head_pic_path", head_pic_path);
 		}
 		if (requestCode == PHOTO_REQUEST_CODE && resultCode == RESULT_OK) {
 			head_pic_path = Utils.setImg(getRealPathFromURI(data.getData()),ivPic);
-			SharedPreferencesDAO.getInstance(mContext).putString("head_pic_path", head_pic_path);
+			SPUtils.getInstance(mContext).putString("head_pic_path", head_pic_path);
 		}
 	}
 }

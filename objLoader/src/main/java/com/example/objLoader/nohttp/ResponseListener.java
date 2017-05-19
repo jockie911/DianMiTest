@@ -8,7 +8,7 @@ import com.example.objLoader.R;
 import com.example.objLoader.bean.BaseRequestBean;
 import com.example.objLoader.utils.GsonTools;
 import com.example.objLoader.utils.ToastUtils;
-import com.example.objLoader.utils.WaitDialog;
+import com.example.objLoader.wedgit.WaitDialog;
 import com.google.gson.Gson;
 import com.google.gson.JsonSyntaxException;
 import com.yolanda.nohttp.Logger;

@@ -26,6 +26,7 @@ import android.widget.TextView;
 import com.example.objLoader.R;
 import com.example.objLoader.istatic.IConstant;
 import com.example.objLoader.nohttp.CallServer;
+import com.example.objLoader.utils.SoftInputUtils;
 import com.example.objLoader.utils.SystemBarTintManager;
 import com.jude.swipbackhelper.SwipeBackHelper;
 
@@ -153,8 +154,7 @@ public abstract class BaseActivity extends AppCompatActivity implements OnClickL
 	protected void onDestroy() {
 		if(isSwipeBack())
 			SwipeBackHelper.onDestroy(this);
-		closeOpenSoftInput(false);
-		// 退出APP时直接取消所有网络请求，这样会取消队列中所有的请求。
+		SoftInputUtils.closeSoftInput(this);
         CallServer.getInstance().cancelAll();
 		super.onDestroy();
 	}
@@ -249,19 +249,6 @@ public abstract class BaseActivity extends AppCompatActivity implements OnClickL
 				permissions=list.toArray(permissions);
 				ActivityCompat.requestPermissions(
 						this, permissions, 0);
-			}
-		}
-	}
-
-	protected void closeOpenSoftInput(boolean isOpen){
-		InputMethodManager imm = (InputMethodManager)getSystemService(Context.INPUT_METHOD_SERVICE);
-		if(imm != null){
-			if(isOpen){
-				if(!imm.isActive()){
-					imm.toggleSoftInput(InputMethodManager.SHOW_IMPLICIT,InputMethodManager.HIDE_NOT_ALWAYS);
-				}
-			}else{
-				imm.hideSoftInputFromWindow(getWindow().getDecorView().getWindowToken(),0);
 			}
 		}
 	}

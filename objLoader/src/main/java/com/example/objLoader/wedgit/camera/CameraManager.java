@@ -9,6 +9,7 @@ import android.view.View;
 import android.widget.TextView;
 
 import com.example.objLoader.R;
+import com.example.objLoader.utils.SPUtils;
 import com.example.objLoader.utils.ToastUtils;
 
 import java.lang.reflect.Method;
@@ -66,8 +67,8 @@ public class CameraManager implements ICameraHelper {
             mCameraHelper = new CameraHelperBaseImpl();
         }
 
-        mLightStatus = FlashLigthStatus.valueOf(SPConfigUtil.loadInt(SP_LIGHT_STATUE, FlashLigthStatus.LIGHT_AUTO.ordinal())); //默认 自动
-        mFlashDirection = CameraDirection.valueOf(SPConfigUtil.loadInt(SP_CAMERA_DIRECTION, CameraDirection.CAMERA_BACK.ordinal())); //默认后置摄像头
+        mLightStatus = FlashLigthStatus.valueOf(SPUtils.getInstance(mContext).getInt(SP_LIGHT_STATUE, FlashLigthStatus.LIGHT_AUTO.ordinal())); //默认 自动
+        mFlashDirection = CameraDirection.valueOf(SPUtils.getInstance(mContext).getInt(SP_CAMERA_DIRECTION, CameraDirection.CAMERA_BACK.ordinal())); //默认后置摄像头
     }
 
     public static CameraManager getInstance(Context context) {
@@ -104,7 +105,7 @@ public class CameraManager implements ICameraHelper {
             drawable.setBounds(0, 0, LEN_PIC, LEN_PIC);
             m_tvFlashLight.setCompoundDrawables(drawable, null, null, null);
 
-            SPConfigUtil.save(SP_LIGHT_STATUE, mLightStatus.ordinal() + "");
+            SPUtils.getInstance(mContext).putInt(SP_LIGHT_STATUE, mLightStatus.ordinal());
         }
     }
 
@@ -124,7 +125,7 @@ public class CameraManager implements ICameraHelper {
             m_tvCameraDireation.setCompoundDrawables(drawable, null, null, null);
             //不再
             // 记录相机方向  会导致部分相机 前置摄像头
-            SPConfigUtil.save(SP_CAMERA_DIRECTION, mFlashDirection.ordinal() + "");
+            SPUtils.getInstance(mContext).putInt(SP_CAMERA_DIRECTION, mFlashDirection.ordinal() );
 
             m_tvFlashLight.setVisibility(mFlashDirection == CameraDirection.CAMERA_BACK ? View.VISIBLE : View.GONE);
         }
@@ -213,7 +214,6 @@ public class CameraManager implements ICameraHelper {
         m_tvCameraDireation = null;
         m_tvFlashLight = null;
     }
-
 
 
     /**

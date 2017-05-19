@@ -19,7 +19,7 @@ import com.example.objLoader.fragment.PhotoCommandFragment;
 import com.example.objLoader.global.BaseActivity;
 import com.example.objLoader.global.BaseApp;
 import com.example.objLoader.istatic.IConstant;
-import com.example.objLoader.utils.SharedPreferencesDAO;
+import com.example.objLoader.utils.SPUtils;
 import com.example.objLoader.utils.ToastUtils;
 
 import org.greenrobot.eventbus.EventBus;
@@ -65,7 +65,7 @@ public class FrontPicActivity extends BaseActivity {
 			EventBus.getDefault().register(this);
 		tvTitle.setText(R.string.front_Pic);
 
-		frontPath = SharedPreferencesDAO.getInstance(mContext).getString(IConstant.FRONT_PIC_PATH);
+		frontPath = SPUtils.getInstance(mContext).getString(IConstant.FRONT_PIC_PATH);
 		if(!TextUtils.isEmpty(frontPath)){
 			Glide.with(this).load(frontPath).into(iv_front);
 		}
@@ -86,7 +86,7 @@ public class FrontPicActivity extends BaseActivity {
 			startActivityForResult(photoIntent, IConstant.ALBUM_REQUEST_CODE);
 			break;
 		case R.id.tv_next_step:
-			frontPath = SharedPreferencesDAO.getInstance(mContext).getString(IConstant.FRONT_PIC_PATH);
+			frontPath = SPUtils.getInstance(mContext).getString(IConstant.FRONT_PIC_PATH);
 			if(TextUtils.isEmpty(frontPath)){
 				ToastUtils.show(R.string.selector_front_pic);
 				return;
@@ -108,7 +108,7 @@ public class FrontPicActivity extends BaseActivity {
 			front_pic_path = albumPath;
 			
 			Glide.with(mContext).load(albumPath).into(iv_front);
-			SharedPreferencesDAO.getInstance(mContext).putString(IConstant.FRONT_PIC_PATH, front_pic_path);
+			SPUtils.getInstance(mContext).putString(IConstant.FRONT_PIC_PATH, front_pic_path);
 		}
 	}
 

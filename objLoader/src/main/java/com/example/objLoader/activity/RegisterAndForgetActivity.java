@@ -15,7 +15,7 @@ import com.example.objLoader.istatic.IConstant;
 import com.example.objLoader.nohttp.CallServer;
 import com.example.objLoader.nohttp.HttpCallBack;
 import com.example.objLoader.istatic.Constants;
-import com.example.objLoader.utils.SharedPreferencesDAO;
+import com.example.objLoader.utils.SPUtils;
 import com.example.objLoader.utils.ToastUtils;
 import com.example.objLoader.utils.Utils;
 import com.yolanda.nohttp.NoHttp;
@@ -43,8 +43,8 @@ public class RegisterAndForgetActivity extends BaseActivity{
 	EditText et_auth_code;
 	@Bind(R.id.et_register_password)
 	EditText et_register_password;
-	@Bind(R.id.et_confirm_password)
-	EditText et_confirm_password;
+//	@Bind(R.id.et_confirm_password)
+//	EditText et_confirm_password;
 	@Bind(R.id.tv_send_auth_code)
 	TextView tv_send_auth_code;
 	@Bind(R.id.iv_eye_pwd)
@@ -97,8 +97,7 @@ public class RegisterAndForgetActivity extends BaseActivity{
 		mobile = et_mobile.getText().toString().trim();
 		auth_code = et_auth_code.getText().toString().trim();
 		password = et_register_password.getText().toString().trim();
-		confirm_password = et_confirm_password.getText().toString().trim();
-		
+
 		switch (v.getId()) {
 			case R.id.tv_register:
 				register();
@@ -112,7 +111,7 @@ public class RegisterAndForgetActivity extends BaseActivity{
 					ToastUtils.show(R.string.log_check_network);
 					return;
 				}
-				SharedPreferencesDAO.getInstance(this).putString(IConstant.MOBILE, mobile);
+				SPUtils.getInstance(this).putString(IConstant.MOBILE, mobile);
 				// 发送验证码
 				timerSmsCode();
 				SMSSDK.getVerificationCode(IConstant.PHONE_AREA_CODE, mobile);

@@ -15,7 +15,7 @@ import com.example.objLoader.istatic.IConstant;
 import com.example.objLoader.nohttp.CallServer;
 import com.example.objLoader.nohttp.HttpCallBack;
 import com.example.objLoader.istatic.Constants;
-import com.example.objLoader.utils.SharedPreferencesDAO;
+import com.example.objLoader.utils.SPUtils;
 import com.example.objLoader.utils.ToastUtils;
 import com.example.objLoader.utils.Utils;
 import com.yolanda.nohttp.NoHttp;
@@ -131,8 +131,8 @@ public class LoginActivity extends BaseActivity {
 		}
 
 		public void onSucceed(int what, BaseRequestBean bean) {
-			SharedPreferencesDAO.getInstance(LoginActivity.this).putString(IConstant.MOBILE, username);
-			SharedPreferencesDAO.getInstance(LoginActivity.this).putBoolean(IConstant.IS_LOGIN, true);
+			SPUtils.getInstance(LoginActivity.this).putString(IConstant.MOBILE, username);
+			SPUtils.getInstance(LoginActivity.this).putBoolean(IConstant.IS_LOGIN, true);
 			ToastUtils.show(bean.info);
 			if(!isCheckLogin){
 				startActivity(new Intent(LoginActivity.this,AccountInfoActivity.class));

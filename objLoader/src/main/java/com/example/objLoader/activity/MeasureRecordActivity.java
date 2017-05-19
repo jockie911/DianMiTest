@@ -14,8 +14,8 @@ import com.example.objLoader.istatic.IConstant;
 import com.example.objLoader.nohttp.CallServer;
 import com.example.objLoader.nohttp.HttpCallBack;
 import com.example.objLoader.istatic.Constants;
-import com.example.objLoader.utils.JLog;
-import com.example.objLoader.utils.SharedPreferencesDAO;
+import com.example.objLoader.utils.Logger;
+import com.example.objLoader.utils.SPUtils;
 import com.example.objLoader.utils.Utils;
 import com.yolanda.nohttp.NoHttp;
 import com.yolanda.nohttp.RequestMethod;
@@ -53,7 +53,7 @@ public class MeasureRecordActivity extends BaseActivity implements AdapterView.O
         tvRightTitle.setTextColor(getResources().getColor(R.color.yollow));
 
         Request<String> stringRequest = NoHttp.createStringRequest(Constants.GET_MEASURE_RECORD, RequestMethod.POST);
-        String mobile = SharedPreferencesDAO.getInstance(this).getString(IConstant.MOBILE);
+        String mobile = SPUtils.getInstance(this).getString(IConstant.MOBILE);
 
         stringRequest.add(IConstant.MOBILE, mobile);
         stringRequest.add(IConstant.STRING, Utils.MD5(mobile + Constants.MD5_KEY + mobile));
@@ -94,7 +94,7 @@ public class MeasureRecordActivity extends BaseActivity implements AdapterView.O
                 List<String> deletePosition = recordMeasureAdapter.getDeletePosition();
 
                 //TODO connect to net to delete
-                JLog.d(deletePosition.toString());
+                Logger.d(deletePosition.toString());
                 recordMeasureAdapter.deleteSuccessRefreshData();
                 break;
         }

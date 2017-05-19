@@ -15,8 +15,8 @@ import android.widget.RelativeLayout;
 
 import com.example.objLoader.bean.PicPathEvent;
 import com.example.objLoader.istatic.IConstant;
-import com.example.objLoader.utils.JLog;
-import com.example.objLoader.utils.SharedPreferencesDAO;
+import com.example.objLoader.utils.Logger;
+import com.example.objLoader.utils.SPUtils;
 import com.example.objLoader.utils.ToastUtils;
 
 import org.greenrobot.eventbus.EventBus;
@@ -76,7 +76,7 @@ public class CameraSurfaceView extends SurfaceView implements SurfaceHolder.Call
         catch (Exception e){
             // Camera is not available (in use or does not exist)
 
-            JLog.e(e.getMessage() + " -- - -- - - ");
+            Logger.e(e.getMessage() + " -- - -- - - ");
         }
         return c;
     }
@@ -88,7 +88,7 @@ public class CameraSurfaceView extends SurfaceView implements SurfaceHolder.Call
             setCameraParams(mCamera,mScreenWidth,mScreenHeight);
             mCamera.startPreview();
         } catch (IOException e) {
-            JLog.d( "Error setting camera preview: " + e.getMessage());
+            Logger.d( "Error setting camera preview: " + e.getMessage());
         }
     }
 
@@ -119,7 +119,7 @@ public class CameraSurfaceView extends SurfaceView implements SurfaceHolder.Call
             mCamera.startPreview();
 
         } catch (Exception e){
-            JLog.d( "Error starting camera preview: " + e.getMessage());
+            Logger.d( "Error starting camera preview: " + e.getMessage());
         }
     }
 
@@ -134,20 +134,20 @@ public class CameraSurfaceView extends SurfaceView implements SurfaceHolder.Call
 
 
     private void setCameraParams(Camera camera, int width, int height) {
-        JLog.i("setCameraParams  width="+width+"  height="+height);
+        Logger.i("setCameraParams  width="+width+"  height="+height);
         Camera.Parameters parameters = mCamera.getParameters();
         // 获取摄像头支持的PictureSize列表
         List<Camera.Size> pictureSizeList = parameters.getSupportedPictureSizes();
         for (Camera.Size size : pictureSizeList) {
-            JLog.i( "pictureSizeList size.width=" + size.width + "  size.height=" + size.height);
+            Logger.i( "pictureSizeList size.width=" + size.width + "  size.height=" + size.height);
         }
         /**从列表中选取合适的分辨率*/
         Camera.Size picSize = getProperSize(pictureSizeList, ((float) height / width));
         if (null == picSize) {
-            JLog.i( "null == picSize");
+            Logger.i( "null == picSize");
             picSize = parameters.getPictureSize();
         }
-        JLog.i( "picSize.width=" + picSize.width + "  picSize.height=" + picSize.height);
+        Logger.i( "picSize.width=" + picSize.width + "  picSize.height=" + picSize.height);
         // 根据选出的PictureSize重新设置SurfaceView大小
         float w = picSize.width;
         float h = picSize.height;
@@ -158,11 +158,11 @@ public class CameraSurfaceView extends SurfaceView implements SurfaceHolder.Call
         List<Camera.Size> previewSizeList = parameters.getSupportedPreviewSizes();
 
         for (Camera.Size size : previewSizeList) {
-            JLog.i( "previewSizeList size.width=" + size.width + "  size.height=" + size.height);
+            Logger.i( "previewSizeList size.width=" + size.width + "  size.height=" + size.height);
         }
         Camera.Size preSize = getProperSize(previewSizeList, ((float) height) / width);
         if (null != preSize) {
-            JLog.i( "preSize.width=" + preSize.width + "  preSize.height=" + preSize.height);
+            Logger.i( "preSize.width=" + preSize.width + "  preSize.height=" + preSize.height);
             parameters.setPreviewSize(preSize.width, preSize.height);
         }
 
@@ -183,7 +183,7 @@ public class CameraSurfaceView extends SurfaceView implements SurfaceHolder.Call
      *            h对应屏幕的width<p/>
      */
     private Camera.Size getProperSize(List<Camera.Size> pictureSizeList, float screenRatio) {
-        JLog.i( "screenRatio=" + screenRatio);
+        Logger.i( "screenRatio=" + screenRatio);
         Camera.Size result = null;
         for (Camera.Size size : pictureSizeList) {
             float currentRatio = ((float) size.width) / size.height;
@@ -231,19 +231,19 @@ public class CameraSurfaceView extends SurfaceView implements SurfaceHolder.Call
                 // 获得图片
                 long s = System.currentTimeMillis();
                 bm = BitmapFactory.decodeByteArray(data, 0, data.length);
-                JLog.d(System.currentTimeMillis() - s + " JTAG");
+                Logger.d(System.currentTimeMillis() - s + " JTAG");
 
                 if (Environment.getExternalStorageState().equals(Environment.MEDIA_MOUNTED)) {
                     File file = new File(filePath);
                     if (!file.exists()){
                         file.createNewFile();
                     }
-                    SharedPreferencesDAO.getInstance(getContext()).putString(IConstant.FRONT_PIC_PATH,filePath);
+                    SPUtils.getInstance(getContext()).putString(IConstant.FRONT_PIC_PATH,filePath);
                     long s1 = System.currentTimeMillis();
 
                     bos = new BufferedOutputStream(new FileOutputStream(file));
                     bm.compress(Bitmap.CompressFormat.JPEG, 60, bos);//将图片压缩到流中
-                    JLog.d(System.currentTimeMillis() - s1 + " JTAG1");
+                    Logger.d(System.currentTimeMillis() - s1 + " JTAG1");
 
                 }else{
                     ToastUtils.show("没有检测到内存卡");

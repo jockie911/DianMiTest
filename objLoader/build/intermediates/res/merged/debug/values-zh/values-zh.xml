@@ -37,6 +37,7 @@
     <string name="double_click_exit">再按一次退出程序</string>
     <string name="editor">编辑</string>
     <string name="error_no">未知错误</string>
+    <string name="female">女</string>
     <string name="first_measure">请先进行人体测量</string>
     <string name="forget_pwd_find_pwd">找回密码</string>
     <string name="front_Pic">正面照</string>
@@ -70,6 +71,7 @@
     <string name="logout">退出登录</string>
     <string name="logout_msg">您确定要退出登录吗？退出后账号信息将被清空。</string>
     <string name="main_app_telling">app只会选取所有照片的外形部分，不记录照片内容</string>
+    <string name="male">男</string>
     <string name="measure_height">身高(CM)</string>
     <string name="measure_input_height">请输入身高</string>
     <string name="measure_input_weight">请输入体重</string>

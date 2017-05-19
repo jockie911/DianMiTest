@@ -46,7 +46,7 @@ public class DetailsSizeFragment extends com.example.objLoader.global.BaseFragme
 	@Override
 	protected void initData() {
 	/*	isData = getActivity().getIntent().getExtras().getBoolean("isData");
-		String strJson = SharedPreferencesDAO.getInstance(getActivity()).getString("json");
+		String strJson = SPUtils.getInstance(getActivity()).getString("json");
 		if(strJson.length() <= 0 || strJson.equals("")){
 			startActivity(new Intent(getActivity(), MeasureWeightAndHeightActivity.class));
 			getActivity().finish();
@@ -88,7 +88,7 @@ public class DetailsSizeFragment extends com.example.objLoader.global.BaseFragme
 //		case R.id.tv_save_details_size:
 //
 //
-//			if(SharedPreferencesDAO.getInstance(getActivity()).getBoolean("isLogin")){
+//			if(SPUtils.getInstance(getActivity()).getBoolean("isLogin")){
 //
 //				showPopup();
 //
@@ -120,8 +120,8 @@ public class DetailsSizeFragment extends com.example.objLoader.global.BaseFragme
 	 * 获取保存记录名称
 	 */
 //	private void saveSizeName() {
-//		time = SharedPreferencesDAO.getInstance(getActivity()).getString("time");
-//		mobile = SharedPreferencesDAO.getInstance(getActivity()).getString("phone_number");
+//		time = SPUtils.getInstance(getActivity()).getString("time");
+//		mobile = SPUtils.getInstance(getActivity()).getString("phone_number");
 //
 //		saveSizeNameRequest = NoHttp.createStringRequest(Constants.SAVE_NAME, RequestMethod.POST);
 //
@@ -139,7 +139,7 @@ public class DetailsSizeFragment extends com.example.objLoader.global.BaseFragme
 //		public void onSucceed(int what, BaseRequestBean bean) {
 //
 //			Toast.show(bean.info);
-//			SharedPreferencesDAO.getInstance(getActivity()).putBoolean("isSave", true);
+//			SPUtils.getInstance(getActivity()).putBoolean("isSave", true);
 //
 //		};
 //
@@ -186,7 +186,7 @@ public class DetailsSizeFragment extends com.example.objLoader.global.BaseFragme
 	public void onResume() {
 		super.onResume();
 //
-//		if(!SharedPreferencesDAO.getInstance(getActivity()).getBoolean("isSave")){
+//		if(!SPUtils.getInstance(getActivity()).getBoolean("isSave")){
 //			tv_save_details_size.setVisibility(View.VISIBLE);
 //		}else{
 //			tv_save_details_size.setVisibility(View.GONE);
@@ -200,7 +200,7 @@ public class DetailsSizeFragment extends com.example.objLoader.global.BaseFragme
 		super.onHiddenChanged(hidden);
 		
 		if(!hidden){
-//			if(!SharedPreferencesDAO.getInstance(getActivity()).getBoolean("isSave")){
+//			if(!SPUtils.getInstance(getActivity()).getBoolean("isSave")){
 //				tv_save_details_size.setVisibility(View.VISIBLE);
 //			}else{
 //				tv_save_details_size.setVisibility(View.GONE);

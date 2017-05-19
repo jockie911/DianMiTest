@@ -307,6 +307,7 @@
     <string name="double_click_exit">再按一次退出程序</string>
     <string name="editor">编辑</string>
     <string name="error_no">Unknown mistake</string>
+    <string name="female">female</string>
     <string name="first_measure">The human body measurement first, please</string>
     <string name="forget_pwd_find_pwd">Forgot password</string>
     <string name="front_Pic">Frontal view</string>
@@ -340,6 +341,7 @@
     <string name="logout">Logout</string>
     <string name="logout_msg">Are you sure exit?all information will be cleared.</string>
     <string name="main_app_telling">App will only select all form part of the picture, do not record pictures content</string>
+    <string name="male">male</string>
     <string name="measure_height">Height(CM)</string>
     <string name="measure_input_height">Please enter a height</string>
     <string name="measure_input_weight">Please enter your weight</string>
