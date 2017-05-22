@@ -7,8 +7,8 @@ import android.widget.ImageButton;
 import android.widget.TextView;
 
 import com.example.objLoader.R;
-import com.example.objLoader.activity.FrontPicActivity;
-import com.example.objLoader.activity.SidePicActivity;
+import com.example.objLoader.module.measure.FrontPicActivity;
+import com.example.objLoader.module.measure.SidePicActivity;
 import com.example.objLoader.global.BaseActivity;
 import com.example.objLoader.istatic.IConstant;
 import com.example.objLoader.wedgit.ShapeView;

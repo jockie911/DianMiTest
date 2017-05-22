@@ -1,0 +1,210 @@
+[
+    {
+        "merged": "E:\\Code\\Android\\MyApplication\\objLoader\\build\\intermediates\\res\\merged\\release\\drawable-xhdpi\\icon_point_pre.png",
+        "source": "E:\\Code\\Android\\MyApplication\\objLoader\\src\\main\\res\\drawable-xhdpi\\icon_point_pre.png"
+    },
+    {
+        "merged": "E:\\Code\\Android\\MyApplication\\objLoader\\build\\intermediates\\res\\merged\\release\\drawable-xhdpi\\ic_launcher.png",
+        "source": "E:\\Code\\Android\\MyApplication\\objLoader\\src\\main\\res\\drawable-xhdpi\\ic_launcher.png"
+    },
+    {
+        "merged": "E:\\Code\\Android\\MyApplication\\objLoader\\build\\intermediates\\res\\merged\\release\\drawable-xhdpi\\actionsheet_bottom_normal.9.png",
+        "source": "E:\\Code\\Android\\MyApplication\\objLoader\\src\\main\\res\\drawable-xhdpi\\actionsheet_bottom_normal.9.png"
+    },
+    {
+        "merged": "E:\\Code\\Android\\MyApplication\\objLoader\\build\\intermediates\\res\\merged\\release\\drawable-xhdpi\\ic_navigation_check.png",
+        "source": "E:\\Code\\Android\\MyApplication\\objLoader\\src\\main\\res\\drawable-xhdpi\\ic_navigation_check.png"
+    },
+    {
+        "merged": "E:\\Code\\Android\\MyApplication\\objLoader\\build\\intermediates\\res\\merged\\release\\drawable-xhdpi\\bottom_clothes_woman.png",
+        "source": "E:\\Code\\Android\\MyApplication\\objLoader\\src\\main\\res\\drawable-xhdpi\\bottom_clothes_woman.png"
+    },
+    {
+        "merged": "E:\\Code\\Android\\MyApplication\\objLoader\\build\\intermediates\\res\\merged\\release\\drawable-xhdpi\\man_bottom.png",
+        "source": "E:\\Code\\Android\\MyApplication\\objLoader\\src\\main\\res\\drawable-xhdpi\\man_bottom.png"
+    },
+    {
+        "merged": "E:\\Code\\Android\\MyApplication\\objLoader\\build\\intermediates\\res\\merged\\release\\drawable-xhdpi\\bottom_clothes_man.png",
+        "source": "E:\\Code\\Android\\MyApplication\\objLoader\\src\\main\\res\\drawable-xhdpi\\bottom_clothes_man.png"
+    },
+    {
+        "merged": "E:\\Code\\Android\\MyApplication\\objLoader\\build\\intermediates\\res\\merged\\release\\drawable-xhdpi\\measure_protocol.png",
+        "source": "E:\\Code\\Android\\MyApplication\\objLoader\\src\\main\\res\\drawable-xhdpi\\measure_protocol.png"
+    },
+    {
+        "merged": "E:\\Code\\Android\\MyApplication\\objLoader\\build\\intermediates\\res\\merged\\release\\drawable-xhdpi\\ic_error.png",
+        "source": "E:\\Code\\Android\\MyApplication\\objLoader\\src\\main\\res\\drawable-xhdpi\\ic_error.png"
+    },
+    {
+        "merged": "E:\\Code\\Android\\MyApplication\\objLoader\\build\\intermediates\\res\\merged\\release\\drawable-xhdpi\\personal_center.png",
+        "source": "E:\\Code\\Android\\MyApplication\\objLoader\\src\\main\\res\\drawable-xhdpi\\personal_center.png"
+    },
+    {
+        "merged": "E:\\Code\\Android\\MyApplication\\objLoader\\build\\intermediates\\res\\merged\\release\\drawable-xhdpi\\actionsheet_top_pressed.9.png",
+        "source": "E:\\Code\\Android\\MyApplication\\objLoader\\src\\main\\res\\drawable-xhdpi\\actionsheet_top_pressed.9.png"
+    },
+    {
+        "merged": "E:\\Code\\Android\\MyApplication\\objLoader\\build\\intermediates\\res\\merged\\release\\drawable-xhdpi\\man_top.png",
+        "source": "E:\\Code\\Android\\MyApplication\\objLoader\\src\\main\\res\\drawable-xhdpi\\man_top.png"
+    },
+    {
+        "merged": "E:\\Code\\Android\\MyApplication\\objLoader\\build\\intermediates\\res\\merged\\release\\drawable-xhdpi\\top_clothes_man.png",
+        "source": "E:\\Code\\Android\\MyApplication\\objLoader\\src\\main\\res\\drawable-xhdpi\\top_clothes_man.png"
+    },
+    {
+        "merged": "E:\\Code\\Android\\MyApplication\\objLoader\\build\\intermediates\\res\\merged\\release\\drawable-xhdpi\\third_process.png",
+        "source": "E:\\Code\\Android\\MyApplication\\objLoader\\src\\main\\res\\drawable-xhdpi\\third_process.png"
+    },
+    {
+        "merged": "E:\\Code\\Android\\MyApplication\\objLoader\\build\\intermediates\\res\\merged\\release\\drawable-xhdpi\\prompt.png",
+        "source": "E:\\Code\\Android\\MyApplication\\objLoader\\src\\main\\res\\drawable-xhdpi\\prompt.png"
+    },
+    {
+        "merged": "E:\\Code\\Android\\MyApplication\\objLoader\\build\\intermediates\\res\\merged\\release\\drawable-xhdpi\\woman_bottom.png",
+        "source": "E:\\Code\\Android\\MyApplication\\objLoader\\src\\main\\res\\drawable-xhdpi\\woman_bottom.png"
+    },
+    {
+        "merged": "E:\\Code\\Android\\MyApplication\\objLoader\\build\\intermediates\\res\\merged\\release\\drawable-xhdpi\\trans_bg.png",
+        "source": "E:\\Code\\Android\\MyApplication\\objLoader\\src\\main\\res\\drawable-xhdpi\\trans_bg.png"
+    },
+    {
+        "merged": "E:\\Code\\Android\\MyApplication\\objLoader\\build\\intermediates\\res\\merged\\release\\drawable-xhdpi\\login_weixin.png",
+        "source": "E:\\Code\\Android\\MyApplication\\objLoader\\src\\main\\res\\drawable-xhdpi\\login_weixin.png"
+    },
+    {
+        "merged": "E:\\Code\\Android\\MyApplication\\objLoader\\build\\intermediates\\res\\merged\\release\\drawable-xhdpi\\opened_eye.png",
+        "source": "E:\\Code\\Android\\MyApplication\\objLoader\\src\\main\\res\\drawable-xhdpi\\opened_eye.png"
+    },
+    {
+        "merged": "E:\\Code\\Android\\MyApplication\\objLoader\\build\\intermediates\\res\\merged\\release\\drawable-xhdpi\\login_pwd.png",
+        "source": "E:\\Code\\Android\\MyApplication\\objLoader\\src\\main\\res\\drawable-xhdpi\\login_pwd.png"
+    },
+    {
+        "merged": "E:\\Code\\Android\\MyApplication\\objLoader\\build\\intermediates\\res\\merged\\release\\drawable-xhdpi\\top_clothes_woman.png",
+        "source": "E:\\Code\\Android\\MyApplication\\objLoader\\src\\main\\res\\drawable-xhdpi\\top_clothes_woman.png"
+    },
+    {
+        "merged": "E:\\Code\\Android\\MyApplication\\objLoader\\build\\intermediates\\res\\merged\\release\\drawable-xhdpi\\start_button.png",
+        "source": "E:\\Code\\Android\\MyApplication\\objLoader\\src\\main\\res\\drawable-xhdpi\\start_button.png"
+    },
+    {
+        "merged": "E:\\Code\\Android\\MyApplication\\objLoader\\build\\intermediates\\res\\merged\\release\\drawable-xhdpi\\xc_h.png",
+        "source": "E:\\Code\\Android\\MyApplication\\objLoader\\src\\main\\res\\drawable-xhdpi\\xc_h.png"
+    },
+    {
+        "merged": "E:\\Code\\Android\\MyApplication\\objLoader\\build\\intermediates\\res\\merged\\release\\drawable-xhdpi\\alert_btn_right_pressed.9.png",
+        "source": "E:\\Code\\Android\\MyApplication\\objLoader\\src\\main\\res\\drawable-xhdpi\\alert_btn_right_pressed.9.png"
+    },
+    {
+        "merged": "E:\\Code\\Android\\MyApplication\\objLoader\\build\\intermediates\\res\\merged\\release\\drawable-xhdpi\\register_auth_code.png",
+        "source": "E:\\Code\\Android\\MyApplication\\objLoader\\src\\main\\res\\drawable-xhdpi\\register_auth_code.png"
+    },
+    {
+        "merged": "E:\\Code\\Android\\MyApplication\\objLoader\\build\\intermediates\\res\\merged\\release\\drawable-xhdpi\\first_process.png",
+        "source": "E:\\Code\\Android\\MyApplication\\objLoader\\src\\main\\res\\drawable-xhdpi\\first_process.png"
+    },
+    {
+        "merged": "E:\\Code\\Android\\MyApplication\\objLoader\\build\\intermediates\\res\\merged\\release\\drawable-xhdpi\\start_button_invalid.png",
+        "source": "E:\\Code\\Android\\MyApplication\\objLoader\\src\\main\\res\\drawable-xhdpi\\start_button_invalid.png"
+    },
+    {
+        "merged": "E:\\Code\\Android\\MyApplication\\objLoader\\build\\intermediates\\res\\merged\\release\\drawable-xhdpi\\icon_point.png",
+        "source": "E:\\Code\\Android\\MyApplication\\objLoader\\src\\main\\res\\drawable-xhdpi\\icon_point.png"
+    },
+    {
+        "merged": "E:\\Code\\Android\\MyApplication\\objLoader\\build\\intermediates\\res\\merged\\release\\drawable-xhdpi\\xj_h.png",
+        "source": "E:\\Code\\Android\\MyApplication\\objLoader\\src\\main\\res\\drawable-xhdpi\\xj_h.png"
+    },
+    {
+        "merged": "E:\\Code\\Android\\MyApplication\\objLoader\\build\\intermediates\\res\\merged\\release\\drawable-xhdpi\\actionsheet_middle_normal.9.png",
+        "source": "E:\\Code\\Android\\MyApplication\\objLoader\\src\\main\\res\\drawable-xhdpi\\actionsheet_middle_normal.9.png"
+    },
+    {
+        "merged": "E:\\Code\\Android\\MyApplication\\objLoader\\build\\intermediates\\res\\merged\\release\\drawable-xhdpi\\actionsheet_top_normal.9.png",
+        "source": "E:\\Code\\Android\\MyApplication\\objLoader\\src\\main\\res\\drawable-xhdpi\\actionsheet_top_normal.9.png"
+    },
+    {
+        "merged": "E:\\Code\\Android\\MyApplication\\objLoader\\build\\intermediates\\res\\merged\\release\\drawable-xhdpi\\home_user.png",
+        "source": "E:\\Code\\Android\\MyApplication\\objLoader\\src\\main\\res\\drawable-xhdpi\\home_user.png"
+    },
+    {
+        "merged": "E:\\Code\\Android\\MyApplication\\objLoader\\build\\intermediates\\res\\merged\\release\\drawable-xhdpi\\actionsheet_single_normal.9.png",
+        "source": "E:\\Code\\Android\\MyApplication\\objLoader\\src\\main\\res\\drawable-xhdpi\\actionsheet_single_normal.9.png"
+    },
+    {
+        "merged": "E:\\Code\\Android\\MyApplication\\objLoader\\build\\intermediates\\res\\merged\\release\\drawable-xhdpi\\measure_record.png",
+        "source": "E:\\Code\\Android\\MyApplication\\objLoader\\src\\main\\res\\drawable-xhdpi\\measure_record.png"
+    },
+    {
+        "merged": "E:\\Code\\Android\\MyApplication\\objLoader\\build\\intermediates\\res\\merged\\release\\drawable-xhdpi\\login_user.png",
+        "source": "E:\\Code\\Android\\MyApplication\\objLoader\\src\\main\\res\\drawable-xhdpi\\login_user.png"
+    },
+    {
+        "merged": "E:\\Code\\Android\\MyApplication\\objLoader\\build\\intermediates\\res\\merged\\release\\drawable-xhdpi\\xj.png",
+        "source": "E:\\Code\\Android\\MyApplication\\objLoader\\src\\main\\res\\drawable-xhdpi\\xj.png"
+    },
+    {
+        "merged": "E:\\Code\\Android\\MyApplication\\objLoader\\build\\intermediates\\res\\merged\\release\\drawable-xhdpi\\actionsheet_bottom_pressed.9.png",
+        "source": "E:\\Code\\Android\\MyApplication\\objLoader\\src\\main\\res\\drawable-xhdpi\\actionsheet_bottom_pressed.9.png"
+    },
+    {
+        "merged": "E:\\Code\\Android\\MyApplication\\objLoader\\build\\intermediates\\res\\merged\\release\\drawable-xhdpi\\actionsheet_middle_pressed.9.png",
+        "source": "E:\\Code\\Android\\MyApplication\\objLoader\\src\\main\\res\\drawable-xhdpi\\actionsheet_middle_pressed.9.png"
+    },
+    {
+        "merged": "E:\\Code\\Android\\MyApplication\\objLoader\\build\\intermediates\\res\\merged\\release\\drawable-xhdpi\\logo_main.png",
+        "source": "E:\\Code\\Android\\MyApplication\\objLoader\\src\\main\\res\\drawable-xhdpi\\logo_main.png"
+    },
+    {
+        "merged": "E:\\Code\\Android\\MyApplication\\objLoader\\build\\intermediates\\res\\merged\\release\\drawable-xhdpi\\xc.png",
+        "source": "E:\\Code\\Android\\MyApplication\\objLoader\\src\\main\\res\\drawable-xhdpi\\xc.png"
+    },
+    {
+        "merged": "E:\\Code\\Android\\MyApplication\\objLoader\\build\\intermediates\\res\\merged\\release\\drawable-xhdpi\\exit.png",
+        "source": "E:\\Code\\Android\\MyApplication\\objLoader\\src\\main\\res\\drawable-xhdpi\\exit.png"
+    },
+    {
+        "merged": "E:\\Code\\Android\\MyApplication\\objLoader\\build\\intermediates\\res\\merged\\release\\drawable-xhdpi\\login_default.png",
+        "source": "E:\\Code\\Android\\MyApplication\\objLoader\\src\\main\\res\\drawable-xhdpi\\login_default.png"
+    },
+    {
+        "merged": "E:\\Code\\Android\\MyApplication\\objLoader\\build\\intermediates\\res\\merged\\release\\drawable-xhdpi\\jinru.png",
+        "source": "E:\\Code\\Android\\MyApplication\\objLoader\\src\\main\\res\\drawable-xhdpi\\jinru.png"
+    },
+    {
+        "merged": "E:\\Code\\Android\\MyApplication\\objLoader\\build\\intermediates\\res\\merged\\release\\drawable-xhdpi\\closed_eye.png",
+        "source": "E:\\Code\\Android\\MyApplication\\objLoader\\src\\main\\res\\drawable-xhdpi\\closed_eye.png"
+    },
+    {
+        "merged": "E:\\Code\\Android\\MyApplication\\objLoader\\build\\intermediates\\res\\merged\\release\\drawable-xhdpi\\alert_btn_left_pressed.9.png",
+        "source": "E:\\Code\\Android\\MyApplication\\objLoader\\src\\main\\res\\drawable-xhdpi\\alert_btn_left_pressed.9.png"
+    },
+    {
+        "merged": "E:\\Code\\Android\\MyApplication\\objLoader\\build\\intermediates\\res\\merged\\release\\drawable-xhdpi\\alert_btn_single_pressed.9.png",
+        "source": "E:\\Code\\Android\\MyApplication\\objLoader\\src\\main\\res\\drawable-xhdpi\\alert_btn_single_pressed.9.png"
+    },
+    {
+        "merged": "E:\\Code\\Android\\MyApplication\\objLoader\\build\\intermediates\\res\\merged\\release\\drawable-xhdpi\\app_icon.png",
+        "source": "E:\\Code\\Android\\MyApplication\\objLoader\\src\\main\\res\\drawable-xhdpi\\app_icon.png"
+    },
+    {
+        "merged": "E:\\Code\\Android\\MyApplication\\objLoader\\build\\intermediates\\res\\merged\\release\\drawable-xhdpi\\second_process.png",
+        "source": "E:\\Code\\Android\\MyApplication\\objLoader\\src\\main\\res\\drawable-xhdpi\\second_process.png"
+    },
+    {
+        "merged": "E:\\Code\\Android\\MyApplication\\objLoader\\build\\intermediates\\res\\merged\\release\\drawable-xhdpi\\alert_bg.9.png",
+        "source": "E:\\Code\\Android\\MyApplication\\objLoader\\src\\main\\res\\drawable-xhdpi\\alert_bg.9.png"
+    },
+    {
+        "merged": "E:\\Code\\Android\\MyApplication\\objLoader\\build\\intermediates\\res\\merged\\release\\drawable-xhdpi\\woman_top.png",
+        "source": "E:\\Code\\Android\\MyApplication\\objLoader\\src\\main\\res\\drawable-xhdpi\\woman_top.png"
+    },
+    {
+        "merged": "E:\\Code\\Android\\MyApplication\\objLoader\\build\\intermediates\\res\\merged\\release\\drawable-xhdpi\\white_back.png",
+        "source": "E:\\Code\\Android\\MyApplication\\objLoader\\src\\main\\res\\drawable-xhdpi\\white_back.png"
+    },
+    {
+        "merged": "E:\\Code\\Android\\MyApplication\\objLoader\\build\\intermediates\\res\\merged\\release\\drawable-xhdpi\\actionsheet_single_pressed.9.png",
+        "source": "E:\\Code\\Android\\MyApplication\\objLoader\\src\\main\\res\\drawable-xhdpi\\actionsheet_single_pressed.9.png"
+    }
+]

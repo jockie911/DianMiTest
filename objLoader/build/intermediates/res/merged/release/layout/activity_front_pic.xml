@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical"
+    android:background="@color/color_base_deep">
+
+    <include layout="@layout/base_title_bar"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:id="@+id/rel_temp_top"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/color_base">
+
+            <ImageView
+                android:id="@+id/iv_temp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginLeft="50dp"
+                android:layout_marginRight="50dp"
+                android:paddingBottom="2dp"
+                android:src="@drawable/first_process" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/iv_temp"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="35dp"
+                android:text="@string/front_Pic"
+                android:textColor="@color/title" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/iv_temp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="5dp"
+                android:layout_marginLeft="35dp"
+                android:text="@string/side_pic"
+                android:textColor="#4a525b" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_below="@+id/iv_temp"
+                android:layout_marginBottom="5dp"
+                android:layout_marginRight="30dp"
+                android:text="@string/weight_height"
+                android:textColor="#4a525b" />
+        </RelativeLayout>
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/rel_temp_bottom"
+            android:layout_below="@+id/rel_temp_top"
+            android:background="@color/white">
+
+            <ImageView
+                android:id="@+id/iv_front"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/front_bg"
+                android:scaleType="centerCrop"/>
+        </FrameLayout>
+
+        <RelativeLayout
+            android:id="@+id/rel_temp_bottom"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_alignParentBottom="true"
+            android:layout_gravity="bottom"
+            android:background="@color/color_base">
+
+            <Button
+                android:id="@+id/btn_front_camera"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="30dp"
+                android:background="@drawable/xj_selector" />
+
+            <Button
+                android:id="@+id/btn_front_album"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="40dp"
+                android:layout_toRightOf="@+id/btn_front_camera"
+                android:background="@drawable/xc_selector" />
+
+            <TextView
+                android:id="@+id/tv_next_step"
+                android:layout_width="150dp"
+                android:layout_height="match_parent"
+                android:layout_alignParentRight="true"
+                android:background="#eb9421"
+                android:gravity="center"
+                android:text="@string/next"
+                android:textColor="#fff"
+                android:textSize="18sp" />
+        </RelativeLayout>
+
+        <FrameLayout
+            android:id="@+id/content_container"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
+    </RelativeLayout>
+</LinearLayout>

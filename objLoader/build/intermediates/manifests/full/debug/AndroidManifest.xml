@@ -57,29 +57,25 @@
 
         <!-- 更换密码 -->
         <activity
-            android:name="com.example.objLoader.activity.ChangePwdActivity"
+            android:name="com.example.objLoader.module.ChangePwdActivity"
             android:configChanges="orientation|keyboardHidden"
             android:screenOrientation="portrait" />
         <!-- 更换用户名 -->
         <activity
-            android:name="com.example.objLoader.activity.ChangeUsernameActivity"
+            android:name="com.example.objLoader.module.ChangeUsernameActivity"
             android:configChanges="orientation|keyboardHidden"
             android:screenOrientation="portrait" />
         <!-- 登陆 -->
         <activity
-            android:name="com.example.objLoader.activity.LoginActivity"
+            android:name="com.example.objLoader.module.login.LoginActivity"
             android:configChanges="orientation|keyboardHidden"
             android:screenOrientation="portrait" />
         <!-- 注册 -->
         <activity
-            android:name="com.example.objLoader.activity.RegisterAndForgetActivity"
+            android:name="com.example.objLoader.module.login.RegisterAndForgetActivity"
             android:configChanges="orientation|keyboardHidden"
             android:screenOrientation="portrait" />
         <!-- 忘记密码 -->
-        <activity
-            android:name="com.example.objLoader.activity.ForgertPwdActivity"
-            android:configChanges="orientation|keyboardHidden"
-            android:screenOrientation="portrait" />
         <!-- 主页 -->
         <!-- <activity -->
         <!-- android:name=".HomeActivity" -->
@@ -94,28 +90,28 @@
         <!-- </activity> -->
         <!-- 个人信息 -->
         <activity
-            android:name="com.example.objLoader.activity.AccountInfoActivity"
+            android:name="com.example.objLoader.module.personInfo.AccountInfoActivity"
             android:configChanges="orientation|keyboardHidden"
             android:screenOrientation="portrait" />
         <!-- 上传正面照 -->
         <activity
-            android:name="com.example.objLoader.activity.FrontPicActivity"
+            android:name="com.example.objLoader.module.measure.FrontPicActivity"
             android:configChanges="orientation|keyboardHidden"
             android:screenOrientation="portrait" />
         <!-- 上传侧面照 -->
         <activity
-            android:name="com.example.objLoader.activity.SidePicActivity"
+            android:name="com.example.objLoader.module.measure.SidePicActivity"
             android:configChanges="orientation|keyboardHidden"
             android:screenOrientation="portrait" />
         <!-- 测量 -->
         <activity
-            android:name="com.example.objLoader.activity.MeasureWeightAndHeightActivity"
+            android:name="com.example.objLoader.module.measure.MeasureWeightAndHeightActivity"
             android:configChanges="orientation|keyboardHidden"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="stateHidden" />
         <!-- 尺寸 -->
         <activity
-            android:name="com.example.objLoader.activity.SplashActivity"
+            android:name="com.example.objLoader.module.SplashActivity"
             android:configChanges="orientation|keyboardHidden"
             android:screenOrientation="portrait"
             android:theme="@style/Theme.AppCompat.NoActionBar" >
@@ -126,13 +122,13 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="com.example.objLoader.activity.MainActivity"
+            android:name="com.example.objLoader.module.MainActivity"
             android:theme="@style/Theme.AppCompat.NoActionBar" />
         <activity
-            android:name="com.example.objLoader.activity.DetailMeasureSizeActivity"
+            android:name="com.example.objLoader.module.DetailMeasureSizeActivity"
             android:windowSoftInputMode="adjustPan" />
-        <activity android:name="com.example.objLoader.activity.MeasureRecordActivity" />
-        <activity android:name="com.example.objLoader.activity.SettingActivity" />
+        <activity android:name="com.example.objLoader.module.MeasureRecordActivity" />
+        <activity android:name="com.example.objLoader.module.SettingActivity" />
 
         <service
             android:name="com.squareup.leakcanary.internal.HeapAnalyzerService"

@@ -2,6 +2,8 @@ package com.example.objLoader.istatic;
 
 public class Constants {
 
+	public static final String WX_ID = "wx3666f68c67eb1f86";
+
 	/**	登录what	*/
 	public static final int LOGIN_WHAT = 0;
 	

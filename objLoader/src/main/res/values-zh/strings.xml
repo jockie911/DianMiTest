@@ -69,27 +69,28 @@
     <string name="size_id">序号</string>
     <string name="size_project">项目</string>
     <string name="size">尺寸</string>
-    
+
     <!-- HomeActivity -->
-	<string name="home_title">摆脱传统的测量的束缚</string>
-	<string name="home_text">用户测量体验</string>
-	<string name="home_measure">测量</string>
-	<string name="home_size">尺寸</string>
-	<string name="home_game">游戏</string>
-	<string name="home_dizhi">订制</string>
-	<string name="home_shop">商城</string>
+    <string name="home_title">摆脱传统的测量的束缚</string>
+    <string name="home_text">用户测量体验</string>
+    <string name="home_measure">测量</string>
+    <string name="home_size">尺寸</string>
+    <string name="home_game">游戏</string>
+    <string name="home_dizhi">订制</string>
+    <string name="home_shop">商城</string>
 
     <!-- public -->
     <string name="first_measure">请先进行人体测量</string>
     <string name="delete_my_log">请先选择需要删除的记录</string>
     <string name="delete_log">是否删除选中的记录</string>
     <string name="delete">删除</string>
+    <string name="ok">确定</string>
     <string name="not_login">未登录,请先登录</string>
     <string name="input_weight_height">请输入身高和体重</string>
     <string name="selector_front_pic">请选择正面照</string>
     <string name="selector_side_pic">请选择侧面照</string>
     <string name="not_details_size">无记录，请上传照片</string>
-    <string name="model_not_found">无3D模型文件,请重新上传照片</string>
+    <string name="model_not_found">无3D模型文件,请上传照片</string>
     <string name="front_pic_not_found">正面照不存在</string>
     <string name="side_pic_not_found">侧面照不存在</string>
     <string name="upload_pic_error">上传图片出错!!!</string>
@@ -135,21 +136,41 @@
     <string name="pickerview_minutes">分</string>
     <string name="pickerview_seconds">秒</string>
     <string name="submit">提交</string>
-    <string name="account_info_measure_record" >量身记录</string>
-    <string name="account_info_measure_protocol" >量身协议</string>
+    <string name="account_info_measure_protocol">量身协议</string>
+    <string name="account_info_measure_record">量身记录</string>
     <string name="logout">退出登录</string>
     <string name="logout_msg">您确定要退出登录吗？退出后账号信息将被清空。</string>
-    <string name="tips_for_measure" >为保障量身质量及准确性，请你穿着较为贴身的义务进行拍照，或选择贴身的照片</string>
+    <string name="tips_for_measure">为保障量身质量及准确性，请你穿着较为贴身的义务进行拍照，或选择贴身的照片</string>
     <string name="person_center">个人中心</string>
     <string name="begin_measure">开始量身</string>
     <string name="no_present">暂未开放</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
     <string name="top_clothes">上装</string>
+    <string name="bottom_clothes">下装</string>
+    <string name="shape">体型</string>
     <string name="sava_record_name_hint">输入量身记录名称</string>
     <string name="editor">编辑</string>
     <string name="remain_time">剩余</string>
     <string name="auth_code_wrong">验证码格式错误</string>
     <string name="compelete">完成</string>
     <string name="weight_height">身高/体重</string>
+
+
+    <!--自定义相机-->
+    <string name="tips_camera_not_exist">不存在相机设备</string>
+    <string name="topic_camera_flashlight_off">关闭</string>
+    <string name="topic_camera_flashlight_on">开启</string>
+    <string name="topic_camera_flashlight_auto">自动</string>
+    <string name="topic_camera_front">前镜头</string>
+    <string name="topic_camera_back">后镜头</string>
+    <string name="topic_camera_takephoto_failure">拍照竟然失败了！</string>
+    <string name="tips_camera_forbidden">相机被禁用 请修改应用权限</string>
+
+    <string name="tips_sdcard_notexist">SD卡不存在</string>
+    <string name="product_more_detail">更多详情</string>
+    <string name="product_ingredients">查看成分分析</string>
+    <string name="product_count_in_meila">%s件收录，国内最大的妆品信息库</string>
     <string name="main_app_telling">app只会选取所有照片的外形部分，不记录照片内容</string>
     <string name="double_click_exit">再按一次退出程序</string>
     <string name="setting">设置</string>
@@ -160,6 +181,9 @@
     <string name="clear_cash_msg">这会清空您已经缓存的数据,下次访问的时候重新下载。</string>
     <string name="female">女</string>
     <string name="male">男</string>
+    <string name="pwd_not_none">密码不能为空</string>
+    <string name="wrong_format_sms_code">验证呀格式错误</string>
+    <!--<string name="topic_camera_photo_save">拍照文件存储失败了！</string>-->
 
 
 </resources>

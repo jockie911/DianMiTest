@@ -141,24 +141,44 @@
     <string name="logout_msg">Are you sure exit?all information will be cleared.</string>
     <string name="tips_for_measure" />
     <string name="person_center">Person center</string>
-    <string name="begin_measure">Begin measure</string>
+    <string name="begin_measure">Begin to tailor</string>
     <string name="no_present">Not ready</string>
-    <string name="top_clothes">上装</string>
-    <string name="sava_record_name_hint">输入量身记录名称</string>
-    <string name="editor">编辑</string>
-    <string name="remain_time">剩余</string>
-    <string name="auth_code_wrong">验证码格式错误</string>
-    <string name="compelete">完成</string>
-    <string name="weight_height">身高/体重</string>
+    <string name="top_clothes">Tops</string>
+    <string name="sava_record_name_hint">Please input measure record name</string>
+    <string name="editor">Editor</string>
+    <string name="remain_time">Remain</string>
+    <string name="bottom_clothes">Bottoms</string>
+    <string name="shape">Body type</string>
+    <string name="auth_code_wrong">The format of the verification code is wrong</string>
+    <string name="compelete">Complete</string>
+    <string name="weight_height">height/weight</string>
     <string name="main_app_telling">App will only select all form part of the picture, do not record pictures content</string>
-    <string name="double_click_exit">再按一次退出程序</string>
-    <string name="setting">设置</string>
-    <string name="about_us">关于我们</string>
-    <string name="your_advice">意见反馈</string>
-    <string name="your_clear_cash">清理缓存</string>
-    <string name="clear_cash_title">确定清理缓存吗?</string>
-    <string name="clear_cash_msg">这会清空您已经缓存的数据,下次访问的时候重新下载。</string>
+    <string name="double_click_exit">Press the exit program again</string>
+    <string name="setting">Settings</string>
+    <string name="about_us">About us</string>
+    <string name="your_advice">Feedback</string>
+    <string name="your_clear_cash">Clear cache</string>
+    <string name="clear_cash_title">Do you want to clear the cache?</string>
+    <string name="clear_cash_msg">This will empty your cached data and download it next time you visit it.</string>
     <string name="female">female</string>
     <string name="male">male</string>
+    <string name="pwd_not_none">Password cannot be empty</string>
+    <string name="wrong_format_sms_code">The format of the verification code is wrong</string>
+    <string name="ok">yes</string>
 
+
+    <!--自定义相机-->
+    <string name="tips_camera_not_exist">There is no camera device</string>
+    <string name="topic_camera_flashlight_off">Open</string>
+    <string name="topic_camera_flashlight_on">Close</string>
+    <string name="topic_camera_flashlight_auto">Auto</string>
+    <string name="topic_camera_front">Front lens</string>
+    <string name="topic_camera_back">After lens</string>
+    <string name="topic_camera_takephoto_failure">The photograph failed!</string>
+    <string name="tips_camera_forbidden">The camera is disabled. Please modify the application permissions</string>
+
+    <string name="tips_sdcard_notexist">SD card does not exist</string>
+    <string name="product_more_detail">more details</string>
+    <string name="product_ingredients">View component analysis</string>
+    <string name="product_count_in_meila">%sIncluded in the article, the largest makeup information library</string>
 </resources>

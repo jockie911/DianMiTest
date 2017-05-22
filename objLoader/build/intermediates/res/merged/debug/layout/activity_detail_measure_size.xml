@@ -7,7 +7,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:background="@color/color_base_deep"
-    tools:context="com.example.objLoader.activity.DetailMeasureSizeActivity">
+    tools:context="com.example.objLoader.module.DetailMeasureSizeActivity">
 
     <RelativeLayout
         android:layout_width="match_parent"

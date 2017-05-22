@@ -6,7 +6,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 
 import com.example.objLoader.R;
-import com.example.objLoader.activity.DetailMeasureSizeActivity;
+import com.example.objLoader.module.DetailMeasureSizeActivity;
 import com.example.objLoader.istatic.Constants;
 import com.tencent.smtt.sdk.WebSettings;
 import com.tencent.smtt.sdk.WebView;

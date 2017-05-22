@@ -2,7 +2,7 @@ package com.example.objLoader.utils;
 
 import android.content.Intent;
 
-import com.example.objLoader.activity.LoginActivity;
+import com.example.objLoader.module.login.LoginActivity;
 import com.example.objLoader.global.BaseApp;
 import com.example.objLoader.istatic.IConstant;
 

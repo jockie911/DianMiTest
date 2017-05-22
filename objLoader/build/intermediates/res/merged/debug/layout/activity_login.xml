@@ -28,6 +28,7 @@
                 android:id="@+id/et_username"
                 style="@style/et_login_common"
                 android:inputType="phone"
+                android:maxLength="11"
                 android:hint="@string/input_username"/>
         </LinearLayout>
 

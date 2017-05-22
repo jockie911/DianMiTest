@@ -97,6 +97,7 @@
     <string name="pickerview_year">年</string>
     <string name="pwd_equals">两次密码输入不一致,请重新输入</string>
     <string name="pwd_lenght">请输入密码(6-12个字母、数字)</string>
+    <string name="pwd_not_none">密碼不能為空</string>
     <string name="pwd_not_right">再次输入的密码不一致,请重新输入!</string>
     <string name="record">记录</string>
     <string name="register_title">注册</string>
@@ -132,6 +133,7 @@
     <string name="upload_pic_error">上传图片出错!!!</string>
     <string name="username_save">用户名已保存</string>
     <string name="weight_height">身高/体重</string>
+    <string name="wrong_format_sms_code">驗證碼格式錯誤</string>
     <string name="your_advice">意见反馈</string>
     <string name="your_clear_cash">清理缓存</string>
 </resources>

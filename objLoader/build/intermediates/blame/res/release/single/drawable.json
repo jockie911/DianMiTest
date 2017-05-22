@@ -1,0 +1,350 @@
+[
+    {
+        "merged": "E:\\Code\\Android\\MyApplication\\objLoader\\build\\intermediates\\res\\merged\\release\\drawable\\actionsheet_middle_selector.xml",
+        "source": "E:\\Code\\Android\\MyApplication\\objLoader\\src\\main\\res\\drawable\\actionsheet_middle_selector.xml"
+    },
+    {
+        "merged": "E:\\Code\\Android\\MyApplication\\objLoader\\build\\intermediates\\res\\merged\\release\\drawable\\size_log.xml",
+        "source": "E:\\Code\\Android\\MyApplication\\objLoader\\src\\main\\res\\drawable\\size_log.xml"
+    },
+    {
+        "merged": "E:\\Code\\Android\\MyApplication\\objLoader\\build\\intermediates\\res\\merged\\release\\drawable\\selector_btn_camera_back.xml",
+        "source": "E:\\Code\\Android\\MyApplication\\objLoader\\src\\main\\res\\drawable\\selector_btn_camera_back.xml"
+    },
+    {
+        "merged": "E:\\Code\\Android\\MyApplication\\objLoader\\build\\intermediates\\res\\merged\\release\\drawable\\abc_list_selector_background_transition_holo_dark.xml",
+        "source": "C:\\Users\\yc\\.android\\build-cache\\d0928f8ffb5d248f984d90ffe3601d0e67dd1423\\output\\res\\drawable\\abc_list_selector_background_transition_holo_dark.xml"
+    },
+    {
+        "merged": "E:\\Code\\Android\\MyApplication\\objLoader\\build\\intermediates\\res\\merged\\release\\drawable\\notification_bg_low.xml",
+        "source": "C:\\Users\\yc\\.android\\build-cache\\d0928f8ffb5d248f984d90ffe3601d0e67dd1423\\output\\res\\drawable\\notification_bg_low.xml"
+    },
+    {
+        "merged": "E:\\Code\\Android\\MyApplication\\objLoader\\build\\intermediates\\res\\merged\\release\\drawable\\abc_seekbar_track_material.xml",
+        "source": "C:\\Users\\yc\\.android\\build-cache\\d0928f8ffb5d248f984d90ffe3601d0e67dd1423\\output\\res\\drawable\\abc_seekbar_track_material.xml"
+    },
+    {
+        "merged": "E:\\Code\\Android\\MyApplication\\objLoader\\build\\intermediates\\res\\merged\\release\\drawable\\home_bottom_text.xml",
+        "source": "E:\\Code\\Android\\MyApplication\\objLoader\\src\\main\\res\\drawable\\home_bottom_text.xml"
+    },
+    {
+        "merged": "E:\\Code\\Android\\MyApplication\\objLoader\\build\\intermediates\\res\\merged\\release\\drawable\\size_bg_color.xml",
+        "source": "E:\\Code\\Android\\MyApplication\\objLoader\\src\\main\\res\\drawable\\size_bg_color.xml"
+    },
+    {
+        "merged": "E:\\Code\\Android\\MyApplication\\objLoader\\build\\intermediates\\res\\merged\\release\\drawable\\wheel_val.xml",
+        "source": "E:\\Code\\Android\\MyApplication\\objLoader\\src\\main\\res\\drawable\\wheel_val.xml"
+    },
+    {
+        "merged": "E:\\Code\\Android\\MyApplication\\objLoader\\build\\intermediates\\res\\merged\\release\\drawable\\alertdialog_left_selector.xml",
+        "source": "E:\\Code\\Android\\MyApplication\\objLoader\\src\\main\\res\\drawable\\alertdialog_left_selector.xml"
+    },
+    {
+        "merged": "E:\\Code\\Android\\MyApplication\\objLoader\\build\\intermediates\\res\\merged\\release\\drawable\\shape_check.xml",
+        "source": "E:\\Code\\Android\\MyApplication\\objLoader\\src\\main\\res\\drawable\\shape_check.xml"
+    },
+    {
+        "merged": "E:\\Code\\Android\\MyApplication\\objLoader\\build\\intermediates\\res\\merged\\release\\drawable\\alertdialog_single_selector.xml",
+        "source": "E:\\Code\\Android\\MyApplication\\objLoader\\src\\main\\res\\drawable\\alertdialog_single_selector.xml"
+    },
+    {
+        "merged": "E:\\Code\\Android\\MyApplication\\objLoader\\build\\intermediates\\res\\merged\\release\\drawable\\abc_cab_background_top_material.xml",
+        "source": "C:\\Users\\yc\\.android\\build-cache\\d0928f8ffb5d248f984d90ffe3601d0e67dd1423\\output\\res\\drawable\\abc_cab_background_top_material.xml"
+    },
+    {
+        "merged": "E:\\Code\\Android\\MyApplication\\objLoader\\build\\intermediates\\res\\merged\\release\\drawable\\next_right.xml",
+        "source": "E:\\Code\\Android\\MyApplication\\objLoader\\src\\main\\res\\drawable\\next_right.xml"
+    },
+    {
+        "merged": "E:\\Code\\Android\\MyApplication\\objLoader\\build\\intermediates\\res\\merged\\release\\drawable\\abc_btn_default_mtrl_shape.xml",
+        "source": "C:\\Users\\yc\\.android\\build-cache\\d0928f8ffb5d248f984d90ffe3601d0e67dd1423\\output\\res\\drawable\\abc_btn_default_mtrl_shape.xml"
+    },
+    {
+        "merged": "E:\\Code\\Android\\MyApplication\\objLoader\\build\\intermediates\\res\\merged\\release\\drawable\\abc_btn_colored_material.xml",
+        "source": "C:\\Users\\yc\\.android\\build-cache\\d0928f8ffb5d248f984d90ffe3601d0e67dd1423\\output\\res\\drawable\\abc_btn_colored_material.xml"
+    },
+    {
+        "merged": "E:\\Code\\Android\\MyApplication\\objLoader\\build\\intermediates\\res\\merged\\release\\drawable\\shape_save_record_name.xml",
+        "source": "E:\\Code\\Android\\MyApplication\\objLoader\\src\\main\\res\\drawable\\shape_save_record_name.xml"
+    },
+    {
+        "merged": "E:\\Code\\Android\\MyApplication\\objLoader\\build\\intermediates\\res\\merged\\release\\drawable\\abc_ic_menu_overflow_material.xml",
+        "source": "C:\\Users\\yc\\.android\\build-cache\\d0928f8ffb5d248f984d90ffe3601d0e67dd1423\\output\\res\\drawable\\abc_ic_menu_overflow_material.xml"
+    },
+    {
+        "merged": "E:\\Code\\Android\\MyApplication\\objLoader\\build\\intermediates\\res\\merged\\release\\drawable\\xj_selector.xml",
+        "source": "E:\\Code\\Android\\MyApplication\\objLoader\\src\\main\\res\\drawable\\xj_selector.xml"
+    },
+    {
+        "merged": "E:\\Code\\Android\\MyApplication\\objLoader\\build\\intermediates\\res\\merged\\release\\drawable\\pop_upload.xml",
+        "source": "E:\\Code\\Android\\MyApplication\\objLoader\\src\\main\\res\\drawable\\pop_upload.xml"
+    },
+    {
+        "merged": "E:\\Code\\Android\\MyApplication\\objLoader\\build\\intermediates\\res\\merged\\release\\drawable\\abc_btn_check_material.xml",
+        "source": "C:\\Users\\yc\\.android\\build-cache\\d0928f8ffb5d248f984d90ffe3601d0e67dd1423\\output\\res\\drawable\\abc_btn_check_material.xml"
+    },
+    {
+        "merged": "E:\\Code\\Android\\MyApplication\\objLoader\\build\\intermediates\\res\\merged\\release\\drawable\\selector_btn_shutter.xml",
+        "source": "E:\\Code\\Android\\MyApplication\\objLoader\\src\\main\\res\\drawable\\selector_btn_shutter.xml"
+    },
+    {
+        "merged": "E:\\Code\\Android\\MyApplication\\objLoader\\build\\intermediates\\res\\merged\\release\\drawable\\abc_textfield_search_material.xml",
+        "source": "C:\\Users\\yc\\.android\\build-cache\\d0928f8ffb5d248f984d90ffe3601d0e67dd1423\\output\\res\\drawable\\abc_textfield_search_material.xml"
+    },
+    {
+        "merged": "E:\\Code\\Android\\MyApplication\\objLoader\\build\\intermediates\\res\\merged\\release\\drawable\\abc_btn_borderless_material.xml",
+        "source": "C:\\Users\\yc\\.android\\build-cache\\d0928f8ffb5d248f984d90ffe3601d0e67dd1423\\output\\res\\drawable\\abc_btn_borderless_material.xml"
+    },
+    {
+        "merged": "E:\\Code\\Android\\MyApplication\\objLoader\\build\\intermediates\\res\\merged\\release\\drawable\\delete_my_log.xml",
+        "source": "E:\\Code\\Android\\MyApplication\\objLoader\\src\\main\\res\\drawable\\delete_my_log.xml"
+    },
+    {
+        "merged": "E:\\Code\\Android\\MyApplication\\objLoader\\build\\intermediates\\res\\merged\\release\\drawable\\abc_ratingbar_indicator_material.xml",
+        "source": "C:\\Users\\yc\\.android\\build-cache\\d0928f8ffb5d248f984d90ffe3601d0e67dd1423\\output\\res\\drawable\\abc_ratingbar_indicator_material.xml"
+    },
+    {
+        "merged": "E:\\Code\\Android\\MyApplication\\objLoader\\build\\intermediates\\res\\merged\\release\\drawable\\design_fab_background.xml",
+        "source": "C:\\Users\\yc\\.android\\build-cache\\9bb9c0f4e18f768e3516e9c4152543666304976c\\output\\res\\drawable\\design_fab_background.xml"
+    },
+    {
+        "merged": "E:\\Code\\Android\\MyApplication\\objLoader\\build\\intermediates\\res\\merged\\release\\drawable\\abc_spinner_textfield_background_material.xml",
+        "source": "C:\\Users\\yc\\.android\\build-cache\\d0928f8ffb5d248f984d90ffe3601d0e67dd1423\\output\\res\\drawable\\abc_spinner_textfield_background_material.xml"
+    },
+    {
+        "merged": "E:\\Code\\Android\\MyApplication\\objLoader\\build\\intermediates\\res\\merged\\release\\drawable\\abc_ratingbar_small_material.xml",
+        "source": "C:\\Users\\yc\\.android\\build-cache\\d0928f8ffb5d248f984d90ffe3601d0e67dd1423\\output\\res\\drawable\\abc_ratingbar_small_material.xml"
+    },
+    {
+        "merged": "E:\\Code\\Android\\MyApplication\\objLoader\\build\\intermediates\\res\\merged\\release\\drawable\\delete.xml",
+        "source": "E:\\Code\\Android\\MyApplication\\objLoader\\src\\main\\res\\drawable\\delete.xml"
+    },
+    {
+        "merged": "E:\\Code\\Android\\MyApplication\\objLoader\\build\\intermediates\\res\\merged\\release\\drawable\\navigation_empty_icon.xml",
+        "source": "C:\\Users\\yc\\.android\\build-cache\\9bb9c0f4e18f768e3516e9c4152543666304976c\\output\\res\\drawable\\navigation_empty_icon.xml"
+    },
+    {
+        "merged": "E:\\Code\\Android\\MyApplication\\objLoader\\build\\intermediates\\res\\merged\\release\\drawable\\abc_tab_indicator_material.xml",
+        "source": "C:\\Users\\yc\\.android\\build-cache\\d0928f8ffb5d248f984d90ffe3601d0e67dd1423\\output\\res\\drawable\\abc_tab_indicator_material.xml"
+    },
+    {
+        "merged": "E:\\Code\\Android\\MyApplication\\objLoader\\build\\intermediates\\res\\merged\\release\\drawable\\abc_cab_background_internal_bg.xml",
+        "source": "C:\\Users\\yc\\.android\\build-cache\\d0928f8ffb5d248f984d90ffe3601d0e67dd1423\\output\\res\\drawable\\abc_cab_background_internal_bg.xml"
+    },
+    {
+        "merged": "E:\\Code\\Android\\MyApplication\\objLoader\\build\\intermediates\\res\\merged\\release\\drawable\\shape_save_record_bg.xml",
+        "source": "E:\\Code\\Android\\MyApplication\\objLoader\\src\\main\\res\\drawable\\shape_save_record_bg.xml"
+    },
+    {
+        "merged": "E:\\Code\\Android\\MyApplication\\objLoader\\build\\intermediates\\res\\merged\\release\\drawable\\size_size.xml",
+        "source": "E:\\Code\\Android\\MyApplication\\objLoader\\src\\main\\res\\drawable\\size_size.xml"
+    },
+    {
+        "merged": "E:\\Code\\Android\\MyApplication\\objLoader\\build\\intermediates\\res\\merged\\release\\drawable\\selector_btn_flashlight_on.xml",
+        "source": "E:\\Code\\Android\\MyApplication\\objLoader\\src\\main\\res\\drawable\\selector_btn_flashlight_on.xml"
+    },
+    {
+        "merged": "E:\\Code\\Android\\MyApplication\\objLoader\\build\\intermediates\\res\\merged\\release\\drawable\\size_bottom_text.xml",
+        "source": "E:\\Code\\Android\\MyApplication\\objLoader\\src\\main\\res\\drawable\\size_bottom_text.xml"
+    },
+    {
+        "merged": "E:\\Code\\Android\\MyApplication\\objLoader\\build\\intermediates\\res\\merged\\release\\drawable\\xc_selector.xml",
+        "source": "E:\\Code\\Android\\MyApplication\\objLoader\\src\\main\\res\\drawable\\xc_selector.xml"
+    },
+    {
+        "merged": "E:\\Code\\Android\\MyApplication\\objLoader\\build\\intermediates\\res\\merged\\release\\drawable\\youxi.xml",
+        "source": "E:\\Code\\Android\\MyApplication\\objLoader\\src\\main\\res\\drawable\\youxi.xml"
+    },
+    {
+        "merged": "E:\\Code\\Android\\MyApplication\\objLoader\\build\\intermediates\\res\\merged\\release\\drawable\\abc_seekbar_thumb_material.xml",
+        "source": "C:\\Users\\yc\\.android\\build-cache\\d0928f8ffb5d248f984d90ffe3601d0e67dd1423\\output\\res\\drawable\\abc_seekbar_thumb_material.xml"
+    },
+    {
+        "merged": "E:\\Code\\Android\\MyApplication\\objLoader\\build\\intermediates\\res\\merged\\release\\drawable\\alertdialog_right_selector.xml",
+        "source": "E:\\Code\\Android\\MyApplication\\objLoader\\src\\main\\res\\drawable\\alertdialog_right_selector.xml"
+    },
+    {
+        "merged": "E:\\Code\\Android\\MyApplication\\objLoader\\build\\intermediates\\res\\merged\\release\\drawable\\selector_btn_camera_front.xml",
+        "source": "E:\\Code\\Android\\MyApplication\\objLoader\\src\\main\\res\\drawable\\selector_btn_camera_front.xml"
+    },
+    {
+        "merged": "E:\\Code\\Android\\MyApplication\\objLoader\\build\\intermediates\\res\\merged\\release\\drawable\\design_snackbar_background.xml",
+        "source": "C:\\Users\\yc\\.android\\build-cache\\9bb9c0f4e18f768e3516e9c4152543666304976c\\output\\res\\drawable\\design_snackbar_background.xml"
+    },
+    {
+        "merged": "E:\\Code\\Android\\MyApplication\\objLoader\\build\\intermediates\\res\\merged\\release\\drawable\\abc_dialog_material_background.xml",
+        "source": "C:\\Users\\yc\\.android\\build-cache\\d0928f8ffb5d248f984d90ffe3601d0e67dd1423\\output\\res\\drawable\\abc_dialog_material_background.xml"
+    },
+    {
+        "merged": "E:\\Code\\Android\\MyApplication\\objLoader\\build\\intermediates\\res\\merged\\release\\drawable\\notification_icon_background.xml",
+        "source": "C:\\Users\\yc\\.android\\build-cache\\d0928f8ffb5d248f984d90ffe3601d0e67dd1423\\output\\res\\drawable\\notification_icon_background.xml"
+    },
+    {
+        "merged": "E:\\Code\\Android\\MyApplication\\objLoader\\build\\intermediates\\res\\merged\\release\\drawable\\actionsheet_top_selector.xml",
+        "source": "E:\\Code\\Android\\MyApplication\\objLoader\\src\\main\\res\\drawable\\actionsheet_top_selector.xml"
+    },
+    {
+        "merged": "E:\\Code\\Android\\MyApplication\\objLoader\\build\\intermediates\\res\\merged\\release\\drawable\\abc_list_selector_holo_dark.xml",
+        "source": "C:\\Users\\yc\\.android\\build-cache\\d0928f8ffb5d248f984d90ffe3601d0e67dd1423\\output\\res\\drawable\\abc_list_selector_holo_dark.xml"
+    },
+    {
+        "merged": "E:\\Code\\Android\\MyApplication\\objLoader\\build\\intermediates\\res\\merged\\release\\drawable\\abc_switch_thumb_material.xml",
+        "source": "C:\\Users\\yc\\.android\\build-cache\\d0928f8ffb5d248f984d90ffe3601d0e67dd1423\\output\\res\\drawable\\abc_switch_thumb_material.xml"
+    },
+    {
+        "merged": "E:\\Code\\Android\\MyApplication\\objLoader\\build\\intermediates\\res\\merged\\release\\drawable\\abc_ic_ab_back_material.xml",
+        "source": "C:\\Users\\yc\\.android\\build-cache\\d0928f8ffb5d248f984d90ffe3601d0e67dd1423\\output\\res\\drawable\\abc_ic_ab_back_material.xml"
+    },
+    {
+        "merged": "E:\\Code\\Android\\MyApplication\\objLoader\\build\\intermediates\\res\\merged\\release\\drawable\\checkbox_style.xml",
+        "source": "E:\\Code\\Android\\MyApplication\\objLoader\\src\\main\\res\\drawable\\checkbox_style.xml"
+    },
+    {
+        "merged": "E:\\Code\\Android\\MyApplication\\objLoader\\build\\intermediates\\res\\merged\\release\\drawable\\abc_seekbar_tick_mark_material.xml",
+        "source": "C:\\Users\\yc\\.android\\build-cache\\d0928f8ffb5d248f984d90ffe3601d0e67dd1423\\output\\res\\drawable\\abc_seekbar_tick_mark_material.xml"
+    },
+    {
+        "merged": "E:\\Code\\Android\\MyApplication\\objLoader\\build\\intermediates\\res\\merged\\release\\drawable\\abc_list_selector_holo_light.xml",
+        "source": "C:\\Users\\yc\\.android\\build-cache\\d0928f8ffb5d248f984d90ffe3601d0e67dd1423\\output\\res\\drawable\\abc_list_selector_holo_light.xml"
+    },
+    {
+        "merged": "E:\\Code\\Android\\MyApplication\\objLoader\\build\\intermediates\\res\\merged\\release\\drawable\\design_bottom_navigation_item_background.xml",
+        "source": "C:\\Users\\yc\\.android\\build-cache\\9bb9c0f4e18f768e3516e9c4152543666304976c\\output\\res\\drawable\\design_bottom_navigation_item_background.xml"
+    },
+    {
+        "merged": "E:\\Code\\Android\\MyApplication\\objLoader\\build\\intermediates\\res\\merged\\release\\drawable\\selector_btn_flashlight_off.xml",
+        "source": "E:\\Code\\Android\\MyApplication\\objLoader\\src\\main\\res\\drawable\\selector_btn_flashlight_off.xml"
+    },
+    {
+        "merged": "E:\\Code\\Android\\MyApplication\\objLoader\\build\\intermediates\\res\\merged\\release\\drawable\\btn_auth_code.xml",
+        "source": "E:\\Code\\Android\\MyApplication\\objLoader\\src\\main\\res\\drawable\\btn_auth_code.xml"
+    },
+    {
+        "merged": "E:\\Code\\Android\\MyApplication\\objLoader\\build\\intermediates\\res\\merged\\release\\drawable\\abc_ic_arrow_drop_right_black_24dp.xml",
+        "source": "C:\\Users\\yc\\.android\\build-cache\\d0928f8ffb5d248f984d90ffe3601d0e67dd1423\\output\\res\\drawable\\abc_ic_arrow_drop_right_black_24dp.xml"
+    },
+    {
+        "merged": "E:\\Code\\Android\\MyApplication\\objLoader\\build\\intermediates\\res\\merged\\release\\drawable\\design_password_eye.xml",
+        "source": "C:\\Users\\yc\\.android\\build-cache\\9bb9c0f4e18f768e3516e9c4152543666304976c\\output\\res\\drawable\\design_password_eye.xml"
+    },
+    {
+        "merged": "E:\\Code\\Android\\MyApplication\\objLoader\\build\\intermediates\\res\\merged\\release\\drawable\\abc_list_selector_background_transition_holo_light.xml",
+        "source": "C:\\Users\\yc\\.android\\build-cache\\d0928f8ffb5d248f984d90ffe3601d0e67dd1423\\output\\res\\drawable\\abc_list_selector_background_transition_holo_light.xml"
+    },
+    {
+        "merged": "E:\\Code\\Android\\MyApplication\\objLoader\\build\\intermediates\\res\\merged\\release\\drawable\\shadow_left.png",
+        "source": "C:\\Users\\yc\\.android\\build-cache\\2262fff0c1f2cedb2a7688f3109cbc825523166c\\output\\res\\drawable\\shadow_left.png"
+    },
+    {
+        "merged": "E:\\Code\\Android\\MyApplication\\objLoader\\build\\intermediates\\res\\merged\\release\\drawable\\login_unbtn_round.xml",
+        "source": "E:\\Code\\Android\\MyApplication\\objLoader\\src\\main\\res\\drawable\\login_unbtn_round.xml"
+    },
+    {
+        "merged": "E:\\Code\\Android\\MyApplication\\objLoader\\build\\intermediates\\res\\merged\\release\\drawable\\abc_text_cursor_material.xml",
+        "source": "C:\\Users\\yc\\.android\\build-cache\\d0928f8ffb5d248f984d90ffe3601d0e67dd1423\\output\\res\\drawable\\abc_text_cursor_material.xml"
+    },
+    {
+        "merged": "E:\\Code\\Android\\MyApplication\\objLoader\\build\\intermediates\\res\\merged\\release\\drawable\\celiang.xml",
+        "source": "E:\\Code\\Android\\MyApplication\\objLoader\\src\\main\\res\\drawable\\celiang.xml"
+    },
+    {
+        "merged": "E:\\Code\\Android\\MyApplication\\objLoader\\build\\intermediates\\res\\merged\\release\\drawable\\abc_vector_test.xml",
+        "source": "C:\\Users\\yc\\.android\\build-cache\\d0928f8ffb5d248f984d90ffe3601d0e67dd1423\\output\\res\\drawable\\abc_vector_test.xml"
+    },
+    {
+        "merged": "E:\\Code\\Android\\MyApplication\\objLoader\\build\\intermediates\\res\\merged\\release\\drawable\\btn_auth_code_default.xml",
+        "source": "E:\\Code\\Android\\MyApplication\\objLoader\\src\\main\\res\\drawable\\btn_auth_code_default.xml"
+    },
+    {
+        "merged": "E:\\Code\\Android\\MyApplication\\objLoader\\build\\intermediates\\res\\merged\\release\\drawable\\chicun.xml",
+        "source": "E:\\Code\\Android\\MyApplication\\objLoader\\src\\main\\res\\drawable\\chicun.xml"
+    },
+    {
+        "merged": "E:\\Code\\Android\\MyApplication\\objLoader\\build\\intermediates\\res\\merged\\release\\drawable\\abc_edit_text_material.xml",
+        "source": "C:\\Users\\yc\\.android\\build-cache\\d0928f8ffb5d248f984d90ffe3601d0e67dd1423\\output\\res\\drawable\\abc_edit_text_material.xml"
+    },
+    {
+        "merged": "E:\\Code\\Android\\MyApplication\\objLoader\\build\\intermediates\\res\\merged\\release\\drawable\\shop.xml",
+        "source": "E:\\Code\\Android\\MyApplication\\objLoader\\src\\main\\res\\drawable\\shop.xml"
+    },
+    {
+        "merged": "E:\\Code\\Android\\MyApplication\\objLoader\\build\\intermediates\\res\\merged\\release\\drawable\\notification_tile_bg.xml",
+        "source": "C:\\Users\\yc\\.android\\build-cache\\d0928f8ffb5d248f984d90ffe3601d0e67dd1423\\output\\res\\drawable\\notification_tile_bg.xml"
+    },
+    {
+        "merged": "E:\\Code\\Android\\MyApplication\\objLoader\\build\\intermediates\\res\\merged\\release\\drawable\\selector_btn_camera_exit.xml",
+        "source": "E:\\Code\\Android\\MyApplication\\objLoader\\src\\main\\res\\drawable\\selector_btn_camera_exit.xml"
+    },
+    {
+        "merged": "E:\\Code\\Android\\MyApplication\\objLoader\\build\\intermediates\\res\\merged\\release\\drawable\\abc_ic_search_api_material.xml",
+        "source": "C:\\Users\\yc\\.android\\build-cache\\d0928f8ffb5d248f984d90ffe3601d0e67dd1423\\output\\res\\drawable\\abc_ic_search_api_material.xml"
+    },
+    {
+        "merged": "E:\\Code\\Android\\MyApplication\\objLoader\\build\\intermediates\\res\\merged\\release\\drawable\\notification_bg.xml",
+        "source": "C:\\Users\\yc\\.android\\build-cache\\d0928f8ffb5d248f984d90ffe3601d0e67dd1423\\output\\res\\drawable\\notification_bg.xml"
+    },
+    {
+        "merged": "E:\\Code\\Android\\MyApplication\\objLoader\\build\\intermediates\\res\\merged\\release\\drawable\\size_model.xml",
+        "source": "E:\\Code\\Android\\MyApplication\\objLoader\\src\\main\\res\\drawable\\size_model.xml"
+    },
+    {
+        "merged": "E:\\Code\\Android\\MyApplication\\objLoader\\build\\intermediates\\res\\merged\\release\\drawable\\selector_camera_icon_album.xml",
+        "source": "E:\\Code\\Android\\MyApplication\\objLoader\\src\\main\\res\\drawable\\selector_camera_icon_album.xml"
+    },
+    {
+        "merged": "E:\\Code\\Android\\MyApplication\\objLoader\\build\\intermediates\\res\\merged\\release\\drawable\\size_null.xml",
+        "source": "E:\\Code\\Android\\MyApplication\\objLoader\\src\\main\\res\\drawable\\size_null.xml"
+    },
+    {
+        "merged": "E:\\Code\\Android\\MyApplication\\objLoader\\build\\intermediates\\res\\merged\\release\\drawable\\icon.png",
+        "source": "E:\\Code\\Android\\MyApplication\\objLoader\\src\\main\\res\\drawable\\icon.png"
+    },
+    {
+        "merged": "E:\\Code\\Android\\MyApplication\\objLoader\\build\\intermediates\\res\\merged\\release\\drawable\\abc_ic_clear_material.xml",
+        "source": "C:\\Users\\yc\\.android\\build-cache\\d0928f8ffb5d248f984d90ffe3601d0e67dd1423\\output\\res\\drawable\\abc_ic_clear_material.xml"
+    },
+    {
+        "merged": "E:\\Code\\Android\\MyApplication\\objLoader\\build\\intermediates\\res\\merged\\release\\drawable\\abc_btn_radio_material.xml",
+        "source": "C:\\Users\\yc\\.android\\build-cache\\d0928f8ffb5d248f984d90ffe3601d0e67dd1423\\output\\res\\drawable\\abc_btn_radio_material.xml"
+    },
+    {
+        "merged": "E:\\Code\\Android\\MyApplication\\objLoader\\build\\intermediates\\res\\merged\\release\\drawable\\abc_ic_voice_search_api_material.xml",
+        "source": "C:\\Users\\yc\\.android\\build-cache\\d0928f8ffb5d248f984d90ffe3601d0e67dd1423\\output\\res\\drawable\\abc_ic_voice_search_api_material.xml"
+    },
+    {
+        "merged": "E:\\Code\\Android\\MyApplication\\objLoader\\build\\intermediates\\res\\merged\\release\\drawable\\measure_text.xml",
+        "source": "E:\\Code\\Android\\MyApplication\\objLoader\\src\\main\\res\\drawable\\measure_text.xml"
+    },
+    {
+        "merged": "E:\\Code\\Android\\MyApplication\\objLoader\\build\\intermediates\\res\\merged\\release\\drawable\\dingzhi.xml",
+        "source": "E:\\Code\\Android\\MyApplication\\objLoader\\src\\main\\res\\drawable\\dingzhi.xml"
+    },
+    {
+        "merged": "E:\\Code\\Android\\MyApplication\\objLoader\\build\\intermediates\\res\\merged\\release\\drawable\\actionsheet_single_selector.xml",
+        "source": "E:\\Code\\Android\\MyApplication\\objLoader\\src\\main\\res\\drawable\\actionsheet_single_selector.xml"
+    },
+    {
+        "merged": "E:\\Code\\Android\\MyApplication\\objLoader\\build\\intermediates\\res\\merged\\release\\drawable\\abc_ratingbar_material.xml",
+        "source": "C:\\Users\\yc\\.android\\build-cache\\d0928f8ffb5d248f984d90ffe3601d0e67dd1423\\output\\res\\drawable\\abc_ratingbar_material.xml"
+    },
+    {
+        "merged": "E:\\Code\\Android\\MyApplication\\objLoader\\build\\intermediates\\res\\merged\\release\\drawable\\abc_item_background_holo_light.xml",
+        "source": "C:\\Users\\yc\\.android\\build-cache\\d0928f8ffb5d248f984d90ffe3601d0e67dd1423\\output\\res\\drawable\\abc_item_background_holo_light.xml"
+    },
+    {
+        "merged": "E:\\Code\\Android\\MyApplication\\objLoader\\build\\intermediates\\res\\merged\\release\\drawable\\selector_btn_flashlight_auto.xml",
+        "source": "E:\\Code\\Android\\MyApplication\\objLoader\\src\\main\\res\\drawable\\selector_btn_flashlight_auto.xml"
+    },
+    {
+        "merged": "E:\\Code\\Android\\MyApplication\\objLoader\\build\\intermediates\\res\\merged\\release\\drawable\\actionsheet_bottom_selector.xml",
+        "source": "E:\\Code\\Android\\MyApplication\\objLoader\\src\\main\\res\\drawable\\actionsheet_bottom_selector.xml"
+    },
+    {
+        "merged": "E:\\Code\\Android\\MyApplication\\objLoader\\build\\intermediates\\res\\merged\\release\\drawable\\abc_ic_go_search_api_material.xml",
+        "source": "C:\\Users\\yc\\.android\\build-cache\\d0928f8ffb5d248f984d90ffe3601d0e67dd1423\\output\\res\\drawable\\abc_ic_go_search_api_material.xml"
+    },
+    {
+        "merged": "E:\\Code\\Android\\MyApplication\\objLoader\\build\\intermediates\\res\\merged\\release\\drawable\\abc_item_background_holo_dark.xml",
+        "source": "C:\\Users\\yc\\.android\\build-cache\\d0928f8ffb5d248f984d90ffe3601d0e67dd1423\\output\\res\\drawable\\abc_item_background_holo_dark.xml"
+    }
+]

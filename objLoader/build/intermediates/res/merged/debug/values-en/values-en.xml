@@ -367,6 +367,7 @@
     <string name="pickerview_year">Year</string>
     <string name="pwd_equals">Enter the password twice inconsistent, please re-enter</string>
     <string name="pwd_lenght">Please enter a password (6-12 alphanumeric characters)</string>
+    <string name="pwd_not_none">密碼不能為空</string>
     <string name="pwd_not_right">Again passwords do not match, please re-enter!</string>
     <string name="record">Recording</string>
     <string name="register_title">Register</string>
@@ -497,6 +498,7 @@
     <string name="upload_pic_error">Picture upload error!!!</string>
     <string name="username_save">Username Saved</string>
     <string name="weight_height">身高/体重</string>
+    <string name="wrong_format_sms_code">驗證碼格式錯誤</string>
     <string name="your_advice">意见反馈</string>
     <string name="your_clear_cash">清理缓存</string>
 </resources>

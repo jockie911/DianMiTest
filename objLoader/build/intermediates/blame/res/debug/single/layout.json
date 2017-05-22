@@ -8,10 +8,6 @@
         "source": "E:\\Code\\Android\\MyApplication\\objLoader\\src\\main\\res\\layout\\activity_permissions.xml"
     },
     {
-        "merged": "E:\\Code\\Android\\MyApplication\\objLoader\\build\\intermediates\\res\\merged\\debug\\layout\\fragment_null.xml",
-        "source": "E:\\Code\\Android\\MyApplication\\objLoader\\src\\main\\res\\layout\\fragment_null.xml"
-    },
-    {
         "merged": "E:\\Code\\Android\\MyApplication\\objLoader\\build\\intermediates\\res\\merged\\debug\\layout\\activity_main.xml",
         "source": "E:\\Code\\Android\\MyApplication\\objLoader\\src\\main\\res\\layout\\activity_main.xml"
     },
@@ -100,10 +96,6 @@
         "source": "C:\\Users\\yc\\.android\\build-cache\\24f64522b38ec1c47659b647328ec022bee813c2\\output\\res\\layout\\leak_canary_display_leak.xml"
     },
     {
-        "merged": "E:\\Code\\Android\\MyApplication\\objLoader\\build\\intermediates\\res\\merged\\debug\\layout\\fragment_my_log.xml",
-        "source": "E:\\Code\\Android\\MyApplication\\objLoader\\src\\main\\res\\layout\\fragment_my_log.xml"
-    },
-    {
         "merged": "E:\\Code\\Android\\MyApplication\\objLoader\\build\\intermediates\\res\\merged\\debug\\layout\\notification_template_media_custom.xml",
         "source": "C:\\Users\\yc\\.android\\build-cache\\d0928f8ffb5d248f984d90ffe3601d0e67dd1423\\output\\res\\layout\\notification_template_media_custom.xml"
     },
@@ -134,10 +126,6 @@
     {
         "merged": "E:\\Code\\Android\\MyApplication\\objLoader\\build\\intermediates\\res\\merged\\debug\\layout\\leak_canary_ref_top_row.xml",
         "source": "C:\\Users\\yc\\.android\\build-cache\\24f64522b38ec1c47659b647328ec022bee813c2\\output\\res\\layout\\leak_canary_ref_top_row.xml"
-    },
-    {
-        "merged": "E:\\Code\\Android\\MyApplication\\objLoader\\build\\intermediates\\res\\merged\\debug\\layout\\fragment_my_log_details_size.xml",
-        "source": "E:\\Code\\Android\\MyApplication\\objLoader\\src\\main\\res\\layout\\fragment_my_log_details_size.xml"
     },
     {
         "merged": "E:\\Code\\Android\\MyApplication\\objLoader\\build\\intermediates\\res\\merged\\debug\\layout\\notification_action_tombstone.xml",
@@ -346,10 +334,6 @@
     {
         "merged": "E:\\Code\\Android\\MyApplication\\objLoader\\build\\intermediates\\res\\merged\\debug\\layout\\leak_canary_leak_row.xml",
         "source": "C:\\Users\\yc\\.android\\build-cache\\24f64522b38ec1c47659b647328ec022bee813c2\\output\\res\\layout\\leak_canary_leak_row.xml"
-    },
-    {
-        "merged": "E:\\Code\\Android\\MyApplication\\objLoader\\build\\intermediates\\res\\merged\\debug\\layout\\fragment_home.xml",
-        "source": "E:\\Code\\Android\\MyApplication\\objLoader\\src\\main\\res\\layout\\fragment_home.xml"
     },
     {
         "merged": "E:\\Code\\Android\\MyApplication\\objLoader\\build\\intermediates\\res\\merged\\debug\\layout\\fragment_detail_clothes_model.xml",

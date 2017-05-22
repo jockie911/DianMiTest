@@ -9,7 +9,7 @@ import android.widget.ListView;
 import android.widget.PopupWindow;
 
 import com.example.objLoader.R;
-import com.example.objLoader.activity.DetailMeasureSizeActivity;
+import com.example.objLoader.module.DetailMeasureSizeActivity;
 import com.example.objLoader.adapter.MeasureInfoAdapter;
 import com.example.objLoader.bean.MeasureInfo;
 import com.example.objLoader.bean.MeasureInfo.Info;
