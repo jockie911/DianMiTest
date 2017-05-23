@@ -74,9 +74,9 @@ public class PhotoCommandFragment extends com.example.objLoader.global.BaseFragm
             case R.id.ib_close:
                 if(getActivity() != null){
                     if(getActivity() instanceof FrontPicActivity){
-                        ((FrontPicActivity)getActivity()).initShowFragment(false);
+                        ((FrontPicActivity)getActivity()).showCameraFragment(false);
                     }else if(getActivity() instanceof SidePicActivity){
-                        ((SidePicActivity)getActivity()).initShowFragment(false);
+                        ((SidePicActivity)getActivity()).showCameraFragment(false);
                     }
                 }
                 break;

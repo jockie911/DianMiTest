@@ -32,12 +32,12 @@
         "source": "E:\\Code\\Android\\MyApplication\\objLoader\\src\\main\\res\\layout\\activity_splash.xml"
     },
     {
-        "merged": "E:\\Code\\Android\\MyApplication\\objLoader\\build\\intermediates\\res\\merged\\release\\layout\\design_navigation_item_header.xml",
-        "source": "C:\\Users\\yc\\.android\\build-cache\\9bb9c0f4e18f768e3516e9c4152543666304976c\\output\\res\\layout\\design_navigation_item_header.xml"
-    },
-    {
         "merged": "E:\\Code\\Android\\MyApplication\\objLoader\\build\\intermediates\\res\\merged\\release\\layout\\design_bottom_sheet_dialog.xml",
         "source": "C:\\Users\\yc\\.android\\build-cache\\9bb9c0f4e18f768e3516e9c4152543666304976c\\output\\res\\layout\\design_bottom_sheet_dialog.xml"
+    },
+    {
+        "merged": "E:\\Code\\Android\\MyApplication\\objLoader\\build\\intermediates\\res\\merged\\release\\layout\\design_navigation_item_header.xml",
+        "source": "C:\\Users\\yc\\.android\\build-cache\\9bb9c0f4e18f768e3516e9c4152543666304976c\\output\\res\\layout\\design_navigation_item_header.xml"
     },
     {
         "merged": "E:\\Code\\Android\\MyApplication\\objLoader\\build\\intermediates\\res\\merged\\release\\layout\\notification_template_icon_group.xml",

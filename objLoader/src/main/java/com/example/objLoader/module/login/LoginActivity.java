@@ -8,10 +8,15 @@ import android.widget.TextView;
 
 import com.example.objLoader.R;
 import com.example.objLoader.global.BaseActivity;
+import com.example.objLoader.global.BaseApp;
+import com.example.objLoader.istatic.Constants;
 import com.example.objLoader.istatic.IConstant;
 import com.example.objLoader.module.personInfo.AccountInfoActivity;
 import com.example.objLoader.module.login.imple.LoginView;
 import com.example.objLoader.module.login.presenter.LoginPresent;
+import com.tencent.mm.opensdk.modelmsg.SendAuth;
+import com.tencent.mm.opensdk.openapi.IWXAPI;
+import com.tencent.mm.opensdk.openapi.WXAPIFactory;
 
 import butterknife.Bind;
 import butterknife.OnClick;
@@ -38,7 +43,7 @@ public class LoginActivity extends BaseActivity implements LoginView {
 	protected void initData() {
 		tvTitle.setText(R.string.login);
 		tvRightTitle.setText(R.string.login_register);
-		loginPresent = new LoginPresent(this);
+		loginPresent = new LoginPresent(this,this);
 		et_username.requestFocus();
 	}
 

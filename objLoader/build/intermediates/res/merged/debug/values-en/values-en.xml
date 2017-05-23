@@ -258,19 +258,51 @@
 		<item>Virgin Islands, US,1284,201,311470</item>
 	</string-array>
     <string-array name="smssdk_country_group_w">
-	    
+		<item>瓦努阿图,678,158,54101|54105</item>
+		<item>危地马拉,502,135,70402|70401|70403</item>
+		<item>维尔京群岛（美属）,1284,201,311470</item>
+		<item>维尔京群岛（英属）,1340,202,348570|348170</item>
+		<item>委内瑞拉,58,31,73406|73404|73401</item>
+		<item>文莱,673,154,52811|52802</item>
+		<item>乌干达,256,89,64111|64133|64166|64122|64110|64101|64114</item>
+		<item>乌克兰,380,124,25507|25506|25521|25501|25503|25502|25505|25504</item>
+		<item>乌拉圭,598,151,74803|74802|74801|74800|74810|74807</item>
+		<item>乌兹别克斯坦,998,196,43401|43402|43407|43403|43404|43405|43406</item>
 	</string-array>
     <string-array name="smssdk_country_group_x">
-	    
+		<item>西班牙,34,11,21402|21401|21423|21411|21422|21410|21421|21432|21420|21409|21408|21419|21407|21418|21417|21406|21405|21427|21416|21404|21415|21425|21403</item>
+		<item>希腊,30,7,20203|20202|20201|20210|20209|20207|20205</item>
+		<item>香港,852,168,45413|45412|45401|45404|45403|45414|45400|45411|45409|45406|45405|45416|45408|45419|45429|45407</item>
+		<item>新加坡,65,37,52502|52503|52512|52501|52505</item>
+		<item>新喀里多尼亚,687,164,54601</item>
+		<item>新西兰,64,36,53001|53004|53005|53024|53002|53006</item>
+		<item>匈牙利,36,12,21630|21670|21601</item>
+		<item>叙利亚,963,177,41701|41702</item>
 	</string-array>
     <string-array name="smssdk_country_group_y">
-		<item>Yemen,967,181,42101|42102|42103</item>
+		<item>牙买加,1876,216,338180|338020|338110</item>
+		<item>亚美尼亚,374,119,28301|28310|28305|28304</item>
+		<item>也门,967,181,42101|42102|42103</item>
+		<item>伊拉克,964,178,41805|41840|41820|41830|41845</item>
+		<item>伊朗,98,49,43235|43214|43220|43200|43211|43219</item>
+		<item>以色列,972,185,42577|42516|42505|42506|42507|RESTRICTED-IL|42519|42508|42501|42512|42523|42502|42503|42514|42515</item>
+		<item>意大利,39,13,22206|22207|22208|22210|22243|22288|22244|22299|22233|22201|22235|22204|22248|22205|22230</item>
+		<item>印度,91,44,405893|405892|405895|405894|405897|405896|405899|405898|40501|40506|40505|405891|405890|40503|405889|405882|405881|405883|405886|405885|405888|405887|405880|405879|405878|405871|405750|405870|405873|405752|405872|405751|405875|405754|405874|405753|405877|405756|405876|405755|405868|405867|405869|405860|405862|405861|405864|405863|405866|405865|405856|405859|405858|40494|40493|40492|40491|40498|40497|40496|40495|40490|40483|40482|40481|40480|40487|40486|40485|405799|40484|40489|40488|40472|40471|40470|40476|40475|40474|40473|40479|40478|40477|40460|405930|405811|40462|405810|405931|40469|40468|40467|40466|405809|405802|405923|405801|405922|405804|405925|405803|405924|405806|405927|405805|405926|405808|405929|405807|405928|40450|40570|40454|40453|40452|405800|405921|40451|405920|40458|40457|40456|40455|40459|405919|405912|405914|405913|405916|405915|405918|405917|40443|40442|40441|40567|40446|40566|40449|405901|405900|405903|405902|405905|405904|405907|405906|40553|40552|40431|40551|40430|40436|40556|40435|40555|40434|40554|40433|40438|40437|405851|405850|40421|405853|40420|405852|405855|405854|40425|40424|40422|40429|40428|40427|40419|405846|405845|405848|405847|405849|405046|405045|405840|405047|40410|405842|405841|405843|40413|40412|405040|40411|40418|405042|40417|405041|40416|405044|40415|405043|40409|405835|405834|405837|405836|405839|405838|405035|405034|405037|405036|40520|405039|405831|405038|405830|405833|405832|40524|40403|40402|40523|40522|40401|40521|40400|40407|405031|40406|405030|40405|405033|40404|405032|40519|40518|405824|405823|405825|405828|405827|405829|405026|405025|405820|405027|405822|405029|405821|40513|40512|40511|40510|40517|40515|40514|40509|40508|40507|405813|405812|405815|405814|405817|405816|405819|405818</item>
+		<item>印度尼西亚,62,34,51010|51021|51089|51001|51011|51027|51007|51028|51009|51008</item>
+		<item>英国,44,17,23427|23428|23407|23409|23420|23400|23401|23423|23500|23424|23402|23403|23425|23426|23416|23417|23418|23419|23430|23431|23476|23410|23433|23455|23411|23478|23434|23458|23414|23415|23450|23451</item>
+		<item>约旦,962,176,41601|41677|41603</item>
+		<item>越南,84,41,45204|45205|45202|45201|45207</item>
 	</string-array>
     <string-array name="smssdk_country_group_z">
-		<item>Zambia,260,92,64502|64501|64503</item>
-		<item>Zimbabwe,263,95,64801|64803|64804</item>
-    </string-array>
-    <string name="about_us">关于我们</string>
+		<item>赞比亚,260,92,64502|64501|64503</item>
+		<item>泽西,44,18,</item>
+		<item>乍得,235,70,62201|62203</item>
+		<item>直布罗陀,350,105,26606|26609|26601</item>
+		<item>智利,56,29,73008|73006|73004|73002|73013|73003|73014|73011|73012|73001</item>
+		<item>中非共和国,236,71,62301|62302|62303|62304</item>
+		<item>中国,86,42,46006|46007|46005|46002|46003|46000|46001</item>
+	</string-array>
+    <string name="about_us">About us</string>
     <string name="account_info_change_pwd">Change Password</string>
     <string name="account_info_log_out">Drop out</string>
     <string name="account_info_measure_protocol">Measure protocol</string>
@@ -281,8 +313,9 @@
     <string name="app_name">DMe</string>
     <string name="auth_code_already">Verification code has been sent</string>
     <string name="auth_code_right">Verification code right</string>
-    <string name="auth_code_wrong">验证码格式错误</string>
-    <string name="begin_measure">Begin measure</string>
+    <string name="auth_code_wrong">The format of the verification code is wrong</string>
+    <string name="begin_measure">Begin to tailor</string>
+    <string name="bottom_clothes">Bottoms</string>
     <string name="camear">Photograph</string>
     <string name="cancel">Cancel</string>
     <string name="change_pwd_confirm_pwd">Confirm password:</string>
@@ -296,16 +329,16 @@
     <string name="change_username_input_new_username">Please enter a new user name</string>
     <string name="change_username_save">Save</string>
     <string name="change_username_title">Username</string>
-    <string name="clear_cash_msg">这会清空您已经缓存的数据,下次访问的时候重新下载。</string>
-    <string name="clear_cash_title">确定清理缓存吗?</string>
+    <string name="clear_cash_msg">This will empty your cached data and download it next time you visit it.</string>
+    <string name="clear_cash_title">Do you want to clear the cache?</string>
     <string name="clientError">Client Error</string>
-    <string name="compelete">完成</string>
+    <string name="compelete">Complete</string>
     <string name="confirm">Confirm</string>
     <string name="delete">Delete</string>
     <string name="delete_log">Whether to delete the selected record</string>
     <string name="delete_my_log">Please select the record you want to delete first</string>
-    <string name="double_click_exit">再按一次退出程序</string>
-    <string name="editor">编辑</string>
+    <string name="double_click_exit">Press the exit program again</string>
+    <string name="editor">Editor</string>
     <string name="error_no">Unknown mistake</string>
     <string name="female">female</string>
     <string name="first_measure">The human body measurement first, please</string>
@@ -357,6 +390,7 @@
     <string name="notFoundCacheError">Cache is not found</string>
     <string name="not_details_size">No record, upload photos</string>
     <string name="not_login">Not logged in, please login</string>
+    <string name="ok">yes</string>
     <string name="open_model">Opening 3D model files, please wait...</string>
     <string name="person_center">Person center</string>
     <string name="pickerview_day">Day</string>
@@ -365,21 +399,25 @@
     <string name="pickerview_month">Month</string>
     <string name="pickerview_seconds">Seconds</string>
     <string name="pickerview_year">Year</string>
+    <string name="product_count_in_meila">%sIncluded in the article, the largest makeup information library</string>
+    <string name="product_ingredients">View component analysis</string>
+    <string name="product_more_detail">more details</string>
     <string name="pwd_equals">Enter the password twice inconsistent, please re-enter</string>
     <string name="pwd_lenght">Please enter a password (6-12 alphanumeric characters)</string>
-    <string name="pwd_not_none">密碼不能為空</string>
+    <string name="pwd_not_none">Password cannot be empty</string>
     <string name="pwd_not_right">Again passwords do not match, please re-enter!</string>
     <string name="record">Recording</string>
     <string name="register_title">Register</string>
-    <string name="remain_time">剩余</string>
+    <string name="remain_time">Remain</string>
     <string name="right_mobile">Please enter the correct phone number</string>
-    <string name="sava_record_name_hint">输入量身记录名称</string>
+    <string name="sava_record_name_hint">Please input measure record name</string>
     <string name="save">Save</string>
     <string name="selector_front_pic">Select frontal</string>
     <string name="selector_side_pic">Please choose a side photo</string>
     <string name="serverError">Server error occurred</string>
     <string name="server_error">Server is not responding, if re-upload</string>
-    <string name="setting">设置</string>
+    <string name="setting">Settings</string>
+    <string name="shape">Body type</string>
     <string name="side_pic">According to the side</string>
     <string name="side_pic_not_found">Side photo does not exist</string>
     <string name="side_puload_pic_success">Photo uploaded completed</string>
@@ -491,14 +529,23 @@
     <string name="smssdk_error_detail_605">No Permission to request the server</string>
     <string name="submit">Submit</string>
     <string name="timeoutError">Request timed out, the server is not responding</string>
+    <string name="tips_camera_forbidden">The camera is disabled. Please modify the application permissions</string>
+    <string name="tips_camera_not_exist">There is no camera device</string>
     <string name="tips_for_measure"/>
-    <string name="top_clothes">上装</string>
+    <string name="tips_sdcard_notexist">SD card does not exist</string>
+    <string name="top_clothes">Tops</string>
+    <string name="topic_camera_back">After lens</string>
+    <string name="topic_camera_flashlight_auto">Auto</string>
+    <string name="topic_camera_flashlight_off">Open</string>
+    <string name="topic_camera_flashlight_on">Close</string>
+    <string name="topic_camera_front">Front lens</string>
+    <string name="topic_camera_takephoto_failure">The photograph failed!</string>
     <string name="uRLError">URL error</string>
     <string name="unKnownHostError">No server specified</string>
     <string name="upload_pic_error">Picture upload error!!!</string>
     <string name="username_save">Username Saved</string>
-    <string name="weight_height">身高/体重</string>
-    <string name="wrong_format_sms_code">驗證碼格式錯誤</string>
-    <string name="your_advice">意见反馈</string>
-    <string name="your_clear_cash">清理缓存</string>
+    <string name="weight_height">height/weight</string>
+    <string name="wrong_format_sms_code">The format of the verification code is wrong</string>
+    <string name="your_advice">Feedback</string>
+    <string name="your_clear_cash">Clear cache</string>
 </resources>

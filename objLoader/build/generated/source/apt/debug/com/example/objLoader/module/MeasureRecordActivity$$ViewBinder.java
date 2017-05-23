@@ -12,7 +12,7 @@ public class MeasureRecordActivity$$ViewBinder<T extends com.example.objLoader.m
     target.lvRecordMeasure = finder.castView(view, 2131689652, "field 'lvRecordMeasure'");
     view = finder.findRequiredView(source, 2131689653, "field 'relBottom'");
     target.relBottom = finder.castView(view, 2131689653, "field 'relBottom'");
-    view = finder.findRequiredView(source, 2131689687, "method 'onClick'");
+    view = finder.findRequiredView(source, 2131689684, "method 'onClick'");
     view.setOnClickListener(
       new butterknife.internal.DebouncingOnClickListener() {
         @Override public void doClick(

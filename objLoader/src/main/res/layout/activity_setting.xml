@@ -6,7 +6,7 @@
     android:fitsSystemWindows="true"
     android:background="@color/color_base_deep"
     android:orientation="vertical"
-    tools:context="com.example.objLoader.module.SettingActivity">
+    tools:context="com.example.objLoader.module.setting.SettingActivity">
 
     <include layout="@layout/base_title_bar"/>
 

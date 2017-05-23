@@ -4,6 +4,7 @@ import android.widget.EditText;
 import android.widget.ImageView;
 
 import com.example.objLoader.bean.BaseRequestBean;
+import com.example.objLoader.global.BaseActivity;
 import com.example.objLoader.global.BaseApp;
 import com.example.objLoader.istatic.IConstant;
 import com.example.objLoader.module.login.imple.LoginView;
@@ -17,12 +18,14 @@ import com.example.objLoader.utils.ToastUtils;
  * Created by yc on 2017/5/22.
  */
 
-public class LoginPresent implements OnLoginListener{
+public class LoginPresent<T extends BaseActivity> implements OnLoginListener{
 
+    private T activity;
     private LoginView loginView;
     private LoginModelImple loginModelImple;
 
-    public LoginPresent(LoginView loginView){
+    public LoginPresent(T activity,LoginView loginView){
+        this.activity = activity;
         this.loginView = loginView;
         loginModelImple = new LoginModelImple();
     }
@@ -57,6 +60,6 @@ public class LoginPresent implements OnLoginListener{
     }
 
     public void loginWX() {
-        loginModelImple.loginWX();
+        loginModelImple.loginWX(activity);
     }
 }

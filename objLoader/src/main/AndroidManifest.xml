@@ -16,7 +16,6 @@
     <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
     <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
     <uses-permission android:name="android.permission.CHANGE_WIFI_MULTICAST_STATE" />
-    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
 
     <!-- SMS SDK所需权限 -->
     <uses-permission android:name="android.permission.READ_CONTACTS" />
@@ -33,6 +32,7 @@
     <uses-permission android:name="android.permission.CAMERA" />
 
     <uses-feature android:name="android.hardware.camera.autofocus" />
+
 
     <application
         android:name=".global.BaseApp"
@@ -123,7 +123,12 @@
             android:name=".module.DetailMeasureSizeActivity"
             android:windowSoftInputMode="adjustPan" />
         <activity android:name=".module.MeasureRecordActivity" />
-        <activity android:name=".module.SettingActivity"></activity>
+        <activity android:name=".module.setting.SettingActivity"/>
+        <activity android:name=".wxapi.WXEntryActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar"/>
     </application>
 
 </manifest>

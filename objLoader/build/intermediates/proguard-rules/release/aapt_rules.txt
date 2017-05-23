@@ -1,0 +1,191 @@
+# view res/layout/design_bottom_navigation_item.xml #generated:26
+-keep class android.support.design.internal.BaselineLayout { <init>(...); }
+
+# view res/layout/design_navigation_item.xml #generated:17
+-keep class android.support.design.internal.NavigationMenuItemView { <init>(...); }
+
+# view res/layout/design_navigation_menu.xml #generated:17
+-keep class android.support.design.internal.NavigationMenuView { <init>(...); }
+
+# view res/layout/design_layout_snackbar_include.xml #generated:18
+-keep class android.support.design.internal.SnackbarContentLayout { <init>(...); }
+
+# view res/layout/design_text_input_password_icon.xml #generated:18
+-keep class android.support.design.widget.CheckableImageButton { <init>(...); }
+
+# view res/layout/design_bottom_sheet_dialog.xml #generated:17
+-keep class android.support.design.widget.CoordinatorLayout { <init>(...); }
+
+# view res/layout/design_layout_snackbar.xml #generated:18
+# view sw600dp-v13\res/layout-sw600dp-v13/design_layout_snackbar.xml #generated:18
+-keep class android.support.design.widget.Snackbar$SnackbarLayout { <init>(...); }
+
+# view res/layout/activity_detail_measure_size.xml #generated:24
+-keep class android.support.design.widget.TabLayout { <init>(...); }
+
+# view res/layout/activity_detail_measure_size.xml #generated:36
+# view res/layout/activity_my_log_details.xml #generated:53
+-keep class android.support.v4.view.ViewPager { <init>(...); }
+
+# view res/layout/abc_alert_dialog_material.xml #generated:41
+-keep class android.support.v4.widget.NestedScrollView { <init>(...); }
+
+# view res/layout/abc_alert_dialog_button_bar_material.xml #generated:43
+# view res/layout/abc_alert_dialog_material.xml #generated:52
+# view res/layout/abc_alert_dialog_material.xml #generated:66
+# view res/layout/abc_alert_dialog_title_material.xml #generated:56
+-keep class android.support.v4.widget.Space { <init>(...); }
+
+# view res/layout/abc_select_dialog_material.xml #generated:23
+-keep class android.support.v7.app.AlertController$RecycleListView { <init>(...); }
+
+# view res/layout/abc_action_menu_item_layout.xml #generated:17
+-keep class android.support.v7.view.menu.ActionMenuItemView { <init>(...); }
+
+# view res/layout/abc_expanded_menu_layout.xml #generated:17
+-keep class android.support.v7.view.menu.ExpandedMenuView { <init>(...); }
+
+# view res/layout/abc_list_menu_item_layout.xml #generated:17
+# view res/layout/abc_popup_menu_item_layout.xml #generated:17
+-keep class android.support.v7.view.menu.ListMenuItemView { <init>(...); }
+
+# view res/layout/abc_screen_toolbar.xml #generated:27
+-keep class android.support.v7.widget.ActionBarContainer { <init>(...); }
+
+# view res/layout/abc_action_mode_bar.xml #generated:19
+# view res/layout/abc_screen_toolbar.xml #generated:43
+-keep class android.support.v7.widget.ActionBarContextView { <init>(...); }
+
+# view res/layout/abc_screen_toolbar.xml #generated:17
+-keep class android.support.v7.widget.ActionBarOverlayLayout { <init>(...); }
+
+# view res/layout/abc_action_menu_layout.xml #generated:17
+-keep class android.support.v7.widget.ActionMenuView { <init>(...); }
+
+# view res/layout/abc_activity_chooser_view.xml #generated:19
+-keep class android.support.v7.widget.ActivityChooserView$InnerLayout { <init>(...); }
+
+# view res/layout/abc_alert_dialog_material.xml #generated:18
+-keep class android.support.v7.widget.AlertDialogLayout { <init>(...); }
+
+# view res/layout/abc_alert_dialog_button_bar_material.xml #generated:26
+-keep class android.support.v7.widget.ButtonBarLayout { <init>(...); }
+
+# view res/layout/abc_screen_content_include.xml #generated:19
+-keep class android.support.v7.widget.ContentFrameLayout { <init>(...); }
+
+# view res/layout/abc_alert_dialog_title_material.xml #generated:45
+-keep class android.support.v7.widget.DialogTitle { <init>(...); }
+
+# view res/layout/abc_screen_simple_overlay_action_mode.xml #generated:23
+-keep class android.support.v7.widget.FitWindowsFrameLayout { <init>(...); }
+
+# view res/layout/abc_dialog_title_material.xml #generated:22
+# view res/layout/abc_screen_simple.xml #generated:17
+-keep class android.support.v7.widget.FitWindowsLinearLayout { <init>(...); }
+
+# view res/layout/abc_search_view.xml #generated:75
+-keep class android.support.v7.widget.SearchView$SearchAutoComplete { <init>(...); }
+
+# view res/layout/abc_screen_toolbar.xml #generated:36
+-keep class android.support.v7.widget.Toolbar { <init>(...); }
+
+# view res/layout/abc_screen_simple.xml #generated:25
+# view res/layout/abc_screen_simple_overlay_action_mode.xml #generated:32
+-keep class android.support.v7.widget.ViewStubCompat { <init>(...); }
+
+# view AndroidManifest.xml #generated:40
+-keep class com.example.objLoader.global.BaseApp { <init>(...); }
+
+# view AndroidManifest.xml #generated:58
+-keep class com.example.objLoader.module.ChangePwdActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:63
+-keep class com.example.objLoader.module.ChangeUsernameActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:126
+-keep class com.example.objLoader.module.DetailMeasureSizeActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:123
+-keep class com.example.objLoader.module.MainActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:129
+-keep class com.example.objLoader.module.MeasureRecordActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:112
+-keep class com.example.objLoader.module.SplashActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:68
+-keep class com.example.objLoader.module.login.LoginActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:73
+-keep class com.example.objLoader.module.login.RegisterAndForgetActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:96
+-keep class com.example.objLoader.module.measure.FrontPicActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:106
+-keep class com.example.objLoader.module.measure.MeasureWeightAndHeightActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:101
+-keep class com.example.objLoader.module.measure.SidePicActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:91
+-keep class com.example.objLoader.module.personInfo.AccountInfoActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:130
+-keep class com.example.objLoader.module.setting.SettingActivity { <init>(...); }
+
+# view res/layout/include_optionspicker.xml #generated:7
+# view res/layout/include_timepicker.xml #generated:25
+-keep class com.example.objLoader.utils.lib.JLog { <init>(...); }
+
+# view res/layout/include_optionspicker.xml #generated:13
+# view res/layout/include_optionspicker.xml #generated:19
+# view res/layout/include_timepicker.xml #generated:13
+# view res/layout/include_timepicker.xml #generated:19
+# view res/layout/include_timepicker.xml #generated:31
+# view res/layout/include_timepicker.xml #generated:7
+# view res/layout/include_timespicker.xml #generated:13
+# view res/layout/include_timespicker.xml #generated:19
+# view res/layout/include_timespicker.xml #generated:25
+# view res/layout/include_timespicker.xml #generated:31
+# view res/layout/include_timespicker.xml #generated:7
+-keep class com.example.objLoader.utils.lib.WheelView { <init>(...); }
+
+# view res/layout/activity_account_info.xml #generated:19
+-keep class com.example.objLoader.wedgit.CircleImageView { <init>(...); }
+
+# view res/layout/fragment_photo_command.xml #generated:52
+-keep class com.example.objLoader.wedgit.ShapeView { <init>(...); }
+
+# view res/layout/custom_camera_container.xml #generated:8
+-keep class com.example.objLoader.wedgit.camera.CameraView { <init>(...); }
+
+# view res/layout/custom_camera_container.xml #generated:13
+-keep class com.example.objLoader.wedgit.camera.FocusImageView { <init>(...); }
+
+# view res/layout/fragment_photo_command.xml #generated:17
+-keep class com.example.objLoader.wedgit.camera.SquareCameraContainer { <init>(...); }
+
+# view res/layout/view_banner_content.xml #generated:6
+-keep class com.example.objLoader.wedgit.imagecycle.CycleViewPager { <init>(...); }
+
+# view res/layout/activity_measure.xml #generated:112
+# view res/layout/activity_measure.xml #generated:123
+-keep class com.example.objLoader.wedgit.wheelpicker.WheelPicker { <init>(...); }
+
+# view AndroidManifest.xml #generated:48
+-keep class com.mob.tools.MobUIShell { <init>(...); }
+
+# view res/layout/fragment_model.xml #generated:9
+# view res/layout/fragment_my_log_model.xml #generated:20
+-keep class com.tencent.smtt.sdk.WebView { <init>(...); }
+
+# view res/layout/activity_main2.xml #generated:23
+-keep class com.yarolegovich.discretescrollview.DiscreteScrollView { <init>(...); }
+
+# onClick res/layout/activity_my_log_details.xml #generated:13
+# onClick res/layout/title.xml #generated:12
+-keepclassmembers class * { *** finish(...); }
+

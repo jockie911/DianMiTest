@@ -154,7 +154,10 @@ public abstract class BaseActivity extends AppCompatActivity implements OnClickL
 	protected void onDestroy() {
 		if(isSwipeBack())
 			SwipeBackHelper.onDestroy(this);
-		SoftInputUtils.closeSoftInput(this);
+		InputMethodManager imm = (InputMethodManager)getSystemService(Context.INPUT_METHOD_SERVICE);
+		if(imm != null)
+			imm.hideSoftInputFromWindow(getWindow().getDecorView().getWindowToken(), 0);
+//		SoftInputUtils.closeSoftInput(this);
         CallServer.getInstance().cancelAll();
 		super.onDestroy();
 	}

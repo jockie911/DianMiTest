@@ -4,9 +4,11 @@ import android.text.InputType;
 import android.text.TextUtils;
 import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.Toast;
 
 import com.example.objLoader.R;
 import com.example.objLoader.bean.BaseRequestBean;
+import com.example.objLoader.global.BaseActivity;
 import com.example.objLoader.global.BaseApp;
 import com.example.objLoader.istatic.Constants;
 import com.example.objLoader.istatic.IConstant;
@@ -26,7 +28,7 @@ import com.yolanda.nohttp.rest.Response;
  * Created by yc on 2017/5/22.
  */
 
-public class LoginModelImple implements LoginModel {
+public class LoginModelImple<T extends BaseActivity> implements LoginModel {
 
     private Request<String> loginRequest;
     private OnLoginListener listener;
@@ -71,12 +73,11 @@ public class LoginModelImple implements LoginModel {
         etPassword.setSelection(TextUtils.isEmpty(s)? 0 : s.length());
     }
 
-    public void loginWX() {
+    public void loginWX(T activity) {
         SendAuth.Req req = new SendAuth.Req();
-		req.scope = "snsapi_userinfo";
-		req.state = "wechat_dianmi" ;
-		IWXAPI msgApi = WXAPIFactory.createWXAPI(BaseApp.getContext(), null);
-		msgApi.registerApp(Constants.WX_ID);
-		msgApi.sendReq(req);
+        req.scope = IConstant.WX_REQ_SCOPE;
+        req.state = IConstant.WX_REQ_STATE;
+        IWXAPI wxapi = WXAPIFactory.createWXAPI(activity, Constants.WX_ID,true);
+        wxapi.sendReq(req);
     }
 }

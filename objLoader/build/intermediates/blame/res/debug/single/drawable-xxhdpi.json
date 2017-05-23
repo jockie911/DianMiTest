@@ -64,20 +64,20 @@
         "source": "E:\\Code\\Android\\MyApplication\\objLoader\\src\\main\\res\\drawable-xxhdpi\\celiang_pressed.png"
     },
     {
-        "merged": "E:\\Code\\Android\\MyApplication\\objLoader\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi\\closed_eye.png",
-        "source": "E:\\Code\\Android\\MyApplication\\objLoader\\src\\main\\res\\drawable-xxhdpi\\closed_eye.png"
-    },
-    {
         "merged": "E:\\Code\\Android\\MyApplication\\objLoader\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi\\camera_icon_closed.png",
         "source": "E:\\Code\\Android\\MyApplication\\objLoader\\src\\main\\res\\drawable-xxhdpi\\camera_icon_closed.png"
     },
     {
-        "merged": "E:\\Code\\Android\\MyApplication\\objLoader\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi\\opened_eye.png",
-        "source": "E:\\Code\\Android\\MyApplication\\objLoader\\src\\main\\res\\drawable-xxhdpi\\opened_eye.png"
+        "merged": "E:\\Code\\Android\\MyApplication\\objLoader\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi\\closed_eye.png",
+        "source": "E:\\Code\\Android\\MyApplication\\objLoader\\src\\main\\res\\drawable-xxhdpi\\closed_eye.png"
     },
     {
         "merged": "E:\\Code\\Android\\MyApplication\\objLoader\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi\\camera_icon_flashlight_auto_pressed.png",
         "source": "E:\\Code\\Android\\MyApplication\\objLoader\\src\\main\\res\\drawable-xxhdpi\\camera_icon_flashlight_auto_pressed.png"
+    },
+    {
+        "merged": "E:\\Code\\Android\\MyApplication\\objLoader\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi\\opened_eye.png",
+        "source": "E:\\Code\\Android\\MyApplication\\objLoader\\src\\main\\res\\drawable-xxhdpi\\opened_eye.png"
     },
     {
         "merged": "E:\\Code\\Android\\MyApplication\\objLoader\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi\\icon_point.png",
@@ -88,12 +88,12 @@
         "source": "E:\\Code\\Android\\MyApplication\\objLoader\\src\\main\\res\\drawable-xxhdpi\\chicun_pressed.png"
     },
     {
-        "merged": "E:\\Code\\Android\\MyApplication\\objLoader\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi\\bottom_clothes_man.png",
-        "source": "E:\\Code\\Android\\MyApplication\\objLoader\\src\\main\\res\\drawable-xxhdpi\\bottom_clothes_man.png"
-    },
-    {
         "merged": "E:\\Code\\Android\\MyApplication\\objLoader\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi\\title_icon_camera_pressed.png",
         "source": "E:\\Code\\Android\\MyApplication\\objLoader\\src\\main\\res\\drawable-xxhdpi\\title_icon_camera_pressed.png"
+    },
+    {
+        "merged": "E:\\Code\\Android\\MyApplication\\objLoader\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi\\bottom_clothes_man.png",
+        "source": "E:\\Code\\Android\\MyApplication\\objLoader\\src\\main\\res\\drawable-xxhdpi\\bottom_clothes_man.png"
     },
     {
         "merged": "E:\\Code\\Android\\MyApplication\\objLoader\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi\\front_bg.png",
@@ -108,12 +108,12 @@
         "source": "E:\\Code\\Android\\MyApplication\\objLoader\\src\\main\\res\\drawable-xxhdpi\\dingzhi_pressed.png"
     },
     {
-        "merged": "E:\\Code\\Android\\MyApplication\\objLoader\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi\\side_bg.png",
-        "source": "E:\\Code\\Android\\MyApplication\\objLoader\\src\\main\\res\\drawable-xxhdpi\\side_bg.png"
-    },
-    {
         "merged": "E:\\Code\\Android\\MyApplication\\objLoader\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi\\camera_icon_lenses_autodyne.png",
         "source": "E:\\Code\\Android\\MyApplication\\objLoader\\src\\main\\res\\drawable-xxhdpi\\camera_icon_lenses_autodyne.png"
+    },
+    {
+        "merged": "E:\\Code\\Android\\MyApplication\\objLoader\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi\\side_bg.png",
+        "source": "E:\\Code\\Android\\MyApplication\\objLoader\\src\\main\\res\\drawable-xxhdpi\\side_bg.png"
     },
     {
         "merged": "E:\\Code\\Android\\MyApplication\\objLoader\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi\\model_normal.png",
@@ -208,16 +208,16 @@
         "source": "E:\\Code\\Android\\MyApplication\\objLoader\\src\\main\\res\\drawable-xxhdpi\\xc.png"
     },
     {
+        "merged": "E:\\Code\\Android\\MyApplication\\objLoader\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi\\focus_focused.9.png",
+        "source": "E:\\Code\\Android\\MyApplication\\objLoader\\src\\main\\res\\drawable-xxhdpi\\focus_focused.9.png"
+    },
+    {
         "merged": "E:\\Code\\Android\\MyApplication\\objLoader\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi\\login_qq.png",
         "source": "E:\\Code\\Android\\MyApplication\\objLoader\\src\\main\\res\\drawable-xxhdpi\\login_qq.png"
     },
     {
         "merged": "E:\\Code\\Android\\MyApplication\\objLoader\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi\\youxi_normal.png",
         "source": "E:\\Code\\Android\\MyApplication\\objLoader\\src\\main\\res\\drawable-xxhdpi\\youxi_normal.png"
-    },
-    {
-        "merged": "E:\\Code\\Android\\MyApplication\\objLoader\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi\\focus_focused.9.png",
-        "source": "E:\\Code\\Android\\MyApplication\\objLoader\\src\\main\\res\\drawable-xxhdpi\\focus_focused.9.png"
     },
     {
         "merged": "E:\\Code\\Android\\MyApplication\\objLoader\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi\\register_auth_code.png",
@@ -316,12 +316,12 @@
         "source": "E:\\Code\\Android\\MyApplication\\objLoader\\src\\main\\res\\drawable-xxhdpi\\null_pressed.png"
     },
     {
-        "merged": "E:\\Code\\Android\\MyApplication\\objLoader\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi\\celiang_normal.png",
-        "source": "E:\\Code\\Android\\MyApplication\\objLoader\\src\\main\\res\\drawable-xxhdpi\\celiang_normal.png"
-    },
-    {
         "merged": "E:\\Code\\Android\\MyApplication\\objLoader\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi\\title_icon_camera.png",
         "source": "E:\\Code\\Android\\MyApplication\\objLoader\\src\\main\\res\\drawable-xxhdpi\\title_icon_camera.png"
+    },
+    {
+        "merged": "E:\\Code\\Android\\MyApplication\\objLoader\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi\\celiang_normal.png",
+        "source": "E:\\Code\\Android\\MyApplication\\objLoader\\src\\main\\res\\drawable-xxhdpi\\celiang_normal.png"
     },
     {
         "merged": "E:\\Code\\Android\\MyApplication\\objLoader\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi\\focus_focus_failed.9.png",

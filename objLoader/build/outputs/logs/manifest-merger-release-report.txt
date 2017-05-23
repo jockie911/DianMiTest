@@ -1,6 +1,6 @@
 -- Merging decision tree log ---
 manifest
-ADDED from E:\Code\Android\MyApplication\objLoader\src\main\AndroidManifest.xml:2:1-129:12
+ADDED from E:\Code\Android\MyApplication\objLoader\src\main\AndroidManifest.xml:2:1-134:12
 	package
 		ADDED from E:\Code\Android\MyApplication\objLoader\src\main\AndroidManifest.xml:3:5-36
 		INJECTED from E:\Code\Android\MyApplication\objLoader\src\main\AndroidManifest.xml
@@ -76,48 +76,48 @@ uses-permission#android.permission.CHANGE_WIFI_MULTICAST_STATE
 ADDED from E:\Code\Android\MyApplication\objLoader\src\main\AndroidManifest.xml:18:5-86
 	android:name
 		ADDED from E:\Code\Android\MyApplication\objLoader\src\main\AndroidManifest.xml:18:22-83
-uses-permission#android.permission.ACCESS_WIFI_STATE
-ADDED from E:\Code\Android\MyApplication\objLoader\src\main\AndroidManifest.xml:19:5-76
-	android:name
-		ADDED from E:\Code\Android\MyApplication\objLoader\src\main\AndroidManifest.xml:19:22-73
 uses-permission#android.permission.READ_CONTACTS
-ADDED from E:\Code\Android\MyApplication\objLoader\src\main\AndroidManifest.xml:22:5-72
+ADDED from E:\Code\Android\MyApplication\objLoader\src\main\AndroidManifest.xml:21:5-72
 	android:name
-		ADDED from E:\Code\Android\MyApplication\objLoader\src\main\AndroidManifest.xml:22:22-69
+		ADDED from E:\Code\Android\MyApplication\objLoader\src\main\AndroidManifest.xml:21:22-69
 uses-permission#android.permission.READ_PHONE_STATE
-ADDED from E:\Code\Android\MyApplication\objLoader\src\main\AndroidManifest.xml:23:5-75
+ADDED from E:\Code\Android\MyApplication\objLoader\src\main\AndroidManifest.xml:22:5-75
 	android:name
-		ADDED from E:\Code\Android\MyApplication\objLoader\src\main\AndroidManifest.xml:23:22-72
+		ADDED from E:\Code\Android\MyApplication\objLoader\src\main\AndroidManifest.xml:22:22-72
+uses-permission#android.permission.ACCESS_WIFI_STATE
+ADDED from E:\Code\Android\MyApplication\objLoader\src\main\AndroidManifest.xml:25:5-76
+	android:name
+		ADDED from E:\Code\Android\MyApplication\objLoader\src\main\AndroidManifest.xml:25:22-73
 uses-permission#android.permission.RECEIVE_SMS
-ADDED from E:\Code\Android\MyApplication\objLoader\src\main\AndroidManifest.xml:28:5-70
+ADDED from E:\Code\Android\MyApplication\objLoader\src\main\AndroidManifest.xml:27:5-70
 	android:name
-		ADDED from E:\Code\Android\MyApplication\objLoader\src\main\AndroidManifest.xml:28:22-67
+		ADDED from E:\Code\Android\MyApplication\objLoader\src\main\AndroidManifest.xml:27:22-67
 uses-permission#android.permission.READ_SMS
-ADDED from E:\Code\Android\MyApplication\objLoader\src\main\AndroidManifest.xml:29:5-67
+ADDED from E:\Code\Android\MyApplication\objLoader\src\main\AndroidManifest.xml:28:5-67
 	android:name
-		ADDED from E:\Code\Android\MyApplication\objLoader\src\main\AndroidManifest.xml:29:22-64
+		ADDED from E:\Code\Android\MyApplication\objLoader\src\main\AndroidManifest.xml:28:22-64
 uses-permission#android.permission.GET_TASKS
-ADDED from E:\Code\Android\MyApplication\objLoader\src\main\AndroidManifest.xml:30:5-68
+ADDED from E:\Code\Android\MyApplication\objLoader\src\main\AndroidManifest.xml:29:5-68
 	android:name
-		ADDED from E:\Code\Android\MyApplication\objLoader\src\main\AndroidManifest.xml:30:22-65
+		ADDED from E:\Code\Android\MyApplication\objLoader\src\main\AndroidManifest.xml:29:22-65
 uses-permission#android.permission.ACCESS_FINE_LOCATION
-ADDED from E:\Code\Android\MyApplication\objLoader\src\main\AndroidManifest.xml:31:5-79
+ADDED from E:\Code\Android\MyApplication\objLoader\src\main\AndroidManifest.xml:30:5-79
 	android:name
-		ADDED from E:\Code\Android\MyApplication\objLoader\src\main\AndroidManifest.xml:31:22-76
+		ADDED from E:\Code\Android\MyApplication\objLoader\src\main\AndroidManifest.xml:30:22-76
 uses-permission#android.permission.WRITE_SETTINGS
-ADDED from E:\Code\Android\MyApplication\objLoader\src\main\AndroidManifest.xml:32:5-73
+ADDED from E:\Code\Android\MyApplication\objLoader\src\main\AndroidManifest.xml:31:5-73
 	android:name
-		ADDED from E:\Code\Android\MyApplication\objLoader\src\main\AndroidManifest.xml:32:22-70
+		ADDED from E:\Code\Android\MyApplication\objLoader\src\main\AndroidManifest.xml:31:22-70
 uses-permission#android.permission.CAMERA
-ADDED from E:\Code\Android\MyApplication\objLoader\src\main\AndroidManifest.xml:33:5-65
+ADDED from E:\Code\Android\MyApplication\objLoader\src\main\AndroidManifest.xml:32:5-65
 	android:name
-		ADDED from E:\Code\Android\MyApplication\objLoader\src\main\AndroidManifest.xml:33:22-62
+		ADDED from E:\Code\Android\MyApplication\objLoader\src\main\AndroidManifest.xml:32:22-62
 uses-feature#android.hardware.camera.autofocus
-ADDED from E:\Code\Android\MyApplication\objLoader\src\main\AndroidManifest.xml:35:5-70
+ADDED from E:\Code\Android\MyApplication\objLoader\src\main\AndroidManifest.xml:34:5-70
 	android:name
-		ADDED from E:\Code\Android\MyApplication\objLoader\src\main\AndroidManifest.xml:35:19-67
+		ADDED from E:\Code\Android\MyApplication\objLoader\src\main\AndroidManifest.xml:34:19-67
 application
-ADDED from E:\Code\Android\MyApplication\objLoader\src\main\AndroidManifest.xml:37:5-127:19
+ADDED from E:\Code\Android\MyApplication\objLoader\src\main\AndroidManifest.xml:37:5-132:19
 MERGED from [MyApplication:sMSSDK:unspecified] E:\Code\Android\MyApplication\sMSSDK\build\intermediates\bundles\default\AndroidManifest.xml:11:5-12:19
 MERGED from [com.android.support.constraint:constraint-layout:1.0.2] C:\Users\yc\.android\build-cache\55f2ddc8ca84cc4a398f974a4a196734dee55575\output\AndroidManifest.xml:9:5-20
 MERGED from [com.android.support:design:25.3.1] C:\Users\yc\.android\build-cache\9bb9c0f4e18f768e3516e9c4152543666304976c\output\AndroidManifest.xml:29:5-20
@@ -253,10 +253,22 @@ activity#com.example.objLoader.module.MeasureRecordActivity
 ADDED from E:\Code\Android\MyApplication\objLoader\src\main\AndroidManifest.xml:125:9-66
 	android:name
 		ADDED from E:\Code\Android\MyApplication\objLoader\src\main\AndroidManifest.xml:125:19-63
-activity#com.example.objLoader.module.SettingActivity
-ADDED from E:\Code\Android\MyApplication\objLoader\src\main\AndroidManifest.xml:126:9-69
+activity#com.example.objLoader.module.setting.SettingActivity
+ADDED from E:\Code\Android\MyApplication\objLoader\src\main\AndroidManifest.xml:126:9-67
 	android:name
-		ADDED from E:\Code\Android\MyApplication\objLoader\src\main\AndroidManifest.xml:126:19-57
+		ADDED from E:\Code\Android\MyApplication\objLoader\src\main\AndroidManifest.xml:126:19-65
+activity#com.example.objLoader.wxapi.WXEntryActivity
+ADDED from E:\Code\Android\MyApplication\objLoader\src\main\AndroidManifest.xml:127:9-131:74
+	android:screenOrientation
+		ADDED from E:\Code\Android\MyApplication\objLoader\src\main\AndroidManifest.xml:130:13-49
+	android:exported
+		ADDED from E:\Code\Android\MyApplication\objLoader\src\main\AndroidManifest.xml:129:13-36
+	android:configChanges
+		ADDED from E:\Code\Android\MyApplication\objLoader\src\main\AndroidManifest.xml:128:13-74
+	android:theme
+		ADDED from E:\Code\Android\MyApplication\objLoader\src\main\AndroidManifest.xml:131:13-72
+	android:name
+		ADDED from E:\Code\Android\MyApplication\objLoader\src\main\AndroidManifest.xml:127:19-56
 meta-data#android.support.VERSION
 ADDED from [com.android.support:design:25.3.1] C:\Users\yc\.android\build-cache\9bb9c0f4e18f768e3516e9c4152543666304976c\output\AndroidManifest.xml:25:5-27:34
 MERGED from [com.android.support:appcompat-v7:25.3.1] C:\Users\yc\.android\build-cache\d0928f8ffb5d248f984d90ffe3601d0e67dd1423\output\AndroidManifest.xml:25:5-27:34

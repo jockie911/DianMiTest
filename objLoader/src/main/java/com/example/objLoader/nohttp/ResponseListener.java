@@ -33,7 +33,6 @@ public class ResponseListener<T> implements OnResponseListener<T> {
     private Context context;
     private HttpCallBack<T> callBack;
 	private BaseRequestBean bean;
-	private Gson gson = new Gson();
 
     private Class<?> classBean;
 
@@ -84,24 +83,15 @@ public class ResponseListener<T> implements OnResponseListener<T> {
 
     @Override
     public void onSucceed(int what, Response<T> response) {
-//    	callBack.onSucceed(what, response);
-//    	Logger.i("请求成功：" + response.get().toString());
-//    	callBack.onSucceed(what, bean);
     	try {
-//    		bean = (BaseRequestBean) gson.fromJson(response.get().toString(),classBean);
-
             JSONObject jsonObject = new JSONObject(response.get().toString());
             String iserror = null;
             if(jsonObject.has("iserror"))
                 iserror = jsonObject.getString("iserror");
+            if (callBack != null && iserror.equals("0")) {
+                callBack.onSucceed(what, response);
 
-            if (callBack != null && /*bean.iserror*/iserror.equals("0")) {
-    			Logger.d("请求成功:"+response.get().toString());
                 callBack.onSucceed(what, (T) GsonTools.changeGsonToBean(response.get().toString(), classBean));
-    			callBack.onSucceed(what, response);
-//                T o = (T) GsonTools.changeGsonToBean(response.get().toString(), classBean);
-//                callBack.onSucceed(what,o);
-//                callBack.onSucceed(what, bean);
     		}else {
     			Logger.d("请求失败:"+response.get().toString());
     			callBack.onFailed(what);

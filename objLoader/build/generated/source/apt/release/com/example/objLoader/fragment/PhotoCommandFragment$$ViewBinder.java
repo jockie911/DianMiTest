@@ -8,10 +8,10 @@ import butterknife.ButterKnife.ViewBinder;
 public class PhotoCommandFragment$$ViewBinder<T extends com.example.objLoader.fragment.PhotoCommandFragment> implements ViewBinder<T> {
   @Override public void bind(final Finder finder, final T target, Object source) {
     View view;
-    view = finder.findRequiredView(source, 2131689715, "field 'mCameraContainer'");
-    target.mCameraContainer = finder.castView(view, 2131689715, "field 'mCameraContainer'");
-    view = finder.findRequiredView(source, 2131689716, "field 'mFlashLight' and method 'onClick'");
-    target.mFlashLight = finder.castView(view, 2131689716, "field 'mFlashLight'");
+    view = finder.findRequiredView(source, 2131689712, "field 'mCameraContainer'");
+    target.mCameraContainer = finder.castView(view, 2131689712, "field 'mCameraContainer'");
+    view = finder.findRequiredView(source, 2131689713, "field 'mFlashLight' and method 'onClick'");
+    target.mFlashLight = finder.castView(view, 2131689713, "field 'mFlashLight'");
     view.setOnClickListener(
       new butterknife.internal.DebouncingOnClickListener() {
         @Override public void doClick(
@@ -20,8 +20,8 @@ public class PhotoCommandFragment$$ViewBinder<T extends com.example.objLoader.fr
           target.onClick(p0);
         }
       });
-    view = finder.findRequiredView(source, 2131689718, "field 'mTakePhoto' and method 'onClick'");
-    target.mTakePhoto = finder.castView(view, 2131689718, "field 'mTakePhoto'");
+    view = finder.findRequiredView(source, 2131689715, "field 'mTakePhoto' and method 'onClick'");
+    target.mTakePhoto = finder.castView(view, 2131689715, "field 'mTakePhoto'");
     view.setOnClickListener(
       new butterknife.internal.DebouncingOnClickListener() {
         @Override public void doClick(
@@ -30,9 +30,9 @@ public class PhotoCommandFragment$$ViewBinder<T extends com.example.objLoader.fr
           target.onClick(p0);
         }
       });
-    view = finder.findRequiredView(source, 2131689719, "field 'shapeView'");
-    target.shapeView = finder.castView(view, 2131689719, "field 'shapeView'");
-    view = finder.findRequiredView(source, 2131689717, "method 'onClick'");
+    view = finder.findRequiredView(source, 2131689716, "field 'shapeView'");
+    target.shapeView = finder.castView(view, 2131689716, "field 'shapeView'");
+    view = finder.findRequiredView(source, 2131689714, "method 'onClick'");
     view.setOnClickListener(
       new butterknife.internal.DebouncingOnClickListener() {
         @Override public void doClick(

@@ -61,4 +61,6 @@ public class Constants {
 	/** 获取所有的测量记录 */
 	public static final String GET_MEASURE_RECORD = SERVER + "searchobj.php";
 
+	/** 微信登陆 */
+	public static final String WX_LOGIN = SERVER + "wechat_api.php";
 }

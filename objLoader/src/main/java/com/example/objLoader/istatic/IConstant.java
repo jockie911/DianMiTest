@@ -11,6 +11,8 @@ public class IConstant {
     public static final String GENDER = "gender";
 
     public static final String REGISTER_OR_FORGET = "register_or_forget";
+    public static final String WX_REQ_STATE = "wechat_dianmi";
+    public static final String WX_REQ_SCOPE = "snsapi_userinfo";
 
     public static long NO_DOUBLE_CLICK_TIME = 500;
 

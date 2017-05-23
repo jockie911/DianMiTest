@@ -59,7 +59,6 @@ public class CallServer {
 	
 	public <T> void add(Context context, Request<T> request, HttpCallBack<T> callBack, int what, boolean isShowDialog, boolean isCanCancel) {
 			queue.add(what, request, new ResponseListener<T>(request, context, callBack, isShowDialog, isCanCancel));
-		
 	}
 	
 	

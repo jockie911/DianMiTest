@@ -5,5 +5,6 @@ package com.example.objLoader.module.login.imple;
  */
 
 public interface LoginModel {
+
     void login(String phoneNum,String pws,OnLoginListener listener);
 }

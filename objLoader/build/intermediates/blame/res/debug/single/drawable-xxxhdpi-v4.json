@@ -20,12 +20,12 @@
         "source": "C:\\Users\\yc\\.android\\build-cache\\d0928f8ffb5d248f984d90ffe3601d0e67dd1423\\output\\res\\drawable-xxxhdpi-v4\\abc_switch_track_mtrl_alpha.9.png"
     },
     {
-        "merged": "E:\\Code\\Android\\MyApplication\\objLoader\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi-v4\\design_ic_visibility_off.png",
-        "source": "C:\\Users\\yc\\.android\\build-cache\\9bb9c0f4e18f768e3516e9c4152543666304976c\\output\\res\\drawable-xxxhdpi-v4\\design_ic_visibility_off.png"
-    },
-    {
         "merged": "E:\\Code\\Android\\MyApplication\\objLoader\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi-v4\\leak_canary_icon.png",
         "source": "C:\\Users\\yc\\.android\\build-cache\\24f64522b38ec1c47659b647328ec022bee813c2\\output\\res\\drawable-xxxhdpi-v4\\leak_canary_icon.png"
+    },
+    {
+        "merged": "E:\\Code\\Android\\MyApplication\\objLoader\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi-v4\\design_ic_visibility_off.png",
+        "source": "C:\\Users\\yc\\.android\\build-cache\\9bb9c0f4e18f768e3516e9c4152543666304976c\\output\\res\\drawable-xxxhdpi-v4\\design_ic_visibility_off.png"
     },
     {
         "merged": "E:\\Code\\Android\\MyApplication\\objLoader\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi-v4\\abc_btn_radio_to_on_mtrl_015.png",

@@ -63,7 +63,7 @@
             android:layout_below="@+id/rel_temp_top"
             android:layout_above="@+id/rel_temp_bottom">
             <ImageView
-                android:id="@+id/iv_side"
+                android:id="@+id/iv_target"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:background="@drawable/side_bg"
@@ -79,7 +79,7 @@
             android:background="@color/color_bg" >
 
             <Button
-                android:id="@+id/btn_side_camera"
+                android:id="@+id/btn_front_camera"
                 android:layout_width="30dp"
                 android:layout_height="30dp"
                 android:layout_marginLeft="30dp"
@@ -88,15 +88,15 @@
                 android:background="@drawable/xj_selector" />
 
             <Button
-                android:id="@+id/btn_side_album"
+                android:id="@+id/btn_front_album"
                 android:layout_width="30dp"
                 android:layout_height="30dp"
                 android:layout_marginLeft="40dp"
                 android:layout_centerVertical="true"
-                android:layout_toRightOf="@+id/btn_side_camera"
+                android:layout_toRightOf="@+id/btn_front_camera"
                 android:background="@drawable/xc_selector" />
             <TextView
-                android:id="@+id/tv_start_measure"
+                android:id="@+id/tv_next_step"
                 android:layout_width="150dp"
                 android:layout_height="match_parent"
                 android:background="#eb9421"

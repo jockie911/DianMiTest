@@ -20,13 +20,11 @@ import com.example.objLoader.istatic.IConstant;
 import com.example.objLoader.module.ChangePwdActivity;
 import com.example.objLoader.module.ChangeUsernameActivity;
 import com.example.objLoader.module.MeasureRecordActivity;
-import com.example.objLoader.module.SettingActivity;
-import com.example.objLoader.module.login.LoginActivity;
+import com.example.objLoader.module.setting.SettingActivity;
 import com.example.objLoader.module.personInfo.presenter.InfoPresent;
 import com.example.objLoader.utils.SPUtils;
 import com.example.objLoader.wedgit.ActionSheetDialog;
 import com.example.objLoader.utils.Utils;
-import com.example.objLoader.wedgit.AlertDialog;
 import com.example.objLoader.wedgit.CircleImageView;
 
 import java.io.File;

@@ -2,7 +2,11 @@ package com.example.objLoader.global;
 
 import cn.smssdk.SMSSDK;
 
+import com.example.objLoader.istatic.Constants;
+import com.example.objLoader.istatic.IConstant;
 import com.squareup.leakcanary.LeakCanary;
+import com.tencent.mm.opensdk.openapi.IWXAPI;
+import com.tencent.mm.opensdk.openapi.WXAPIFactory;
 import com.yolanda.nohttp.Logger;
 import com.yolanda.nohttp.NoHttp;
 
@@ -47,6 +51,8 @@ public class BaseApp extends Application {
 			return;
 		}
 		LeakCanary.install(this);
+
+		registToWX();
 	}
 
 	public static BaseApp getInstance() {
@@ -81,5 +87,13 @@ public class BaseApp extends Application {
 			}
 			mCameraBitmap = null;
 		}
+	}
+
+	/**
+	 * 注册微信id
+	 */
+	private void registToWX(){
+		IWXAPI wxapi = WXAPIFactory.createWXAPI(this, Constants.WX_ID, true);
+		wxapi.registerApp(Constants.WX_ID);
 	}
 }

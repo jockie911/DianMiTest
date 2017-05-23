@@ -132,12 +132,12 @@
         "source": "C:\\Users\\yc\\.android\\build-cache\\d0928f8ffb5d248f984d90ffe3601d0e67dd1423\\output\\res\\drawable\\abc_cab_background_internal_bg.xml"
     },
     {
-        "merged": "E:\\Code\\Android\\MyApplication\\objLoader\\build\\intermediates\\res\\merged\\release\\drawable\\shape_save_record_bg.xml",
-        "source": "E:\\Code\\Android\\MyApplication\\objLoader\\src\\main\\res\\drawable\\shape_save_record_bg.xml"
-    },
-    {
         "merged": "E:\\Code\\Android\\MyApplication\\objLoader\\build\\intermediates\\res\\merged\\release\\drawable\\size_size.xml",
         "source": "E:\\Code\\Android\\MyApplication\\objLoader\\src\\main\\res\\drawable\\size_size.xml"
+    },
+    {
+        "merged": "E:\\Code\\Android\\MyApplication\\objLoader\\build\\intermediates\\res\\merged\\release\\drawable\\shape_save_record_bg.xml",
+        "source": "E:\\Code\\Android\\MyApplication\\objLoader\\src\\main\\res\\drawable\\shape_save_record_bg.xml"
     },
     {
         "merged": "E:\\Code\\Android\\MyApplication\\objLoader\\build\\intermediates\\res\\merged\\release\\drawable\\selector_btn_flashlight_on.xml",

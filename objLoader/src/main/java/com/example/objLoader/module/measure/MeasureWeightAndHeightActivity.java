@@ -8,6 +8,7 @@ import com.example.objLoader.bean.MeasureRecordBean;
 import com.example.objLoader.global.BaseActivity;
 import com.example.objLoader.istatic.IConstant;
 import com.example.objLoader.module.DetailMeasureSizeActivity;
+import com.example.objLoader.module.measure.present.MeasurePresent;
 import com.example.objLoader.wedgit.wheelpicker.WheelPicker;
 
 import java.util.ArrayList;
@@ -24,6 +25,7 @@ public class MeasureWeightAndHeightActivity extends BaseActivity implements View
 
 	private ArrayList<String> heightList = new ArrayList<>();
 	private ArrayList<String> weightList = new ArrayList<>();
+	private MeasurePresent measurePresent;
 
 	@Override
 	protected int getLayoutRes() {
@@ -49,6 +51,8 @@ public class MeasureWeightAndHeightActivity extends BaseActivity implements View
 		pickerWeight.setData(weightList);
 		pickerHeight.setSelectedItemPosition(30);
 		pickerWeight.setSelectedItemPosition(10);
+
+		measurePresent = new MeasurePresent();
 	}
 
 	@Override
@@ -65,6 +69,7 @@ public class MeasureWeightAndHeightActivity extends BaseActivity implements View
 			intent.putExtra(IConstant.ITEM_DATA,dataBean);
 			startActivity(intent);
 
+			measurePresent.measure();
 		}
 	}
 }

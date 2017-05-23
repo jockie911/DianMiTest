@@ -8,10 +8,9 @@ import butterknife.ButterKnife.ViewBinder;
 public class FrontPicActivity$$ViewBinder<T extends com.example.objLoader.module.measure.FrontPicActivity> implements ViewBinder<T> {
   @Override public void bind(final Finder finder, final T target, Object source) {
     View view;
-    view = finder.findRequiredView(source, 2131689624, "field 'iv_front'");
-    target.iv_front = finder.castView(view, 2131689624, "field 'iv_front'");
-    view = finder.findRequiredView(source, 2131689627, "field 'tv_next_step' and method 'onClick'");
-    target.tv_next_step = finder.castView(view, 2131689627, "field 'tv_next_step'");
+    view = finder.findRequiredView(source, 2131689624, "field 'ivTarget'");
+    target.ivTarget = finder.castView(view, 2131689624, "field 'ivTarget'");
+    view = finder.findRequiredView(source, 2131689625, "method 'onClick'");
     view.setOnClickListener(
       new butterknife.internal.DebouncingOnClickListener() {
         @Override public void doClick(
@@ -20,8 +19,7 @@ public class FrontPicActivity$$ViewBinder<T extends com.example.objLoader.module
           target.onClick(p0);
         }
       });
-    view = finder.findRequiredView(source, 2131689625, "field 'btn_front_camera' and method 'onClick'");
-    target.btn_front_camera = finder.castView(view, 2131689625, "field 'btn_front_camera'");
+    view = finder.findRequiredView(source, 2131689626, "method 'onClick'");
     view.setOnClickListener(
       new butterknife.internal.DebouncingOnClickListener() {
         @Override public void doClick(
@@ -30,8 +28,7 @@ public class FrontPicActivity$$ViewBinder<T extends com.example.objLoader.module
           target.onClick(p0);
         }
       });
-    view = finder.findRequiredView(source, 2131689626, "field 'btn_front_album' and method 'onClick'");
-    target.btn_front_album = finder.castView(view, 2131689626, "field 'btn_front_album'");
+    view = finder.findRequiredView(source, 2131689627, "method 'onClick'");
     view.setOnClickListener(
       new butterknife.internal.DebouncingOnClickListener() {
         @Override public void doClick(
@@ -43,9 +40,6 @@ public class FrontPicActivity$$ViewBinder<T extends com.example.objLoader.module
   }
 
   @Override public void unbind(T target) {
-    target.iv_front = null;
-    target.tv_next_step = null;
-    target.btn_front_camera = null;
-    target.btn_front_album = null;
+    target.ivTarget = null;
   }
 }

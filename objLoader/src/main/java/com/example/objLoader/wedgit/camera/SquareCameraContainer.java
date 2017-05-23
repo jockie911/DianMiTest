@@ -312,7 +312,7 @@ public class SquareCameraContainer<T extends BaseActivity> extends FrameLayout i
                         mFocusImageView.startFocus(point);
 
                         //播放对焦音效
-                        if(mFocusSoundPrepared) {
+                        if(mFocusSoundPrepared && mSoundPool != null) {
                             mSoundPool.play(mFocusSoundId, 1.0f, 0.5f, 1, 0, 1.0f);
                         }
                     }
