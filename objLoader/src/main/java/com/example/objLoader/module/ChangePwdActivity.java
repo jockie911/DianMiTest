@@ -9,7 +9,7 @@ import android.widget.ImageView;
 
 import com.example.objLoader.R;
 import com.example.objLoader.bean.BaseRequestBean;
-import com.example.objLoader.global.BaseActivity;
+import com.example.objLoader.base.BaseActivity;
 import com.example.objLoader.istatic.IConstant;
 import com.example.objLoader.module.login.LoginActivity;
 import com.example.objLoader.nohttp.CallServer;

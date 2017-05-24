@@ -7,7 +7,7 @@ import android.widget.TextView;
 
 import com.example.objLoader.R;
 import com.example.objLoader.module.DetailMeasureSizeActivity;
-import com.example.objLoader.global.BaseFragment;
+import com.example.objLoader.base.BaseFragment;
 import com.example.objLoader.istatic.IConstant;
 
 import butterknife.Bind;

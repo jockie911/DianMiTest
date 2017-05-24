@@ -4,7 +4,7 @@ import android.graphics.Bitmap;
 
 import com.example.objLoader.R;
 import com.example.objLoader.bean.PicPathEvent;
-import com.example.objLoader.global.BaseApp;
+import com.example.objLoader.base.BaseApp;
 
 import org.greenrobot.eventbus.Subscribe;
 import org.greenrobot.eventbus.ThreadMode;

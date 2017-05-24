@@ -3,6 +3,7 @@ package com.example.objLoader.istatic;
 public class Constants {
 
 	public static final String WX_ID = "wx3666f68c67eb1f86";
+	public static final String WX_SECRET = "34a8ceb3d701f3f74427d7d9b9508742";
 
 	/**	登录what	*/
 	public static final int LOGIN_WHAT = 0;
@@ -62,5 +63,6 @@ public class Constants {
 	public static final String GET_MEASURE_RECORD = SERVER + "searchobj.php";
 
 	/** 微信登陆 */
-	public static final String WX_LOGIN = SERVER + "wechat_api.php";
+//	public static final String WX_LOGIN = SERVER + "wechat.php";
+	public static final String WX_LOGIN = "http://114.55.145.129/somatometry/wechat.php";
 }

@@ -3,7 +3,7 @@ package com.example.objLoader.wedgit.camera;
 import android.content.pm.PackageManager;
 import android.hardware.Camera;
 
-import com.example.objLoader.global.BaseApp;
+import com.example.objLoader.base.BaseApp;
 
 /**
  * API 9 以下使用  只支持一个摄像头

@@ -8,7 +8,7 @@ import android.widget.TextView;
 
 import com.example.objLoader.R;
 import com.example.objLoader.bean.BaseRequestBean;
-import com.example.objLoader.global.BaseApp;
+import com.example.objLoader.base.BaseApp;
 import com.example.objLoader.istatic.Constants;
 import com.example.objLoader.istatic.IConstant;
 import com.example.objLoader.nohttp.CallServer;

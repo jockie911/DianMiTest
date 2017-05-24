@@ -15,7 +15,7 @@ import android.widget.TextView;
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.request.target.BitmapImageViewTarget;
 import com.example.objLoader.R;
-import com.example.objLoader.global.BaseActivity;
+import com.example.objLoader.base.BaseActivity;
 import com.example.objLoader.istatic.IConstant;
 import com.example.objLoader.module.ChangePwdActivity;
 import com.example.objLoader.module.ChangeUsernameActivity;

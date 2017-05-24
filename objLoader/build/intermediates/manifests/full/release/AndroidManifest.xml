@@ -38,12 +38,13 @@
         android:value="25.3.1" />
 
     <application
-        android:name="com.example.objLoader.global.BaseApp"
+        android:name="com.example.objLoader.base.BaseApp"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:theme="@style/AppTheme" >
 
+        <!-- 592294b21c5dd0567a0015ae -->
         <!-- SMS SDK -->
         <activity
             android:name="com.mob.tools.MobUIShell"

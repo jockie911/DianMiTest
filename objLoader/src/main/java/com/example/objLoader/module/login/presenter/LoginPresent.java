@@ -4,8 +4,8 @@ import android.widget.EditText;
 import android.widget.ImageView;
 
 import com.example.objLoader.bean.BaseRequestBean;
-import com.example.objLoader.global.BaseActivity;
-import com.example.objLoader.global.BaseApp;
+import com.example.objLoader.base.BaseActivity;
+import com.example.objLoader.base.BaseApp;
 import com.example.objLoader.istatic.IConstant;
 import com.example.objLoader.module.login.imple.LoginView;
 import com.example.objLoader.module.login.imple.OnLoginListener;
@@ -45,7 +45,6 @@ public class LoginPresent<T extends BaseActivity> implements OnLoginListener{
     @Override
     public void onSuccess(BaseRequestBean bean) {
 //        SPUtils.getInstance(BaseApp.getContext()).putString(IConstant.MOBILE, phoneNum);
-        Logger.d(bean.toString());
         SPUtils.getInstance(BaseApp.getContext()).putBoolean(IConstant.IS_LOGIN, true);
         ToastUtils.show(bean.info);
         if(loginView.isCheckLogin()){

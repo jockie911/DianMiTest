@@ -3,7 +3,7 @@ package com.example.objLoader.utils;
 import android.content.Context;
 import android.os.Environment;
 
-import com.example.objLoader.global.BaseApp;
+import com.example.objLoader.base.BaseApp;
 
 import java.io.File;
 import java.math.BigDecimal;

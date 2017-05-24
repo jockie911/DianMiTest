@@ -6,7 +6,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.example.objLoader.R;
-import com.example.objLoader.global.BaseActivity;
+import com.example.objLoader.base.BaseActivity;
 import com.example.objLoader.istatic.IConstant;
 import com.example.objLoader.module.login.imple.RegistForgetView;
 import com.example.objLoader.module.login.presenter.LoginPresent;

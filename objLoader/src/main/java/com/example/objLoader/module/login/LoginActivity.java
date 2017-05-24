@@ -7,16 +7,18 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.example.objLoader.R;
-import com.example.objLoader.global.BaseActivity;
-import com.example.objLoader.global.BaseApp;
-import com.example.objLoader.istatic.Constants;
+import com.example.objLoader.base.BaseActivity;
+import com.example.objLoader.bean.WxLoginSuccessEvent;
 import com.example.objLoader.istatic.IConstant;
-import com.example.objLoader.module.personInfo.AccountInfoActivity;
 import com.example.objLoader.module.login.imple.LoginView;
 import com.example.objLoader.module.login.presenter.LoginPresent;
-import com.tencent.mm.opensdk.modelmsg.SendAuth;
-import com.tencent.mm.opensdk.openapi.IWXAPI;
-import com.tencent.mm.opensdk.openapi.WXAPIFactory;
+import com.example.objLoader.module.personInfo.AccountInfoActivity;
+import com.example.objLoader.utils.SPUtils;
+import com.example.objLoader.wxapi.WXEntryActivity;
+
+import org.greenrobot.eventbus.EventBus;
+import org.greenrobot.eventbus.Subscribe;
+import org.greenrobot.eventbus.ThreadMode;
 
 import butterknife.Bind;
 import butterknife.OnClick;
@@ -45,6 +47,8 @@ public class LoginActivity extends BaseActivity implements LoginView {
 		tvRightTitle.setText(R.string.login_register);
 		loginPresent = new LoginPresent(this,this);
 		et_username.requestFocus();
+		if(!EventBus.getDefault().isRegistered(this))
+			EventBus.getDefault().register(this);
 	}
 
 	@Override
@@ -110,5 +114,19 @@ public class LoginActivity extends BaseActivity implements LoginView {
 	@Override
 	public boolean isCheckLogin() {
 		return getIntent().getBooleanExtra(IConstant.IS_CHECK_LOGIN, false);
+	}
+
+	@Override
+	protected void onDestroy() {
+		if(EventBus.getDefault().isRegistered(this))
+			EventBus.getDefault().unregister(this);
+		super.onDestroy();
+	}
+
+	@Subscribe(threadMode = ThreadMode.MAIN)
+	public void wxLoginSuccess(WxLoginSuccessEvent env){
+		SPUtils.getInstance(this).putBoolean(IConstant.IS_LOGIN,true);
+		startActivity(new Intent(this, AccountInfoActivity.class));
+		finish();
 	}
 }

@@ -13,7 +13,7 @@ import android.view.animation.ScaleAnimation;
 import android.widget.ImageView;
 
 import com.example.objLoader.R;
-import com.example.objLoader.global.BaseActivity;
+import com.example.objLoader.base.BaseActivity;
 
 import butterknife.Bind;
 

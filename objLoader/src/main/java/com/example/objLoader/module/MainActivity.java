@@ -11,7 +11,7 @@ import android.widget.TextView;
 
 import com.example.objLoader.R;
 import com.example.objLoader.adapter.DiscreteScrollViewAdapter;
-import com.example.objLoader.global.BaseActivity;
+import com.example.objLoader.base.BaseActivity;
 import com.example.objLoader.istatic.IConstant;
 import com.example.objLoader.module.login.LoginActivity;
 import com.example.objLoader.module.measure.FrontPicActivity;

@@ -14,7 +14,7 @@ import com.tencent.smtt.sdk.WebViewClient;
 
 import butterknife.Bind;
 
-public class ModelFragment extends com.example.objLoader.global.BaseFragment {
+public class ModelFragment extends com.example.objLoader.base.BaseFragment {
 
 	@Bind(R.id.tencent_model_webview)
 	WebView tencent_model_webview;

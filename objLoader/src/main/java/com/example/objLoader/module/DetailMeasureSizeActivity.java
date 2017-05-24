@@ -14,7 +14,7 @@ import com.example.objLoader.bean.MeasureRecordBean;
 import com.example.objLoader.fragment.DetailClothesModelFragment;
 import com.example.objLoader.fragment.DetailsSizeFragment;
 import com.example.objLoader.fragment.ModelFragment;
-import com.example.objLoader.global.BaseActivity;
+import com.example.objLoader.base.BaseActivity;
 import com.example.objLoader.istatic.IConstant;
 import com.example.objLoader.wedgit.AlertEdittextDialog;
 import com.example.objLoader.utils.LoginUtils;

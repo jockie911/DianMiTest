@@ -1,4 +1,4 @@
-#Tue May 23 18:03:48 CST 2017
+#Wed May 24 16:44:48 CST 2017
 base.0=E\:\\Code\\Android\\MyApplication\\objLoader\\build\\intermediates\\transforms\\dex\\release\\folders\\1000\\1f\\main
 renamed.0=classes.dex
 file.0=E\:\\Code\\Android\\MyApplication\\objLoader\\build\\intermediates\\transforms\\dex\\release\\folders\\1000\\1f\\main\\classes.dex

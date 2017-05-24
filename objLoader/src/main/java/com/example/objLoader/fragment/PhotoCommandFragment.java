@@ -9,7 +9,7 @@ import android.widget.TextView;
 import com.example.objLoader.R;
 import com.example.objLoader.module.measure.FrontPicActivity;
 import com.example.objLoader.module.measure.SidePicActivity;
-import com.example.objLoader.global.BaseActivity;
+import com.example.objLoader.base.BaseActivity;
 import com.example.objLoader.istatic.IConstant;
 import com.example.objLoader.wedgit.ShapeView;
 import com.example.objLoader.wedgit.camera.CameraManager;
@@ -24,7 +24,7 @@ import butterknife.OnClick;
  */
 
 @SuppressLint("ValidFragment")
-public class PhotoCommandFragment extends com.example.objLoader.global.BaseFragment {
+public class PhotoCommandFragment extends com.example.objLoader.base.BaseFragment {
 
     @Bind(R.id.cameraContainer)
     SquareCameraContainer mCameraContainer;

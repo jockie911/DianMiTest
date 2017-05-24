@@ -22,7 +22,7 @@ import android.widget.LinearLayout.LayoutParams;
 import android.widget.TextView;
 
 import com.example.objLoader.R;
-import com.example.objLoader.global.BaseApp;
+import com.example.objLoader.base.BaseApp;
 
 
 public class AlertEdittextDialog implements TextWatcher, DialogInterface.OnDismissListener {

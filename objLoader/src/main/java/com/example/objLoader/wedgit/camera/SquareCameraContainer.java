@@ -24,8 +24,8 @@ import android.widget.Toast;
 
 import com.example.objLoader.R;
 import com.example.objLoader.bean.PicPathEvent;
-import com.example.objLoader.global.BaseActivity;
-import com.example.objLoader.global.BaseApp;
+import com.example.objLoader.base.BaseActivity;
+import com.example.objLoader.base.BaseApp;
 import com.example.objLoader.istatic.IConstant;
 import com.example.objLoader.utils.BitmapUtils;
 import com.example.objLoader.utils.FileUtil;
@@ -77,6 +77,7 @@ public class SquareCameraContainer<T extends BaseActivity> extends FrameLayout i
     public static final int RESETMASK_DELY = 1000; //一段时间后遮罩层一定要隐藏
     private boolean isFrontTakePhoto;
     private int gender;
+    private Bitmap targetBitmap;
 
     public SquareCameraContainer(Context context) {
         super(context);
@@ -564,6 +565,8 @@ public class SquareCameraContainer<T extends BaseActivity> extends FrameLayout i
 
         SPUtils.getInstance(getContext()).putString(isFrontTakePhoto?IConstant.FRONT_PIC_PATH : IConstant.SIDE_PIC_PATH,mImagePath);
         EventBus.getDefault().post(new PicPathEvent(isFrontTakePhoto));
+//        if(bi)
+//        bitmap.recycle();
     }
 
     long lastTime;
@@ -573,7 +576,6 @@ public class SquareCameraContainer<T extends BaseActivity> extends FrameLayout i
         private boolean isBackCamera;
         private boolean sampleSizeSuggested;
         private boolean ioExceptionRetried;     //寻找合适的bitmap发生io异常  允许一次重试
-
 
         SavePicTask(byte[] data, boolean isBackCamera) {
             sampleSizeSuggested = false;
@@ -621,19 +623,16 @@ public class SquareCameraContainer<T extends BaseActivity> extends FrameLayout i
             Log.i(TAG, "saveToSDCard beforefindFitBitmap time:" + (System.currentTimeMillis() - lastTime));
             //从本地读取合适的sampleSize,默认为1
             int sampleSize = SPUtils.getInstance(mContext).getInt("sampleSize", 1);
-            Bitmap bitmap = findFitBitmap(data, getCropRect(data), sampleSize);
+            targetBitmap = findFitBitmap(data, getCropRect(data), sampleSize);
 
-            if (bitmap == null) {
+            if (targetBitmap == null) {
                 return false;
             }
 
             Log.i(TAG, "saveToSDCard beforeSave time:" + (System.currentTimeMillis() - lastTime));
-            BitmapUtils.saveBitmap(bitmap, mImagePath);
+            BitmapUtils.saveBitmap(targetBitmap, mImagePath);
+            BaseApp.getInstance().setCameraBitmap(targetBitmap);
 
-            BaseApp.getInstance().setCameraBitmap(bitmap);
-//            bitmap.recycle();
-
-            //TODO jiang sava the pic
             Log.i(TAG, "saveToSDCard afterSave time:" + (System.currentTimeMillis() - lastTime));
             return true;
         }
@@ -719,8 +718,10 @@ public class SquareCameraContainer<T extends BaseActivity> extends FrameLayout i
             if (result) {
                 fileScan(mImagePath);
 //                releaseCamera();    //不要在这个地方释放相机资源   这里是浪费时间的最大元凶  约1500ms左右
-
-                //TODO jiang this is finish
+                if(targetBitmap != null){
+//                    targetBitmap.recycle();
+                    targetBitmap = null;
+                }
 //                mActivity.postTakePhoto();
                 Log.i(TAG, "TASK:" + (System.currentTimeMillis() - lastTime) + "  /mImagePath :" + mImagePath);
             } else {

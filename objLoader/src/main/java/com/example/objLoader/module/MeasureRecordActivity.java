@@ -9,7 +9,7 @@ import android.widget.RelativeLayout;
 import com.example.objLoader.R;
 import com.example.objLoader.adapter.RecordMeasureAdapter;
 import com.example.objLoader.bean.MeasureRecordBean;
-import com.example.objLoader.global.BaseActivity;
+import com.example.objLoader.base.BaseActivity;
 import com.example.objLoader.istatic.IConstant;
 import com.example.objLoader.nohttp.CallServer;
 import com.example.objLoader.nohttp.HttpCallBack;

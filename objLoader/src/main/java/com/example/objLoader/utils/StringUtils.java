@@ -10,7 +10,7 @@ import android.util.Log;
 import android.util.TypedValue;
 
 import com.example.objLoader.R;
-import com.example.objLoader.global.BaseApp;
+import com.example.objLoader.base.BaseApp;
 
 
 public class StringUtils {

@@ -1,6 +1,6 @@
 package com.example.objLoader.utils;
 
-import com.example.objLoader.global.BaseApp;
+import com.example.objLoader.base.BaseApp;
 
 public class ToastUtils {
 

@@ -86,9 +86,10 @@ public class ResponseListener<T> implements OnResponseListener<T> {
     	try {
             JSONObject jsonObject = new JSONObject(response.get().toString());
             String iserror = null;
+
             if(jsonObject.has("iserror"))
                 iserror = jsonObject.getString("iserror");
-            if (callBack != null && iserror.equals("0")) {
+            if ((callBack != null && TextUtils.equals("0",iserror)) || what == 10000) {
                 callBack.onSucceed(what, response);
 
                 callBack.onSucceed(what, (T) GsonTools.changeGsonToBean(response.get().toString(), classBean));

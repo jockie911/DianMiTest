@@ -5,7 +5,6 @@ import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.SharedPreferences;
 
-import com.example.objLoader.global.BaseApp;
 import com.example.objLoader.istatic.Constants;
 
 /**

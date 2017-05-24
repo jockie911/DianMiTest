@@ -1,6 +1,5 @@
 package com.example.objLoader.wedgit.camera;
 
-import android.app.Activity;
 import android.content.Context;
 import android.graphics.PixelFormat;
 import android.graphics.Point;
@@ -15,11 +14,10 @@ import android.view.Surface;
 import android.view.SurfaceHolder;
 import android.view.SurfaceView;
 import android.widget.FrameLayout;
-import android.widget.Toast;
 
 import com.example.objLoader.R;
-import com.example.objLoader.global.BaseActivity;
-import com.example.objLoader.global.BaseApp;
+import com.example.objLoader.base.BaseActivity;
+import com.example.objLoader.base.BaseApp;
 import com.example.objLoader.utils.Logger;
 import com.example.objLoader.utils.ToastUtils;
 

@@ -4,7 +4,7 @@ import android.view.View;
 import android.widget.EditText;
 
 import com.example.objLoader.R;
-import com.example.objLoader.global.BaseActivity;
+import com.example.objLoader.base.BaseActivity;
 import com.example.objLoader.utils.SPUtils;
 import com.example.objLoader.utils.ToastUtils;
 

@@ -3,23 +3,17 @@ package com.example.objLoader.module.measure;
 
 import android.content.Intent;
 import android.graphics.Bitmap;
-import android.support.v4.app.FragmentTransaction;
-import android.text.TextUtils;
 import android.view.View;
-import android.widget.Button;
 import android.widget.ImageView;
-import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
 import com.example.objLoader.R;
 import com.example.objLoader.bean.PicPathEvent;
-import com.example.objLoader.fragment.PhotoCommandFragment;
-import com.example.objLoader.global.BaseActivity;
-import com.example.objLoader.global.BaseApp;
+import com.example.objLoader.base.BaseActivity;
+import com.example.objLoader.base.BaseApp;
 import com.example.objLoader.istatic.IConstant;
 import com.example.objLoader.module.measure.present.FrontSidePresenter;
 import com.example.objLoader.utils.SPUtils;
-import com.example.objLoader.utils.ToastUtils;
 
 import org.greenrobot.eventbus.EventBus;
 import org.greenrobot.eventbus.Subscribe;

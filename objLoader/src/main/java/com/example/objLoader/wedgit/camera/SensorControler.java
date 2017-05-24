@@ -6,7 +6,7 @@ import android.hardware.SensorEvent;
 import android.hardware.SensorEventListener;
 import android.hardware.SensorManager;
 
-import com.example.objLoader.global.BaseApp;
+import com.example.objLoader.base.BaseApp;
 import com.example.objLoader.utils.Logger;
 
 import java.util.Calendar;

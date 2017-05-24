@@ -21,7 +21,7 @@ import java.util.List;
 import butterknife.Bind;
 
 @SuppressLint("ValidFragment")
-public class DetailsSizeFragment extends com.example.objLoader.global.BaseFragment {
+public class DetailsSizeFragment extends com.example.objLoader.base.BaseFragment {
 
 	private PopupWindow sizeNameWindow;
 	private String sizeName;
