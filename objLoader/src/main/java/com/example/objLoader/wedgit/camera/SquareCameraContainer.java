@@ -28,6 +28,7 @@ import com.example.objLoader.base.BaseActivity;
 import com.example.objLoader.base.BaseApp;
 import com.example.objLoader.istatic.IConstant;
 import com.example.objLoader.utils.BitmapUtils;
+import com.example.objLoader.utils.DensityUtil;
 import com.example.objLoader.utils.FileUtil;
 import com.example.objLoader.utils.Logger;
 import com.example.objLoader.utils.SPUtils;
@@ -143,7 +144,7 @@ public class SquareCameraContainer<T extends BaseActivity> extends FrameLayout i
         mCameraView.setPictureCallback(pictureCallback);
         mZoomSeekBar.setOnSeekBarChangeListener(onSeekBarChangeListener);
 
-//        //音效初始化
+//        音效初始化
 //        mSoundPool = getSoundPool();
     }
 
@@ -396,6 +397,9 @@ public class SquareCameraContainer<T extends BaseActivity> extends FrameLayout i
         }
     };
 
+    /**
+     * 拍照成功后的回掉
+     */
     private final Camera.PictureCallback pictureCallback = new Camera.PictureCallback() {
         @Override
         public void onPictureTaken(final byte[] data, Camera camera) {
@@ -475,8 +479,7 @@ public class SquareCameraContainer<T extends BaseActivity> extends FrameLayout i
 
     /**
      * 旋转bitmap
-     * 对于前置摄像头和后置摄像头采用不同的旋转角度  前置摄像头还需要做镜像水平翻转
-     *
+     * 对于前置摄像头和后置摄像头采用不同的旋转角度  前置摄像头还需要做镜像水平翻转，先关闭前置拍摄
      * @param bitmap
      * @param isBackCamera
      * @return
@@ -503,25 +506,24 @@ public class SquareCameraContainer<T extends BaseActivity> extends FrameLayout i
 
 
     /**
-     * 获取以中心点为中心的正方形区域 ...
-     *
+     * 获取拍照区域大小面积的bitmap
      * @param data
      * @return
      */
     private Rect getCropRect(byte[] data) {
-        //获得图片大小
         BitmapFactory.Options options = new BitmapFactory.Options();
         options.inJustDecodeBounds = true;
         BitmapFactory.decodeByteArray(data, 0, data.length, options);
-
         int width = options.outWidth;
         int height = options.outHeight;
-        int centerX = width / 2;
-        int centerY = height / 2;
+        int mScreenHeight = BaseApp.mScreenHeight;
+        float hRate = DensityUtil.dip2px(getContext(),60) /(mScreenHeight + 0.0f);
+        int v = (int)(width * hRate);
+        int v1 = (int)(width * (1 - 1.75 * hRate));
 
-        int PHOTO_LEN = Math.min(width, height);
-//        return new Rect(centerX - PHOTO_LEN / 2, centerY - PHOTO_LEN / 2, centerX + PHOTO_LEN / 2, centerY + PHOTO_LEN / 2);
-        return new Rect(0,0,width,height);
+        Logger.d("v " + v + "  v2  " + v1);
+        Logger.d("width " + width + "  height  " + height);
+        return new Rect(v, 0, v1, height);
     }
 
     /**
@@ -565,12 +567,11 @@ public class SquareCameraContainer<T extends BaseActivity> extends FrameLayout i
 
         SPUtils.getInstance(getContext()).putString(isFrontTakePhoto?IConstant.FRONT_PIC_PATH : IConstant.SIDE_PIC_PATH,mImagePath);
         EventBus.getDefault().post(new PicPathEvent(isFrontTakePhoto));
-//        if(bi)
-//        bitmap.recycle();
+//        if(targetBitmap != null)
+//        targetBitmap.recycle();
     }
 
     long lastTime;
-
     private class SavePicTask extends Thread {
         private byte[] data;
         private boolean isBackCamera;

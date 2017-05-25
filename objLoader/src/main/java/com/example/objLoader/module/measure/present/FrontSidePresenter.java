@@ -1,8 +1,11 @@
 package com.example.objLoader.module.measure.present;
 
 import android.content.Intent;
+import android.database.Cursor;
+import android.provider.MediaStore;
 import android.support.v4.app.FragmentTransaction;
 import android.text.TextUtils;
+import android.view.View;
 import android.widget.ImageView;
 
 import com.bumptech.glide.Glide;
@@ -16,6 +19,7 @@ import com.example.objLoader.module.measure.MeasureWeightAndHeightActivity;
 import com.example.objLoader.module.measure.SidePicActivity;
 import com.example.objLoader.utils.SPUtils;
 import com.example.objLoader.utils.ToastUtils;
+import com.example.objLoader.wedgit.AlertDialog;
 
 /**
  * Created by yc on 2017/5/23.
@@ -75,5 +79,33 @@ public class FrontSidePresenter<T extends BaseActivity> {
         if(!isFront) intent.putExtra(IConstant.GENDER,frontSideView.getGender());
         ((T)activity).startActivity(intent);
 
+    }
+
+    /**
+     * 从相册选取照片，ndk检查是否是正确格式的照片  （照片是否需要手动剪裁？？？）
+     * @param picAbsPath
+     */
+    public void checkAlbumPicContainsData(String picAbsPath) {
+        if(true){
+            frontSideView.resultAlbumPicSuccess(picAbsPath);
+        }else{
+            frontSideView.resultAlbumPicError();
+        }
+    }
+
+    /**
+     * 照片不符合，让用户重新选择
+     */
+    public void showErrorDialog() {
+        AlertDialog builder = new AlertDialog(activity).builder();
+        builder.setTitle(R.string.error_pic_model)
+                .setMsg(frontSideView.isFrontPic()?R.string.choose_right_front_pic : R.string.choose_right_side_pic)
+                .setNegativeButton(R.string.cancel,null)
+                .setPositiveButton(R.string.ok, new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        frontSideView.openAlbumChoosePic();
+                    }
+                }).show();
     }
 }

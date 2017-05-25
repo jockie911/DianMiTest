@@ -48,6 +48,10 @@ public class AbActivityManager {
 		activityList.remove(activity);
 	}
 
+	public void removeActivity(int position) {
+		activityList.remove(position);
+	}
+
 	/**
 	 * 遍历所有Activity并finish.
 	 */

@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.view.View;
 
 import com.example.objLoader.R;
+import com.example.objLoader.base.AbActivityManager;
 import com.example.objLoader.bean.MeasureRecordBean;
 import com.example.objLoader.base.BaseActivity;
 import com.example.objLoader.istatic.IConstant;

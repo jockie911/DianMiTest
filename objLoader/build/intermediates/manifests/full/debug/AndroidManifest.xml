@@ -57,7 +57,7 @@
 
         <!-- 更换密码 -->
         <activity
-            android:name="com.example.objLoader.module.ChangePwdActivity"
+            android:name="com.example.objLoader.module.personInfo.ChangePwdActivity"
             android:configChanges="orientation|keyboardHidden"
             android:screenOrientation="portrait" />
         <!-- 更换用户名 -->

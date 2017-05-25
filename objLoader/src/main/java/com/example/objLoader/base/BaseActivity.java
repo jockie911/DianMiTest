@@ -35,8 +35,6 @@ import butterknife.ButterKnife;
 
 public abstract class BaseActivity extends AppCompatActivity implements OnClickListener{
 
-	public static Context mContext;
-	
 	//手指按下的点为(x1, y1)手指离开屏幕的点为(x2, y2)
 	protected float x1 = 0;
 	protected float x2 = 0;
@@ -58,7 +56,6 @@ public abstract class BaseActivity extends AppCompatActivity implements OnClickL
 		ButterKnife.bind(this);
 		initData();
 
-		mContext = this;
 		AbActivityManager.getInstance().addActivity(this);
 		initSwipeBack();
 	}
@@ -100,7 +97,7 @@ public abstract class BaseActivity extends AppCompatActivity implements OnClickL
 	 * @return
 	 */
 	protected boolean isSwipeBack(){
-		return true;
+		return false;
 	}
 
 	/**
@@ -110,19 +107,6 @@ public abstract class BaseActivity extends AppCompatActivity implements OnClickL
 
 	protected abstract void initData();
 
-	@SuppressLint("InlinedApi")
-	private void setTranslucentStatus(boolean on) {
-		Window win = getWindow();
-		WindowManager.LayoutParams winParams = win.getAttributes();
-		final int bits = WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS;
-		if (on) {
-			winParams.flags |= bits;
-		} else {
-			winParams.flags &= ~bits;
-		}
-		win.setAttributes(winParams);
-	}
-	
 	/**
 	 * 描述：Activity结束.
 	 * 
@@ -131,6 +115,7 @@ public abstract class BaseActivity extends AppCompatActivity implements OnClickL
 	@Override
 	public void finish() {
 		AbActivityManager.getInstance().removeActivity(this);
+
 		super.finish();
 	}
 	

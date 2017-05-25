@@ -32,12 +32,12 @@
         "source": "E:\\Code\\Android\\MyApplication\\objLoader\\src\\main\\res\\drawable-xhdpi\\man_bottom.png"
     },
     {
-        "merged": "E:\\Code\\Android\\MyApplication\\objLoader\\build\\intermediates\\res\\merged\\release\\drawable-xhdpi\\measure_protocol.png",
-        "source": "E:\\Code\\Android\\MyApplication\\objLoader\\src\\main\\res\\drawable-xhdpi\\measure_protocol.png"
-    },
-    {
         "merged": "E:\\Code\\Android\\MyApplication\\objLoader\\build\\intermediates\\res\\merged\\release\\drawable-xhdpi\\bottom_clothes_man.png",
         "source": "E:\\Code\\Android\\MyApplication\\objLoader\\src\\main\\res\\drawable-xhdpi\\bottom_clothes_man.png"
+    },
+    {
+        "merged": "E:\\Code\\Android\\MyApplication\\objLoader\\build\\intermediates\\res\\merged\\release\\drawable-xhdpi\\measure_protocol.png",
+        "source": "E:\\Code\\Android\\MyApplication\\objLoader\\src\\main\\res\\drawable-xhdpi\\measure_protocol.png"
     },
     {
         "merged": "E:\\Code\\Android\\MyApplication\\objLoader\\build\\intermediates\\res\\merged\\release\\drawable-xhdpi\\ic_error.png",

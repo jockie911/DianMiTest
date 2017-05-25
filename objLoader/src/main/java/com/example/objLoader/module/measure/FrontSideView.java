@@ -12,4 +12,9 @@ public interface FrontSideView extends BaseView{
 
     boolean isFrontPic();
 
+    void openAlbumChoosePic();
+
+    void resultAlbumPicSuccess(String picPath);
+
+    void resultAlbumPicError();
 }

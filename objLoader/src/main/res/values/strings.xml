@@ -183,6 +183,9 @@
     <string name="male">男</string>
     <string name="pwd_not_none">密码不能为空</string>
     <string name="wrong_format_sms_code">验证呀格式错误</string>
+    <string name="error_pic_model">照片格式错误</string>
+    <string name="choose_right_front_pic">请根据模板提示选择正确的正面照.</string>
+    <string name="choose_right_side_pic">请根据模板提示选择正确的侧面照</string>
     <!--<string name="topic_camera_photo_save">拍照文件存储失败了！</string>-->
 
 </resources>

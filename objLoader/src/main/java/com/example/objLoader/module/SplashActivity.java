@@ -6,7 +6,6 @@ import android.os.Handler;
 import android.view.View;
 import android.view.WindowManager;
 import android.view.animation.AccelerateInterpolator;
-import android.view.animation.AlphaAnimation;
 import android.view.animation.Animation;
 import android.view.animation.AnimationSet;
 import android.view.animation.ScaleAnimation;
@@ -21,7 +20,6 @@ public class SplashActivity extends BaseActivity {
 
     @Bind(R.id.iv_splash)
     ImageView ivSplash;
-    private int count = 0;
     private AnimationSet animationSet;
 
     @Override
@@ -49,15 +47,15 @@ public class SplashActivity extends BaseActivity {
         handler.postDelayed(new Runnable() {
             @Override
             public void run() {
-                AlphaAnimation aa = new AlphaAnimation(1.0f,0.0f);
-                aa.setRepeatMode(Animation.REVERSE);
+//                AlphaAnimation aa = new AlphaAnimation(1.0f,0.0f);
+//                aa.setRepeatMode(Animation.REVERSE);
 
 
                 ScaleAnimation sa = new ScaleAnimation(1.0f, 1.8f, 1.0f, 1.8f,
                         Animation.RELATIVE_TO_SELF, 0.5f, Animation.RELATIVE_TO_SELF, 0.5f);
 
                 animationSet.setDuration(1200);
-                animationSet.addAnimation(aa);
+//                animationSet.addAnimation(aa);
                 animationSet.addAnimation(sa);
                 animationSet.setInterpolator(new AccelerateInterpolator());
                 animationSet.setFillAfter(true);
@@ -66,13 +64,6 @@ public class SplashActivity extends BaseActivity {
             }
         },2000);
 
-        handler.postDelayed(new Runnable() {
-            @Override
-            public void run() {
-                startActivity(new Intent(SplashActivity.this,MainActivity.class));
-                finish();
-            }
-        },2800);
         animationSet.setAnimationListener(new Animation.AnimationListener() {
             @Override
             public void onAnimationStart(Animation animation) {
@@ -81,7 +72,8 @@ public class SplashActivity extends BaseActivity {
 
             @Override
             public void onAnimationEnd(Animation animation) {
-
+                startActivity(new Intent(SplashActivity.this,MainActivity.class));
+                finish();
             }
 
             @Override

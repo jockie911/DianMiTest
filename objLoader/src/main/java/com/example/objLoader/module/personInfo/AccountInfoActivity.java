@@ -17,7 +17,6 @@ import com.bumptech.glide.request.target.BitmapImageViewTarget;
 import com.example.objLoader.R;
 import com.example.objLoader.base.BaseActivity;
 import com.example.objLoader.istatic.IConstant;
-import com.example.objLoader.module.ChangePwdActivity;
 import com.example.objLoader.module.ChangeUsernameActivity;
 import com.example.objLoader.module.MeasureRecordActivity;
 import com.example.objLoader.module.setting.SettingActivity;

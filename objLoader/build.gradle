@@ -38,8 +38,14 @@ dependencies {
     compile 'com.android.support:design:25.3.1'
     compile 'org.greenrobot:eventbus:3.0.0'
 
-//    compile 'com.tencent.mm.opensdk:wechat-sdk-android-with-mta:+' //weixin
     compile 'com.tencent.mm.opensdk:wechat-sdk-android-without-mta:+'
+
+    /*retrofit*/
+    compile 'com.squareup.retrofit2:retrofit:2.1.0'
+    compile 'com.squareup.retrofit2:converter-gson:2.1.0'
+    compile 'com.squareup.retrofit2:adapter-rxjava:2.2.0'
+    compile 'io.reactivex:rxjava:1.2.4'
+    compile 'io.reactivex:rxandroid:1.2.1'
 
     /*LeakCanary*/
     testCompile 'com.squareup.leakcanary:leakcanary-android-no-op:1.5.1'

@@ -11,6 +11,7 @@ public class WXUserInfoBean {
     private String headimgurl;
     private int sex;
     private String unionid;
+    private String iserror;
 
     public String getOpenid() {
         return openid;
@@ -50,5 +51,13 @@ public class WXUserInfoBean {
 
     public void setUnionid(String unionid) {
         this.unionid = unionid;
+    }
+
+    public String getIserror() {
+        return iserror;
+    }
+
+    public void setIserror(String iserror) {
+        this.iserror = iserror;
     }
 }

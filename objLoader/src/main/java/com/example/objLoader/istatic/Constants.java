@@ -45,7 +45,7 @@ public class Constants {
 	public static final String FORGET_PWD = SERVER + "forgetpwd.php";
 	
 	/**	修改密码	*/
-	public static final String CHANGE_PWD = SERVER + "changepwdsetup.php";
+	public static final String CHANGE_PWD = "changepwdsetup.php";
 	
 	/**	获取人体测量信息	*/
 	public static final String GET_MEASURE_INFO = SERVER + "makedatainfo.php";

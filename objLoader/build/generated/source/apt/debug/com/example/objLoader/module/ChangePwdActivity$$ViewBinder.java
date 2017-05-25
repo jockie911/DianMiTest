@@ -2,10 +2,13 @@
 package com.example.objLoader.module;
 
 import android.view.View;
+
+import com.example.objLoader.module.personInfo.ChangePwdActivity;
+
 import butterknife.ButterKnife.Finder;
 import butterknife.ButterKnife.ViewBinder;
 
-public class ChangePwdActivity$$ViewBinder<T extends com.example.objLoader.module.ChangePwdActivity> implements ViewBinder<T> {
+public class ChangePwdActivity$$ViewBinder<T extends ChangePwdActivity> implements ViewBinder<T> {
   @Override public void bind(final Finder finder, final T target, Object source) {
     View view;
     view = finder.findRequiredView(source, 2131689605, "field 'et_old_pwd'");

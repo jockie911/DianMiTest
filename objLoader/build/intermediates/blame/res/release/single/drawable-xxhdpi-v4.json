@@ -1,11 +1,11 @@
 [
     {
-        "merged": "E:\\Code\\Android\\MyApplication\\objLoader\\build\\intermediates\\res\\merged\\release\\drawable-xxhdpi-v4\\measure_bg.jpg",
-        "source": "E:\\Code\\Android\\MyApplication\\objLoader\\src\\main\\res\\drawable-xxhdpi\\measure_bg.jpg"
-    },
-    {
         "merged": "E:\\Code\\Android\\MyApplication\\objLoader\\build\\intermediates\\res\\merged\\release\\drawable-xxhdpi-v4\\bg.jpg",
         "source": "E:\\Code\\Android\\MyApplication\\objLoader\\src\\main\\res\\drawable-xxhdpi\\bg.jpg"
+    },
+    {
+        "merged": "E:\\Code\\Android\\MyApplication\\objLoader\\build\\intermediates\\res\\merged\\release\\drawable-xxhdpi-v4\\measure_bg.jpg",
+        "source": "E:\\Code\\Android\\MyApplication\\objLoader\\src\\main\\res\\drawable-xxhdpi\\measure_bg.jpg"
     },
     {
         "merged": "E:\\Code\\Android\\MyApplication\\objLoader\\build\\intermediates\\res\\merged\\release\\drawable-xxhdpi-v4\\abc_ic_menu_paste_mtrl_am_alpha.png",

@@ -62,7 +62,6 @@ public class PhotoCommandFragment extends com.example.objLoader.base.BaseFragmen
         mCameraContainer.bindActivity((BaseActivity) getActivity(),isFrontTakePhoto,gender);
 
         mCameraManager = CameraManager.getInstance(getActivity());
-
         mCameraManager.bindOptionMenuView(mFlashLight,null);
     }
 

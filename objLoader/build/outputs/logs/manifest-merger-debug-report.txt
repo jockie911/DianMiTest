@@ -33,6 +33,7 @@ MERGED from [com.android.support:support-media-compat:25.3.1] C:\Users\yc\.andro
 MERGED from [com.android.support:support-core-ui:25.3.1] C:\Users\yc\.android\build-cache\51250feb2a6e8a80f6d6f9a48e279a4625525eda\output\AndroidManifest.xml:21:5-23:58
 MERGED from [com.android.support:support-core-utils:25.3.1] C:\Users\yc\.android\build-cache\c61b0258c8ab4513f727c4cbfab29ae17d8d68cd\output\AndroidManifest.xml:21:5-23:61
 MERGED from [com.android.support:support-compat:25.3.1] C:\Users\yc\.android\build-cache\df968a0ab5a91fb038dff00e50d7d287ae3cf11c\output\AndroidManifest.xml:21:5-23:58
+MERGED from [io.reactivex:rxandroid:1.2.1] C:\Users\yc\.android\build-cache\d82d3d76fbed2eace608532fff32b2f389d1654d\output\AndroidManifest.xml:19:5-43
 MERGED from [com.squareup.leakcanary:leakcanary-android:1.5.1] C:\Users\yc\.android\build-cache\24f64522b38ec1c47659b647328ec022bee813c2\output\AndroidManifest.xml:20:5-44
 	tools:overrideLibrary
 		ADDED from [com.android.support:design:25.3.1] C:\Users\yc\.android\build-cache\9bb9c0f4e18f768e3516e9c4152543666304976c\output\AndroidManifest.xml:23:9-59
@@ -154,14 +155,14 @@ ADDED from E:\Code\Android\MyApplication\objLoader\src\main\AndroidManifest.xml:
 		ADDED from E:\Code\Android\MyApplication\objLoader\src\main\AndroidManifest.xml:48:13-72
 	android:name
 		ADDED from E:\Code\Android\MyApplication\objLoader\src\main\AndroidManifest.xml:46:13-52
-activity#com.example.objLoader.module.ChangePwdActivity
+activity#com.example.objLoader.module.personInfo.ChangePwdActivity
 ADDED from E:\Code\Android\MyApplication\objLoader\src\main\AndroidManifest.xml:55:9-58:52
 	android:screenOrientation
 		ADDED from E:\Code\Android\MyApplication\objLoader\src\main\AndroidManifest.xml:58:13-49
 	android:configChanges
 		ADDED from E:\Code\Android\MyApplication\objLoader\src\main\AndroidManifest.xml:57:13-63
 	android:name
-		ADDED from E:\Code\Android\MyApplication\objLoader\src\main\AndroidManifest.xml:56:13-53
+		ADDED from E:\Code\Android\MyApplication\objLoader\src\main\AndroidManifest.xml:56:13-64
 activity#com.example.objLoader.module.ChangeUsernameActivity
 ADDED from E:\Code\Android\MyApplication\objLoader\src\main\AndroidManifest.xml:60:9-63:52
 	android:screenOrientation

@@ -8,9 +8,9 @@ import android.widget.ImageView;
 
 import com.bumptech.glide.Glide;
 import com.example.objLoader.R;
-import com.example.objLoader.bean.PicPathEvent;
 import com.example.objLoader.base.BaseActivity;
 import com.example.objLoader.base.BaseApp;
+import com.example.objLoader.bean.PicPathEvent;
 import com.example.objLoader.istatic.IConstant;
 import com.example.objLoader.module.measure.present.FrontSidePresenter;
 import com.example.objLoader.utils.SPUtils;
@@ -64,8 +64,7 @@ public class FrontPicActivity extends BaseActivity implements FrontSideView{
 			showCameraFragment(true);
 			break;
 		case R.id.btn_front_album:
-			Intent photoIntent = new Intent(Intent.ACTION_PICK,android.provider.MediaStore.Images.Media.EXTERNAL_CONTENT_URI);// 调用android的图库
-			startActivityForResult(photoIntent, IConstant.ALBUM_REQUEST_CODE);
+			openAlbumChoosePic();
 			break;
 		case R.id.tv_next_step:
 			frontSidePresenter.nextStep();
@@ -78,9 +77,7 @@ public class FrontPicActivity extends BaseActivity implements FrontSideView{
 		super.onActivityResult(requestCode, resultCode, data);
 		if (requestCode == IConstant.ALBUM_REQUEST_CODE && resultCode == RESULT_OK) {
 			String albumPath = getRealPathFromURI(data.getData()); // 图片文件路径
-			if(ivTarget != null)
-				Glide.with(this).load(albumPath).into(ivTarget);
-			SPUtils.getInstance(this).putString(isFrontPic() ? IConstant.FRONT_PIC_PATH : IConstant.SIDE_PIC_PATH, albumPath);
+			frontSidePresenter.checkAlbumPicContainsData(albumPath);
 		}
 	}
 
@@ -116,5 +113,23 @@ public class FrontPicActivity extends BaseActivity implements FrontSideView{
 	@Override
 	public boolean isFrontPic() {
 		return true;
+	}
+
+	@Override
+	public void resultAlbumPicSuccess(String albumPath) {
+		if(ivTarget != null)
+			Glide.with(this).load(albumPath).into(ivTarget);
+		SPUtils.getInstance(this).putString(isFrontPic() ? IConstant.FRONT_PIC_PATH : IConstant.SIDE_PIC_PATH, albumPath);
+	}
+
+	@Override
+	public void resultAlbumPicError() {
+		frontSidePresenter.showErrorDialog();
+	}
+
+	@Override
+	public void openAlbumChoosePic() {
+		Intent photoIntent = new Intent(Intent.ACTION_PICK,android.provider.MediaStore.Images.Media.EXTERNAL_CONTENT_URI);// 调用android的图库
+		startActivityForResult(photoIntent, IConstant.ALBUM_REQUEST_CODE);
 	}
 }

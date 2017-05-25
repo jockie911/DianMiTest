@@ -14,7 +14,6 @@ import com.example.objLoader.module.login.imple.LoginView;
 import com.example.objLoader.module.login.presenter.LoginPresent;
 import com.example.objLoader.module.personInfo.AccountInfoActivity;
 import com.example.objLoader.utils.SPUtils;
-import com.example.objLoader.wxapi.WXEntryActivity;
 
 import org.greenrobot.eventbus.EventBus;
 import org.greenrobot.eventbus.Subscribe;
