@@ -299,6 +299,8 @@
     <string name="change_username_input_new_username">请输入新用户名</string>
     <string name="change_username_save">保存</string>
     <string name="change_username_title">用户名</string>
+    <string name="choose_right_front_pic">请根据模板提示选择正确的正面照.</string>
+    <string name="choose_right_side_pic">请根据模板提示选择正确的侧面照</string>
     <string name="clear_cash_msg">这会清空您已经缓存的数据,下次访问的时候重新下载。</string>
     <string name="clear_cash_title">确定清理缓存吗?</string>
     <string name="clientError">客户端发生错误</string>
@@ -310,6 +312,7 @@
     <string name="double_click_exit">再按一次退出程序</string>
     <string name="editor">编辑</string>
     <string name="error_no">未知错误</string>
+    <string name="error_pic_model">照片格式错误</string>
     <string name="female">女</string>
     <string name="first_measure">请先进行人体测量</string>
     <string name="forget_pwd_find_pwd">找回密码</string>

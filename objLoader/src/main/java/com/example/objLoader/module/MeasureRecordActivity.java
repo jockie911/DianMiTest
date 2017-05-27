@@ -53,7 +53,7 @@ public class MeasureRecordActivity extends BaseActivity implements AdapterView.O
         tvRightTitle.setTextColor(getResources().getColor(R.color.yollow));
 
         Request<String> stringRequest = NoHttp.createStringRequest(Constants.GET_MEASURE_RECORD, RequestMethod.POST);
-        String mobile = SPUtils.getInstance(this).getString(IConstant.MOBILE);
+        String mobile = SPUtils.getInstance().getString(IConstant.MOBILE);
 
         stringRequest.add(IConstant.MOBILE, mobile);
         stringRequest.add(IConstant.STRING, Utils.MD5(mobile + Constants.MD5_KEY + mobile));

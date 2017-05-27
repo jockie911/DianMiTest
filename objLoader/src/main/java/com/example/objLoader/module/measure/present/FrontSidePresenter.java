@@ -42,7 +42,7 @@ public class FrontSidePresenter<T extends BaseActivity> {
      */
     public void initBmpShow(ImageView targetImageView) {
         frontSideView.getGender();
-        String picPath = SPUtils.getInstance(BaseApp.getContext()).getString(frontSideView.isFrontPic() ? IConstant.FRONT_PIC_PATH : IConstant.SIDE_PIC_PATH);
+        String picPath = SPUtils.getInstance().getString(frontSideView.isFrontPic() ? IConstant.FRONT_PIC_PATH : IConstant.SIDE_PIC_PATH);
         if(!TextUtils.isEmpty(picPath)){
             Glide.with(activity).load(picPath).into(targetImageView);
         }
@@ -69,7 +69,7 @@ public class FrontSidePresenter<T extends BaseActivity> {
      */
     public void nextStep() {
         boolean isFront = frontSideView.isFrontPic();
-        String picPath = SPUtils.getInstance(BaseApp.getContext()).getString(isFront ? IConstant.FRONT_PIC_PATH : IConstant.SIDE_PIC_PATH);
+        String picPath = SPUtils.getInstance().getString(isFront ? IConstant.FRONT_PIC_PATH : IConstant.SIDE_PIC_PATH);
         if(TextUtils.isEmpty(picPath)){
             ToastUtils.show(isFront ? R.string.selector_front_pic : R.string.selector_side_pic);
             return;

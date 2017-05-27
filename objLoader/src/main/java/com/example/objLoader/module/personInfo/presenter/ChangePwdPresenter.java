@@ -35,7 +35,7 @@ public class ChangePwdPresenter {
             ToastUtils.show(R.string.pwd_lenght);
             return;
         }
-        String mobile = SPUtils.getInstance(BaseApp.getContext()).getString(IConstant.MOBILE);
+        String mobile = SPUtils.getInstance().getString(IConstant.MOBILE);
         RestClient.instance().changeUserPwd(mobile,Utils.MD5(oldPwd),Utils.MD5(newPwd), Utils.MD5(Utils.MD5(newPwd) +
                 Utils.MD5(mobile + Constants.MD5_KEY + Utils.MD5(oldPwd))))
         .subscribeOn(Schedulers.io())

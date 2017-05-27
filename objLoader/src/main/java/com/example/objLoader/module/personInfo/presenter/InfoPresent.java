@@ -33,8 +33,8 @@ public class InfoPresent {
         }).setPositiveButton(R.string.ok, new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                SPUtils.getInstance(BaseApp.getContext()).putString(IConstant.USERNAME, "");
-                SPUtils.getInstance(BaseApp.getContext()).putBoolean(IConstant.IS_LOGIN, false);
+                SPUtils.getInstance().putString(IConstant.USERNAME, "");
+                SPUtils.getInstance().putBoolean(IConstant.IS_LOGIN, false);
                 Intent intent = new Intent(BaseApp.getContext(), LoginActivity.class);
                 intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK);
                 activity.startActivity(intent);

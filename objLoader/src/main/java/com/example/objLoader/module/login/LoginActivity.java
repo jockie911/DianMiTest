@@ -8,7 +8,7 @@ import android.widget.TextView;
 
 import com.example.objLoader.R;
 import com.example.objLoader.base.BaseActivity;
-import com.example.objLoader.bean.WxLoginSuccessEvent;
+import com.example.objLoader.bean.event.WxLoginSuccessEvent;
 import com.example.objLoader.istatic.IConstant;
 import com.example.objLoader.module.login.imple.LoginView;
 import com.example.objLoader.module.login.presenter.LoginPresent;
@@ -124,7 +124,7 @@ public class LoginActivity extends BaseActivity implements LoginView {
 
 	@Subscribe(threadMode = ThreadMode.MAIN)
 	public void wxLoginSuccess(WxLoginSuccessEvent env){
-		SPUtils.getInstance(this).putBoolean(IConstant.IS_LOGIN,true);
+		SPUtils.getInstance().putBoolean(IConstant.IS_LOGIN,true);
 		startActivity(new Intent(this, AccountInfoActivity.class));
 		finish();
 	}

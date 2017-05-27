@@ -19,7 +19,7 @@ public class BaseApp extends Application {
 	public static int mScreenWidth = 0;
 	public static int mScreenHeight = 0;
 
-	private Bitmap mCameraBitmap;
+	private static Bitmap mCameraBitmap;
 
 	@Override
 	public void onCreate() {
@@ -36,16 +36,10 @@ public class BaseApp extends Application {
 		SMSSDK.initSDK(this, "157ea230e470e", "b56bd81e865fa5e575750c6aade55505");
 
 
-		DisplayMetrics mDisplayMetrics = getApplicationContext().getResources()
-				.getDisplayMetrics();
+		DisplayMetrics mDisplayMetrics = getApplicationContext().getResources().getDisplayMetrics();
 		BaseApp.mScreenWidth = mDisplayMetrics.widthPixels;
 		BaseApp.mScreenHeight = mDisplayMetrics.heightPixels;
 
-		if (LeakCanary.isInAnalyzerProcess(this)) {
-			// This process is dedicated to LeakCanary for heap analysis.
-			// You should not init your app in this process.
-			return;
-		}
 		LeakCanary.install(this);
 
 		registToWX();
@@ -58,12 +52,6 @@ public class BaseApp extends Application {
 	public static Context getContext(){
 		return context;
 	}
-
-
-
-
-
-
 
 	public Bitmap getCameraBitmap() {
 		return mCameraBitmap;

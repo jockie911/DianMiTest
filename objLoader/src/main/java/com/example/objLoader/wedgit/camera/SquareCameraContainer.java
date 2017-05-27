@@ -23,7 +23,7 @@ import android.widget.SeekBar;
 import android.widget.Toast;
 
 import com.example.objLoader.R;
-import com.example.objLoader.bean.PicPathEvent;
+import com.example.objLoader.bean.event.PicPathEvent;
 import com.example.objLoader.base.BaseActivity;
 import com.example.objLoader.base.BaseApp;
 import com.example.objLoader.istatic.IConstant;
@@ -565,7 +565,7 @@ public class SquareCameraContainer<T extends BaseActivity> extends FrameLayout i
         intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
         getContext().sendBroadcast(intent);
 
-        SPUtils.getInstance(getContext()).putString(isFrontTakePhoto?IConstant.FRONT_PIC_PATH : IConstant.SIDE_PIC_PATH,mImagePath);
+        SPUtils.getInstance().putString(isFrontTakePhoto?IConstant.FRONT_PIC_PATH : IConstant.SIDE_PIC_PATH,mImagePath);
         EventBus.getDefault().post(new PicPathEvent(isFrontTakePhoto));
 //        if(targetBitmap != null)
 //        targetBitmap.recycle();
@@ -623,7 +623,7 @@ public class SquareCameraContainer<T extends BaseActivity> extends FrameLayout i
 
             Log.i(TAG, "saveToSDCard beforefindFitBitmap time:" + (System.currentTimeMillis() - lastTime));
             //从本地读取合适的sampleSize,默认为1
-            int sampleSize = SPUtils.getInstance(mContext).getInt("sampleSize", 1);
+            int sampleSize = SPUtils.getInstance().getInt("sampleSize", 1);
             targetBitmap = findFitBitmap(data, getCropRect(data), sampleSize);
 
             if (targetBitmap == null) {
@@ -665,7 +665,7 @@ public class SquareCameraContainer<T extends BaseActivity> extends FrameLayout i
 
 
                 //未抛出异常，保存合适的sampleSize
-                SPUtils.getInstance(mContext).putInt("sampleSize", sampleSize);
+                SPUtils.getInstance().putInt("sampleSize", sampleSize);
 
                 Log.i(TAG, "sampleSize:" + sampleSize);
                 Log.i(TAG, "saveToSDCard afterLoad Bitmap time:" + (System.currentTimeMillis() - lastTime));

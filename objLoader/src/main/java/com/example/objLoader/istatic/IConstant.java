@@ -23,6 +23,7 @@ public class IConstant {
 
     public static int CAMERA_REQUEST_CODE = 1;
     public static int ALBUM_REQUEST_CODE = 2;
+    public static int RESULT_CROP_CODE = 3;
 
 
     public static String FRONT_PIC_PATH = "frontPicPath";

@@ -13,6 +13,7 @@ import com.example.objLoader.istatic.Constants;
 import com.example.objLoader.istatic.IConstant;
 import com.example.objLoader.nohttp.CallServer;
 import com.example.objLoader.nohttp.HttpCallBack;
+import com.example.objLoader.utils.Logger;
 import com.example.objLoader.utils.ToastUtils;
 import com.example.objLoader.utils.Utils;
 import com.tencent.mm.opensdk.modelmsg.SendAuth;
@@ -49,13 +50,9 @@ public class LoginModelImple<T extends BaseActivity> implements LoginModel {
 
     private HttpCallBack<BaseRequestBean> callBack = new HttpCallBack<BaseRequestBean>() {
 
-        @Override
-        public void onSucceed(int what, Response<BaseRequestBean> response) {
-            super.onSucceed(what, response);
-        }
-
         public void onSucceed(int what, BaseRequestBean bean) {
             listener.onSuccess(bean);
+
         };
 
         public void onFailed(int what, String errorInfo) {

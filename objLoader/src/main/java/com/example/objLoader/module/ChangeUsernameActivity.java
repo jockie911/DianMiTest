@@ -5,6 +5,7 @@ import android.widget.EditText;
 
 import com.example.objLoader.R;
 import com.example.objLoader.base.BaseActivity;
+import com.example.objLoader.base.BaseApp;
 import com.example.objLoader.utils.SPUtils;
 import com.example.objLoader.utils.ToastUtils;
 
@@ -56,7 +57,7 @@ public class ChangeUsernameActivity extends BaseActivity {
 			ToastUtils.show(R.string.input_username);
 			return;
 		}
-		SPUtils.getInstance(mContext).putString("username", username);
+		SPUtils.getInstance().putString("username", username);
 		ToastUtils.show(R.string.username_save);
 		finish();
 		

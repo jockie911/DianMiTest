@@ -32,8 +32,8 @@ public class AccountInfoActivity$$ViewBinder<T extends com.example.objLoader.mod
     target.tv_phone_number = finder.castView(view, 2131689597, "field 'tv_phone_number'");
     view = finder.findRequiredView(source, 2131689600, "field 'tv_username'");
     target.tv_username = finder.castView(view, 2131689600, "field 'tv_username'");
-    view = finder.findRequiredView(source, 2131689596, "field 'ivPic' and method 'onClick'");
-    target.ivPic = finder.castView(view, 2131689596, "field 'ivPic'");
+    view = finder.findRequiredView(source, 2131689596, "field 'ivAvatar' and method 'onClick'");
+    target.ivAvatar = finder.castView(view, 2131689596, "field 'ivAvatar'");
     view.setOnClickListener(
       new butterknife.internal.DebouncingOnClickListener() {
         @Override public void doClick(
@@ -77,7 +77,7 @@ public class AccountInfoActivity$$ViewBinder<T extends com.example.objLoader.mod
     target.rl_change_username = null;
     target.tv_phone_number = null;
     target.tv_username = null;
-    target.ivPic = null;
+    target.ivAvatar = null;
     target.ivRightTitleBar = null;
   }
 }

@@ -13,7 +13,7 @@ import android.view.SurfaceView;
 import android.view.WindowManager;
 import android.widget.RelativeLayout;
 
-import com.example.objLoader.bean.PicPathEvent;
+import com.example.objLoader.bean.event.PicPathEvent;
 import com.example.objLoader.istatic.IConstant;
 import com.example.objLoader.utils.Logger;
 import com.example.objLoader.utils.SPUtils;
@@ -238,7 +238,7 @@ public class CameraSurfaceView extends SurfaceView implements SurfaceHolder.Call
                     if (!file.exists()){
                         file.createNewFile();
                     }
-                    SPUtils.getInstance(getContext()).putString(IConstant.FRONT_PIC_PATH,filePath);
+                    SPUtils.getInstance().putString(IConstant.FRONT_PIC_PATH,filePath);
                     long s1 = System.currentTimeMillis();
 
                     bos = new BufferedOutputStream(new FileOutputStream(file));

@@ -16,7 +16,7 @@ import com.example.objLoader.base.BaseActivity;
 
 import butterknife.Bind;
 
-public class SplashActivity extends BaseActivity {
+public class SplashActivity extends BaseActivity implements Animation.AnimationListener {
 
     @Bind(R.id.iv_splash)
     ImageView ivSplash;
@@ -42,16 +42,15 @@ public class SplashActivity extends BaseActivity {
 
     @Override
     protected void initData() {
-        Handler handler = new Handler();
         animationSet = new AnimationSet(true);
-        handler.postDelayed(new Runnable() {
+        sHandler.postDelayed(new Runnable() {
             @Override
             public void run() {
 //                AlphaAnimation aa = new AlphaAnimation(1.0f,0.0f);
 //                aa.setRepeatMode(Animation.REVERSE);
 
 
-                ScaleAnimation sa = new ScaleAnimation(1.0f, 1.8f, 1.0f, 1.8f,
+                ScaleAnimation sa = new ScaleAnimation(1.0f, 1.3f, 1.0f, 1.3f,
                         Animation.RELATIVE_TO_SELF, 0.5f, Animation.RELATIVE_TO_SELF, 0.5f);
 
                 animationSet.setDuration(1200);
@@ -63,25 +62,7 @@ public class SplashActivity extends BaseActivity {
                 ivSplash.startAnimation(animationSet);
             }
         },2000);
-
-        animationSet.setAnimationListener(new Animation.AnimationListener() {
-            @Override
-            public void onAnimationStart(Animation animation) {
-            }
-
-
-            @Override
-            public void onAnimationEnd(Animation animation) {
-                startActivity(new Intent(SplashActivity.this,MainActivity.class));
-                finish();
-            }
-
-            @Override
-            public void onAnimationRepeat(Animation animation) {
-
-            }
-        });
-
+        animationSet.setAnimationListener(this);
         //TODO check out new version to update --> force update/choose update
     }
 
@@ -91,10 +72,29 @@ public class SplashActivity extends BaseActivity {
     }
 
 
+    static Handler sHandler = new Handler();
+
     @Override
     protected void onDestroy() {
         if(animationSet != null)
             animationSet.cancel();
+        sHandler.removeCallbacksAndMessages(null);
         super.onDestroy();
+    }
+
+    @Override
+    public void onAnimationStart(Animation animation) {
+
+    }
+
+    @Override
+    public void onAnimationEnd(Animation animation) {
+        startActivity(new Intent(SplashActivity.this,MainActivity.class));
+        finish();
+    }
+
+    @Override
+    public void onAnimationRepeat(Animation animation) {
+
     }
 }

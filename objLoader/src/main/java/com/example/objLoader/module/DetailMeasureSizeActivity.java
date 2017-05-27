@@ -16,8 +16,8 @@ import com.example.objLoader.fragment.DetailsSizeFragment;
 import com.example.objLoader.fragment.ModelFragment;
 import com.example.objLoader.base.BaseActivity;
 import com.example.objLoader.istatic.IConstant;
+import com.example.objLoader.module.login.presenter.LoginPresent;
 import com.example.objLoader.wedgit.AlertEdittextDialog;
-import com.example.objLoader.utils.LoginUtils;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -101,7 +101,7 @@ public class DetailMeasureSizeActivity extends BaseActivity {
      * save current record
      */
     private void showSavaRecordDialog() {
-        LoginUtils.isLogin();
+        LoginPresent.isLogin();
 
         final AlertEdittextDialog builder = new AlertEdittextDialog(DetailMeasureSizeActivity.this).builder();
         builder.setTitle(R.string.sava_record_name_hint);

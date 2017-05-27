@@ -3,6 +3,7 @@ package com.example.objLoader.module.measure;
 
 import android.content.Intent;
 import android.graphics.Bitmap;
+import android.util.SparseArray;
 import android.view.View;
 import android.widget.ImageView;
 
@@ -10,8 +11,9 @@ import com.bumptech.glide.Glide;
 import com.example.objLoader.R;
 import com.example.objLoader.base.BaseActivity;
 import com.example.objLoader.base.BaseApp;
-import com.example.objLoader.bean.PicPathEvent;
+import com.example.objLoader.bean.event.PicPathEvent;
 import com.example.objLoader.istatic.IConstant;
+import com.example.objLoader.module.login.presenter.LoginPresent;
 import com.example.objLoader.module.measure.present.FrontSidePresenter;
 import com.example.objLoader.utils.SPUtils;
 
@@ -119,7 +121,7 @@ public class FrontPicActivity extends BaseActivity implements FrontSideView{
 	public void resultAlbumPicSuccess(String albumPath) {
 		if(ivTarget != null)
 			Glide.with(this).load(albumPath).into(ivTarget);
-		SPUtils.getInstance(this).putString(isFrontPic() ? IConstant.FRONT_PIC_PATH : IConstant.SIDE_PIC_PATH, albumPath);
+		SPUtils.getInstance().putString(isFrontPic() ? IConstant.FRONT_PIC_PATH : IConstant.SIDE_PIC_PATH, albumPath);
 	}
 
 	@Override

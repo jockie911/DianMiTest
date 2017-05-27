@@ -1,5 +1,6 @@
 package com.example.objLoader.net;
 
+import com.example.objLoader.bean.BaseHttpBean;
 import com.example.objLoader.bean.BaseRequestBean;
 import com.example.objLoader.bean.Temp;
 import com.example.objLoader.bean.WXUserInfoBean;
@@ -8,6 +9,7 @@ import com.example.objLoader.net.api.Api;
 import com.example.objLoader.utils.Logger;
 
 import java.io.IOException;
+import java.util.Map;
 import java.util.concurrent.TimeUnit;
 
 import okhttp3.Interceptor;
@@ -22,7 +24,7 @@ import rx.Observable;
  * Created by yc on 2017/5/25.
  */
 
-public class RestClient {
+public class RestClient<T> {
 
     private static final String TAG = "RestClient";
 
@@ -108,5 +110,13 @@ public class RestClient {
 
     public Observable<BaseRequestBean> changeUserPwd(String mobile, String oldpwd, String newpwd, String md5) {
         return api().changeUserPwd(mobile,oldpwd,newpwd,md5);
+    }
+
+    public Observable<BaseHttpBean<T>> get(String url, Map<String,String> params){
+        return api().get(url,params);
+    }
+
+    public Observable<BaseHttpBean<T>> post(String url, Map<String,String> params){
+        return api().post(url,params);
     }
 }

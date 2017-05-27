@@ -5,6 +5,7 @@ import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.SharedPreferences;
 
+import com.example.objLoader.base.BaseApp;
 import com.example.objLoader.istatic.Constants;
 
 /**
@@ -21,9 +22,9 @@ public class SPUtils {
 	
 	private static SPUtils single=null;
 	
-	public static SPUtils getInstance(Context context){
+	public static SPUtils getInstance(){
 		if(single==null){
-			single=new SPUtils(context);
+			single=new SPUtils(BaseApp.getContext());
 		}
 		return single;
 	}

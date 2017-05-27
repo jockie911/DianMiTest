@@ -329,6 +329,8 @@
     <string name="change_username_input_new_username">Please enter a new user name</string>
     <string name="change_username_save">Save</string>
     <string name="change_username_title">Username</string>
+    <string name="choose_right_front_pic">请根据模板提示选择正确的正面照.</string>
+    <string name="choose_right_side_pic">请根据模板提示选择正确的侧面照</string>
     <string name="clear_cash_msg">This will empty your cached data and download it next time you visit it.</string>
     <string name="clear_cash_title">Do you want to clear the cache?</string>
     <string name="clientError">Client Error</string>
@@ -340,6 +342,7 @@
     <string name="double_click_exit">Press the exit program again</string>
     <string name="editor">Editor</string>
     <string name="error_no">Unknown mistake</string>
+    <string name="error_pic_model">照片格式错误</string>
     <string name="female">female</string>
     <string name="first_measure">The human body measurement first, please</string>
     <string name="forget_pwd_find_pwd">Forgot password</string>

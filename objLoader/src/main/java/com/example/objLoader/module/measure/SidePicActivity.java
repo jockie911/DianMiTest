@@ -3,7 +3,7 @@ package com.example.objLoader.module.measure;
 import android.graphics.Bitmap;
 
 import com.example.objLoader.R;
-import com.example.objLoader.bean.PicPathEvent;
+import com.example.objLoader.bean.event.PicPathEvent;
 import com.example.objLoader.base.BaseApp;
 
 import org.greenrobot.eventbus.Subscribe;
