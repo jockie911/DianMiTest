@@ -2,6 +2,7 @@ package com.example.objLoader.module.personInfo;
 
 import android.content.Intent;
 import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.net.Uri;
 import android.os.Bundle;
 import android.os.Environment;
@@ -9,6 +10,7 @@ import android.provider.MediaStore;
 import android.support.v4.graphics.drawable.RoundedBitmapDrawable;
 import android.support.v4.graphics.drawable.RoundedBitmapDrawableFactory;
 import android.text.TextUtils;
+import android.util.Log;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
@@ -16,6 +18,7 @@ import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.request.target.BitmapImageViewTarget;
+import com.bumptech.glide.signature.StringSignature;
 import com.example.objLoader.R;
 import com.example.objLoader.base.BaseActivity;
 import com.example.objLoader.base.BaseApp;
@@ -24,7 +27,9 @@ import com.example.objLoader.module.ChangeUsernameActivity;
 import com.example.objLoader.module.MeasureRecordActivity;
 import com.example.objLoader.module.setting.SettingActivity;
 import com.example.objLoader.module.personInfo.presenter.InfoPresent;
+import com.example.objLoader.utils.FileUtil;
 import com.example.objLoader.utils.SPUtils;
+import com.example.objLoader.utils.ToastUtils;
 import com.example.objLoader.wedgit.ActionSheetDialog;
 import com.example.objLoader.utils.Utils;
 import com.example.objLoader.wedgit.CircleImageView;
@@ -55,6 +60,7 @@ public class AccountInfoActivity extends BaseActivity {
 	private String username,mobile;
 	private Uri imageUriFromCamera;
 	private InfoPresent infoPresent;
+	private File file2;
 
 	@Override
     protected int getLayoutRes() {
@@ -71,24 +77,9 @@ public class AccountInfoActivity extends BaseActivity {
 		ivRightTitleBar.setImageResource(R.drawable.exit);
 		tvTitle.setText(R.string.account_info_title);
 
-		String headPicPath = SPUtils.getInstance().getString("head_pic_path");
-		if(headPicPath.equals("") || headPicPath.length() <= 0 ){
-			ivAvatar.setImageResource(R.drawable.login_default);
-		}else{
-			File file = new File(headPicPath);
-			if (file.isFile() && file.length() > 0){
-				Glide.with(this).load(file).into(ivAvatar);
-			}
-
-			Glide.with(this).load(new File(headPicPath)).asBitmap().centerCrop().into(new BitmapImageViewTarget(ivAvatar) {
-				@Override
-				protected void setResource(Bitmap resource) {
-					RoundedBitmapDrawable circularBitmapDrawable =
-							RoundedBitmapDrawableFactory.create(getResources(), resource);
-					circularBitmapDrawable.setCircular(true);
-					ivAvatar.setImageDrawable(circularBitmapDrawable);
-				}
-			});
+		File file = new File(FileUtil.getAppFoler(), "avatar.png");
+		if(file.exists() && file.length() > 0){
+			Glide.with(this).load(file).signature(new StringSignature(System.currentTimeMillis() + "")).into(ivAvatar);
 		}
 
 		mobile = SPUtils.getInstance().getString(IConstant.MOBILE);
@@ -100,6 +91,11 @@ public class AccountInfoActivity extends BaseActivity {
 		tv_username.setText(username);
 
 		infoPresent = new InfoPresent();
+
+		File file1 = new File(FileUtil.getAppFoler());
+		if(!file1.exists())
+			file1.mkdir();
+		file2 = new File(file1.getAbsolutePath(),"temp.png");
 	}
 
 	@Override
@@ -132,9 +128,8 @@ public class AccountInfoActivity extends BaseActivity {
 		new ActionSheetDialog(this).builder().addSheetItem(getResources().getString(R.string.camear), ActionSheetDialog.SheetItemColor.Blue, new ActionSheetDialog.OnSheetItemClickListener() {
 			@Override
 			public void onClick(int which) {
-				imageUriFromCamera = Utils.createImagePathUri(BaseApp.getContext());
 				Intent cameraIntent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
-				cameraIntent.putExtra(MediaStore.EXTRA_OUTPUT, imageUriFromCamera);
+				cameraIntent.putExtra(MediaStore.EXTRA_OUTPUT, Uri.fromFile(file2));
 				startActivityForResult(cameraIntent, IConstant.CAMERA_REQUEST_CODE);
 			}
 		}).addSheetItem(getResources().getString(R.string.album), ActionSheetDialog.SheetItemColor.Blue, new ActionSheetDialog.OnSheetItemClickListener() {
@@ -156,37 +151,38 @@ public class AccountInfoActivity extends BaseActivity {
 
 	@Override
 	protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+		switch (requestCode){
+			case IConstant.CAMERA_REQUEST_CODE:
+				if(file2.exists() && resultCode == RESULT_OK){
+					cropRawPhoto(Uri.fromFile(file2));
+				}
+				break;
+			case IConstant.ALBUM_REQUEST_CODE:
+				if(data != null)
+					cropRawPhoto(data.getData());
+				break;
+			case IConstant.RESULT_CROP_CODE:
+				if(data != null)
+					setImageToHeadView(data);
+				break;
+		}
 		super.onActivityResult(requestCode, resultCode, data);
-		String head_pic_path ;
-		if (requestCode == IConstant.CAMERA_REQUEST_CODE && resultCode == RESULT_OK) {
-//			head_pic_path = Utils.setImg(getRealPathFromURI(imageUriFromCamera),ivAvatar);
-//			SPUtils.getInstance().putString("head_pic_path", head_pic_path);
-			cropRawPhoto(data.getData(),1,1,1080,1080);
-		}
-		if (requestCode == IConstant.ALBUM_REQUEST_CODE && resultCode == RESULT_OK) {
-//			head_pic_path = Utils.setImg(getRealPathFromURI(data.getData()),ivAvatar);
-//			SPUtils.getInstance().putString("head_pic_path", head_pic_path);
-			cropRawPhoto(data.getData(),1,1,1080,1080);
-		}
-		if(requestCode == IConstant.RESULT_CROP_CODE && requestCode == RESULT_OK){
-			setImageToHeadView(data);
-		}
 	}
 
 	/**
 	 * 裁剪原始的图片
 	 */
-	public void cropRawPhoto(Uri uri,int aspectX,int aspectY,int bpWidth,int bpHeight) {
+	public void cropRawPhoto(Uri uri) {
 		Intent intent = new Intent("com.android.camera.action.CROP");
 		intent.setDataAndType(uri, "image/*");
 
 		intent.putExtra("crop", "true");
 		// aspectX , aspectY :宽高的比例
-		intent.putExtra("aspectX", aspectX);
-		intent.putExtra("aspectY", aspectY);
+		intent.putExtra("aspectX", 1);
+		intent.putExtra("aspectY", 1);
 		// outputX , outputY : 裁剪图片宽高
-		intent.putExtra("outputX", bpWidth);
-		intent.putExtra("outputY", bpHeight);
+		intent.putExtra("outputX", 200);
+		intent.putExtra("outputY", 200);
 		intent.putExtra("return-data", true);
 		startActivityForResult(intent, IConstant.RESULT_CROP_CODE);
 	}
@@ -196,19 +192,24 @@ public class AccountInfoActivity extends BaseActivity {
 		Bundle extras = intent.getExtras();
 		if (extras != null) {
 			Bitmap photo = extras.getParcelable("data");
-			ivAvatar.setImageBitmap(photo);
-			Glide.with(this).load(photo).into(ivAvatar);
 
-//新建文件夹 先选好路径 再调用mkdir函数 现在是根目录下面的Ask文件夹
-			File nf = new File(Environment.getExternalStorageDirectory()+"/Ask");
+			ivAvatar.setImageBitmap(photo);
+			File nf = new File(FileUtil.getAppFoler());
 			if(!nf.exists())
 				nf.mkdir();
-//在根目录下面的ASk文件夹下 创建okkk.jpg文件
-			File f = new File(Environment.getExternalStorageDirectory()+"/Ask", System.currentTimeMillis() + "okkk.jpg");
+			File f = new File(nf.getPath(), "avatar.png");
+			if(f.exists()){
+				f.delete();
+			}
+			try {
+				f.createNewFile();
+			} catch (IOException e) {
+				e.printStackTrace();
+			}
 			FileOutputStream out = null;
 			try {//打开输出流 将图片数据填入文件中
 				out = new FileOutputStream(f);
-				photo.compress(Bitmap.CompressFormat.PNG, 90, out);
+				photo.compress(Bitmap.CompressFormat.PNG, 50, out);
 				try {
 					out.flush();
 					out.close();

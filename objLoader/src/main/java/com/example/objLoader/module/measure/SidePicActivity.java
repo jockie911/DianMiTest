@@ -9,7 +9,7 @@ import com.example.objLoader.base.BaseApp;
 import org.greenrobot.eventbus.Subscribe;
 import org.greenrobot.eventbus.ThreadMode;
 
-public class SidePicActivity extends FrontPicActivity implements FrontSideView{
+public class SidePicActivity extends FrontPicActivity implements IFrontSideView {
 
 	@Override
 	protected int getLayoutRes() {

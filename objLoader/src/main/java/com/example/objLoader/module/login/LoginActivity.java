@@ -8,9 +8,10 @@ import android.widget.TextView;
 
 import com.example.objLoader.R;
 import com.example.objLoader.base.BaseActivity;
+import com.example.objLoader.base.BasePresenter;
 import com.example.objLoader.bean.event.WxLoginSuccessEvent;
 import com.example.objLoader.istatic.IConstant;
-import com.example.objLoader.module.login.imple.LoginView;
+import com.example.objLoader.module.login.imple.ILoginView;
 import com.example.objLoader.module.login.presenter.LoginPresent;
 import com.example.objLoader.module.personInfo.AccountInfoActivity;
 import com.example.objLoader.utils.SPUtils;
@@ -22,7 +23,7 @@ import org.greenrobot.eventbus.ThreadMode;
 import butterknife.Bind;
 import butterknife.OnClick;
 
-public class LoginActivity extends BaseActivity implements LoginView {
+public class LoginActivity extends BaseActivity implements ILoginView {
 
 	@Bind(R.id.et_username)
 	EditText et_username;
@@ -44,7 +45,6 @@ public class LoginActivity extends BaseActivity implements LoginView {
 	protected void initData() {
 		tvTitle.setText(R.string.login);
 		tvRightTitle.setText(R.string.login_register);
-		loginPresent = new LoginPresent(this,this);
 		et_username.requestFocus();
 		if(!EventBus.getDefault().isRegistered(this))
 			EventBus.getDefault().register(this);
@@ -53,6 +53,13 @@ public class LoginActivity extends BaseActivity implements LoginView {
 	@Override
 	protected boolean isHavaBaseTitleBar() {
 		return true;
+	}
+
+	@Override
+	protected BasePresenter initPresenter() {
+		loginPresent = new LoginPresent(this);
+		loginPresent.attachView(this);
+		return loginPresent;
 	}
 
 	@Override

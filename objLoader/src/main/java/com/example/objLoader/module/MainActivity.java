@@ -19,6 +19,7 @@ import com.example.objLoader.module.personInfo.AccountInfoActivity;
 import com.example.objLoader.utils.SPUtils;
 import com.example.objLoader.utils.ToastUtils;
 import com.example.objLoader.utils.DensityUtil;
+import com.example.objLoader.wedgit.LoadingDialog;
 import com.yarolegovich.discretescrollview.DiscreteScrollView;
 import com.yarolegovich.discretescrollview.transform.ScaleTransformer;
 

@@ -6,6 +6,7 @@ import android.widget.ImageView;
 
 import com.example.objLoader.R;
 import com.example.objLoader.base.BaseActivity;
+import com.example.objLoader.base.BasePresenter;
 import com.example.objLoader.module.login.presenter.LoginPresent;
 import com.example.objLoader.module.personInfo.presenter.ChangePwdPresenter;
 import com.example.objLoader.module.personInfo.presenter.ChangePwdView;
@@ -43,8 +44,12 @@ public class ChangePwdActivity extends BaseActivity implements ChangePwdView {
 	protected void initData() {
 		tvTitle.setText(R.string.change_pwd_title);
 		tvRightTitle.setText(R.string.change_pwd_old_confirm);
+	}
 
-		changePwdPresenter = new ChangePwdPresenter(this);
+	@Override
+	protected BasePresenter initPresenter() {
+		changePwdPresenter = new ChangePwdPresenter();
+		return changePwdPresenter;
 	}
 
 	@Override

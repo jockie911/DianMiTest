@@ -92,7 +92,6 @@ public class Utils {
 	public static Uri createImagePathUri(Context context) {
         Uri imageFilePath = null;
         try {
-
             String status = Environment.getExternalStorageState();
             SimpleDateFormat timeFormatter = new SimpleDateFormat("yyyyMMdd_HHmmss", Locale.CHINA);
             long time = System.currentTimeMillis();

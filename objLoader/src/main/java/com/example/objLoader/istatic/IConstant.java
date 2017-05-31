@@ -21,9 +21,9 @@ public class IConstant {
     public static int GENDEER_MALE = 1;
     public static int GENDER_FEMALE = 2;
 
-    public static int CAMERA_REQUEST_CODE = 1;
-    public static int ALBUM_REQUEST_CODE = 2;
-    public static int RESULT_CROP_CODE = 3;
+    public final static int CAMERA_REQUEST_CODE = 1;
+    public final static int ALBUM_REQUEST_CODE = 2;
+    public final static int RESULT_CROP_CODE = 3;
 
 
     public static String FRONT_PIC_PATH = "frontPicPath";

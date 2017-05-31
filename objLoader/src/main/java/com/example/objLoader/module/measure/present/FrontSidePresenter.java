@@ -1,8 +1,6 @@
 package com.example.objLoader.module.measure.present;
 
 import android.content.Intent;
-import android.database.Cursor;
-import android.provider.MediaStore;
 import android.support.v4.app.FragmentTransaction;
 import android.text.TextUtils;
 import android.view.View;
@@ -10,11 +8,11 @@ import android.widget.ImageView;
 
 import com.bumptech.glide.Glide;
 import com.example.objLoader.R;
+import com.example.objLoader.base.BasePresenter;
 import com.example.objLoader.fragment.PhotoCommandFragment;
 import com.example.objLoader.base.BaseActivity;
-import com.example.objLoader.base.BaseApp;
 import com.example.objLoader.istatic.IConstant;
-import com.example.objLoader.module.measure.FrontSideView;
+import com.example.objLoader.module.measure.IFrontSideView;
 import com.example.objLoader.module.measure.MeasureWeightAndHeightActivity;
 import com.example.objLoader.module.measure.SidePicActivity;
 import com.example.objLoader.utils.SPUtils;
@@ -25,15 +23,13 @@ import com.example.objLoader.wedgit.AlertDialog;
  * Created by yc on 2017/5/23.
  */
 
-public class FrontSidePresenter<T extends BaseActivity> {
+public class FrontSidePresenter<T extends BaseActivity> extends BasePresenter<IFrontSideView>{
 
     private T activity;
-    private FrontSideView frontSideView;
     private PhotoCommandFragment photoCommandFragment;
 
-    public FrontSidePresenter(T activity,FrontSideView frontSideView){
+    public FrontSidePresenter(T activity){
         this.activity = activity;
-        this.frontSideView = frontSideView;
     }
 
     /**
@@ -41,8 +37,8 @@ public class FrontSidePresenter<T extends BaseActivity> {
      * @param targetImageView
      */
     public void initBmpShow(ImageView targetImageView) {
-        frontSideView.getGender();
-        String picPath = SPUtils.getInstance().getString(frontSideView.isFrontPic() ? IConstant.FRONT_PIC_PATH : IConstant.SIDE_PIC_PATH);
+        mBaseView.getGender();
+        String picPath = SPUtils.getInstance().getString(mBaseView.isFrontPic() ? IConstant.FRONT_PIC_PATH : IConstant.SIDE_PIC_PATH);
         if(!TextUtils.isEmpty(picPath)){
             Glide.with(activity).load(picPath).into(targetImageView);
         }
@@ -50,7 +46,7 @@ public class FrontSidePresenter<T extends BaseActivity> {
 
     public void showCameraFragment(boolean isShow) {
         if(photoCommandFragment == null)
-            photoCommandFragment = new PhotoCommandFragment(frontSideView.isFrontPic(),frontSideView.getGender());
+            photoCommandFragment = new PhotoCommandFragment(mBaseView.isFrontPic(),mBaseView.getGender());
         FragmentTransaction fragmentTransaction = activity.getSupportFragmentManager().beginTransaction();
         if(isShow){
             if(!photoCommandFragment.isAdded()){
@@ -68,15 +64,15 @@ public class FrontSidePresenter<T extends BaseActivity> {
      * 下一步操作
      */
     public void nextStep() {
-        boolean isFront = frontSideView.isFrontPic();
+        boolean isFront = mBaseView.isFrontPic();
         String picPath = SPUtils.getInstance().getString(isFront ? IConstant.FRONT_PIC_PATH : IConstant.SIDE_PIC_PATH);
         if(TextUtils.isEmpty(picPath)){
             ToastUtils.show(isFront ? R.string.selector_front_pic : R.string.selector_side_pic);
             return;
         }
         Intent intent = new Intent(activity,isFront ? SidePicActivity.class : MeasureWeightAndHeightActivity.class);
-        intent.putExtra(IConstant.GENDER,frontSideView.getGender());
-        if(!isFront) intent.putExtra(IConstant.GENDER,frontSideView.getGender());
+        intent.putExtra(IConstant.GENDER,mBaseView.getGender());
+        if(!isFront) intent.putExtra(IConstant.GENDER,mBaseView.getGender());
         ((T)activity).startActivity(intent);
 
     }
@@ -87,9 +83,9 @@ public class FrontSidePresenter<T extends BaseActivity> {
      */
     public void checkAlbumPicContainsData(String picAbsPath) {
         if(true){
-            frontSideView.resultAlbumPicSuccess(picAbsPath);
+            mBaseView.resultAlbumPicSuccess(picAbsPath);
         }else{
-            frontSideView.resultAlbumPicError();
+            mBaseView.resultAlbumPicError();
         }
     }
 
@@ -99,12 +95,12 @@ public class FrontSidePresenter<T extends BaseActivity> {
     public void showErrorDialog() {
         AlertDialog builder = new AlertDialog(activity).builder();
         builder.setTitle(R.string.error_pic_model)
-                .setMsg(frontSideView.isFrontPic()?R.string.choose_right_front_pic : R.string.choose_right_side_pic)
+                .setMsg(mBaseView.isFrontPic()?R.string.choose_right_front_pic : R.string.choose_right_side_pic)
                 .setNegativeButton(R.string.cancel,null)
                 .setPositiveButton(R.string.ok, new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-                        frontSideView.openAlbumChoosePic();
+                        mBaseView.openAlbumChoosePic();
                     }
                 }).show();
     }

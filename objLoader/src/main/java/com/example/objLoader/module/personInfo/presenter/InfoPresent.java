@@ -5,6 +5,7 @@ import android.view.View;
 
 import com.example.objLoader.R;
 import com.example.objLoader.base.BaseApp;
+import com.example.objLoader.base.BasePresenter;
 import com.example.objLoader.istatic.IConstant;
 import com.example.objLoader.module.login.LoginActivity;
 import com.example.objLoader.module.personInfo.AccountInfoActivity;
@@ -15,7 +16,7 @@ import com.example.objLoader.wedgit.AlertDialog;
  * Created by yc on 2017/5/22.
  */
 
-public class InfoPresent {
+public class InfoPresent extends BasePresenter{
 
     public InfoPresent(){
 

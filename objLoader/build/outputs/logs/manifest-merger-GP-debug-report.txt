@@ -1,0 +1,336 @@
+-- Merging decision tree log ---
+manifest
+ADDED from E:\Code\Android\MyApplication\objLoader\src\main\AndroidManifest.xml:2:1-135:12
+	package
+		ADDED from E:\Code\Android\MyApplication\objLoader\src\main\AndroidManifest.xml:3:5-36
+		INJECTED from E:\Code\Android\MyApplication\objLoader\src\main\AndroidManifest.xml
+		INJECTED from E:\Code\Android\MyApplication\objLoader\src\main\AndroidManifest.xml
+	android:versionName
+		ADDED from E:\Code\Android\MyApplication\objLoader\src\main\AndroidManifest.xml:5:5-30
+		INJECTED from E:\Code\Android\MyApplication\objLoader\src\main\AndroidManifest.xml
+		INJECTED from E:\Code\Android\MyApplication\objLoader\src\main\AndroidManifest.xml
+	android:versionCode
+		ADDED from E:\Code\Android\MyApplication\objLoader\src\main\AndroidManifest.xml:4:5-28
+		INJECTED from E:\Code\Android\MyApplication\objLoader\src\main\AndroidManifest.xml
+		INJECTED from E:\Code\Android\MyApplication\objLoader\src\main\AndroidManifest.xml
+	xmlns:android
+		ADDED from E:\Code\Android\MyApplication\objLoader\src\main\AndroidManifest.xml:2:11-69
+uses-sdk
+ADDED from E:\Code\Android\MyApplication\objLoader\src\main\AndroidManifest.xml:7:5-9:41
+MERGED from [MyApplication:sMSSDK:unspecified] E:\Code\Android\MyApplication\sMSSDK\build\intermediates\bundles\default\AndroidManifest.xml:7:5-9:41
+MERGED from [com.android.support.constraint:constraint-layout:1.0.2] C:\Users\yc\.android\build-cache\55f2ddc8ca84cc4a398f974a4a196734dee55575\output\AndroidManifest.xml:5:5-7:41
+MERGED from [com.yarolegovich:discrete-scrollview:1.1.4] C:\Users\yc\.android\build-cache\ba879d93af5f994975fd39aab3155ab57c6c0f03\output\AndroidManifest.xml:8:5-10:41
+MERGED from [com.jude:swipebackhelper:3.1.2] C:\Users\yc\.android\build-cache\2262fff0c1f2cedb2a7688f3109cbc825523166c\output\AndroidManifest.xml:7:5-9:41
+MERGED from [com.android.support:design:25.3.1] C:\Users\yc\.android\build-cache\9bb9c0f4e18f768e3516e9c4152543666304976c\output\AndroidManifest.xml:21:5-23:62
+MERGED from [com.android.support:recyclerview-v7:25.3.1] C:\Users\yc\.android\build-cache\06c2f5f4352080a9567848fb20f81e5998d6fd8f\output\AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:transition:25.3.1] C:\Users\yc\.android\build-cache\ca9c1ba974168447b8ba02ddc475b6c6960c47f0\output\AndroidManifest.xml:20:5-44
+MERGED from [io.reactivex:rxandroid:1.2.1] C:\Users\yc\.android\build-cache\d82d3d76fbed2eace608532fff32b2f389d1654d\output\AndroidManifest.xml:19:5-43
+MERGED from [com.wang.avi:library:1.0.0] C:\Users\yc\.android\build-cache\610ca8b68f3330ca4eac7784208b9e3f80621583\output\AndroidManifest.xml:7:5-9:41
+MERGED from [com.android.support:appcompat-v7:25.3.1] C:\Users\yc\.android\build-cache\d0928f8ffb5d248f984d90ffe3601d0e67dd1423\output\AndroidManifest.xml:21:5-23:78
+MERGED from [com.android.support:support-v4:25.3.1] C:\Users\yc\.android\build-cache\f4cc810a5d1d0f67b511eaf90ca566300aeddc70\output\AndroidManifest.xml:21:5-23:54
+MERGED from [com.android.support:support-fragment:25.3.1] C:\Users\yc\.android\build-cache\8b43b5bb113515b65480c6490b82f6243b80034e\output\AndroidManifest.xml:21:5-23:60
+MERGED from [com.android.support:support-media-compat:25.3.1] C:\Users\yc\.android\build-cache\408d465a57b41a9a6e9d543347e1020e7546d11e\output\AndroidManifest.xml:21:5-23:63
+MERGED from [com.android.support:support-core-ui:25.3.1] C:\Users\yc\.android\build-cache\51250feb2a6e8a80f6d6f9a48e279a4625525eda\output\AndroidManifest.xml:21:5-23:58
+MERGED from [com.android.support:support-core-utils:25.3.1] C:\Users\yc\.android\build-cache\c61b0258c8ab4513f727c4cbfab29ae17d8d68cd\output\AndroidManifest.xml:21:5-23:61
+MERGED from [com.android.support:animated-vector-drawable:25.3.1] C:\Users\yc\.android\build-cache\dcef2eeadf7e8c04fbca84a43468cdadef03e88a\output\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-vector-drawable:25.3.1] C:\Users\yc\.android\build-cache\ed05c00a3b295e294c5ffed2c1461d31ebe63734\output\AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:support-compat:25.3.1] C:\Users\yc\.android\build-cache\df968a0ab5a91fb038dff00e50d7d287ae3cf11c\output\AndroidManifest.xml:21:5-23:58
+MERGED from [com.squareup.leakcanary:leakcanary-android:1.5.1] C:\Users\yc\.android\build-cache\24f64522b38ec1c47659b647328ec022bee813c2\output\AndroidManifest.xml:20:5-44
+	tools:overrideLibrary
+		ADDED from [com.android.support:design:25.3.1] C:\Users\yc\.android\build-cache\9bb9c0f4e18f768e3516e9c4152543666304976c\output\AndroidManifest.xml:23:9-59
+	android:targetSdkVersion
+		ADDED from E:\Code\Android\MyApplication\objLoader\src\main\AndroidManifest.xml:9:9-38
+		INJECTED from E:\Code\Android\MyApplication\objLoader\src\main\AndroidManifest.xml
+		INJECTED from E:\Code\Android\MyApplication\objLoader\src\main\AndroidManifest.xml
+	android:minSdkVersion
+		ADDED from E:\Code\Android\MyApplication\objLoader\src\main\AndroidManifest.xml:8:9-35
+		INJECTED from E:\Code\Android\MyApplication\objLoader\src\main\AndroidManifest.xml
+		INJECTED from E:\Code\Android\MyApplication\objLoader\src\main\AndroidManifest.xml
+uses-permission#android.permission.READ_EXTERNAL_STORAGE
+ADDED from E:\Code\Android\MyApplication\objLoader\src\main\AndroidManifest.xml:11:5-80
+MERGED from [com.squareup.leakcanary:leakcanary-android:1.5.1] C:\Users\yc\.android\build-cache\24f64522b38ec1c47659b647328ec022bee813c2\output\AndroidManifest.xml:23:5-80
+	android:name
+		ADDED from E:\Code\Android\MyApplication\objLoader\src\main\AndroidManifest.xml:11:22-77
+uses-permission#android.permission.WRITE_EXTERNAL_STORAGE
+ADDED from E:\Code\Android\MyApplication\objLoader\src\main\AndroidManifest.xml:12:5-81
+MERGED from [com.squareup.leakcanary:leakcanary-android:1.5.1] C:\Users\yc\.android\build-cache\24f64522b38ec1c47659b647328ec022bee813c2\output\AndroidManifest.xml:24:5-81
+	android:name
+		ADDED from E:\Code\Android\MyApplication\objLoader\src\main\AndroidManifest.xml:12:22-78
+uses-permission#android.permission.MOUNT_UNMOUNT_FILESYSTEMS
+ADDED from E:\Code\Android\MyApplication\objLoader\src\main\AndroidManifest.xml:13:5-84
+	android:name
+		ADDED from E:\Code\Android\MyApplication\objLoader\src\main\AndroidManifest.xml:13:22-81
+uses-permission#android.permission.INTERNET
+ADDED from E:\Code\Android\MyApplication\objLoader\src\main\AndroidManifest.xml:14:5-67
+	android:name
+		ADDED from E:\Code\Android\MyApplication\objLoader\src\main\AndroidManifest.xml:14:22-64
+uses-permission#android.permission.ACCESS_NETWORK_STATE
+ADDED from E:\Code\Android\MyApplication\objLoader\src\main\AndroidManifest.xml:15:5-79
+	android:name
+		ADDED from E:\Code\Android\MyApplication\objLoader\src\main\AndroidManifest.xml:15:22-76
+uses-permission#android.permission.CHANGE_NETWORK_STATE
+ADDED from E:\Code\Android\MyApplication\objLoader\src\main\AndroidManifest.xml:16:5-79
+	android:name
+		ADDED from E:\Code\Android\MyApplication\objLoader\src\main\AndroidManifest.xml:16:22-76
+uses-permission#android.permission.CHANGE_WIFI_STATE
+ADDED from E:\Code\Android\MyApplication\objLoader\src\main\AndroidManifest.xml:17:5-76
+	android:name
+		ADDED from E:\Code\Android\MyApplication\objLoader\src\main\AndroidManifest.xml:17:22-73
+uses-permission#android.permission.CHANGE_WIFI_MULTICAST_STATE
+ADDED from E:\Code\Android\MyApplication\objLoader\src\main\AndroidManifest.xml:18:5-86
+	android:name
+		ADDED from E:\Code\Android\MyApplication\objLoader\src\main\AndroidManifest.xml:18:22-83
+uses-permission#android.permission.READ_CONTACTS
+ADDED from E:\Code\Android\MyApplication\objLoader\src\main\AndroidManifest.xml:21:5-72
+	android:name
+		ADDED from E:\Code\Android\MyApplication\objLoader\src\main\AndroidManifest.xml:21:22-69
+uses-permission#android.permission.READ_PHONE_STATE
+ADDED from E:\Code\Android\MyApplication\objLoader\src\main\AndroidManifest.xml:22:5-75
+	android:name
+		ADDED from E:\Code\Android\MyApplication\objLoader\src\main\AndroidManifest.xml:22:22-72
+uses-permission#android.permission.ACCESS_WIFI_STATE
+ADDED from E:\Code\Android\MyApplication\objLoader\src\main\AndroidManifest.xml:25:5-76
+	android:name
+		ADDED from E:\Code\Android\MyApplication\objLoader\src\main\AndroidManifest.xml:25:22-73
+uses-permission#android.permission.RECEIVE_SMS
+ADDED from E:\Code\Android\MyApplication\objLoader\src\main\AndroidManifest.xml:27:5-70
+	android:name
+		ADDED from E:\Code\Android\MyApplication\objLoader\src\main\AndroidManifest.xml:27:22-67
+uses-permission#android.permission.READ_SMS
+ADDED from E:\Code\Android\MyApplication\objLoader\src\main\AndroidManifest.xml:28:5-67
+	android:name
+		ADDED from E:\Code\Android\MyApplication\objLoader\src\main\AndroidManifest.xml:28:22-64
+uses-permission#android.permission.GET_TASKS
+ADDED from E:\Code\Android\MyApplication\objLoader\src\main\AndroidManifest.xml:29:5-68
+	android:name
+		ADDED from E:\Code\Android\MyApplication\objLoader\src\main\AndroidManifest.xml:29:22-65
+uses-permission#android.permission.ACCESS_FINE_LOCATION
+ADDED from E:\Code\Android\MyApplication\objLoader\src\main\AndroidManifest.xml:30:5-79
+	android:name
+		ADDED from E:\Code\Android\MyApplication\objLoader\src\main\AndroidManifest.xml:30:22-76
+uses-permission#android.permission.WRITE_SETTINGS
+ADDED from E:\Code\Android\MyApplication\objLoader\src\main\AndroidManifest.xml:31:5-73
+	android:name
+		ADDED from E:\Code\Android\MyApplication\objLoader\src\main\AndroidManifest.xml:31:22-70
+uses-permission#android.permission.CAMERA
+ADDED from E:\Code\Android\MyApplication\objLoader\src\main\AndroidManifest.xml:32:5-65
+	android:name
+		ADDED from E:\Code\Android\MyApplication\objLoader\src\main\AndroidManifest.xml:32:22-62
+uses-feature#android.hardware.camera.autofocus
+ADDED from E:\Code\Android\MyApplication\objLoader\src\main\AndroidManifest.xml:34:5-70
+	android:name
+		ADDED from E:\Code\Android\MyApplication\objLoader\src\main\AndroidManifest.xml:34:19-67
+application
+ADDED from E:\Code\Android\MyApplication\objLoader\src\main\AndroidManifest.xml:37:5-133:19
+MERGED from [MyApplication:sMSSDK:unspecified] E:\Code\Android\MyApplication\sMSSDK\build\intermediates\bundles\default\AndroidManifest.xml:11:5-12:19
+MERGED from [com.android.support.constraint:constraint-layout:1.0.2] C:\Users\yc\.android\build-cache\55f2ddc8ca84cc4a398f974a4a196734dee55575\output\AndroidManifest.xml:9:5-20
+MERGED from [com.android.support:design:25.3.1] C:\Users\yc\.android\build-cache\9bb9c0f4e18f768e3516e9c4152543666304976c\output\AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:transition:25.3.1] C:\Users\yc\.android\build-cache\ca9c1ba974168447b8ba02ddc475b6c6960c47f0\output\AndroidManifest.xml:26:5-20
+MERGED from [com.wang.avi:library:1.0.0] C:\Users\yc\.android\build-cache\610ca8b68f3330ca4eac7784208b9e3f80621583\output\AndroidManifest.xml:11:5-14:19
+MERGED from [com.android.support:appcompat-v7:25.3.1] C:\Users\yc\.android\build-cache\d0928f8ffb5d248f984d90ffe3601d0e67dd1423\output\AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:support-v4:25.3.1] C:\Users\yc\.android\build-cache\f4cc810a5d1d0f67b511eaf90ca566300aeddc70\output\AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:support-fragment:25.3.1] C:\Users\yc\.android\build-cache\8b43b5bb113515b65480c6490b82f6243b80034e\output\AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:support-media-compat:25.3.1] C:\Users\yc\.android\build-cache\408d465a57b41a9a6e9d543347e1020e7546d11e\output\AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:support-core-ui:25.3.1] C:\Users\yc\.android\build-cache\51250feb2a6e8a80f6d6f9a48e279a4625525eda\output\AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:support-core-utils:25.3.1] C:\Users\yc\.android\build-cache\c61b0258c8ab4513f727c4cbfab29ae17d8d68cd\output\AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:animated-vector-drawable:25.3.1] C:\Users\yc\.android\build-cache\dcef2eeadf7e8c04fbca84a43468cdadef03e88a\output\AndroidManifest.xml:26:5-20
+MERGED from [com.android.support:support-vector-drawable:25.3.1] C:\Users\yc\.android\build-cache\ed05c00a3b295e294c5ffed2c1461d31ebe63734\output\AndroidManifest.xml:26:5-20
+MERGED from [com.android.support:support-compat:25.3.1] C:\Users\yc\.android\build-cache\df968a0ab5a91fb038dff00e50d7d287ae3cf11c\output\AndroidManifest.xml:29:5-20
+MERGED from [com.squareup.leakcanary:leakcanary-android:1.5.1] C:\Users\yc\.android\build-cache\24f64522b38ec1c47659b647328ec022bee813c2\output\AndroidManifest.xml:26:5-55:19
+	android:label
+		ADDED from E:\Code\Android\MyApplication\objLoader\src\main\AndroidManifest.xml:40:9-41
+	android:icon
+		ADDED from E:\Code\Android\MyApplication\objLoader\src\main\AndroidManifest.xml:39:9-43
+	android:allowBackup
+		ADDED from [MyApplication:sMSSDK:unspecified] E:\Code\Android\MyApplication\sMSSDK\build\intermediates\bundles\default\AndroidManifest.xml:11:18-44
+	android:theme
+		ADDED from E:\Code\Android\MyApplication\objLoader\src\main\AndroidManifest.xml:41:9-40
+	android:name
+		ADDED from E:\Code\Android\MyApplication\objLoader\src\main\AndroidManifest.xml:38:9-37
+activity#com.mob.tools.MobUIShell
+ADDED from E:\Code\Android\MyApplication\objLoader\src\main\AndroidManifest.xml:45:9-49:70
+	android:windowSoftInputMode
+		ADDED from E:\Code\Android\MyApplication\objLoader\src\main\AndroidManifest.xml:49:13-67
+	android:configChanges
+		ADDED from E:\Code\Android\MyApplication\objLoader\src\main\AndroidManifest.xml:47:13-74
+	android:theme
+		ADDED from E:\Code\Android\MyApplication\objLoader\src\main\AndroidManifest.xml:48:13-72
+	android:name
+		ADDED from E:\Code\Android\MyApplication\objLoader\src\main\AndroidManifest.xml:46:13-52
+activity#com.example.objLoader.module.personInfo.ChangePwdActivity
+ADDED from E:\Code\Android\MyApplication\objLoader\src\main\AndroidManifest.xml:55:9-58:52
+	android:screenOrientation
+		ADDED from E:\Code\Android\MyApplication\objLoader\src\main\AndroidManifest.xml:58:13-49
+	android:configChanges
+		ADDED from E:\Code\Android\MyApplication\objLoader\src\main\AndroidManifest.xml:57:13-63
+	android:name
+		ADDED from E:\Code\Android\MyApplication\objLoader\src\main\AndroidManifest.xml:56:13-64
+activity#com.example.objLoader.module.ChangeUsernameActivity
+ADDED from E:\Code\Android\MyApplication\objLoader\src\main\AndroidManifest.xml:60:9-63:52
+	android:screenOrientation
+		ADDED from E:\Code\Android\MyApplication\objLoader\src\main\AndroidManifest.xml:63:13-49
+	android:configChanges
+		ADDED from E:\Code\Android\MyApplication\objLoader\src\main\AndroidManifest.xml:62:13-63
+	android:name
+		ADDED from E:\Code\Android\MyApplication\objLoader\src\main\AndroidManifest.xml:61:13-58
+activity#com.example.objLoader.module.login.LoginActivity
+ADDED from E:\Code\Android\MyApplication\objLoader\src\main\AndroidManifest.xml:65:9-68:52
+	android:screenOrientation
+		ADDED from E:\Code\Android\MyApplication\objLoader\src\main\AndroidManifest.xml:68:13-49
+	android:configChanges
+		ADDED from E:\Code\Android\MyApplication\objLoader\src\main\AndroidManifest.xml:67:13-63
+	android:name
+		ADDED from E:\Code\Android\MyApplication\objLoader\src\main\AndroidManifest.xml:66:13-55
+activity#com.example.objLoader.module.login.RegisterAndForgetActivity
+ADDED from E:\Code\Android\MyApplication\objLoader\src\main\AndroidManifest.xml:70:9-73:52
+	android:screenOrientation
+		ADDED from E:\Code\Android\MyApplication\objLoader\src\main\AndroidManifest.xml:73:13-49
+	android:configChanges
+		ADDED from E:\Code\Android\MyApplication\objLoader\src\main\AndroidManifest.xml:72:13-63
+	android:name
+		ADDED from E:\Code\Android\MyApplication\objLoader\src\main\AndroidManifest.xml:71:13-67
+activity#com.example.objLoader.module.personInfo.AccountInfoActivity
+ADDED from E:\Code\Android\MyApplication\objLoader\src\main\AndroidManifest.xml:88:9-91:52
+	android:screenOrientation
+		ADDED from E:\Code\Android\MyApplication\objLoader\src\main\AndroidManifest.xml:91:13-49
+	android:configChanges
+		ADDED from E:\Code\Android\MyApplication\objLoader\src\main\AndroidManifest.xml:90:13-63
+	android:name
+		ADDED from E:\Code\Android\MyApplication\objLoader\src\main\AndroidManifest.xml:89:13-66
+activity#com.example.objLoader.module.measure.FrontPicActivity
+ADDED from E:\Code\Android\MyApplication\objLoader\src\main\AndroidManifest.xml:93:9-96:52
+	android:screenOrientation
+		ADDED from E:\Code\Android\MyApplication\objLoader\src\main\AndroidManifest.xml:96:13-49
+	android:configChanges
+		ADDED from E:\Code\Android\MyApplication\objLoader\src\main\AndroidManifest.xml:95:13-63
+	android:name
+		ADDED from E:\Code\Android\MyApplication\objLoader\src\main\AndroidManifest.xml:94:13-60
+activity#com.example.objLoader.module.measure.SidePicActivity
+ADDED from E:\Code\Android\MyApplication\objLoader\src\main\AndroidManifest.xml:98:9-101:52
+	android:screenOrientation
+		ADDED from E:\Code\Android\MyApplication\objLoader\src\main\AndroidManifest.xml:101:13-49
+	android:configChanges
+		ADDED from E:\Code\Android\MyApplication\objLoader\src\main\AndroidManifest.xml:100:13-63
+	android:name
+		ADDED from E:\Code\Android\MyApplication\objLoader\src\main\AndroidManifest.xml:99:13-59
+activity#com.example.objLoader.module.measure.MeasureWeightAndHeightActivity
+ADDED from E:\Code\Android\MyApplication\objLoader\src\main\AndroidManifest.xml:103:9-107:57
+	android:screenOrientation
+		ADDED from E:\Code\Android\MyApplication\objLoader\src\main\AndroidManifest.xml:106:13-49
+	android:windowSoftInputMode
+		ADDED from E:\Code\Android\MyApplication\objLoader\src\main\AndroidManifest.xml:107:13-54
+	android:configChanges
+		ADDED from E:\Code\Android\MyApplication\objLoader\src\main\AndroidManifest.xml:105:13-63
+	android:name
+		ADDED from E:\Code\Android\MyApplication\objLoader\src\main\AndroidManifest.xml:104:13-74
+activity#com.example.objLoader.module.SplashActivity
+ADDED from E:\Code\Android\MyApplication\objLoader\src\main\AndroidManifest.xml:109:9-119:20
+	android:screenOrientation
+		ADDED from E:\Code\Android\MyApplication\objLoader\src\main\AndroidManifest.xml:112:13-49
+	android:configChanges
+		ADDED from E:\Code\Android\MyApplication\objLoader\src\main\AndroidManifest.xml:111:13-63
+	android:theme
+		ADDED from E:\Code\Android\MyApplication\objLoader\src\main\AndroidManifest.xml:113:13-63
+	android:name
+		ADDED from E:\Code\Android\MyApplication\objLoader\src\main\AndroidManifest.xml:110:13-50
+intent-filter#android.intent.action.MAIN+android.intent.category.LAUNCHER
+ADDED from E:\Code\Android\MyApplication\objLoader\src\main\AndroidManifest.xml:114:13-118:29
+action#android.intent.action.MAIN
+ADDED from E:\Code\Android\MyApplication\objLoader\src\main\AndroidManifest.xml:115:17-69
+	android:name
+		ADDED from E:\Code\Android\MyApplication\objLoader\src\main\AndroidManifest.xml:115:25-66
+category#android.intent.category.LAUNCHER
+ADDED from E:\Code\Android\MyApplication\objLoader\src\main\AndroidManifest.xml:117:17-77
+	android:name
+		ADDED from E:\Code\Android\MyApplication\objLoader\src\main\AndroidManifest.xml:117:27-74
+activity#com.example.objLoader.module.MainActivity
+ADDED from E:\Code\Android\MyApplication\objLoader\src\main\AndroidManifest.xml:120:9-122:66
+	android:theme
+		ADDED from E:\Code\Android\MyApplication\objLoader\src\main\AndroidManifest.xml:122:13-63
+	android:name
+		ADDED from E:\Code\Android\MyApplication\objLoader\src\main\AndroidManifest.xml:121:13-48
+activity#com.example.objLoader.module.DetailMeasureSizeActivity
+ADDED from E:\Code\Android\MyApplication\objLoader\src\main\AndroidManifest.xml:123:9-125:55
+	android:windowSoftInputMode
+		ADDED from E:\Code\Android\MyApplication\objLoader\src\main\AndroidManifest.xml:125:13-52
+	android:name
+		ADDED from E:\Code\Android\MyApplication\objLoader\src\main\AndroidManifest.xml:124:13-61
+activity#com.example.objLoader.module.MeasureRecordActivity
+ADDED from E:\Code\Android\MyApplication\objLoader\src\main\AndroidManifest.xml:126:9-66
+	android:name
+		ADDED from E:\Code\Android\MyApplication\objLoader\src\main\AndroidManifest.xml:126:19-63
+activity#com.example.objLoader.module.setting.SettingActivity
+ADDED from E:\Code\Android\MyApplication\objLoader\src\main\AndroidManifest.xml:127:9-67
+	android:name
+		ADDED from E:\Code\Android\MyApplication\objLoader\src\main\AndroidManifest.xml:127:19-65
+activity#com.example.objLoader.wxapi.WXEntryActivity
+ADDED from E:\Code\Android\MyApplication\objLoader\src\main\AndroidManifest.xml:128:9-132:74
+	android:screenOrientation
+		ADDED from E:\Code\Android\MyApplication\objLoader\src\main\AndroidManifest.xml:131:13-49
+	android:exported
+		ADDED from E:\Code\Android\MyApplication\objLoader\src\main\AndroidManifest.xml:130:13-36
+	android:configChanges
+		ADDED from E:\Code\Android\MyApplication\objLoader\src\main\AndroidManifest.xml:129:13-74
+	android:theme
+		ADDED from E:\Code\Android\MyApplication\objLoader\src\main\AndroidManifest.xml:132:13-72
+	android:name
+		ADDED from E:\Code\Android\MyApplication\objLoader\src\main\AndroidManifest.xml:128:19-56
+meta-data#android.support.VERSION
+ADDED from [com.android.support:design:25.3.1] C:\Users\yc\.android\build-cache\9bb9c0f4e18f768e3516e9c4152543666304976c\output\AndroidManifest.xml:25:5-27:34
+MERGED from [com.android.support:recyclerview-v7:25.3.1] C:\Users\yc\.android\build-cache\06c2f5f4352080a9567848fb20f81e5998d6fd8f\output\AndroidManifest.xml:22:5-24:34
+MERGED from [com.android.support:transition:25.3.1] C:\Users\yc\.android\build-cache\ca9c1ba974168447b8ba02ddc475b6c6960c47f0\output\AndroidManifest.xml:22:5-24:34
+MERGED from [com.android.support:appcompat-v7:25.3.1] C:\Users\yc\.android\build-cache\d0928f8ffb5d248f984d90ffe3601d0e67dd1423\output\AndroidManifest.xml:25:5-27:34
+MERGED from [com.android.support:support-v4:25.3.1] C:\Users\yc\.android\build-cache\f4cc810a5d1d0f67b511eaf90ca566300aeddc70\output\AndroidManifest.xml:25:5-27:34
+MERGED from [com.android.support:support-fragment:25.3.1] C:\Users\yc\.android\build-cache\8b43b5bb113515b65480c6490b82f6243b80034e\output\AndroidManifest.xml:25:5-27:34
+MERGED from [com.android.support:support-media-compat:25.3.1] C:\Users\yc\.android\build-cache\408d465a57b41a9a6e9d543347e1020e7546d11e\output\AndroidManifest.xml:25:5-27:34
+MERGED from [com.android.support:support-core-ui:25.3.1] C:\Users\yc\.android\build-cache\51250feb2a6e8a80f6d6f9a48e279a4625525eda\output\AndroidManifest.xml:25:5-27:34
+MERGED from [com.android.support:support-core-utils:25.3.1] C:\Users\yc\.android\build-cache\c61b0258c8ab4513f727c4cbfab29ae17d8d68cd\output\AndroidManifest.xml:25:5-27:34
+MERGED from [com.android.support:animated-vector-drawable:25.3.1] C:\Users\yc\.android\build-cache\dcef2eeadf7e8c04fbca84a43468cdadef03e88a\output\AndroidManifest.xml:22:5-24:34
+MERGED from [com.android.support:support-vector-drawable:25.3.1] C:\Users\yc\.android\build-cache\ed05c00a3b295e294c5ffed2c1461d31ebe63734\output\AndroidManifest.xml:22:5-24:34
+MERGED from [com.android.support:support-compat:25.3.1] C:\Users\yc\.android\build-cache\df968a0ab5a91fb038dff00e50d7d287ae3cf11c\output\AndroidManifest.xml:25:5-27:34
+	android:value
+		ADDED from [com.android.support:design:25.3.1] C:\Users\yc\.android\build-cache\9bb9c0f4e18f768e3516e9c4152543666304976c\output\AndroidManifest.xml:27:9-31
+	android:name
+		ADDED from [com.android.support:design:25.3.1] C:\Users\yc\.android\build-cache\9bb9c0f4e18f768e3516e9c4152543666304976c\output\AndroidManifest.xml:26:9-47
+service#com.squareup.leakcanary.internal.HeapAnalyzerService
+ADDED from [com.squareup.leakcanary:leakcanary-android:1.5.1] C:\Users\yc\.android\build-cache\24f64522b38ec1c47659b647328ec022bee813c2\output\AndroidManifest.xml:27:9-30:45
+	android:enabled
+		ADDED from [com.squareup.leakcanary:leakcanary-android:1.5.1] C:\Users\yc\.android\build-cache\24f64522b38ec1c47659b647328ec022bee813c2\output\AndroidManifest.xml:29:13-36
+	android:process
+		ADDED from [com.squareup.leakcanary:leakcanary-android:1.5.1] C:\Users\yc\.android\build-cache\24f64522b38ec1c47659b647328ec022bee813c2\output\AndroidManifest.xml:30:13-42
+	android:name
+		ADDED from [com.squareup.leakcanary:leakcanary-android:1.5.1] C:\Users\yc\.android\build-cache\24f64522b38ec1c47659b647328ec022bee813c2\output\AndroidManifest.xml:28:13-80
+service#com.squareup.leakcanary.DisplayLeakService
+ADDED from [com.squareup.leakcanary:leakcanary-android:1.5.1] C:\Users\yc\.android\build-cache\24f64522b38ec1c47659b647328ec022bee813c2\output\AndroidManifest.xml:31:9-33:39
+	android:enabled
+		ADDED from [com.squareup.leakcanary:leakcanary-android:1.5.1] C:\Users\yc\.android\build-cache\24f64522b38ec1c47659b647328ec022bee813c2\output\AndroidManifest.xml:33:13-36
+	android:name
+		ADDED from [com.squareup.leakcanary:leakcanary-android:1.5.1] C:\Users\yc\.android\build-cache\24f64522b38ec1c47659b647328ec022bee813c2\output\AndroidManifest.xml:32:13-70
+activity#com.squareup.leakcanary.internal.DisplayLeakActivity
+ADDED from [com.squareup.leakcanary:leakcanary-android:1.5.1] C:\Users\yc\.android\build-cache\24f64522b38ec1c47659b647328ec022bee813c2\output\AndroidManifest.xml:35:9-47:20
+	android:enabled
+		ADDED from [com.squareup.leakcanary:leakcanary-android:1.5.1] C:\Users\yc\.android\build-cache\24f64522b38ec1c47659b647328ec022bee813c2\output\AndroidManifest.xml:37:13-36
+	android:label
+		ADDED from [com.squareup.leakcanary:leakcanary-android:1.5.1] C:\Users\yc\.android\build-cache\24f64522b38ec1c47659b647328ec022bee813c2\output\AndroidManifest.xml:39:13-71
+	android:icon
+		ADDED from [com.squareup.leakcanary:leakcanary-android:1.5.1] C:\Users\yc\.android\build-cache\24f64522b38ec1c47659b647328ec022bee813c2\output\AndroidManifest.xml:38:13-54
+	android:theme
+		ADDED from [com.squareup.leakcanary:leakcanary-android:1.5.1] C:\Users\yc\.android\build-cache\24f64522b38ec1c47659b647328ec022bee813c2\output\AndroidManifest.xml:41:13-63
+	android:taskAffinity
+		ADDED from [com.squareup.leakcanary:leakcanary-android:1.5.1] C:\Users\yc\.android\build-cache\24f64522b38ec1c47659b647328ec022bee813c2\output\AndroidManifest.xml:40:13-76
+	android:name
+		ADDED from [com.squareup.leakcanary:leakcanary-android:1.5.1] C:\Users\yc\.android\build-cache\24f64522b38ec1c47659b647328ec022bee813c2\output\AndroidManifest.xml:36:13-80
+activity#com.squareup.leakcanary.internal.RequestStoragePermissionActivity
+ADDED from [com.squareup.leakcanary:leakcanary-android:1.5.1] C:\Users\yc\.android\build-cache\24f64522b38ec1c47659b647328ec022bee813c2\output\AndroidManifest.xml:48:9-54:68
+	android:enabled
+		ADDED from [com.squareup.leakcanary:leakcanary-android:1.5.1] C:\Users\yc\.android\build-cache\24f64522b38ec1c47659b647328ec022bee813c2\output\AndroidManifest.xml:50:13-36
+	android:label
+		ADDED from [com.squareup.leakcanary:leakcanary-android:1.5.1] C:\Users\yc\.android\build-cache\24f64522b38ec1c47659b647328ec022bee813c2\output\AndroidManifest.xml:52:13-82
+	android:icon
+		ADDED from [com.squareup.leakcanary:leakcanary-android:1.5.1] C:\Users\yc\.android\build-cache\24f64522b38ec1c47659b647328ec022bee813c2\output\AndroidManifest.xml:51:13-54
+	android:theme
+		ADDED from [com.squareup.leakcanary:leakcanary-android:1.5.1] C:\Users\yc\.android\build-cache\24f64522b38ec1c47659b647328ec022bee813c2\output\AndroidManifest.xml:54:13-65
+	android:taskAffinity
+		ADDED from [com.squareup.leakcanary:leakcanary-android:1.5.1] C:\Users\yc\.android\build-cache\24f64522b38ec1c47659b647328ec022bee813c2\output\AndroidManifest.xml:53:13-76
+	android:name
+		ADDED from [com.squareup.leakcanary:leakcanary-android:1.5.1] C:\Users\yc\.android\build-cache\24f64522b38ec1c47659b647328ec022bee813c2\output\AndroidManifest.xml:49:13-93

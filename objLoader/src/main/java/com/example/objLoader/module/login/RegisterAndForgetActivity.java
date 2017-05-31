@@ -7,15 +7,16 @@ import android.widget.TextView;
 
 import com.example.objLoader.R;
 import com.example.objLoader.base.BaseActivity;
+import com.example.objLoader.base.BasePresenter;
 import com.example.objLoader.istatic.IConstant;
-import com.example.objLoader.module.login.imple.RegistForgetView;
+import com.example.objLoader.module.login.imple.IRegistForgetView;
 import com.example.objLoader.module.login.presenter.LoginPresent;
 import com.example.objLoader.module.login.presenter.RegistForgetPresent;
 
 import butterknife.Bind;
 import butterknife.OnClick;
 
-public class RegisterAndForgetActivity extends BaseActivity implements RegistForgetView {
+public class RegisterAndForgetActivity extends BaseActivity implements IRegistForgetView {
 
 	@Bind(R.id.et_mobile)
 	EditText et_mobile;
@@ -49,8 +50,13 @@ public class RegisterAndForgetActivity extends BaseActivity implements RegistFor
 		isForgetpsw = getIntent().getBooleanExtra(IConstant.REGISTER_OR_FORGET, false);
 		tvTitle.setText(isForgetpsw?R.string.forget_pwd_find_pwd : R.string.register_title);
 		tvRegister.setText(isForgetpsw?R.string.submit:R.string.ok);
+	}
 
-		registForgetPresent = new RegistForgetPresent(this);
+	@Override
+	protected BasePresenter initPresenter() {
+		registForgetPresent = new RegistForgetPresent();
+		registForgetPresent.attachView(this);
+		return registForgetPresent;
 	}
 
 	@Override

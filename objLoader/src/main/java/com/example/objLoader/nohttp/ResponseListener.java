@@ -1,15 +1,14 @@
 package com.example.objLoader.nohttp;
 
+import android.app.Activity;
 import android.content.Context;
-import android.content.DialogInterface;
 import android.text.TextUtils;
 
 import com.example.objLoader.R;
 import com.example.objLoader.bean.BaseRequestBean;
 import com.example.objLoader.utils.GsonTools;
 import com.example.objLoader.utils.ToastUtils;
-import com.example.objLoader.wedgit.WaitDialog;
-import com.google.gson.Gson;
+import com.example.objLoader.wedgit.LoadingDialog;
 import com.google.gson.JsonSyntaxException;
 import com.yolanda.nohttp.Logger;
 import com.yolanda.nohttp.error.NetworkError;
@@ -29,12 +28,12 @@ public class ResponseListener<T> implements OnResponseListener<T> {
 
     private Request<T> mRequest;
 
-    private WaitDialog mDialog;
     private Context context;
     private HttpCallBack<T> callBack;
 	private BaseRequestBean bean;
 
     private Class<?> classBean;
+    private LoadingDialog builder;
 
     public ResponseListener(Request<T> request, Context context,
                             HttpCallBack<T> callBack, boolean isShowDialog,
@@ -43,12 +42,21 @@ public class ResponseListener<T> implements OnResponseListener<T> {
         this.context = context;
         this.callBack = callBack;
         this.classBean = classBean;
-        if (context != null && isShowDialog) {
-            mDialog = new WaitDialog(context);
+        if (context != null && context instanceof Activity && isShowDialog) {
+          /*  mDialog = new WaitDialog(context);
             mDialog.setCancelable(isCanCancel);
             mDialog.setOnCancelListener(new DialogInterface.OnCancelListener() {
                 @Override
                 public void onCancel(DialogInterface dialog) {
+                    mRequest.cancel();
+                }
+            });*/
+
+            builder = new LoadingDialog(context).builder();
+            builder.setCancelable(isCanCancel);
+            builder.setOnCancelListener(new LoadingDialog.OnCancelListener() {
+                @Override
+                public void onCancel() {
                     mRequest.cancel();
                 }
             });
@@ -61,15 +69,23 @@ public class ResponseListener<T> implements OnResponseListener<T> {
         this.mRequest = request;
         this.context = context;
         this.callBack = callBack;
-        if (context != null && isShowDialog) {
-            mDialog = new WaitDialog(context);
+        if (context != null && context instanceof Activity &&  isShowDialog) {
+            builder = new LoadingDialog(context).builder();
+            builder.setCancelable(isCanCancel);
+            builder.setOnCancelListener(new LoadingDialog.OnCancelListener() {
+                @Override
+                public void onCancel() {
+                    mRequest.cancel();
+                }
+            });
+         /*   mDialog = new WaitDialog(context);
             mDialog.setCancelable(isCanCancel);
             mDialog.setOnCancelListener(new DialogInterface.OnCancelListener() {
                 @Override
                 public void onCancel(DialogInterface dialog) {
                     mRequest.cancel();
                 }
-            });
+            });*/
         }
     }
 
@@ -77,8 +93,11 @@ public class ResponseListener<T> implements OnResponseListener<T> {
     @Override
     public void onStart(int what) {
 
-        if (mDialog != null && !mDialog.isShowing())
-            mDialog.show();
+     /*   if (mDialog != null && !mDialog.isShowing())
+            mDialog.show();*/
+         if(builder != null && builder.isShowing()){
+             builder.show();
+         }
     }
 
     @Override
@@ -139,8 +158,9 @@ public class ResponseListener<T> implements OnResponseListener<T> {
 
     @Override
     public void onFinish(int what) {
-        if (mDialog != null && mDialog.isShowing())
-            mDialog.dismiss();
+       /* if (mDialog != null && mDialog.isShowing())
+            mDialog.dismiss();*/
+       if(builder != null && builder.isShowing())
+           builder.dismiss();
     }
-
 }

@@ -4,15 +4,15 @@ import android.content.Intent;
 import android.widget.EditText;
 import android.widget.ImageView;
 
-import com.example.objLoader.bean.BaseRequestBean;
 import com.example.objLoader.base.BaseActivity;
 import com.example.objLoader.base.BaseApp;
+import com.example.objLoader.base.BasePresenter;
+import com.example.objLoader.bean.BaseRequestBean;
 import com.example.objLoader.istatic.IConstant;
 import com.example.objLoader.module.login.LoginActivity;
-import com.example.objLoader.module.login.imple.LoginView;
-import com.example.objLoader.module.login.imple.OnLoginListener;
+import com.example.objLoader.module.login.imple.ILoginView;
 import com.example.objLoader.module.login.imple.LoginModelImple;
-import com.example.objLoader.utils.Logger;
+import com.example.objLoader.module.login.imple.OnLoginListener;
 import com.example.objLoader.utils.SPUtils;
 import com.example.objLoader.utils.ToastUtils;
 
@@ -20,15 +20,13 @@ import com.example.objLoader.utils.ToastUtils;
  * Created by yc on 2017/5/22.
  */
 
-public class LoginPresent<T extends BaseActivity> implements OnLoginListener{
+public class LoginPresent<T extends BaseActivity> extends BasePresenter<ILoginView> implements OnLoginListener{
 
     private T activity;
-    private LoginView loginView;
     private LoginModelImple loginModelImple;
 
-    public LoginPresent(T activity,LoginView loginView){
+    public LoginPresent(T activity){
         this.activity = activity;
-        this.loginView = loginView;
         loginModelImple = new LoginModelImple();
     }
 
@@ -37,11 +35,12 @@ public class LoginPresent<T extends BaseActivity> implements OnLoginListener{
     }
 
     public void login() {
-        loginModelImple.login(loginView.getPhoneNum(),loginView.getPwd(),this);
+        loginModelImple.login(mBaseView.getPhoneNum(),mBaseView.getPwd(),this);
     }
 
     public void changeEdittextPwdStatus(EditText etPassword, ImageView ivEyePwd) {
         loginModelImple.changeEdittextPwdStatus(etPassword,ivEyePwd);
+        
     }
 
     @Override
@@ -49,10 +48,10 @@ public class LoginPresent<T extends BaseActivity> implements OnLoginListener{
 //        SPUtils.getInstance(BaseApp.getContext()).putString(IConstant.MOBILE, phoneNum);
         SPUtils.getInstance().putBoolean(IConstant.IS_LOGIN, true);
         ToastUtils.show(bean.info);
-        if(loginView.isCheckLogin()){
-            loginView.moveToAccountInfoActivity();
+        if(mBaseView.isCheckLogin()){
+            mBaseView.moveToAccountInfoActivity();
         }
-        loginView.finishActivity();
+        mBaseView.finishActivity();
     }
 
     @Override

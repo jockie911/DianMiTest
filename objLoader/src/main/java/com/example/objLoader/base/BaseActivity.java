@@ -22,6 +22,7 @@ import android.view.WindowManager;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.TextView;
 
+import com.bumptech.glide.Glide;
 import com.example.objLoader.R;
 import com.example.objLoader.istatic.IConstant;
 import com.example.objLoader.nohttp.CallServer;
@@ -35,25 +36,22 @@ import butterknife.ButterKnife;
 
 public abstract class BaseActivity extends AppCompatActivity implements OnClickListener{
 
-	//手指按下的点为(x1, y1)手指离开屏幕的点为(x2, y2)
-	protected float x1 = 0;
-	protected float x2 = 0;
-	protected float y1 = 0;
-	protected float y2 = 0;
 	protected View rootView;
 	protected TextView tvRightTitle;
 	protected TextView tvTitle;
+	private BasePresenter presenter;
 
 	@SuppressLint("NewApi") @Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-//		requestWindowFeature(Window.FEA);
 		setStatusBar();
 		setPhoneOrientation();
 		rootView = LayoutInflater.from(this).inflate(getLayoutRes(), null);
 		setContentView(rootView);
 		initBaseTitleBar();
 		ButterKnife.bind(this);
+
+		presenter = initPresenter();
 		initData();
 
 		AbActivityManager.getInstance().addActivity(this);
@@ -142,6 +140,9 @@ public abstract class BaseActivity extends AppCompatActivity implements OnClickL
 			imm.hideSoftInputFromWindow(getWindow().getDecorView().getWindowToken(), 0);
 //		SoftInputUtils.closeSoftInput(this);
         CallServer.getInstance().cancelAll();
+		if (presenter != null) {
+			presenter.detachView();
+		}
 		super.onDestroy();
 	}
 
@@ -198,6 +199,23 @@ public abstract class BaseActivity extends AppCompatActivity implements OnClickL
 		long timeInMillis = Calendar.getInstance().getTimeInMillis();
 		v.setTag(v.getId(),timeInMillis);
 	    return timeInMillis - beforeTimemiles < IConstant.NO_DOUBLE_CLICK_TIME;
+	}
+
+
+	@Override
+	protected void onStart() {
+		Glide.with(this).resumeRequestsRecursive();
+		super.onStart();
+	}
+
+	@Override
+	protected void onPause() {
+		Glide.with(this).pauseRequestsRecursive();
+		super.onPause();
+	}
+
+	protected BasePresenter initPresenter() {
+		return null;
 	}
 
 	protected void requestPermissions(boolean ...onlyRequestCamera){

@@ -43,4 +43,14 @@
         <attr name="focus_success_id" format="integer" />
         <attr name="focus_fail_id" format="integer" />
     </declare-styleable>
+
+    <declare-styleable name="AVLoadingIndicatorView">
+        <attr name="minWidth" format="dimension" />
+        <attr name="maxWidth" format="dimension"/>
+        <attr name="minHeight" format="dimension" />
+        <attr name="maxHeight" format="dimension"/>
+        <attr name="indicatorColor" format="color"/>
+        <attr name="AVLoadingIndicatorView_indicator" format="integer"/>
+        <attr name="indicator" format="string"/>
+    </declare-styleable>
 </resources>

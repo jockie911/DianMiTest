@@ -60,8 +60,7 @@ public class FileUtil {
     }
 
     public static String getAppFoler() {
-        return Environment.getExternalStorageDirectory()
-                + "/" + FOLDER;
+        return Environment.getExternalStorageDirectory() + "/" + FOLDER;
     }
 
     /**

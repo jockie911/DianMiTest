@@ -3,7 +3,7 @@ package com.example.objLoader.module.personInfo.presenter;
 import android.text.TextUtils;
 
 import com.example.objLoader.R;
-import com.example.objLoader.base.BaseApp;
+import com.example.objLoader.base.BasePresenter;
 import com.example.objLoader.bean.BaseRequestBean;
 import com.example.objLoader.istatic.Constants;
 import com.example.objLoader.istatic.IConstant;
@@ -20,17 +20,11 @@ import rx.schedulers.Schedulers;
  * Created by yc on 2017/5/25.
  */
 
-public class ChangePwdPresenter {
-
-    private ChangePwdView changePwdView;
-
-    public ChangePwdPresenter(ChangePwdView changePwdView) {
-        this.changePwdView = changePwdView;
-    }
+public class ChangePwdPresenter extends BasePresenter<ChangePwdView>{
 
     public void changechangePwd() {
-        String oldPwd = changePwdView.getOldPwd();
-        String newPwd = changePwdView.getNewPwd();
+        String oldPwd = mBaseView.getOldPwd();
+        String newPwd = mBaseView.getNewPwd();
         if(oldPwd.length() < 5 || newPwd.length() < 5){
             ToastUtils.show(R.string.pwd_lenght);
             return;
@@ -44,9 +38,9 @@ public class ChangePwdPresenter {
             @Override
             public void call(BaseRequestBean baseRequestBean) {
                 if(TextUtils.equals("0",baseRequestBean.iserror)){
-                    changePwdView.onChangePwsSuccess();
+                    mBaseView.onChangePwsSuccess();
                 }else{
-                    changePwdView.onChangePwdError(baseRequestBean.info);
+                    mBaseView.onChangePwdError(baseRequestBean.info);
                 }
             }
         });

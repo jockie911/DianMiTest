@@ -33,6 +33,7 @@ import com.example.objLoader.utils.FileUtil;
 import com.example.objLoader.utils.Logger;
 import com.example.objLoader.utils.SPUtils;
 import com.example.objLoader.utils.StringUtils;
+import com.example.objLoader.wedgit.LoadingDialog;
 
 import org.greenrobot.eventbus.EventBus;
 
@@ -159,7 +160,7 @@ public class SquareCameraContainer<T extends BaseActivity> extends FrameLayout i
             mSoundPool = new SoundPool(5, AudioManager.STREAM_MUSIC, 0);
             mFocusSoundId = mSoundPool.load(mContext,R.raw.camera_focus,1);
             mFocusSoundPrepared = false;
-            mSoundPool.setOnLoadCompleteListener(new SoundPool.OnLoadCompleteListener() {
+                    mSoundPool.setOnLoadCompleteListener(new SoundPool.OnLoadCompleteListener() {
                 @Override
                 public void onLoadComplete(SoundPool soundPool, int sampleId, int status) {
                     mFocusSoundPrepared = true;
@@ -190,12 +191,7 @@ public class SquareCameraContainer<T extends BaseActivity> extends FrameLayout i
     @Override
     protected void onMeasure
             (int widthMeasureSpec, int heightMeasureSpec) {
-        //TODO jiang
         super.onMeasure(widthMeasureSpec, heightMeasureSpec);
-//        int len = BaseApp.mScreenWidth;
-//
-//        //保证View是正方形
-//        setMeasuredDimension(len, len);
     }
 
     /**
@@ -397,10 +393,12 @@ public class SquareCameraContainer<T extends BaseActivity> extends FrameLayout i
         }
     };
 
+    private LoadingDialog loadingDialog;
     /**
      * 拍照成功后的回掉
      */
     private final Camera.PictureCallback pictureCallback = new Camera.PictureCallback() {
+
         @Override
         public void onPictureTaken(final byte[] data, Camera camera) {
             //TODO jiang  --> take photo success ,judge the photo is requied
@@ -409,6 +407,10 @@ public class SquareCameraContainer<T extends BaseActivity> extends FrameLayout i
             }else{
 
             }
+            loadingDialog = new LoadingDialog(mActivity).builder();
+            loadingDialog.setCancelable(false)
+                    .setMsg(getResources().getString(R.string.loading))
+                    .show();
             new SavePicTask(data, mCameraView.isBackCamera()).start();
         }
     };
@@ -454,7 +456,8 @@ public class SquareCameraContainer<T extends BaseActivity> extends FrameLayout i
         if (mCameraView != null) {
             mCameraView.onStart();
         }
-        mSoundPool = getSoundPool();
+//        mSoundPool = getSoundPool();  开启音效
+        mSoundPool = null;
     }
 
     @Override
@@ -467,6 +470,7 @@ public class SquareCameraContainer<T extends BaseActivity> extends FrameLayout i
         if(mSoundPool != null)
             mSoundPool.release();
         mSoundPool = null;
+        recycleBitmap();
     }
 
     public void setMaskOn() {
@@ -565,10 +569,11 @@ public class SquareCameraContainer<T extends BaseActivity> extends FrameLayout i
         intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
         getContext().sendBroadcast(intent);
 
+        dismiss();
         SPUtils.getInstance().putString(isFrontTakePhoto?IConstant.FRONT_PIC_PATH : IConstant.SIDE_PIC_PATH,mImagePath);
         EventBus.getDefault().post(new PicPathEvent(isFrontTakePhoto));
-//        if(targetBitmap != null)
-//        targetBitmap.recycle();
+
+//        recycleBitmap();
     }
 
     long lastTime;
@@ -719,10 +724,10 @@ public class SquareCameraContainer<T extends BaseActivity> extends FrameLayout i
             if (result) {
                 fileScan(mImagePath);
 //                releaseCamera();    //不要在这个地方释放相机资源   这里是浪费时间的最大元凶  约1500ms左右
-                if(targetBitmap != null){
+//                if(targetBitmap != null){
 //                    targetBitmap.recycle();
-                    targetBitmap = null;
-                }
+//                    targetBitmap = null;
+//                }
 //                mActivity.postTakePhoto();
                 Log.i(TAG, "TASK:" + (System.currentTimeMillis() - lastTime) + "  /mImagePath :" + mImagePath);
             } else {
@@ -730,8 +735,24 @@ public class SquareCameraContainer<T extends BaseActivity> extends FrameLayout i
                 Toast.makeText(mContext, R.string.topic_camera_takephoto_failure, Toast.LENGTH_SHORT).show();
                 //TODO jiang
 //                mActivity.rest();
+                dismiss();
                 mCameraView.startPreview();
             }
         }
     };
+
+    /**
+     * 回收bitmap
+     */
+    public void recycleBitmap(){
+        if(targetBitmap != null && !targetBitmap.isRecycled()){
+            targetBitmap.recycle();
+            targetBitmap = null;
+        }
+    }
+
+    private void dismiss(){
+        if(loadingDialog != null)
+            loadingDialog.dismiss();
+    }
 }

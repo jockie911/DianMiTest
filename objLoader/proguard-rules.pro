@@ -147,3 +147,7 @@ public static final android.os.Parcelable$Creator *;
 -keepattributes Signature
 # Retain declared checked exceptions for use by a Proxy instance.
 -keepattributes Exceptions
+
+#------------------ AVLoadingIndicatorView  -------------------
+-keep class com.wang.avi.** { *; }
+-keep class com.wang.avi.indicators.** { *; }

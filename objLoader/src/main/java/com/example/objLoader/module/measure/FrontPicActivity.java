@@ -3,7 +3,6 @@ package com.example.objLoader.module.measure;
 
 import android.content.Intent;
 import android.graphics.Bitmap;
-import android.util.SparseArray;
 import android.view.View;
 import android.widget.ImageView;
 
@@ -11,9 +10,9 @@ import com.bumptech.glide.Glide;
 import com.example.objLoader.R;
 import com.example.objLoader.base.BaseActivity;
 import com.example.objLoader.base.BaseApp;
+import com.example.objLoader.base.BasePresenter;
 import com.example.objLoader.bean.event.PicPathEvent;
 import com.example.objLoader.istatic.IConstant;
-import com.example.objLoader.module.login.presenter.LoginPresent;
 import com.example.objLoader.module.measure.present.FrontSidePresenter;
 import com.example.objLoader.utils.SPUtils;
 
@@ -24,7 +23,7 @@ import org.greenrobot.eventbus.ThreadMode;
 import butterknife.Bind;
 import butterknife.OnClick;
 
-public class FrontPicActivity extends BaseActivity implements FrontSideView{
+public class FrontPicActivity extends BaseActivity implements IFrontSideView {
 
 	@Bind(R.id.iv_target)
 	protected ImageView ivTarget;
@@ -52,8 +51,14 @@ public class FrontPicActivity extends BaseActivity implements FrontSideView{
 		tvTitle.setText(R.string.front_Pic);
 		GENDER = getIntent().getIntExtra(IConstant.GENDER, 0);
 
-		frontSidePresenter = new FrontSidePresenter(this,this);
 		frontSidePresenter.initBmpShow(ivTarget);
+	}
+
+	@Override
+	protected BasePresenter initPresenter() {
+		frontSidePresenter = new FrontSidePresenter(this);
+		frontSidePresenter.attachView(this);
+		return frontSidePresenter;
 	}
 
 	@Override

@@ -1,0 +1,10 @@
+[
+    {
+        "merged": "E:\\Code\\Android\\MyApplication\\objLoader\\build\\intermediates\\res\\merged\\GP\\debug\\drawable-xxxhdpi\\icon_point_pre.png",
+        "source": "E:\\Code\\Android\\MyApplication\\objLoader\\src\\main\\res\\drawable-xxxhdpi\\icon_point_pre.png"
+    },
+    {
+        "merged": "E:\\Code\\Android\\MyApplication\\objLoader\\build\\intermediates\\res\\merged\\GP\\debug\\drawable-xxxhdpi\\icon_point.png",
+        "source": "E:\\Code\\Android\\MyApplication\\objLoader\\src\\main\\res\\drawable-xxxhdpi\\icon_point.png"
+    }
+]
