@@ -1,4 +1,0 @@
-#Wed May 31 14:38:45 CST 2017
-base.0=E\:\\Code\\Android\\MyApplication\\objLoader\\build\\intermediates\\transforms\\dex\\GP\\debug\\folders\\1000\\5\\slice_2
-renamed.0=classes.dex
-file.0=E\:\\Code\\Android\\MyApplication\\objLoader\\build\\intermediates\\transforms\\dex\\GP\\debug\\folders\\1000\\5\\slice_2\\classes.dex

@@ -1,7 +1,0 @@
-#Wed May 31 14:38:45 CST 2017
-base.0=E\:\\Code\\Android\\MyApplication\\objLoader\\build\\intermediates\\transforms\\dex\\GP\\debug\\folders\\1000\\10000\\instant-run-bootstrap_71898a6cc70321dde3c7908ee81fc730737ac90f
-renamed.1=classes2.dex
-renamed.0=classes.dex
-file.1=E\:\\Code\\Android\\MyApplication\\objLoader\\build\\intermediates\\transforms\\dex\\GP\\debug\\folders\\1000\\10000\\instant-run_141104961f767f99f4bd3adac256e48a7b5c6def\\classes.dex
-base.1=E\:\\Code\\Android\\MyApplication\\objLoader\\build\\intermediates\\transforms\\dex\\GP\\debug\\folders\\1000\\10000\\instant-run_141104961f767f99f4bd3adac256e48a7b5c6def
-file.0=E\:\\Code\\Android\\MyApplication\\objLoader\\build\\intermediates\\transforms\\dex\\GP\\debug\\folders\\1000\\10000\\instant-run-bootstrap_71898a6cc70321dde3c7908ee81fc730737ac90f\\classes.dex

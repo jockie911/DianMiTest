@@ -20,9 +20,10 @@ import com.tencent.mm.opensdk.openapi.WXAPIFactory;
 
 import org.greenrobot.eventbus.EventBus;
 
-import rx.Subscriber;
+import rx.Observable;
 import rx.android.schedulers.AndroidSchedulers;
 import rx.functions.Action1;
+import rx.functions.Func1;
 import rx.schedulers.Schedulers;
 
 
@@ -48,8 +49,8 @@ public class WXEntryActivity extends Activity implements IWXAPIEventHandler {
             case BaseResp.ErrCode.ERR_OK:
                 if(TextUtils.equals(IConstant.WX_REQ_STATE,((SendAuth.Resp) baseResp).state)){
                     String code = ((SendAuth.Resp) baseResp).code;
-                    ToastUtils.show(code);
                     getOpenID(code);
+//                    textLogin(code);
                 }
                 break;
             case BaseResp.ErrCode.ERR_AUTH_DENIED :
@@ -111,5 +112,44 @@ public class WXEntryActivity extends Activity implements IWXAPIEventHandler {
                 finish();
             }
         });
+    }
+
+
+    private void textLogin(String code){
+        String urlStr = "https://api.weixin.qq.com/sns/oauth2/access_token?appid="+Constants.WX_ID+"&secret="+Constants.WX_SECRET+
+                "&code="+code+"&grant_type=authorization_code";
+        RestClient.instance().wxLogin(urlStr)
+                .subscribeOn(Schedulers.io())
+                .observeOn(AndroidSchedulers.mainThread())
+                .flatMap(new Func1<Temp, Observable<Temp>>() {
+                        @Override
+                        public Observable<Temp> call(Temp temp) {
+                            return RestClient.instance().wxUserInfo("https://api.weixin.qq.com/sns/userinfo",temp.getAccess_token(),temp.getOpenid());
+                        }
+                }).flatMap(new Func1<WXUserInfoBean,Observable<WXUserInfoBean>>() {
+                        @Override
+                        public Observable<WXUserInfoBean> call(WXUserInfoBean wxUserInfoBean) {
+                            return RestClient.instance().checkWXLogin(Constants.WX_LOGIN,
+                                    wxUserInfoBean.getUnionid(),
+                                    wxUserInfoBean.getNickname(),
+                                    wxUserInfoBean.getHeadimgurl(),
+                                    wxUserInfoBean.getSex(),
+                                    1,
+                                    "18297508272");
+                        }
+                    })
+                .observeOn(AndroidSchedulers.mainThread())
+                .subscribe(new Action1<WXUserInfoBean>() {
+                    @Override
+                    public void call(WXUserInfoBean wxUserInfoBean) {
+                        if(wxUserInfoBean != null && TextUtils.equals("0",wxUserInfoBean.getIserror())){
+                            EventBus.getDefault().post(new WxLoginSuccessEvent());
+                        }else{
+                            ToastUtils.show("error");
+                        }
+                        finish();
+                    }
+                });
+
     }
 }

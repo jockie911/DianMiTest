@@ -181,8 +181,8 @@
     <string name="product_more_detail">more details</string>
     <string name="product_ingredients">View component analysis</string>
     <string name="product_count_in_meila">%sIncluded in the article, the largest makeup information library</string>
-    <string name="error_pic_model">照片格式错误</string>
-    <string name="choose_right_front_pic">请根据模板提示选择正确的正面照.</string>
-    <string name="choose_right_side_pic">请根据模板提示选择正确的侧面照</string>
+    <string name="error_pic_model">Photo format error</string>
+    <string name="choose_right_front_pic">Please select the correct front view from the template prompt</string>
+    <string name="choose_right_side_pic">Please select the correct profile according to the template prompt</string>
     <string name="loading">Loading</string>
 </resources>

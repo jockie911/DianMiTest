@@ -14,6 +14,8 @@ import com.example.objLoader.R;
 import com.example.objLoader.utils.DensityUtil;
 import com.wang.avi.AVLoadingIndicatorView;
 
+import rx.Observable;
+
 /**
  * Created by yc on 2017/5/31.
  */
@@ -32,6 +34,7 @@ public class LoadingDialog {
         WindowManager windowManager = (WindowManager) context
                 .getSystemService(Context.WINDOW_SERVICE);
         display = windowManager.getDefaultDisplay();
+
     }
 
     public LoadingDialog builder(){
@@ -61,7 +64,7 @@ public class LoadingDialog {
     }
 
     private void setLayout() {
-
+        
     }
 
     public LoadingDialog setMsg(String msg){

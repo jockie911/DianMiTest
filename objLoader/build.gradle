@@ -25,34 +25,34 @@ android {
         }
     }
 
-    productFlavors {
-        GP {
-
-        }
-
-        productFlavors.all { flavor ->
-            flavor.manifestPlaceholders = [UMENG_CHANNEL_VALUE: name]
-        }
-    }
-
-    applicationVariants.all { variant ->
-        variant.outputs.each { output ->
-            def outputFile = output.outputFile
-            if (variant.buildType.name.equals('release')) {
-                //生成apk名字的格式：Channel1.0.0_2016-06-22_baidu.apk
-                //可自定义自己想要生成的格式
-                def fileName = "ScoreInn_${defaultConfig.versionName}_${releaseTime()}_${variant.productFlavors[0].name}.apk"
-                output.outputFile = new File(outputFile.parent, fileName)
-            }
-        }
-    }
+//    productFlavors {
+//        GP {
+//
+//        }
+//
+//        productFlavors.all { flavor ->
+//            flavor.manifestPlaceholders = [UMENG_CHANNEL_VALUE: name]
+//        }
+//    }
+//
+//    applicationVariants.all { variant ->
+//        variant.outputs.each { output ->
+//            def outputFile = output.outputFile
+//            if (variant.buildType.name.equals('release')) {
+//                //生成apk名字的格式：Channel1.0.0_2016-06-22_baidu.apk
+//                //可自定义自己想要生成的格式
+//                def fileName = "ScoreInn_${defaultConfig.versionName}_${releaseTime()}_${variant.productFlavors[0].name}.apk"
+//                output.outputFile = new File(outputFile.parent, fileName)
+//            }
+//        }
+//    }
 }
 
 dependencies {
     compile project(':sMSSDK')
 //    compile 'com.android.support:support-v4:20.+'
     compile files('libs/glide-3.7.0.jar')
-    compile files('libs/nineoldandroids-2.4.0.jar')
+//    compile files('libs/nineoldandroids-2.4.0.jar')
     compile files('libs/nohttp1.0.4-include-source.jar')
     compile files('libs/tencentX5WebView.jar')
 
