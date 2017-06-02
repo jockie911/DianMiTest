@@ -49,10 +49,17 @@ public interface Api<T> {
                                               @Field(IConstant.STRING) String md5);
 
 
+//    @GET()
+//    Observable<BaseHttpBean<T>> get(@Url String url, @QueryMap Map<String, String> params/*, @Header("Cache-Time") String time*/);
+//
+//    @FormUrlEncoded
+//    @POST()
+//    Observable<BaseHttpBean<T>> post(@Url String url, @FieldMap Map<String, String> params/*, @Header("Cache-Time") String time*/);
+
     @GET()
-    Observable<BaseHttpBean<T>> get(@Url String url, @QueryMap Map<String, String> params/*, @Header("Cache-Time") String time*/);
+    Observable<BaseRequestBean> get(@Url String url, @QueryMap Map<String, String> params);
 
     @FormUrlEncoded
     @POST()
-    Observable<BaseHttpBean<T>> post(@Url String url, @FieldMap Map<String, String> params/*, @Header("Cache-Time") String time*/);
+    Observable<BaseRequestBean> post(@Url String url, @FieldMap Map<String, String> params);
 }

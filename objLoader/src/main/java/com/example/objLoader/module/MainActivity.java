@@ -59,7 +59,7 @@ import butterknife.OnClick;
  *                   不见满街漂亮妹，哪个归得程序员？
  */
 
-public class MainActivity extends BaseActivity {
+public class MainActivity extends BaseActivity implements DiscreteScrollView.ScrollStateChangeListener<RecyclerView.ViewHolder> {
 
     @Bind(R.id.rel_person_center)
     RelativeLayout rel_person_center;
@@ -96,23 +96,7 @@ public class MainActivity extends BaseActivity {
         discreteScrollView.setItemTransformer(new ScaleTransformer.Builder()
                 .setMinScale(0.7f)
                 .build());
-
-        discreteScrollView.setScrollStateChangeListener(new DiscreteScrollView.ScrollStateChangeListener<RecyclerView.ViewHolder>() {
-            @Override
-            public void onScrollStart(@NonNull RecyclerView.ViewHolder currentItemHolder, int adapterPosition) {
-                setButtonStartBgInvalid(false);
-            }
-
-            @Override
-            public void onScrollEnd(@NonNull RecyclerView.ViewHolder currentItemHolder, int adapterPosition) {
-                setButtonStartStatus(adapterPosition);
-            }
-
-            @Override
-            public void onScroll(float scrollPosition, @NonNull RecyclerView.ViewHolder currentHolder, @NonNull RecyclerView.ViewHolder newCurrent) {
-
-            }
-        });
+        discreteScrollView.setScrollStateChangeListener(this);
     }
 
     /**
@@ -151,6 +135,21 @@ public class MainActivity extends BaseActivity {
                 }
                 break;
         }
+
+    }
+
+    @Override
+    public void onScrollStart(@NonNull RecyclerView.ViewHolder currentItemHolder, int adapterPosition) {
+        setButtonStartBgInvalid(false);
+    }
+
+    @Override
+    public void onScrollEnd(@NonNull RecyclerView.ViewHolder currentItemHolder, int adapterPosition) {
+        setButtonStartStatus(adapterPosition);
+    }
+
+    @Override
+    public void onScroll(float scrollPosition, @NonNull RecyclerView.ViewHolder currentHolder, @NonNull RecyclerView.ViewHolder newCurrent) {
 
     }
 

@@ -1,5 +1,5 @@
 #Internal package file, do not edit.
-#Thu Jun 01 12:01:29 CST 2017
+#Thu Jun 01 14:01:59 CST 2017
 20.base=E\:\\Code\\Android\\MyApplication\\objLoader\\build\\intermediates\\res\\resources-release.ap_
 143.base=E\:\\Code\\Android\\MyApplication\\objLoader\\build\\intermediates\\res\\resources-release.ap_
 493.base=E\:\\Code\\Android\\MyApplication\\objLoader\\build\\intermediates\\res\\resources-release.ap_

@@ -14,7 +14,7 @@
         <com.wang.avi.AVLoadingIndicatorView
             android:id="@+id/avi"
             android:layout_gravity="center_horizontal"
-            android:layout_width="80dp"
+            android:layout_width="70dp"
             android:layout_height="wrap_content"
             android:layout_centerHorizontal="true"
             app:indicator="LineScalePulseOut"

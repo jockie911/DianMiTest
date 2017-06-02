@@ -20,6 +20,11 @@ public class RegistForgetPresent extends BasePresenter<IRegistForgetView> implem
 
     private RegistForgetModelImple registForgeftModelImple;
 
+    @Override
+    protected void onViewAttach() {
+        registForgeftModelImple = new RegistForgetModelImple();
+    }
+
     public void requestSmsCode(TextView tv_send_auth_code) {
         registForgeftModelImple.setTextView(tv_send_auth_code);
         registForgeftModelImple.requestSmsCode(mBaseView.getPhoneNum(),this);

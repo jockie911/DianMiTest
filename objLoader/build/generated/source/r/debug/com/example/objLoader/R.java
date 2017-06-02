@@ -36,14 +36,6 @@ public final class R {
     }
     public static final class array {
         public static final int WheelArrayDefault=0x7f09001a;
-        /** <item>Monday</item>
-<item>Tuesday</item>
-<item>Wednesday</item>
-<item>Thursday</item>
-<item>Friday</item>
-<item>Saturday</item>
-<item>Sunday</item>
-         */
         public static final int WheelArrayWeek=0x7f09001b;
         public static final int smssdk_country_group_a=0x7f090000;
         public static final int smssdk_country_group_b=0x7f090001;

@@ -1,5 +1,6 @@
 package com.example.objLoader.wedgit;
 
+import android.app.Activity;
 import android.app.Dialog;
 import android.content.Context;
 import android.content.DialogInterface;
@@ -35,6 +36,12 @@ public class LoadingDialog {
                 .getSystemService(Context.WINDOW_SERVICE);
         display = windowManager.getDefaultDisplay();
 
+      /*  if(context instanceof Activity){
+            Activity activity = (Activity) context;
+            WindowManager.LayoutParams attributes = activity.getWindow().getAttributes();
+            attributes.alpha = 1.0f;
+            activity.getWindow().setAttributes(attributes);
+        }*/
     }
 
     public LoadingDialog builder(){
@@ -47,6 +54,7 @@ public class LoadingDialog {
         tvMsg = (TextView) view.findViewById(R.id.tv_msg);
 
         dialog = new Dialog(context, R.style.AlertDialogStyle);
+        dialog.getWindow().setDimAmount(0.1f);
         dialog.setContentView(view);
 
         llRoot.setLayoutParams(new FrameLayout.LayoutParams(DensityUtil.dip2px(context,120),DensityUtil.dip2px(context,120)));
@@ -60,11 +68,12 @@ public class LoadingDialog {
 
     public void show(){
         setLayout();
-        dialog.show();
+        if(dialog != null)
+            dialog.show();
     }
 
     private void setLayout() {
-        
+
     }
 
     public LoadingDialog setMsg(String msg){

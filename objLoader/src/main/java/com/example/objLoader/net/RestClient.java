@@ -112,11 +112,19 @@ public class RestClient<T> {
         return api().changeUserPwd(mobile,oldpwd,newpwd,md5);
     }
 
-    public Observable<BaseHttpBean<T>> get(String url, Map<String,String> params){
+   /* public Observable<BaseHttpBean<T>> get(String url, Map<String,String> params){
         return api().get(url,params);
     }
 
     public Observable<BaseHttpBean<T>> post(String url, Map<String,String> params){
+        return api().post(url,params);
+    }*/
+
+    public Observable<BaseRequestBean> get(String url, Map<String,String> params){
+        return api().get(url,params);
+    }
+
+    public Observable<BaseRequestBean> post(String url, Map<String,String> params){
         return api().post(url,params);
     }
 }

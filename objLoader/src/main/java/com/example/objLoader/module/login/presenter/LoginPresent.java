@@ -27,11 +27,11 @@ public class LoginPresent<T extends BaseActivity> extends BasePresenter<ILoginVi
 
     public LoginPresent(T activity){
         this.activity = activity;
-        loginModelImple = new LoginModelImple();
+        loginModelImple = new LoginModelImple(activity);
     }
 
     public LoginPresent(){
-        loginModelImple = new LoginModelImple();
+        loginModelImple = new LoginModelImple(activity);
     }
 
     public void login() {

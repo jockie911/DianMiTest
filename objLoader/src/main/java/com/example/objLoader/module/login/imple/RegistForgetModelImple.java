@@ -23,6 +23,7 @@ import org.json.JSONObject;
 
 import java.util.Timer;
 import java.util.TimerTask;
+import java.util.regex.Pattern;
 
 import cn.smssdk.EventHandler;
 import cn.smssdk.SMSSDK;
@@ -41,6 +42,7 @@ public class RegistForgetModelImple implements RegistForgetModel {
     private Timer timer;
     private long timell;
     private Request<String> registerRuquest;
+    public static final String REGEX_MOBILE_EXACT  = "^((13[0-9])|(14[5,7])|(15[0-3,5-9])|(17[0,3,5-8])|(18[0-9])|(147))\\d{8}$";
 
     EventHandler eh = new EventHandler() {
         @Override
@@ -58,13 +60,26 @@ public class RegistForgetModelImple implements RegistForgetModel {
     }
 
     /**
-     * 獲取驗證碼
+     * 正则匹配手机号码
+     * @param input
+     * @return
+     */
+    public static boolean isMobileExact(CharSequence input) {
+        return isMatch(REGEX_MOBILE_EXACT, input);
+    }
+
+    public static boolean isMatch(String regex, CharSequence input) {
+        return input != null && input.length() > 0 && Pattern.matches(regex, input);
+    }
+
+    /**
+     * 获取验证码
      * @param phoneNum
      * @param listerer
      */
     @Override
     public void requestSmsCode(String phoneNum, OnSmsCodeSubmitListerer listerer) {
-        if (phoneNum.length() < 11) {
+        if (!isMobileExact(phoneNum)) {
             ToastUtils.show(R.string.right_mobile);
             return;
         }
@@ -79,14 +94,14 @@ public class RegistForgetModelImple implements RegistForgetModel {
     }
 
     /**
-     * 驗證驗證碼
+     * 验证验证码
      * @param phoneNum
      * @param smsCode
      * @param listener
      */
     @Override
     public void checkOutSmsCode(String phoneNum, String smsCode, OnSmsCheckoutListener listener) {
-        if (phoneNum.length() < 11) {
+        if (!isMobileExact(phoneNum)) {
             ToastUtils.show(R.string.right_mobile);
             return;
         }
@@ -104,7 +119,7 @@ public class RegistForgetModelImple implements RegistForgetModel {
 
     @Override
     public void submitRequest(String phoneNum, String smsCode, String pwd,boolean isForgetpsw, OnSubmitRequestListener listener) {
-        if (phoneNum.length() < 11) {
+        if (!isMobileExact(phoneNum)) {
             ToastUtils.show(R.string.right_mobile);
             return;
         }
@@ -123,9 +138,7 @@ public class RegistForgetModelImple implements RegistForgetModel {
         registerRuquest.add(IConstant.PASSWORD, Utils.MD5(pwd));
         registerRuquest.add(IConstant.STRING, Utils.MD5(phoneNum + Constants.MD5_KEY + Utils.MD5(pwd)));
         CallServer.getInstance().add(BaseApp.getContext(), registerRuquest, callBack,Constants.REGISTER_WHAT, false, false,BaseRequestBean.class);
-
     }
-
 
     Handler mHandler = new Handler() {
         public void handleMessage(Message msg) {
@@ -197,7 +210,6 @@ public class RegistForgetModelImple implements RegistForgetModel {
         timell = System.currentTimeMillis();
         timer = new Timer();
         timer.schedule(new MyTimerTask(),0,1000);
-
     }
 
     public void setTextView(TextView textView) {

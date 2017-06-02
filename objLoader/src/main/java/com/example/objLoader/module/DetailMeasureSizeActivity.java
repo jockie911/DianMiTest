@@ -10,6 +10,7 @@ import android.widget.TextView;
 
 import com.example.objLoader.R;
 import com.example.objLoader.adapter.VpTableAdapter;
+import com.example.objLoader.base.BaseSubscriber;
 import com.example.objLoader.bean.MeasureRecordBean;
 import com.example.objLoader.fragment.DetailClothesModelFragment;
 import com.example.objLoader.fragment.DetailsSizeFragment;
@@ -17,6 +18,7 @@ import com.example.objLoader.fragment.ModelFragment;
 import com.example.objLoader.base.BaseActivity;
 import com.example.objLoader.istatic.IConstant;
 import com.example.objLoader.module.login.presenter.LoginPresent;
+import com.example.objLoader.net.RestClient;
 import com.example.objLoader.wedgit.AlertEdittextDialog;
 
 import java.util.ArrayList;
@@ -24,6 +26,10 @@ import java.util.List;
 
 import butterknife.Bind;
 import butterknife.OnClick;
+import rx.Scheduler;
+import rx.Subscriber;
+import rx.android.schedulers.AndroidSchedulers;
+import rx.schedulers.Schedulers;
 
 public class DetailMeasureSizeActivity extends BaseActivity {
 
@@ -52,14 +58,17 @@ public class DetailMeasureSizeActivity extends BaseActivity {
 
 
         tabTitleLists = new ArrayList<>();
+
+
+        
         tabTitleLists.add("详细尺寸");
         tabTitleLists.add("号型匹配");
-        tabTitleLists.add("3D模型");
+//        tabTitleLists.add("3D模型");
 
         fmLists = new ArrayList<>();
         fmLists.add(new DetailsSizeFragment());
         fmLists.add(new DetailClothesModelFragment());
-        fmLists.add(new ModelFragment());
+//        fmLists.add(new ModelFragment());
 
         tableLayout.setTabMode(TabLayout.MODE_FIXED);
         VpTableAdapter vpTableAdapter = new VpTableAdapter(getSupportFragmentManager(),fmLists,tabTitleLists,tableLayout);
@@ -114,6 +123,4 @@ public class DetailMeasureSizeActivity extends BaseActivity {
             }
         }).show();
     }
-
-
 }

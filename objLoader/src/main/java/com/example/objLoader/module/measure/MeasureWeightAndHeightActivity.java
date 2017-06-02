@@ -2,6 +2,7 @@ package com.example.objLoader.module.measure;
 
 import android.content.Intent;
 import android.view.View;
+import android.widget.RelativeLayout;
 
 import com.example.objLoader.R;
 import com.example.objLoader.base.AbActivityManager;
