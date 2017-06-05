@@ -29,6 +29,11 @@ public class ChangePwdPresenter extends BasePresenter<ChangePwdView>{
             ToastUtils.show(R.string.pwd_lenght);
             return;
         }
+        if(TextUtils.equals(oldPwd,newPwd)){
+            ToastUtils.show(R.string.twice_same_psw);
+            return;
+        }
+
         String mobile = SPUtils.getInstance().getString(IConstant.MOBILE);
         RestClient.instance().changeUserPwd(mobile,Utils.MD5(oldPwd),Utils.MD5(newPwd), Utils.MD5(Utils.MD5(newPwd) +
                 Utils.MD5(mobile + Constants.MD5_KEY + Utils.MD5(oldPwd))))

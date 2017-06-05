@@ -673,14 +673,7 @@
                     "endOffset": 23923
                 },
                 "from": {
-                    "file": "E:\\Code\\Android\\MyApplication\\objLoader\\src\\main\\res\\values-en\\strings.xml",
-                    "position": {
-                        "startLine": 184,
-                        "startColumn": 4,
-                        "startOffset": 10102,
-                        "endColumn": 112,
-                        "endOffset": 10210
-                    }
+                    "file": "E:\\Code\\Android\\MyApplication\\objLoader\\src\\main\\res\\values-en\\strings.xml"
                 }
             },
             {
@@ -692,14 +685,7 @@
                     "endOffset": 24040
                 },
                 "from": {
-                    "file": "E:\\Code\\Android\\MyApplication\\objLoader\\src\\main\\res\\values-en\\strings.xml",
-                    "position": {
-                        "startLine": 185,
-                        "startColumn": 4,
-                        "startOffset": 10215,
-                        "endColumn": 116,
-                        "endOffset": 10327
-                    }
+                    "file": "E:\\Code\\Android\\MyApplication\\objLoader\\src\\main\\res\\values-en\\strings.xml"
                 }
             },
             {
@@ -815,20 +801,27 @@
                     "startLine": 342,
                     "startColumn": 4,
                     "startOffset": 24668,
-                    "endColumn": 41,
-                    "endOffset": 24705
+                    "endColumn": 51,
+                    "endOffset": 24715
                 },
                 "from": {
-                    "file": "E:\\Code\\Android\\MyApplication\\objLoader\\src\\main\\res\\values-en\\strings.xml"
+                    "file": "E:\\Code\\Android\\MyApplication\\objLoader\\src\\main\\res\\values-en\\strings.xml",
+                    "position": {
+                        "startLine": 188,
+                        "startColumn": 4,
+                        "startOffset": 10433,
+                        "endColumn": 51,
+                        "endOffset": 10480
+                    }
                 }
             },
             {
                 "to": {
                     "startLine": 343,
                     "startColumn": 4,
-                    "startOffset": 24710,
-                    "endColumn": 52,
-                    "endOffset": 24758
+                    "startOffset": 24720,
+                    "endColumn": 41,
+                    "endOffset": 24757
                 },
                 "from": {
                     "file": "E:\\Code\\Android\\MyApplication\\objLoader\\src\\main\\res\\values-en\\strings.xml"
@@ -838,28 +831,21 @@
                 "to": {
                     "startLine": 344,
                     "startColumn": 4,
-                    "startOffset": 24763,
-                    "endColumn": 62,
-                    "endOffset": 24821
+                    "startOffset": 24762,
+                    "endColumn": 52,
+                    "endOffset": 24810
                 },
                 "from": {
-                    "file": "E:\\Code\\Android\\MyApplication\\objLoader\\src\\main\\res\\values-en\\strings.xml",
-                    "position": {
-                        "startLine": 183,
-                        "startColumn": 4,
-                        "startOffset": 10039,
-                        "endColumn": 62,
-                        "endOffset": 10097
-                    }
+                    "file": "E:\\Code\\Android\\MyApplication\\objLoader\\src\\main\\res\\values-en\\strings.xml"
                 }
             },
             {
                 "to": {
                     "startLine": 345,
                     "startColumn": 4,
-                    "startOffset": 24826,
-                    "endColumn": 41,
-                    "endOffset": 24863
+                    "startOffset": 24815,
+                    "endColumn": 62,
+                    "endOffset": 24873
                 },
                 "from": {
                     "file": "E:\\Code\\Android\\MyApplication\\objLoader\\src\\main\\res\\values-en\\strings.xml"
@@ -869,9 +855,9 @@
                 "to": {
                     "startLine": 346,
                     "startColumn": 4,
-                    "startOffset": 24868,
-                    "endColumn": 82,
-                    "endOffset": 24946
+                    "startOffset": 24878,
+                    "endColumn": 41,
+                    "endOffset": 24915
                 },
                 "from": {
                     "file": "E:\\Code\\Android\\MyApplication\\objLoader\\src\\main\\res\\values-en\\strings.xml"
@@ -881,9 +867,9 @@
                 "to": {
                     "startLine": 347,
                     "startColumn": 4,
-                    "startOffset": 24951,
-                    "endColumn": 63,
-                    "endOffset": 25010
+                    "startOffset": 24920,
+                    "endColumn": 82,
+                    "endOffset": 24998
                 },
                 "from": {
                     "file": "E:\\Code\\Android\\MyApplication\\objLoader\\src\\main\\res\\values-en\\strings.xml"
@@ -893,9 +879,9 @@
                 "to": {
                     "startLine": 348,
                     "startColumn": 4,
-                    "startOffset": 25015,
-                    "endColumn": 50,
-                    "endOffset": 25061
+                    "startOffset": 25003,
+                    "endColumn": 63,
+                    "endOffset": 25062
                 },
                 "from": {
                     "file": "E:\\Code\\Android\\MyApplication\\objLoader\\src\\main\\res\\values-en\\strings.xml"
@@ -905,9 +891,9 @@
                 "to": {
                     "startLine": 349,
                     "startColumn": 4,
-                    "startOffset": 25066,
-                    "endColumn": 75,
-                    "endOffset": 25137
+                    "startOffset": 25067,
+                    "endColumn": 50,
+                    "endOffset": 25113
                 },
                 "from": {
                     "file": "E:\\Code\\Android\\MyApplication\\objLoader\\src\\main\\res\\values-en\\strings.xml"
@@ -917,9 +903,9 @@
                 "to": {
                     "startLine": 350,
                     "startColumn": 4,
-                    "startOffset": 25142,
-                    "endColumn": 77,
-                    "endOffset": 25215
+                    "startOffset": 25118,
+                    "endColumn": 75,
+                    "endOffset": 25189
                 },
                 "from": {
                     "file": "E:\\Code\\Android\\MyApplication\\objLoader\\src\\main\\res\\values-en\\strings.xml"
@@ -929,9 +915,9 @@
                 "to": {
                     "startLine": 351,
                     "startColumn": 4,
-                    "startOffset": 25220,
-                    "endColumn": 45,
-                    "endOffset": 25261
+                    "startOffset": 25194,
+                    "endColumn": 77,
+                    "endOffset": 25267
                 },
                 "from": {
                     "file": "E:\\Code\\Android\\MyApplication\\objLoader\\src\\main\\res\\values-en\\strings.xml"
@@ -941,9 +927,9 @@
                 "to": {
                     "startLine": 352,
                     "startColumn": 4,
-                    "startOffset": 25266,
-                    "endColumn": 42,
-                    "endOffset": 25304
+                    "startOffset": 25272,
+                    "endColumn": 45,
+                    "endOffset": 25313
                 },
                 "from": {
                     "file": "E:\\Code\\Android\\MyApplication\\objLoader\\src\\main\\res\\values-en\\strings.xml"
@@ -953,9 +939,9 @@
                 "to": {
                     "startLine": 353,
                     "startColumn": 4,
-                    "startOffset": 25309,
-                    "endColumn": 50,
-                    "endOffset": 25355
+                    "startOffset": 25318,
+                    "endColumn": 42,
+                    "endOffset": 25356
                 },
                 "from": {
                     "file": "E:\\Code\\Android\\MyApplication\\objLoader\\src\\main\\res\\values-en\\strings.xml"
@@ -965,9 +951,9 @@
                 "to": {
                     "startLine": 354,
                     "startColumn": 4,
-                    "startOffset": 25360,
-                    "endColumn": 42,
-                    "endOffset": 25398
+                    "startOffset": 25361,
+                    "endColumn": 50,
+                    "endOffset": 25407
                 },
                 "from": {
                     "file": "E:\\Code\\Android\\MyApplication\\objLoader\\src\\main\\res\\values-en\\strings.xml"
@@ -977,9 +963,9 @@
                 "to": {
                     "startLine": 355,
                     "startColumn": 4,
-                    "startOffset": 25403,
+                    "startOffset": 25412,
                     "endColumn": 42,
-                    "endOffset": 25441
+                    "endOffset": 25450
                 },
                 "from": {
                     "file": "E:\\Code\\Android\\MyApplication\\objLoader\\src\\main\\res\\values-en\\strings.xml"
@@ -989,9 +975,9 @@
                 "to": {
                     "startLine": 356,
                     "startColumn": 4,
-                    "startOffset": 25446,
-                    "endColumn": 65,
-                    "endOffset": 25507
+                    "startOffset": 25455,
+                    "endColumn": 42,
+                    "endOffset": 25493
                 },
                 "from": {
                     "file": "E:\\Code\\Android\\MyApplication\\objLoader\\src\\main\\res\\values-en\\strings.xml"
@@ -1001,9 +987,9 @@
                 "to": {
                     "startLine": 357,
                     "startColumn": 4,
-                    "startOffset": 25512,
-                    "endColumn": 89,
-                    "endOffset": 25597
+                    "startOffset": 25498,
+                    "endColumn": 65,
+                    "endOffset": 25559
                 },
                 "from": {
                     "file": "E:\\Code\\Android\\MyApplication\\objLoader\\src\\main\\res\\values-en\\strings.xml"
@@ -1013,8 +999,8 @@
                 "to": {
                     "startLine": 358,
                     "startColumn": 4,
-                    "startOffset": 25602,
-                    "endColumn": 51,
+                    "startOffset": 25564,
+                    "endColumn": 89,
                     "endOffset": 25649
                 },
                 "from": {
@@ -1026,8 +1012,8 @@
                     "startLine": 359,
                     "startColumn": 4,
                     "startOffset": 25654,
-                    "endColumn": 74,
-                    "endOffset": 25724
+                    "endColumn": 51,
+                    "endOffset": 25701
                 },
                 "from": {
                     "file": "E:\\Code\\Android\\MyApplication\\objLoader\\src\\main\\res\\values-en\\strings.xml"
@@ -1037,9 +1023,9 @@
                 "to": {
                     "startLine": 360,
                     "startColumn": 4,
-                    "startOffset": 25729,
+                    "startOffset": 25706,
                     "endColumn": 74,
-                    "endOffset": 25799
+                    "endOffset": 25776
                 },
                 "from": {
                     "file": "E:\\Code\\Android\\MyApplication\\objLoader\\src\\main\\res\\values-en\\strings.xml"
@@ -1049,9 +1035,9 @@
                 "to": {
                     "startLine": 361,
                     "startColumn": 4,
-                    "startOffset": 25804,
-                    "endColumn": 70,
-                    "endOffset": 25870
+                    "startOffset": 25781,
+                    "endColumn": 74,
+                    "endOffset": 25851
                 },
                 "from": {
                     "file": "E:\\Code\\Android\\MyApplication\\objLoader\\src\\main\\res\\values-en\\strings.xml"
@@ -1061,9 +1047,9 @@
                 "to": {
                     "startLine": 362,
                     "startColumn": 4,
-                    "startOffset": 25875,
-                    "endColumn": 69,
-                    "endOffset": 25940
+                    "startOffset": 25856,
+                    "endColumn": 70,
+                    "endOffset": 25922
                 },
                 "from": {
                     "file": "E:\\Code\\Android\\MyApplication\\objLoader\\src\\main\\res\\values-en\\strings.xml"
@@ -1073,9 +1059,9 @@
                 "to": {
                     "startLine": 363,
                     "startColumn": 4,
-                    "startOffset": 25945,
-                    "endColumn": 50,
-                    "endOffset": 25991
+                    "startOffset": 25927,
+                    "endColumn": 69,
+                    "endOffset": 25992
                 },
                 "from": {
                     "file": "E:\\Code\\Android\\MyApplication\\objLoader\\src\\main\\res\\values-en\\strings.xml"
@@ -1085,9 +1071,9 @@
                 "to": {
                     "startLine": 364,
                     "startColumn": 4,
-                    "startOffset": 25996,
-                    "endColumn": 75,
-                    "endOffset": 26067
+                    "startOffset": 25997,
+                    "endColumn": 50,
+                    "endOffset": 26043
                 },
                 "from": {
                     "file": "E:\\Code\\Android\\MyApplication\\objLoader\\src\\main\\res\\values-en\\strings.xml"
@@ -1097,9 +1083,9 @@
                 "to": {
                     "startLine": 365,
                     "startColumn": 4,
-                    "startOffset": 26072,
-                    "endColumn": 77,
-                    "endOffset": 26145
+                    "startOffset": 26048,
+                    "endColumn": 75,
+                    "endOffset": 26119
                 },
                 "from": {
                     "file": "E:\\Code\\Android\\MyApplication\\objLoader\\src\\main\\res\\values-en\\strings.xml"
@@ -1109,9 +1095,9 @@
                 "to": {
                     "startLine": 366,
                     "startColumn": 4,
-                    "startOffset": 26150,
-                    "endColumn": 65,
-                    "endOffset": 26211
+                    "startOffset": 26124,
+                    "endColumn": 77,
+                    "endOffset": 26197
                 },
                 "from": {
                     "file": "E:\\Code\\Android\\MyApplication\\objLoader\\src\\main\\res\\values-en\\strings.xml"
@@ -1121,9 +1107,9 @@
                 "to": {
                     "startLine": 367,
                     "startColumn": 4,
-                    "startOffset": 26216,
-                    "endColumn": 78,
-                    "endOffset": 26290
+                    "startOffset": 26202,
+                    "endColumn": 65,
+                    "endOffset": 26263
                 },
                 "from": {
                     "file": "E:\\Code\\Android\\MyApplication\\objLoader\\src\\main\\res\\values-en\\strings.xml"
@@ -1133,9 +1119,9 @@
                 "to": {
                     "startLine": 368,
                     "startColumn": 4,
-                    "startOffset": 26295,
-                    "endColumn": 43,
-                    "endOffset": 26334
+                    "startOffset": 26268,
+                    "endColumn": 78,
+                    "endOffset": 26342
                 },
                 "from": {
                     "file": "E:\\Code\\Android\\MyApplication\\objLoader\\src\\main\\res\\values-en\\strings.xml"
@@ -1145,9 +1131,9 @@
                 "to": {
                     "startLine": 369,
                     "startColumn": 4,
-                    "startOffset": 26339,
-                    "endColumn": 85,
-                    "endOffset": 26420
+                    "startOffset": 26347,
+                    "endColumn": 43,
+                    "endOffset": 26386
                 },
                 "from": {
                     "file": "E:\\Code\\Android\\MyApplication\\objLoader\\src\\main\\res\\values-en\\strings.xml"
@@ -1157,9 +1143,9 @@
                 "to": {
                     "startLine": 370,
                     "startColumn": 4,
-                    "startOffset": 26425,
-                    "endColumn": 39,
-                    "endOffset": 26460
+                    "startOffset": 26391,
+                    "endColumn": 85,
+                    "endOffset": 26472
                 },
                 "from": {
                     "file": "E:\\Code\\Android\\MyApplication\\objLoader\\src\\main\\res\\values-en\\strings.xml"
@@ -1169,9 +1155,9 @@
                 "to": {
                     "startLine": 371,
                     "startColumn": 4,
-                    "startOffset": 26465,
-                    "endColumn": 48,
-                    "endOffset": 26509
+                    "startOffset": 26477,
+                    "endColumn": 39,
+                    "endOffset": 26512
                 },
                 "from": {
                     "file": "E:\\Code\\Android\\MyApplication\\objLoader\\src\\main\\res\\values-en\\strings.xml"
@@ -1181,9 +1167,9 @@
                 "to": {
                     "startLine": 372,
                     "startColumn": 4,
-                    "startOffset": 26514,
-                    "endColumn": 50,
-                    "endOffset": 26560
+                    "startOffset": 26517,
+                    "endColumn": 48,
+                    "endOffset": 26561
                 },
                 "from": {
                     "file": "E:\\Code\\Android\\MyApplication\\objLoader\\src\\main\\res\\values-en\\strings.xml"
@@ -1193,9 +1179,9 @@
                 "to": {
                     "startLine": 373,
                     "startColumn": 4,
-                    "startOffset": 26565,
-                    "endColumn": 61,
-                    "endOffset": 26622
+                    "startOffset": 26566,
+                    "endColumn": 50,
+                    "endOffset": 26612
                 },
                 "from": {
                     "file": "E:\\Code\\Android\\MyApplication\\objLoader\\src\\main\\res\\values-en\\strings.xml"
@@ -1205,8 +1191,8 @@
                 "to": {
                     "startLine": 374,
                     "startColumn": 4,
-                    "startOffset": 26627,
-                    "endColumn": 51,
+                    "startOffset": 26617,
+                    "endColumn": 61,
                     "endOffset": 26674
                 },
                 "from": {
@@ -1218,8 +1204,8 @@
                     "startLine": 375,
                     "startColumn": 4,
                     "startOffset": 26679,
-                    "endColumn": 54,
-                    "endOffset": 26729
+                    "endColumn": 51,
+                    "endOffset": 26726
                 },
                 "from": {
                     "file": "E:\\Code\\Android\\MyApplication\\objLoader\\src\\main\\res\\values-en\\strings.xml"
@@ -1229,9 +1215,9 @@
                 "to": {
                     "startLine": 376,
                     "startColumn": 4,
-                    "startOffset": 26734,
-                    "endColumn": 90,
-                    "endOffset": 26820
+                    "startOffset": 26731,
+                    "endColumn": 54,
+                    "endOffset": 26781
                 },
                 "from": {
                     "file": "E:\\Code\\Android\\MyApplication\\objLoader\\src\\main\\res\\values-en\\strings.xml"
@@ -1241,9 +1227,9 @@
                 "to": {
                     "startLine": 377,
                     "startColumn": 4,
-                    "startOffset": 26825,
-                    "endColumn": 41,
-                    "endOffset": 26862
+                    "startOffset": 26786,
+                    "endColumn": 90,
+                    "endOffset": 26872
                 },
                 "from": {
                     "file": "E:\\Code\\Android\\MyApplication\\objLoader\\src\\main\\res\\values-en\\strings.xml"
@@ -1253,9 +1239,9 @@
                 "to": {
                     "startLine": 378,
                     "startColumn": 4,
-                    "startOffset": 26867,
-                    "endColumn": 89,
-                    "endOffset": 26952
+                    "startOffset": 26877,
+                    "endColumn": 41,
+                    "endOffset": 26914
                 },
                 "from": {
                     "file": "E:\\Code\\Android\\MyApplication\\objLoader\\src\\main\\res\\values-en\\strings.xml"
@@ -1265,9 +1251,9 @@
                 "to": {
                     "startLine": 379,
                     "startColumn": 4,
-                    "startOffset": 26957,
-                    "endColumn": 126,
-                    "endOffset": 27079
+                    "startOffset": 26919,
+                    "endColumn": 89,
+                    "endOffset": 27004
                 },
                 "from": {
                     "file": "E:\\Code\\Android\\MyApplication\\objLoader\\src\\main\\res\\values-en\\strings.xml"
@@ -1277,9 +1263,9 @@
                 "to": {
                     "startLine": 380,
                     "startColumn": 4,
-                    "startOffset": 27084,
-                    "endColumn": 37,
-                    "endOffset": 27117
+                    "startOffset": 27009,
+                    "endColumn": 126,
+                    "endOffset": 27131
                 },
                 "from": {
                     "file": "E:\\Code\\Android\\MyApplication\\objLoader\\src\\main\\res\\values-en\\strings.xml"
@@ -1289,9 +1275,9 @@
                 "to": {
                     "startLine": 381,
                     "startColumn": 4,
-                    "startOffset": 27122,
-                    "endColumn": 53,
-                    "endOffset": 27171
+                    "startOffset": 27136,
+                    "endColumn": 37,
+                    "endOffset": 27169
                 },
                 "from": {
                     "file": "E:\\Code\\Android\\MyApplication\\objLoader\\src\\main\\res\\values-en\\strings.xml"
@@ -1301,9 +1287,9 @@
                 "to": {
                     "startLine": 382,
                     "startColumn": 4,
-                    "startOffset": 27176,
-                    "endColumn": 70,
-                    "endOffset": 27242
+                    "startOffset": 27174,
+                    "endColumn": 53,
+                    "endOffset": 27223
                 },
                 "from": {
                     "file": "E:\\Code\\Android\\MyApplication\\objLoader\\src\\main\\res\\values-en\\strings.xml"
@@ -1313,9 +1299,9 @@
                 "to": {
                     "startLine": 383,
                     "startColumn": 4,
-                    "startOffset": 27247,
-                    "endColumn": 73,
-                    "endOffset": 27316
+                    "startOffset": 27228,
+                    "endColumn": 70,
+                    "endOffset": 27294
                 },
                 "from": {
                     "file": "E:\\Code\\Android\\MyApplication\\objLoader\\src\\main\\res\\values-en\\strings.xml"
@@ -1325,9 +1311,9 @@
                 "to": {
                     "startLine": 384,
                     "startColumn": 4,
-                    "startOffset": 27321,
-                    "endColumn": 90,
-                    "endOffset": 27407
+                    "startOffset": 27299,
+                    "endColumn": 73,
+                    "endOffset": 27368
                 },
                 "from": {
                     "file": "E:\\Code\\Android\\MyApplication\\objLoader\\src\\main\\res\\values-en\\strings.xml"
@@ -1337,8 +1323,8 @@
                 "to": {
                     "startLine": 385,
                     "startColumn": 4,
-                    "startOffset": 27412,
-                    "endColumn": 51,
+                    "startOffset": 27373,
+                    "endColumn": 90,
                     "endOffset": 27459
                 },
                 "from": {
@@ -1350,8 +1336,8 @@
                     "startLine": 386,
                     "startColumn": 4,
                     "startOffset": 27464,
-                    "endColumn": 53,
-                    "endOffset": 27513
+                    "endColumn": 51,
+                    "endOffset": 27511
                 },
                 "from": {
                     "file": "E:\\Code\\Android\\MyApplication\\objLoader\\src\\main\\res\\values-en\\strings.xml"
@@ -1361,9 +1347,9 @@
                 "to": {
                     "startLine": 387,
                     "startColumn": 4,
-                    "startOffset": 27518,
-                    "endColumn": 74,
-                    "endOffset": 27588
+                    "startOffset": 27516,
+                    "endColumn": 53,
+                    "endOffset": 27565
                 },
                 "from": {
                     "file": "E:\\Code\\Android\\MyApplication\\objLoader\\src\\main\\res\\values-en\\strings.xml"
@@ -1373,9 +1359,9 @@
                 "to": {
                     "startLine": 388,
                     "startColumn": 4,
-                    "startOffset": 27593,
-                    "endColumn": 48,
-                    "endOffset": 27637
+                    "startOffset": 27570,
+                    "endColumn": 74,
+                    "endOffset": 27640
                 },
                 "from": {
                     "file": "E:\\Code\\Android\\MyApplication\\objLoader\\src\\main\\res\\values-en\\strings.xml"
@@ -1385,9 +1371,9 @@
                 "to": {
                     "startLine": 389,
                     "startColumn": 4,
-                    "startOffset": 27642,
-                    "endColumn": 77,
-                    "endOffset": 27715
+                    "startOffset": 27645,
+                    "endColumn": 48,
+                    "endOffset": 27689
                 },
                 "from": {
                     "file": "E:\\Code\\Android\\MyApplication\\objLoader\\src\\main\\res\\values-en\\strings.xml"
@@ -1397,9 +1383,9 @@
                 "to": {
                     "startLine": 390,
                     "startColumn": 4,
-                    "startOffset": 27720,
-                    "endColumn": 66,
-                    "endOffset": 27782
+                    "startOffset": 27694,
+                    "endColumn": 77,
+                    "endOffset": 27767
                 },
                 "from": {
                     "file": "E:\\Code\\Android\\MyApplication\\objLoader\\src\\main\\res\\values-en\\strings.xml"
@@ -1409,9 +1395,9 @@
                 "to": {
                     "startLine": 391,
                     "startColumn": 4,
-                    "startOffset": 27787,
-                    "endColumn": 37,
-                    "endOffset": 27820
+                    "startOffset": 27772,
+                    "endColumn": 66,
+                    "endOffset": 27834
                 },
                 "from": {
                     "file": "E:\\Code\\Android\\MyApplication\\objLoader\\src\\main\\res\\values-en\\strings.xml"
@@ -1421,9 +1407,9 @@
                 "to": {
                     "startLine": 392,
                     "startColumn": 4,
-                    "startOffset": 27825,
-                    "endColumn": 48,
-                    "endOffset": 27869
+                    "startOffset": 27839,
+                    "endColumn": 37,
+                    "endOffset": 27872
                 },
                 "from": {
                     "file": "E:\\Code\\Android\\MyApplication\\objLoader\\src\\main\\res\\values-en\\strings.xml"
@@ -1433,9 +1419,9 @@
                 "to": {
                     "startLine": 393,
                     "startColumn": 4,
-                    "startOffset": 27874,
-                    "endColumn": 65,
-                    "endOffset": 27935
+                    "startOffset": 27877,
+                    "endColumn": 48,
+                    "endOffset": 27921
                 },
                 "from": {
                     "file": "E:\\Code\\Android\\MyApplication\\objLoader\\src\\main\\res\\values-en\\strings.xml"
@@ -1445,9 +1431,9 @@
                 "to": {
                     "startLine": 394,
                     "startColumn": 4,
-                    "startOffset": 27940,
-                    "endColumn": 69,
-                    "endOffset": 28005
+                    "startOffset": 27926,
+                    "endColumn": 65,
+                    "endOffset": 27987
                 },
                 "from": {
                     "file": "E:\\Code\\Android\\MyApplication\\objLoader\\src\\main\\res\\values-en\\strings.xml"
@@ -1457,9 +1443,9 @@
                 "to": {
                     "startLine": 395,
                     "startColumn": 4,
-                    "startOffset": 28010,
-                    "endColumn": 65,
-                    "endOffset": 28071
+                    "startOffset": 27992,
+                    "endColumn": 69,
+                    "endOffset": 28057
                 },
                 "from": {
                     "file": "E:\\Code\\Android\\MyApplication\\objLoader\\src\\main\\res\\values-en\\strings.xml"
@@ -1469,9 +1455,9 @@
                 "to": {
                     "startLine": 396,
                     "startColumn": 4,
-                    "startOffset": 28076,
-                    "endColumn": 34,
-                    "endOffset": 28106
+                    "startOffset": 28062,
+                    "endColumn": 65,
+                    "endOffset": 28123
                 },
                 "from": {
                     "file": "E:\\Code\\Android\\MyApplication\\objLoader\\src\\main\\res\\values-en\\strings.xml"
@@ -1481,9 +1467,9 @@
                 "to": {
                     "startLine": 397,
                     "startColumn": 4,
-                    "startOffset": 28111,
-                    "endColumn": 77,
-                    "endOffset": 28184
+                    "startOffset": 28128,
+                    "endColumn": 34,
+                    "endOffset": 28158
                 },
                 "from": {
                     "file": "E:\\Code\\Android\\MyApplication\\objLoader\\src\\main\\res\\values-en\\strings.xml"
@@ -1493,9 +1479,9 @@
                 "to": {
                     "startLine": 398,
                     "startColumn": 4,
-                    "startOffset": 28189,
-                    "endColumn": 55,
-                    "endOffset": 28240
+                    "startOffset": 28163,
+                    "endColumn": 77,
+                    "endOffset": 28236
                 },
                 "from": {
                     "file": "E:\\Code\\Android\\MyApplication\\objLoader\\src\\main\\res\\values-en\\strings.xml"
@@ -1505,9 +1491,9 @@
                 "to": {
                     "startLine": 399,
                     "startColumn": 4,
-                    "startOffset": 28245,
-                    "endColumn": 46,
-                    "endOffset": 28287
+                    "startOffset": 28241,
+                    "endColumn": 55,
+                    "endOffset": 28292
                 },
                 "from": {
                     "file": "E:\\Code\\Android\\MyApplication\\objLoader\\src\\main\\res\\values-en\\strings.xml"
@@ -1517,9 +1503,9 @@
                 "to": {
                     "startLine": 400,
                     "startColumn": 4,
-                    "startOffset": 28292,
-                    "endColumn": 50,
-                    "endOffset": 28338
+                    "startOffset": 28297,
+                    "endColumn": 46,
+                    "endOffset": 28339
                 },
                 "from": {
                     "file": "E:\\Code\\Android\\MyApplication\\objLoader\\src\\main\\res\\values-en\\strings.xml"
@@ -1529,9 +1515,9 @@
                 "to": {
                     "startLine": 401,
                     "startColumn": 4,
-                    "startOffset": 28343,
-                    "endColumn": 54,
-                    "endOffset": 28393
+                    "startOffset": 28344,
+                    "endColumn": 50,
+                    "endOffset": 28390
                 },
                 "from": {
                     "file": "E:\\Code\\Android\\MyApplication\\objLoader\\src\\main\\res\\values-en\\strings.xml"
@@ -1541,9 +1527,9 @@
                 "to": {
                     "startLine": 402,
                     "startColumn": 4,
-                    "startOffset": 28398,
-                    "endColumn": 50,
-                    "endOffset": 28444
+                    "startOffset": 28395,
+                    "endColumn": 54,
+                    "endOffset": 28445
                 },
                 "from": {
                     "file": "E:\\Code\\Android\\MyApplication\\objLoader\\src\\main\\res\\values-en\\strings.xml"
@@ -1553,9 +1539,9 @@
                 "to": {
                     "startLine": 403,
                     "startColumn": 4,
-                    "startOffset": 28449,
-                    "endColumn": 54,
-                    "endOffset": 28499
+                    "startOffset": 28450,
+                    "endColumn": 50,
+                    "endOffset": 28496
                 },
                 "from": {
                     "file": "E:\\Code\\Android\\MyApplication\\objLoader\\src\\main\\res\\values-en\\strings.xml"
@@ -1565,9 +1551,9 @@
                 "to": {
                     "startLine": 404,
                     "startColumn": 4,
-                    "startOffset": 28504,
-                    "endColumn": 48,
-                    "endOffset": 28548
+                    "startOffset": 28501,
+                    "endColumn": 54,
+                    "endOffset": 28551
                 },
                 "from": {
                     "file": "E:\\Code\\Android\\MyApplication\\objLoader\\src\\main\\res\\values-en\\strings.xml"
@@ -1577,9 +1563,9 @@
                 "to": {
                     "startLine": 405,
                     "startColumn": 4,
-                    "startOffset": 28553,
-                    "endColumn": 116,
-                    "endOffset": 28665
+                    "startOffset": 28556,
+                    "endColumn": 48,
+                    "endOffset": 28600
                 },
                 "from": {
                     "file": "E:\\Code\\Android\\MyApplication\\objLoader\\src\\main\\res\\values-en\\strings.xml"
@@ -1589,9 +1575,9 @@
                 "to": {
                     "startLine": 406,
                     "startColumn": 4,
-                    "startOffset": 28670,
-                    "endColumn": 71,
-                    "endOffset": 28737
+                    "startOffset": 28605,
+                    "endColumn": 116,
+                    "endOffset": 28717
                 },
                 "from": {
                     "file": "E:\\Code\\Android\\MyApplication\\objLoader\\src\\main\\res\\values-en\\strings.xml"
@@ -1601,9 +1587,9 @@
                 "to": {
                     "startLine": 407,
                     "startColumn": 4,
-                    "startOffset": 28742,
-                    "endColumn": 60,
-                    "endOffset": 28798
+                    "startOffset": 28722,
+                    "endColumn": 71,
+                    "endOffset": 28789
                 },
                 "from": {
                     "file": "E:\\Code\\Android\\MyApplication\\objLoader\\src\\main\\res\\values-en\\strings.xml"
@@ -1613,9 +1599,9 @@
                 "to": {
                     "startLine": 408,
                     "startColumn": 4,
-                    "startOffset": 28803,
-                    "endColumn": 93,
-                    "endOffset": 28892
+                    "startOffset": 28794,
+                    "endColumn": 60,
+                    "endOffset": 28850
                 },
                 "from": {
                     "file": "E:\\Code\\Android\\MyApplication\\objLoader\\src\\main\\res\\values-en\\strings.xml"
@@ -1625,9 +1611,9 @@
                 "to": {
                     "startLine": 409,
                     "startColumn": 4,
-                    "startOffset": 28897,
+                    "startOffset": 28855,
                     "endColumn": 93,
-                    "endOffset": 28986
+                    "endOffset": 28944
                 },
                 "from": {
                     "file": "E:\\Code\\Android\\MyApplication\\objLoader\\src\\main\\res\\values-en\\strings.xml"
@@ -1637,9 +1623,9 @@
                 "to": {
                     "startLine": 410,
                     "startColumn": 4,
-                    "startOffset": 28991,
-                    "endColumn": 65,
-                    "endOffset": 29052
+                    "startOffset": 28949,
+                    "endColumn": 93,
+                    "endOffset": 29038
                 },
                 "from": {
                     "file": "E:\\Code\\Android\\MyApplication\\objLoader\\src\\main\\res\\values-en\\strings.xml"
@@ -1649,9 +1635,9 @@
                 "to": {
                     "startLine": 411,
                     "startColumn": 4,
-                    "startOffset": 29057,
-                    "endColumn": 88,
-                    "endOffset": 29141
+                    "startOffset": 29043,
+                    "endColumn": 65,
+                    "endOffset": 29104
                 },
                 "from": {
                     "file": "E:\\Code\\Android\\MyApplication\\objLoader\\src\\main\\res\\values-en\\strings.xml"
@@ -1661,9 +1647,9 @@
                 "to": {
                     "startLine": 412,
                     "startColumn": 4,
-                    "startOffset": 29146,
-                    "endColumn": 44,
-                    "endOffset": 29186
+                    "startOffset": 29109,
+                    "endColumn": 88,
+                    "endOffset": 29193
                 },
                 "from": {
                     "file": "E:\\Code\\Android\\MyApplication\\objLoader\\src\\main\\res\\values-en\\strings.xml"
@@ -1673,8 +1659,8 @@
                 "to": {
                     "startLine": 413,
                     "startColumn": 4,
-                    "startOffset": 29191,
-                    "endColumn": 51,
+                    "startOffset": 29198,
+                    "endColumn": 44,
                     "endOffset": 29238
                 },
                 "from": {
@@ -1686,8 +1672,8 @@
                     "startLine": 414,
                     "startColumn": 4,
                     "startOffset": 29243,
-                    "endColumn": 46,
-                    "endOffset": 29285
+                    "endColumn": 51,
+                    "endOffset": 29290
                 },
                 "from": {
                     "file": "E:\\Code\\Android\\MyApplication\\objLoader\\src\\main\\res\\values-en\\strings.xml"
@@ -1697,9 +1683,9 @@
                 "to": {
                     "startLine": 415,
                     "startColumn": 4,
-                    "startOffset": 29290,
-                    "endColumn": 78,
-                    "endOffset": 29364
+                    "startOffset": 29295,
+                    "endColumn": 46,
+                    "endOffset": 29337
                 },
                 "from": {
                     "file": "E:\\Code\\Android\\MyApplication\\objLoader\\src\\main\\res\\values-en\\strings.xml"
@@ -1709,9 +1695,9 @@
                 "to": {
                     "startLine": 416,
                     "startColumn": 4,
-                    "startOffset": 29369,
-                    "endColumn": 82,
-                    "endOffset": 29447
+                    "startOffset": 29342,
+                    "endColumn": 78,
+                    "endOffset": 29416
                 },
                 "from": {
                     "file": "E:\\Code\\Android\\MyApplication\\objLoader\\src\\main\\res\\values-en\\strings.xml"
@@ -1721,9 +1707,9 @@
                 "to": {
                     "startLine": 417,
                     "startColumn": 4,
-                    "startOffset": 29452,
-                    "endColumn": 37,
-                    "endOffset": 29485
+                    "startOffset": 29421,
+                    "endColumn": 82,
+                    "endOffset": 29499
                 },
                 "from": {
                     "file": "E:\\Code\\Android\\MyApplication\\objLoader\\src\\main\\res\\values-en\\strings.xml"
@@ -1733,9 +1719,9 @@
                 "to": {
                     "startLine": 418,
                     "startColumn": 4,
-                    "startOffset": 29490,
-                    "endColumn": 61,
-                    "endOffset": 29547
+                    "startOffset": 29504,
+                    "endColumn": 37,
+                    "endOffset": 29537
                 },
                 "from": {
                     "file": "E:\\Code\\Android\\MyApplication\\objLoader\\src\\main\\res\\values-en\\strings.xml"
@@ -1745,9 +1731,9 @@
                 "to": {
                     "startLine": 419,
                     "startColumn": 4,
-                    "startOffset": 29552,
-                    "endColumn": 72,
-                    "endOffset": 29620
+                    "startOffset": 29542,
+                    "endColumn": 61,
+                    "endOffset": 29599
                 },
                 "from": {
                     "file": "E:\\Code\\Android\\MyApplication\\objLoader\\src\\main\\res\\values-en\\strings.xml"
@@ -1757,9 +1743,9 @@
                 "to": {
                     "startLine": 420,
                     "startColumn": 4,
-                    "startOffset": 29625,
-                    "endColumn": 61,
-                    "endOffset": 29682
+                    "startOffset": 29604,
+                    "endColumn": 72,
+                    "endOffset": 29672
                 },
                 "from": {
                     "file": "E:\\Code\\Android\\MyApplication\\objLoader\\src\\main\\res\\values-en\\strings.xml"
@@ -1769,9 +1755,9 @@
                 "to": {
                     "startLine": 421,
                     "startColumn": 4,
-                    "startOffset": 29687,
-                    "endColumn": 79,
-                    "endOffset": 29762
+                    "startOffset": 29677,
+                    "endColumn": 61,
+                    "endOffset": 29734
                 },
                 "from": {
                     "file": "E:\\Code\\Android\\MyApplication\\objLoader\\src\\main\\res\\values-en\\strings.xml"
@@ -1781,9 +1767,9 @@
                 "to": {
                     "startLine": 422,
                     "startColumn": 4,
-                    "startOffset": 29767,
-                    "endColumn": 44,
-                    "endOffset": 29807
+                    "startOffset": 29739,
+                    "endColumn": 79,
+                    "endOffset": 29814
                 },
                 "from": {
                     "file": "E:\\Code\\Android\\MyApplication\\objLoader\\src\\main\\res\\values-en\\strings.xml"
@@ -1793,9 +1779,9 @@
                 "to": {
                     "startLine": 423,
                     "startColumn": 4,
-                    "startOffset": 29812,
-                    "endColumn": 43,
-                    "endOffset": 29851
+                    "startOffset": 29819,
+                    "endColumn": 44,
+                    "endOffset": 29859
                 },
                 "from": {
                     "file": "E:\\Code\\Android\\MyApplication\\objLoader\\src\\main\\res\\values-en\\strings.xml"
@@ -1805,9 +1791,9 @@
                 "to": {
                     "startLine": 424,
                     "startColumn": 4,
-                    "startOffset": 29856,
-                    "endColumn": 58,
-                    "endOffset": 29910
+                    "startOffset": 29864,
+                    "endColumn": 43,
+                    "endOffset": 29903
                 },
                 "from": {
                     "file": "E:\\Code\\Android\\MyApplication\\objLoader\\src\\main\\res\\values-en\\strings.xml"
@@ -1817,9 +1803,9 @@
                 "to": {
                     "startLine": 425,
                     "startColumn": 4,
-                    "startOffset": 29915,
-                    "endColumn": 72,
-                    "endOffset": 29983
+                    "startOffset": 29908,
+                    "endColumn": 58,
+                    "endOffset": 29962
                 },
                 "from": {
                     "file": "E:\\Code\\Android\\MyApplication\\objLoader\\src\\main\\res\\values-en\\strings.xml"
@@ -1829,9 +1815,9 @@
                 "to": {
                     "startLine": 426,
                     "startColumn": 4,
-                    "startOffset": 29988,
-                    "endColumn": 76,
-                    "endOffset": 30060
+                    "startOffset": 29967,
+                    "endColumn": 72,
+                    "endOffset": 30035
                 },
                 "from": {
                     "file": "E:\\Code\\Android\\MyApplication\\objLoader\\src\\main\\res\\values-en\\strings.xml"
@@ -1841,9 +1827,9 @@
                 "to": {
                     "startLine": 427,
                     "startColumn": 4,
-                    "startOffset": 30065,
-                    "endColumn": 54,
-                    "endOffset": 30115
+                    "startOffset": 30040,
+                    "endColumn": 76,
+                    "endOffset": 30112
                 },
                 "from": {
                     "file": "E:\\Code\\Android\\MyApplication\\objLoader\\src\\main\\res\\values-en\\strings.xml"
@@ -1853,9 +1839,9 @@
                 "to": {
                     "startLine": 428,
                     "startColumn": 4,
-                    "startOffset": 30120,
-                    "endColumn": 78,
-                    "endOffset": 30194
+                    "startOffset": 30117,
+                    "endColumn": 54,
+                    "endOffset": 30167
                 },
                 "from": {
                     "file": "E:\\Code\\Android\\MyApplication\\objLoader\\src\\main\\res\\values-en\\strings.xml"
@@ -1865,9 +1851,9 @@
                 "to": {
                     "startLine": 429,
                     "startColumn": 4,
-                    "startOffset": 30199,
+                    "startOffset": 30172,
                     "endColumn": 78,
-                    "endOffset": 30273
+                    "endOffset": 30246
                 },
                 "from": {
                     "file": "E:\\Code\\Android\\MyApplication\\objLoader\\src\\main\\res\\values-en\\strings.xml"
@@ -1877,9 +1863,9 @@
                 "to": {
                     "startLine": 430,
                     "startColumn": 4,
-                    "startOffset": 30278,
-                    "endColumn": 72,
-                    "endOffset": 30346
+                    "startOffset": 30251,
+                    "endColumn": 78,
+                    "endOffset": 30325
                 },
                 "from": {
                     "file": "E:\\Code\\Android\\MyApplication\\objLoader\\src\\main\\res\\values-en\\strings.xml"
@@ -1889,9 +1875,9 @@
                 "to": {
                     "startLine": 431,
                     "startColumn": 4,
-                    "startOffset": 30351,
-                    "endColumn": 37,
-                    "endOffset": 30384
+                    "startOffset": 30330,
+                    "endColumn": 72,
+                    "endOffset": 30398
                 },
                 "from": {
                     "file": "E:\\Code\\Android\\MyApplication\\objLoader\\src\\main\\res\\values-en\\strings.xml"
@@ -1901,9 +1887,9 @@
                 "to": {
                     "startLine": 432,
                     "startColumn": 4,
-                    "startOffset": 30389,
-                    "endColumn": 54,
-                    "endOffset": 30439
+                    "startOffset": 30403,
+                    "endColumn": 37,
+                    "endOffset": 30436
                 },
                 "from": {
                     "file": "E:\\Code\\Android\\MyApplication\\objLoader\\src\\main\\res\\values-en\\strings.xml"
@@ -1913,9 +1899,9 @@
                 "to": {
                     "startLine": 433,
                     "startColumn": 4,
-                    "startOffset": 30444,
-                    "endColumn": 39,
-                    "endOffset": 30479
+                    "startOffset": 30441,
+                    "endColumn": 54,
+                    "endOffset": 30491
                 },
                 "from": {
                     "file": "E:\\Code\\Android\\MyApplication\\objLoader\\src\\main\\res\\values-en\\strings.xml"
@@ -1925,9 +1911,9 @@
                 "to": {
                     "startLine": 434,
                     "startColumn": 4,
-                    "startOffset": 30484,
-                    "endColumn": 46,
-                    "endOffset": 30526
+                    "startOffset": 30496,
+                    "endColumn": 39,
+                    "endOffset": 30531
                 },
                 "from": {
                     "file": "E:\\Code\\Android\\MyApplication\\objLoader\\src\\main\\res\\values-en\\strings.xml"
@@ -1937,9 +1923,9 @@
                 "to": {
                     "startLine": 435,
                     "startColumn": 4,
-                    "startOffset": 30531,
-                    "endColumn": 47,
-                    "endOffset": 30574
+                    "startOffset": 30536,
+                    "endColumn": 46,
+                    "endOffset": 30578
                 },
                 "from": {
                     "file": "E:\\Code\\Android\\MyApplication\\objLoader\\src\\main\\res\\values-en\\strings.xml"
@@ -1949,9 +1935,9 @@
                 "to": {
                     "startLine": 436,
                     "startColumn": 4,
-                    "startOffset": 30579,
-                    "endColumn": 49,
-                    "endOffset": 30624
+                    "startOffset": 30583,
+                    "endColumn": 47,
+                    "endOffset": 30626
                 },
                 "from": {
                     "file": "E:\\Code\\Android\\MyApplication\\objLoader\\src\\main\\res\\values-en\\strings.xml"
@@ -1961,9 +1947,9 @@
                 "to": {
                     "startLine": 437,
                     "startColumn": 4,
-                    "startOffset": 30629,
-                    "endColumn": 48,
-                    "endOffset": 30673
+                    "startOffset": 30631,
+                    "endColumn": 49,
+                    "endOffset": 30676
                 },
                 "from": {
                     "file": "E:\\Code\\Android\\MyApplication\\objLoader\\src\\main\\res\\values-en\\strings.xml"
@@ -1973,21 +1959,21 @@
                 "to": {
                     "startLine": 438,
                     "startColumn": 4,
-                    "startOffset": 30678,
-                    "endColumn": 65,
-                    "endOffset": 30739
+                    "startOffset": 30681,
+                    "endColumn": 48,
+                    "endOffset": 30725
                 },
                 "from": {
-                    "file": "E:\\Code\\Android\\MyApplication\\sMSSDK\\build\\intermediates\\bundles\\default\\res\\values-en\\values-en.xml"
+                    "file": "E:\\Code\\Android\\MyApplication\\objLoader\\src\\main\\res\\values-en\\strings.xml"
                 }
             },
             {
                 "to": {
                     "startLine": 439,
                     "startColumn": 4,
-                    "startOffset": 30744,
-                    "endColumn": 64,
-                    "endOffset": 30804
+                    "startOffset": 30730,
+                    "endColumn": 65,
+                    "endOffset": 30791
                 },
                 "from": {
                     "file": "E:\\Code\\Android\\MyApplication\\sMSSDK\\build\\intermediates\\bundles\\default\\res\\values-en\\values-en.xml"
@@ -1997,9 +1983,9 @@
                 "to": {
                     "startLine": 440,
                     "startColumn": 4,
-                    "startOffset": 30809,
-                    "endColumn": 70,
-                    "endOffset": 30875
+                    "startOffset": 30796,
+                    "endColumn": 64,
+                    "endOffset": 30856
                 },
                 "from": {
                     "file": "E:\\Code\\Android\\MyApplication\\sMSSDK\\build\\intermediates\\bundles\\default\\res\\values-en\\values-en.xml"
@@ -2009,9 +1995,9 @@
                 "to": {
                     "startLine": 441,
                     "startColumn": 4,
-                    "startOffset": 30880,
-                    "endColumn": 64,
-                    "endOffset": 30940
+                    "startOffset": 30861,
+                    "endColumn": 70,
+                    "endOffset": 30927
                 },
                 "from": {
                     "file": "E:\\Code\\Android\\MyApplication\\sMSSDK\\build\\intermediates\\bundles\\default\\res\\values-en\\values-en.xml"
@@ -2021,9 +2007,9 @@
                 "to": {
                     "startLine": 442,
                     "startColumn": 4,
-                    "startOffset": 30945,
-                    "endColumn": 66,
-                    "endOffset": 31007
+                    "startOffset": 30932,
+                    "endColumn": 64,
+                    "endOffset": 30992
                 },
                 "from": {
                     "file": "E:\\Code\\Android\\MyApplication\\sMSSDK\\build\\intermediates\\bundles\\default\\res\\values-en\\values-en.xml"
@@ -2033,9 +2019,9 @@
                 "to": {
                     "startLine": 443,
                     "startColumn": 4,
-                    "startOffset": 31012,
-                    "endColumn": 65,
-                    "endOffset": 31073
+                    "startOffset": 30997,
+                    "endColumn": 66,
+                    "endOffset": 31059
                 },
                 "from": {
                     "file": "E:\\Code\\Android\\MyApplication\\sMSSDK\\build\\intermediates\\bundles\\default\\res\\values-en\\values-en.xml"
@@ -2045,9 +2031,9 @@
                 "to": {
                     "startLine": 444,
                     "startColumn": 4,
-                    "startOffset": 31078,
-                    "endColumn": 69,
-                    "endOffset": 31143
+                    "startOffset": 31064,
+                    "endColumn": 65,
+                    "endOffset": 31125
                 },
                 "from": {
                     "file": "E:\\Code\\Android\\MyApplication\\sMSSDK\\build\\intermediates\\bundles\\default\\res\\values-en\\values-en.xml"
@@ -2057,9 +2043,9 @@
                 "to": {
                     "startLine": 445,
                     "startColumn": 4,
-                    "startOffset": 31148,
-                    "endColumn": 66,
-                    "endOffset": 31210
+                    "startOffset": 31130,
+                    "endColumn": 69,
+                    "endOffset": 31195
                 },
                 "from": {
                     "file": "E:\\Code\\Android\\MyApplication\\sMSSDK\\build\\intermediates\\bundles\\default\\res\\values-en\\values-en.xml"
@@ -2069,9 +2055,9 @@
                 "to": {
                     "startLine": 446,
                     "startColumn": 4,
-                    "startOffset": 31215,
-                    "endColumn": 67,
-                    "endOffset": 31278
+                    "startOffset": 31200,
+                    "endColumn": 66,
+                    "endOffset": 31262
                 },
                 "from": {
                     "file": "E:\\Code\\Android\\MyApplication\\sMSSDK\\build\\intermediates\\bundles\\default\\res\\values-en\\values-en.xml"
@@ -2081,9 +2067,9 @@
                 "to": {
                     "startLine": 447,
                     "startColumn": 4,
-                    "startOffset": 31283,
-                    "endColumn": 76,
-                    "endOffset": 31355
+                    "startOffset": 31267,
+                    "endColumn": 67,
+                    "endOffset": 31330
                 },
                 "from": {
                     "file": "E:\\Code\\Android\\MyApplication\\sMSSDK\\build\\intermediates\\bundles\\default\\res\\values-en\\values-en.xml"
@@ -2093,9 +2079,9 @@
                 "to": {
                     "startLine": 448,
                     "startColumn": 4,
-                    "startOffset": 31360,
-                    "endColumn": 64,
-                    "endOffset": 31420
+                    "startOffset": 31335,
+                    "endColumn": 76,
+                    "endOffset": 31407
                 },
                 "from": {
                     "file": "E:\\Code\\Android\\MyApplication\\sMSSDK\\build\\intermediates\\bundles\\default\\res\\values-en\\values-en.xml"
@@ -2105,9 +2091,9 @@
                 "to": {
                     "startLine": 449,
                     "startColumn": 4,
-                    "startOffset": 31425,
-                    "endColumn": 67,
-                    "endOffset": 31488
+                    "startOffset": 31412,
+                    "endColumn": 64,
+                    "endOffset": 31472
                 },
                 "from": {
                     "file": "E:\\Code\\Android\\MyApplication\\sMSSDK\\build\\intermediates\\bundles\\default\\res\\values-en\\values-en.xml"
@@ -2117,9 +2103,9 @@
                 "to": {
                     "startLine": 450,
                     "startColumn": 4,
-                    "startOffset": 31493,
-                    "endColumn": 69,
-                    "endOffset": 31558
+                    "startOffset": 31477,
+                    "endColumn": 67,
+                    "endOffset": 31540
                 },
                 "from": {
                     "file": "E:\\Code\\Android\\MyApplication\\sMSSDK\\build\\intermediates\\bundles\\default\\res\\values-en\\values-en.xml"
@@ -2129,9 +2115,9 @@
                 "to": {
                     "startLine": 451,
                     "startColumn": 4,
-                    "startOffset": 31563,
-                    "endColumn": 71,
-                    "endOffset": 31630
+                    "startOffset": 31545,
+                    "endColumn": 69,
+                    "endOffset": 31610
                 },
                 "from": {
                     "file": "E:\\Code\\Android\\MyApplication\\sMSSDK\\build\\intermediates\\bundles\\default\\res\\values-en\\values-en.xml"
@@ -2141,9 +2127,9 @@
                 "to": {
                     "startLine": 452,
                     "startColumn": 4,
-                    "startOffset": 31635,
-                    "endColumn": 64,
-                    "endOffset": 31695
+                    "startOffset": 31615,
+                    "endColumn": 71,
+                    "endOffset": 31682
                 },
                 "from": {
                     "file": "E:\\Code\\Android\\MyApplication\\sMSSDK\\build\\intermediates\\bundles\\default\\res\\values-en\\values-en.xml"
@@ -2153,9 +2139,9 @@
                 "to": {
                     "startLine": 453,
                     "startColumn": 4,
-                    "startOffset": 31700,
-                    "endColumn": 65,
-                    "endOffset": 31761
+                    "startOffset": 31687,
+                    "endColumn": 64,
+                    "endOffset": 31747
                 },
                 "from": {
                     "file": "E:\\Code\\Android\\MyApplication\\sMSSDK\\build\\intermediates\\bundles\\default\\res\\values-en\\values-en.xml"
@@ -2165,9 +2151,9 @@
                 "to": {
                     "startLine": 454,
                     "startColumn": 4,
-                    "startOffset": 31766,
-                    "endColumn": 67,
-                    "endOffset": 31829
+                    "startOffset": 31752,
+                    "endColumn": 65,
+                    "endOffset": 31813
                 },
                 "from": {
                     "file": "E:\\Code\\Android\\MyApplication\\sMSSDK\\build\\intermediates\\bundles\\default\\res\\values-en\\values-en.xml"
@@ -2177,9 +2163,9 @@
                 "to": {
                     "startLine": 455,
                     "startColumn": 4,
-                    "startOffset": 31834,
-                    "endColumn": 68,
-                    "endOffset": 31898
+                    "startOffset": 31818,
+                    "endColumn": 67,
+                    "endOffset": 31881
                 },
                 "from": {
                     "file": "E:\\Code\\Android\\MyApplication\\sMSSDK\\build\\intermediates\\bundles\\default\\res\\values-en\\values-en.xml"
@@ -2189,9 +2175,9 @@
                 "to": {
                     "startLine": 456,
                     "startColumn": 4,
-                    "startOffset": 31903,
-                    "endColumn": 73,
-                    "endOffset": 31972
+                    "startOffset": 31886,
+                    "endColumn": 68,
+                    "endOffset": 31950
                 },
                 "from": {
                     "file": "E:\\Code\\Android\\MyApplication\\sMSSDK\\build\\intermediates\\bundles\\default\\res\\values-en\\values-en.xml"
@@ -2201,9 +2187,9 @@
                 "to": {
                     "startLine": 457,
                     "startColumn": 4,
-                    "startOffset": 31977,
-                    "endColumn": 64,
-                    "endOffset": 32037
+                    "startOffset": 31955,
+                    "endColumn": 73,
+                    "endOffset": 32024
                 },
                 "from": {
                     "file": "E:\\Code\\Android\\MyApplication\\sMSSDK\\build\\intermediates\\bundles\\default\\res\\values-en\\values-en.xml"
@@ -2213,9 +2199,9 @@
                 "to": {
                     "startLine": 458,
                     "startColumn": 4,
-                    "startOffset": 32042,
-                    "endColumn": 71,
-                    "endOffset": 32109
+                    "startOffset": 32029,
+                    "endColumn": 64,
+                    "endOffset": 32089
                 },
                 "from": {
                     "file": "E:\\Code\\Android\\MyApplication\\sMSSDK\\build\\intermediates\\bundles\\default\\res\\values-en\\values-en.xml"
@@ -2225,9 +2211,9 @@
                 "to": {
                     "startLine": 459,
                     "startColumn": 4,
-                    "startOffset": 32114,
-                    "endColumn": 67,
-                    "endOffset": 32177
+                    "startOffset": 32094,
+                    "endColumn": 71,
+                    "endOffset": 32161
                 },
                 "from": {
                     "file": "E:\\Code\\Android\\MyApplication\\sMSSDK\\build\\intermediates\\bundles\\default\\res\\values-en\\values-en.xml"
@@ -2237,9 +2223,9 @@
                 "to": {
                     "startLine": 460,
                     "startColumn": 4,
-                    "startOffset": 32182,
+                    "startOffset": 32166,
                     "endColumn": 67,
-                    "endOffset": 32245
+                    "endOffset": 32229
                 },
                 "from": {
                     "file": "E:\\Code\\Android\\MyApplication\\sMSSDK\\build\\intermediates\\bundles\\default\\res\\values-en\\values-en.xml"
@@ -2249,9 +2235,9 @@
                 "to": {
                     "startLine": 461,
                     "startColumn": 4,
-                    "startOffset": 32250,
-                    "endColumn": 81,
-                    "endOffset": 32327
+                    "startOffset": 32234,
+                    "endColumn": 67,
+                    "endOffset": 32297
                 },
                 "from": {
                     "file": "E:\\Code\\Android\\MyApplication\\sMSSDK\\build\\intermediates\\bundles\\default\\res\\values-en\\values-en.xml"
@@ -2261,9 +2247,9 @@
                 "to": {
                     "startLine": 462,
                     "startColumn": 4,
-                    "startOffset": 32332,
+                    "startOffset": 32302,
                     "endColumn": 81,
-                    "endOffset": 32409
+                    "endOffset": 32379
                 },
                 "from": {
                     "file": "E:\\Code\\Android\\MyApplication\\sMSSDK\\build\\intermediates\\bundles\\default\\res\\values-en\\values-en.xml"
@@ -2273,9 +2259,9 @@
                 "to": {
                     "startLine": 463,
                     "startColumn": 4,
-                    "startOffset": 32414,
+                    "startOffset": 32384,
                     "endColumn": 81,
-                    "endOffset": 32491
+                    "endOffset": 32461
                 },
                 "from": {
                     "file": "E:\\Code\\Android\\MyApplication\\sMSSDK\\build\\intermediates\\bundles\\default\\res\\values-en\\values-en.xml"
@@ -2285,9 +2271,9 @@
                 "to": {
                     "startLine": 464,
                     "startColumn": 4,
-                    "startOffset": 32496,
+                    "startOffset": 32466,
                     "endColumn": 81,
-                    "endOffset": 32573
+                    "endOffset": 32543
                 },
                 "from": {
                     "file": "E:\\Code\\Android\\MyApplication\\sMSSDK\\build\\intermediates\\bundles\\default\\res\\values-en\\values-en.xml"
@@ -2297,9 +2283,9 @@
                 "to": {
                     "startLine": 465,
                     "startColumn": 4,
-                    "startOffset": 32578,
-                    "endColumn": 80,
-                    "endOffset": 32654
+                    "startOffset": 32548,
+                    "endColumn": 81,
+                    "endOffset": 32625
                 },
                 "from": {
                     "file": "E:\\Code\\Android\\MyApplication\\sMSSDK\\build\\intermediates\\bundles\\default\\res\\values-en\\values-en.xml"
@@ -2309,9 +2295,9 @@
                 "to": {
                     "startLine": 466,
                     "startColumn": 4,
-                    "startOffset": 32659,
-                    "endColumn": 110,
-                    "endOffset": 32765
+                    "startOffset": 32630,
+                    "endColumn": 80,
+                    "endOffset": 32706
                 },
                 "from": {
                     "file": "E:\\Code\\Android\\MyApplication\\sMSSDK\\build\\intermediates\\bundles\\default\\res\\values-en\\values-en.xml"
@@ -2321,9 +2307,9 @@
                 "to": {
                     "startLine": 467,
                     "startColumn": 4,
-                    "startOffset": 32770,
-                    "endColumn": 73,
-                    "endOffset": 32839
+                    "startOffset": 32711,
+                    "endColumn": 110,
+                    "endOffset": 32817
                 },
                 "from": {
                     "file": "E:\\Code\\Android\\MyApplication\\sMSSDK\\build\\intermediates\\bundles\\default\\res\\values-en\\values-en.xml"
@@ -2333,9 +2319,9 @@
                 "to": {
                     "startLine": 468,
                     "startColumn": 4,
-                    "startOffset": 32844,
-                    "endColumn": 67,
-                    "endOffset": 32907
+                    "startOffset": 32822,
+                    "endColumn": 73,
+                    "endOffset": 32891
                 },
                 "from": {
                     "file": "E:\\Code\\Android\\MyApplication\\sMSSDK\\build\\intermediates\\bundles\\default\\res\\values-en\\values-en.xml"
@@ -2345,9 +2331,9 @@
                 "to": {
                     "startLine": 469,
                     "startColumn": 4,
-                    "startOffset": 32912,
-                    "endColumn": 70,
-                    "endOffset": 32978
+                    "startOffset": 32896,
+                    "endColumn": 67,
+                    "endOffset": 32959
                 },
                 "from": {
                     "file": "E:\\Code\\Android\\MyApplication\\sMSSDK\\build\\intermediates\\bundles\\default\\res\\values-en\\values-en.xml"
@@ -2357,9 +2343,9 @@
                 "to": {
                     "startLine": 470,
                     "startColumn": 4,
-                    "startOffset": 32983,
-                    "endColumn": 60,
-                    "endOffset": 33039
+                    "startOffset": 32964,
+                    "endColumn": 70,
+                    "endOffset": 33030
                 },
                 "from": {
                     "file": "E:\\Code\\Android\\MyApplication\\sMSSDK\\build\\intermediates\\bundles\\default\\res\\values-en\\values-en.xml"
@@ -2369,9 +2355,9 @@
                 "to": {
                     "startLine": 471,
                     "startColumn": 4,
-                    "startOffset": 33044,
-                    "endColumn": 71,
-                    "endOffset": 33111
+                    "startOffset": 33035,
+                    "endColumn": 60,
+                    "endOffset": 33091
                 },
                 "from": {
                     "file": "E:\\Code\\Android\\MyApplication\\sMSSDK\\build\\intermediates\\bundles\\default\\res\\values-en\\values-en.xml"
@@ -2381,9 +2367,9 @@
                 "to": {
                     "startLine": 472,
                     "startColumn": 4,
-                    "startOffset": 33116,
-                    "endColumn": 104,
-                    "endOffset": 33216
+                    "startOffset": 33096,
+                    "endColumn": 71,
+                    "endOffset": 33163
                 },
                 "from": {
                     "file": "E:\\Code\\Android\\MyApplication\\sMSSDK\\build\\intermediates\\bundles\\default\\res\\values-en\\values-en.xml"
@@ -2393,9 +2379,9 @@
                 "to": {
                     "startLine": 473,
                     "startColumn": 4,
-                    "startOffset": 33221,
-                    "endColumn": 86,
-                    "endOffset": 33303
+                    "startOffset": 33168,
+                    "endColumn": 104,
+                    "endOffset": 33268
                 },
                 "from": {
                     "file": "E:\\Code\\Android\\MyApplication\\sMSSDK\\build\\intermediates\\bundles\\default\\res\\values-en\\values-en.xml"
@@ -2405,9 +2391,9 @@
                 "to": {
                     "startLine": 474,
                     "startColumn": 4,
-                    "startOffset": 33308,
-                    "endColumn": 83,
-                    "endOffset": 33387
+                    "startOffset": 33273,
+                    "endColumn": 86,
+                    "endOffset": 33355
                 },
                 "from": {
                     "file": "E:\\Code\\Android\\MyApplication\\sMSSDK\\build\\intermediates\\bundles\\default\\res\\values-en\\values-en.xml"
@@ -2417,9 +2403,9 @@
                 "to": {
                     "startLine": 475,
                     "startColumn": 4,
-                    "startOffset": 33392,
-                    "endColumn": 103,
-                    "endOffset": 33491
+                    "startOffset": 33360,
+                    "endColumn": 83,
+                    "endOffset": 33439
                 },
                 "from": {
                     "file": "E:\\Code\\Android\\MyApplication\\sMSSDK\\build\\intermediates\\bundles\\default\\res\\values-en\\values-en.xml"
@@ -2429,9 +2415,9 @@
                 "to": {
                     "startLine": 476,
                     "startColumn": 4,
-                    "startOffset": 33496,
-                    "endColumn": 102,
-                    "endOffset": 33594
+                    "startOffset": 33444,
+                    "endColumn": 103,
+                    "endOffset": 33543
                 },
                 "from": {
                     "file": "E:\\Code\\Android\\MyApplication\\sMSSDK\\build\\intermediates\\bundles\\default\\res\\values-en\\values-en.xml"
@@ -2441,9 +2427,9 @@
                 "to": {
                     "startLine": 477,
                     "startColumn": 4,
-                    "startOffset": 33599,
-                    "endColumn": 106,
-                    "endOffset": 33701
+                    "startOffset": 33548,
+                    "endColumn": 102,
+                    "endOffset": 33646
                 },
                 "from": {
                     "file": "E:\\Code\\Android\\MyApplication\\sMSSDK\\build\\intermediates\\bundles\\default\\res\\values-en\\values-en.xml"
@@ -2453,9 +2439,9 @@
                 "to": {
                     "startLine": 478,
                     "startColumn": 4,
-                    "startOffset": 33706,
-                    "endColumn": 71,
-                    "endOffset": 33773
+                    "startOffset": 33651,
+                    "endColumn": 106,
+                    "endOffset": 33753
                 },
                 "from": {
                     "file": "E:\\Code\\Android\\MyApplication\\sMSSDK\\build\\intermediates\\bundles\\default\\res\\values-en\\values-en.xml"
@@ -2465,9 +2451,9 @@
                 "to": {
                     "startLine": 479,
                     "startColumn": 4,
-                    "startOffset": 33778,
-                    "endColumn": 87,
-                    "endOffset": 33861
+                    "startOffset": 33758,
+                    "endColumn": 71,
+                    "endOffset": 33825
                 },
                 "from": {
                     "file": "E:\\Code\\Android\\MyApplication\\sMSSDK\\build\\intermediates\\bundles\\default\\res\\values-en\\values-en.xml"
@@ -2477,9 +2463,9 @@
                 "to": {
                     "startLine": 480,
                     "startColumn": 4,
-                    "startOffset": 33866,
-                    "endColumn": 71,
-                    "endOffset": 33933
+                    "startOffset": 33830,
+                    "endColumn": 87,
+                    "endOffset": 33913
                 },
                 "from": {
                     "file": "E:\\Code\\Android\\MyApplication\\sMSSDK\\build\\intermediates\\bundles\\default\\res\\values-en\\values-en.xml"
@@ -2489,9 +2475,9 @@
                 "to": {
                     "startLine": 481,
                     "startColumn": 4,
-                    "startOffset": 33938,
-                    "endColumn": 82,
-                    "endOffset": 34016
+                    "startOffset": 33918,
+                    "endColumn": 71,
+                    "endOffset": 33985
                 },
                 "from": {
                     "file": "E:\\Code\\Android\\MyApplication\\sMSSDK\\build\\intermediates\\bundles\\default\\res\\values-en\\values-en.xml"
@@ -2501,9 +2487,9 @@
                 "to": {
                     "startLine": 482,
                     "startColumn": 4,
-                    "startOffset": 34021,
-                    "endColumn": 87,
-                    "endOffset": 34104
+                    "startOffset": 33990,
+                    "endColumn": 82,
+                    "endOffset": 34068
                 },
                 "from": {
                     "file": "E:\\Code\\Android\\MyApplication\\sMSSDK\\build\\intermediates\\bundles\\default\\res\\values-en\\values-en.xml"
@@ -2513,9 +2499,9 @@
                 "to": {
                     "startLine": 483,
                     "startColumn": 4,
-                    "startOffset": 34109,
-                    "endColumn": 96,
-                    "endOffset": 34201
+                    "startOffset": 34073,
+                    "endColumn": 87,
+                    "endOffset": 34156
                 },
                 "from": {
                     "file": "E:\\Code\\Android\\MyApplication\\sMSSDK\\build\\intermediates\\bundles\\default\\res\\values-en\\values-en.xml"
@@ -2525,9 +2511,9 @@
                 "to": {
                     "startLine": 484,
                     "startColumn": 4,
-                    "startOffset": 34206,
-                    "endColumn": 85,
-                    "endOffset": 34287
+                    "startOffset": 34161,
+                    "endColumn": 96,
+                    "endOffset": 34253
                 },
                 "from": {
                     "file": "E:\\Code\\Android\\MyApplication\\sMSSDK\\build\\intermediates\\bundles\\default\\res\\values-en\\values-en.xml"
@@ -2537,9 +2523,9 @@
                 "to": {
                     "startLine": 485,
                     "startColumn": 4,
-                    "startOffset": 34292,
-                    "endColumn": 72,
-                    "endOffset": 34360
+                    "startOffset": 34258,
+                    "endColumn": 85,
+                    "endOffset": 34339
                 },
                 "from": {
                     "file": "E:\\Code\\Android\\MyApplication\\sMSSDK\\build\\intermediates\\bundles\\default\\res\\values-en\\values-en.xml"
@@ -2549,9 +2535,9 @@
                 "to": {
                     "startLine": 486,
                     "startColumn": 4,
-                    "startOffset": 34365,
-                    "endColumn": 87,
-                    "endOffset": 34448
+                    "startOffset": 34344,
+                    "endColumn": 72,
+                    "endOffset": 34412
                 },
                 "from": {
                     "file": "E:\\Code\\Android\\MyApplication\\sMSSDK\\build\\intermediates\\bundles\\default\\res\\values-en\\values-en.xml"
@@ -2561,9 +2547,9 @@
                 "to": {
                     "startLine": 487,
                     "startColumn": 4,
-                    "startOffset": 34453,
-                    "endColumn": 78,
-                    "endOffset": 34527
+                    "startOffset": 34417,
+                    "endColumn": 87,
+                    "endOffset": 34500
                 },
                 "from": {
                     "file": "E:\\Code\\Android\\MyApplication\\sMSSDK\\build\\intermediates\\bundles\\default\\res\\values-en\\values-en.xml"
@@ -2573,9 +2559,9 @@
                 "to": {
                     "startLine": 488,
                     "startColumn": 4,
-                    "startOffset": 34532,
-                    "endColumn": 84,
-                    "endOffset": 34612
+                    "startOffset": 34505,
+                    "endColumn": 78,
+                    "endOffset": 34579
                 },
                 "from": {
                     "file": "E:\\Code\\Android\\MyApplication\\sMSSDK\\build\\intermediates\\bundles\\default\\res\\values-en\\values-en.xml"
@@ -2585,9 +2571,9 @@
                 "to": {
                     "startLine": 489,
                     "startColumn": 4,
-                    "startOffset": 34617,
-                    "endColumn": 89,
-                    "endOffset": 34702
+                    "startOffset": 34584,
+                    "endColumn": 84,
+                    "endOffset": 34664
                 },
                 "from": {
                     "file": "E:\\Code\\Android\\MyApplication\\sMSSDK\\build\\intermediates\\bundles\\default\\res\\values-en\\values-en.xml"
@@ -2597,9 +2583,9 @@
                 "to": {
                     "startLine": 490,
                     "startColumn": 4,
-                    "startOffset": 34707,
-                    "endColumn": 91,
-                    "endOffset": 34794
+                    "startOffset": 34669,
+                    "endColumn": 89,
+                    "endOffset": 34754
                 },
                 "from": {
                     "file": "E:\\Code\\Android\\MyApplication\\sMSSDK\\build\\intermediates\\bundles\\default\\res\\values-en\\values-en.xml"
@@ -2609,9 +2595,9 @@
                 "to": {
                     "startLine": 491,
                     "startColumn": 4,
-                    "startOffset": 34799,
-                    "endColumn": 79,
-                    "endOffset": 34874
+                    "startOffset": 34759,
+                    "endColumn": 91,
+                    "endOffset": 34846
                 },
                 "from": {
                     "file": "E:\\Code\\Android\\MyApplication\\sMSSDK\\build\\intermediates\\bundles\\default\\res\\values-en\\values-en.xml"
@@ -2621,9 +2607,9 @@
                 "to": {
                     "startLine": 492,
                     "startColumn": 4,
-                    "startOffset": 34879,
-                    "endColumn": 85,
-                    "endOffset": 34960
+                    "startOffset": 34851,
+                    "endColumn": 79,
+                    "endOffset": 34926
                 },
                 "from": {
                     "file": "E:\\Code\\Android\\MyApplication\\sMSSDK\\build\\intermediates\\bundles\\default\\res\\values-en\\values-en.xml"
@@ -2633,9 +2619,9 @@
                 "to": {
                     "startLine": 493,
                     "startColumn": 4,
-                    "startOffset": 34965,
-                    "endColumn": 81,
-                    "endOffset": 35042
+                    "startOffset": 34931,
+                    "endColumn": 85,
+                    "endOffset": 35012
                 },
                 "from": {
                     "file": "E:\\Code\\Android\\MyApplication\\sMSSDK\\build\\intermediates\\bundles\\default\\res\\values-en\\values-en.xml"
@@ -2645,9 +2631,9 @@
                 "to": {
                     "startLine": 494,
                     "startColumn": 4,
-                    "startOffset": 35047,
-                    "endColumn": 94,
-                    "endOffset": 35137
+                    "startOffset": 35017,
+                    "endColumn": 81,
+                    "endOffset": 35094
                 },
                 "from": {
                     "file": "E:\\Code\\Android\\MyApplication\\sMSSDK\\build\\intermediates\\bundles\\default\\res\\values-en\\values-en.xml"
@@ -2657,9 +2643,9 @@
                 "to": {
                     "startLine": 495,
                     "startColumn": 4,
-                    "startOffset": 35142,
-                    "endColumn": 101,
-                    "endOffset": 35239
+                    "startOffset": 35099,
+                    "endColumn": 94,
+                    "endOffset": 35189
                 },
                 "from": {
                     "file": "E:\\Code\\Android\\MyApplication\\sMSSDK\\build\\intermediates\\bundles\\default\\res\\values-en\\values-en.xml"
@@ -2669,9 +2655,9 @@
                 "to": {
                     "startLine": 496,
                     "startColumn": 4,
-                    "startOffset": 35244,
-                    "endColumn": 81,
-                    "endOffset": 35321
+                    "startOffset": 35194,
+                    "endColumn": 101,
+                    "endOffset": 35291
                 },
                 "from": {
                     "file": "E:\\Code\\Android\\MyApplication\\sMSSDK\\build\\intermediates\\bundles\\default\\res\\values-en\\values-en.xml"
@@ -2681,9 +2667,9 @@
                 "to": {
                     "startLine": 497,
                     "startColumn": 4,
-                    "startOffset": 35326,
-                    "endColumn": 129,
-                    "endOffset": 35451
+                    "startOffset": 35296,
+                    "endColumn": 81,
+                    "endOffset": 35373
                 },
                 "from": {
                     "file": "E:\\Code\\Android\\MyApplication\\sMSSDK\\build\\intermediates\\bundles\\default\\res\\values-en\\values-en.xml"
@@ -2693,9 +2679,9 @@
                 "to": {
                     "startLine": 498,
                     "startColumn": 4,
-                    "startOffset": 35456,
-                    "endColumn": 110,
-                    "endOffset": 35562
+                    "startOffset": 35378,
+                    "endColumn": 129,
+                    "endOffset": 35503
                 },
                 "from": {
                     "file": "E:\\Code\\Android\\MyApplication\\sMSSDK\\build\\intermediates\\bundles\\default\\res\\values-en\\values-en.xml"
@@ -2705,9 +2691,9 @@
                 "to": {
                     "startLine": 499,
                     "startColumn": 4,
-                    "startOffset": 35567,
-                    "endColumn": 101,
-                    "endOffset": 35664
+                    "startOffset": 35508,
+                    "endColumn": 110,
+                    "endOffset": 35614
                 },
                 "from": {
                     "file": "E:\\Code\\Android\\MyApplication\\sMSSDK\\build\\intermediates\\bundles\\default\\res\\values-en\\values-en.xml"
@@ -2717,9 +2703,9 @@
                 "to": {
                     "startLine": 500,
                     "startColumn": 4,
-                    "startOffset": 35669,
-                    "endColumn": 86,
-                    "endOffset": 35751
+                    "startOffset": 35619,
+                    "endColumn": 101,
+                    "endOffset": 35716
                 },
                 "from": {
                     "file": "E:\\Code\\Android\\MyApplication\\sMSSDK\\build\\intermediates\\bundles\\default\\res\\values-en\\values-en.xml"
@@ -2729,9 +2715,9 @@
                 "to": {
                     "startLine": 501,
                     "startColumn": 4,
-                    "startOffset": 35756,
-                    "endColumn": 114,
-                    "endOffset": 35866
+                    "startOffset": 35721,
+                    "endColumn": 86,
+                    "endOffset": 35803
                 },
                 "from": {
                     "file": "E:\\Code\\Android\\MyApplication\\sMSSDK\\build\\intermediates\\bundles\\default\\res\\values-en\\values-en.xml"
@@ -2741,9 +2727,9 @@
                 "to": {
                     "startLine": 502,
                     "startColumn": 4,
-                    "startOffset": 35871,
-                    "endColumn": 69,
-                    "endOffset": 35936
+                    "startOffset": 35808,
+                    "endColumn": 114,
+                    "endOffset": 35918
                 },
                 "from": {
                     "file": "E:\\Code\\Android\\MyApplication\\sMSSDK\\build\\intermediates\\bundles\\default\\res\\values-en\\values-en.xml"
@@ -2753,9 +2739,9 @@
                 "to": {
                     "startLine": 503,
                     "startColumn": 4,
-                    "startOffset": 35941,
-                    "endColumn": 103,
-                    "endOffset": 36040
+                    "startOffset": 35923,
+                    "endColumn": 69,
+                    "endOffset": 35988
                 },
                 "from": {
                     "file": "E:\\Code\\Android\\MyApplication\\sMSSDK\\build\\intermediates\\bundles\\default\\res\\values-en\\values-en.xml"
@@ -2765,9 +2751,9 @@
                 "to": {
                     "startLine": 504,
                     "startColumn": 4,
-                    "startOffset": 36045,
-                    "endColumn": 107,
-                    "endOffset": 36148
+                    "startOffset": 35993,
+                    "endColumn": 103,
+                    "endOffset": 36092
                 },
                 "from": {
                     "file": "E:\\Code\\Android\\MyApplication\\sMSSDK\\build\\intermediates\\bundles\\default\\res\\values-en\\values-en.xml"
@@ -2777,9 +2763,9 @@
                 "to": {
                     "startLine": 505,
                     "startColumn": 4,
-                    "startOffset": 36153,
-                    "endColumn": 80,
-                    "endOffset": 36229
+                    "startOffset": 36097,
+                    "endColumn": 107,
+                    "endOffset": 36200
                 },
                 "from": {
                     "file": "E:\\Code\\Android\\MyApplication\\sMSSDK\\build\\intermediates\\bundles\\default\\res\\values-en\\values-en.xml"
@@ -2789,9 +2775,9 @@
                 "to": {
                     "startLine": 506,
                     "startColumn": 4,
-                    "startOffset": 36234,
-                    "endColumn": 95,
-                    "endOffset": 36325
+                    "startOffset": 36205,
+                    "endColumn": 80,
+                    "endOffset": 36281
                 },
                 "from": {
                     "file": "E:\\Code\\Android\\MyApplication\\sMSSDK\\build\\intermediates\\bundles\\default\\res\\values-en\\values-en.xml"
@@ -2801,9 +2787,9 @@
                 "to": {
                     "startLine": 507,
                     "startColumn": 4,
-                    "startOffset": 36330,
-                    "endColumn": 113,
-                    "endOffset": 36439
+                    "startOffset": 36286,
+                    "endColumn": 95,
+                    "endOffset": 36377
                 },
                 "from": {
                     "file": "E:\\Code\\Android\\MyApplication\\sMSSDK\\build\\intermediates\\bundles\\default\\res\\values-en\\values-en.xml"
@@ -2813,9 +2799,9 @@
                 "to": {
                     "startLine": 508,
                     "startColumn": 4,
-                    "startOffset": 36444,
-                    "endColumn": 101,
-                    "endOffset": 36541
+                    "startOffset": 36382,
+                    "endColumn": 113,
+                    "endOffset": 36491
                 },
                 "from": {
                     "file": "E:\\Code\\Android\\MyApplication\\sMSSDK\\build\\intermediates\\bundles\\default\\res\\values-en\\values-en.xml"
@@ -2825,9 +2811,9 @@
                 "to": {
                     "startLine": 509,
                     "startColumn": 4,
-                    "startOffset": 36546,
-                    "endColumn": 99,
-                    "endOffset": 36641
+                    "startOffset": 36496,
+                    "endColumn": 101,
+                    "endOffset": 36593
                 },
                 "from": {
                     "file": "E:\\Code\\Android\\MyApplication\\sMSSDK\\build\\intermediates\\bundles\\default\\res\\values-en\\values-en.xml"
@@ -2837,9 +2823,9 @@
                 "to": {
                     "startLine": 510,
                     "startColumn": 4,
-                    "startOffset": 36646,
-                    "endColumn": 114,
-                    "endOffset": 36756
+                    "startOffset": 36598,
+                    "endColumn": 99,
+                    "endOffset": 36693
                 },
                 "from": {
                     "file": "E:\\Code\\Android\\MyApplication\\sMSSDK\\build\\intermediates\\bundles\\default\\res\\values-en\\values-en.xml"
@@ -2849,9 +2835,9 @@
                 "to": {
                     "startLine": 511,
                     "startColumn": 4,
-                    "startOffset": 36761,
-                    "endColumn": 108,
-                    "endOffset": 36865
+                    "startOffset": 36698,
+                    "endColumn": 114,
+                    "endOffset": 36808
                 },
                 "from": {
                     "file": "E:\\Code\\Android\\MyApplication\\sMSSDK\\build\\intermediates\\bundles\\default\\res\\values-en\\values-en.xml"
@@ -2861,9 +2847,9 @@
                 "to": {
                     "startLine": 512,
                     "startColumn": 4,
-                    "startOffset": 36870,
-                    "endColumn": 115,
-                    "endOffset": 36981
+                    "startOffset": 36813,
+                    "endColumn": 108,
+                    "endOffset": 36917
                 },
                 "from": {
                     "file": "E:\\Code\\Android\\MyApplication\\sMSSDK\\build\\intermediates\\bundles\\default\\res\\values-en\\values-en.xml"
@@ -2873,9 +2859,9 @@
                 "to": {
                     "startLine": 513,
                     "startColumn": 4,
-                    "startOffset": 36986,
-                    "endColumn": 92,
-                    "endOffset": 37074
+                    "startOffset": 36922,
+                    "endColumn": 115,
+                    "endOffset": 37033
                 },
                 "from": {
                     "file": "E:\\Code\\Android\\MyApplication\\sMSSDK\\build\\intermediates\\bundles\\default\\res\\values-en\\values-en.xml"
@@ -2885,9 +2871,9 @@
                 "to": {
                     "startLine": 514,
                     "startColumn": 4,
-                    "startOffset": 37079,
-                    "endColumn": 88,
-                    "endOffset": 37163
+                    "startOffset": 37038,
+                    "endColumn": 92,
+                    "endOffset": 37126
                 },
                 "from": {
                     "file": "E:\\Code\\Android\\MyApplication\\sMSSDK\\build\\intermediates\\bundles\\default\\res\\values-en\\values-en.xml"
@@ -2897,9 +2883,9 @@
                 "to": {
                     "startLine": 515,
                     "startColumn": 4,
-                    "startOffset": 37168,
-                    "endColumn": 75,
-                    "endOffset": 37239
+                    "startOffset": 37131,
+                    "endColumn": 88,
+                    "endOffset": 37215
                 },
                 "from": {
                     "file": "E:\\Code\\Android\\MyApplication\\sMSSDK\\build\\intermediates\\bundles\\default\\res\\values-en\\values-en.xml"
@@ -2909,9 +2895,9 @@
                 "to": {
                     "startLine": 516,
                     "startColumn": 4,
-                    "startOffset": 37244,
-                    "endColumn": 109,
-                    "endOffset": 37349
+                    "startOffset": 37220,
+                    "endColumn": 75,
+                    "endOffset": 37291
                 },
                 "from": {
                     "file": "E:\\Code\\Android\\MyApplication\\sMSSDK\\build\\intermediates\\bundles\\default\\res\\values-en\\values-en.xml"
@@ -2921,9 +2907,9 @@
                 "to": {
                     "startLine": 517,
                     "startColumn": 4,
-                    "startOffset": 37354,
-                    "endColumn": 72,
-                    "endOffset": 37422
+                    "startOffset": 37296,
+                    "endColumn": 109,
+                    "endOffset": 37401
                 },
                 "from": {
                     "file": "E:\\Code\\Android\\MyApplication\\sMSSDK\\build\\intermediates\\bundles\\default\\res\\values-en\\values-en.xml"
@@ -2933,9 +2919,9 @@
                 "to": {
                     "startLine": 518,
                     "startColumn": 4,
-                    "startOffset": 37427,
-                    "endColumn": 102,
-                    "endOffset": 37525
+                    "startOffset": 37406,
+                    "endColumn": 72,
+                    "endOffset": 37474
                 },
                 "from": {
                     "file": "E:\\Code\\Android\\MyApplication\\sMSSDK\\build\\intermediates\\bundles\\default\\res\\values-en\\values-en.xml"
@@ -2945,9 +2931,9 @@
                 "to": {
                     "startLine": 519,
                     "startColumn": 4,
-                    "startOffset": 37530,
-                    "endColumn": 96,
-                    "endOffset": 37622
+                    "startOffset": 37479,
+                    "endColumn": 102,
+                    "endOffset": 37577
                 },
                 "from": {
                     "file": "E:\\Code\\Android\\MyApplication\\sMSSDK\\build\\intermediates\\bundles\\default\\res\\values-en\\values-en.xml"
@@ -2957,9 +2943,9 @@
                 "to": {
                     "startLine": 520,
                     "startColumn": 4,
-                    "startOffset": 37627,
-                    "endColumn": 107,
-                    "endOffset": 37730
+                    "startOffset": 37582,
+                    "endColumn": 96,
+                    "endOffset": 37674
                 },
                 "from": {
                     "file": "E:\\Code\\Android\\MyApplication\\sMSSDK\\build\\intermediates\\bundles\\default\\res\\values-en\\values-en.xml"
@@ -2969,9 +2955,9 @@
                 "to": {
                     "startLine": 521,
                     "startColumn": 4,
-                    "startOffset": 37735,
-                    "endColumn": 88,
-                    "endOffset": 37819
+                    "startOffset": 37679,
+                    "endColumn": 107,
+                    "endOffset": 37782
                 },
                 "from": {
                     "file": "E:\\Code\\Android\\MyApplication\\sMSSDK\\build\\intermediates\\bundles\\default\\res\\values-en\\values-en.xml"
@@ -2981,9 +2967,9 @@
                 "to": {
                     "startLine": 522,
                     "startColumn": 4,
-                    "startOffset": 37824,
-                    "endColumn": 85,
-                    "endOffset": 37905
+                    "startOffset": 37787,
+                    "endColumn": 88,
+                    "endOffset": 37871
                 },
                 "from": {
                     "file": "E:\\Code\\Android\\MyApplication\\sMSSDK\\build\\intermediates\\bundles\\default\\res\\values-en\\values-en.xml"
@@ -2993,9 +2979,9 @@
                 "to": {
                     "startLine": 523,
                     "startColumn": 4,
-                    "startOffset": 37910,
-                    "endColumn": 105,
-                    "endOffset": 38011
+                    "startOffset": 37876,
+                    "endColumn": 85,
+                    "endOffset": 37957
                 },
                 "from": {
                     "file": "E:\\Code\\Android\\MyApplication\\sMSSDK\\build\\intermediates\\bundles\\default\\res\\values-en\\values-en.xml"
@@ -3005,9 +2991,9 @@
                 "to": {
                     "startLine": 524,
                     "startColumn": 4,
-                    "startOffset": 38016,
-                    "endColumn": 104,
-                    "endOffset": 38116
+                    "startOffset": 37962,
+                    "endColumn": 105,
+                    "endOffset": 38063
                 },
                 "from": {
                     "file": "E:\\Code\\Android\\MyApplication\\sMSSDK\\build\\intermediates\\bundles\\default\\res\\values-en\\values-en.xml"
@@ -3017,9 +3003,9 @@
                 "to": {
                     "startLine": 525,
                     "startColumn": 4,
-                    "startOffset": 38121,
-                    "endColumn": 118,
-                    "endOffset": 38235
+                    "startOffset": 38068,
+                    "endColumn": 104,
+                    "endOffset": 38168
                 },
                 "from": {
                     "file": "E:\\Code\\Android\\MyApplication\\sMSSDK\\build\\intermediates\\bundles\\default\\res\\values-en\\values-en.xml"
@@ -3029,9 +3015,9 @@
                 "to": {
                     "startLine": 526,
                     "startColumn": 4,
-                    "startOffset": 38240,
-                    "endColumn": 73,
-                    "endOffset": 38309
+                    "startOffset": 38173,
+                    "endColumn": 118,
+                    "endOffset": 38287
                 },
                 "from": {
                     "file": "E:\\Code\\Android\\MyApplication\\sMSSDK\\build\\intermediates\\bundles\\default\\res\\values-en\\values-en.xml"
@@ -3041,9 +3027,9 @@
                 "to": {
                     "startLine": 527,
                     "startColumn": 4,
-                    "startOffset": 38314,
-                    "endColumn": 85,
-                    "endOffset": 38395
+                    "startOffset": 38292,
+                    "endColumn": 73,
+                    "endOffset": 38361
                 },
                 "from": {
                     "file": "E:\\Code\\Android\\MyApplication\\sMSSDK\\build\\intermediates\\bundles\\default\\res\\values-en\\values-en.xml"
@@ -3053,9 +3039,9 @@
                 "to": {
                     "startLine": 528,
                     "startColumn": 4,
-                    "startOffset": 38400,
-                    "endColumn": 73,
-                    "endOffset": 38469
+                    "startOffset": 38366,
+                    "endColumn": 85,
+                    "endOffset": 38447
                 },
                 "from": {
                     "file": "E:\\Code\\Android\\MyApplication\\sMSSDK\\build\\intermediates\\bundles\\default\\res\\values-en\\values-en.xml"
@@ -3065,9 +3051,9 @@
                 "to": {
                     "startLine": 529,
                     "startColumn": 4,
-                    "startOffset": 38474,
-                    "endColumn": 95,
-                    "endOffset": 38565
+                    "startOffset": 38452,
+                    "endColumn": 73,
+                    "endOffset": 38521
                 },
                 "from": {
                     "file": "E:\\Code\\Android\\MyApplication\\sMSSDK\\build\\intermediates\\bundles\\default\\res\\values-en\\values-en.xml"
@@ -3077,9 +3063,9 @@
                 "to": {
                     "startLine": 530,
                     "startColumn": 4,
-                    "startOffset": 38570,
-                    "endColumn": 89,
-                    "endOffset": 38655
+                    "startOffset": 38526,
+                    "endColumn": 95,
+                    "endOffset": 38617
                 },
                 "from": {
                     "file": "E:\\Code\\Android\\MyApplication\\sMSSDK\\build\\intermediates\\bundles\\default\\res\\values-en\\values-en.xml"
@@ -3089,9 +3075,9 @@
                 "to": {
                     "startLine": 531,
                     "startColumn": 4,
-                    "startOffset": 38660,
-                    "endColumn": 98,
-                    "endOffset": 38754
+                    "startOffset": 38622,
+                    "endColumn": 89,
+                    "endOffset": 38707
                 },
                 "from": {
                     "file": "E:\\Code\\Android\\MyApplication\\sMSSDK\\build\\intermediates\\bundles\\default\\res\\values-en\\values-en.xml"
@@ -3101,9 +3087,9 @@
                 "to": {
                     "startLine": 532,
                     "startColumn": 4,
-                    "startOffset": 38759,
-                    "endColumn": 87,
-                    "endOffset": 38842
+                    "startOffset": 38712,
+                    "endColumn": 98,
+                    "endOffset": 38806
                 },
                 "from": {
                     "file": "E:\\Code\\Android\\MyApplication\\sMSSDK\\build\\intermediates\\bundles\\default\\res\\values-en\\values-en.xml"
@@ -3113,21 +3099,21 @@
                 "to": {
                     "startLine": 533,
                     "startColumn": 4,
-                    "startOffset": 38847,
-                    "endColumn": 41,
-                    "endOffset": 38884
+                    "startOffset": 38811,
+                    "endColumn": 87,
+                    "endOffset": 38894
                 },
                 "from": {
-                    "file": "E:\\Code\\Android\\MyApplication\\objLoader\\src\\main\\res\\values-en\\strings.xml"
+                    "file": "E:\\Code\\Android\\MyApplication\\sMSSDK\\build\\intermediates\\bundles\\default\\res\\values-en\\values-en.xml"
                 }
             },
             {
                 "to": {
                     "startLine": 534,
                     "startColumn": 4,
-                    "startOffset": 38889,
-                    "endColumn": 88,
-                    "endOffset": 38973
+                    "startOffset": 38899,
+                    "endColumn": 41,
+                    "endOffset": 38936
                 },
                 "from": {
                     "file": "E:\\Code\\Android\\MyApplication\\objLoader\\src\\main\\res\\values-en\\strings.xml"
@@ -3137,9 +3123,9 @@
                 "to": {
                     "startLine": 535,
                     "startColumn": 4,
-                    "startOffset": 38978,
-                    "endColumn": 115,
-                    "endOffset": 39089
+                    "startOffset": 38941,
+                    "endColumn": 88,
+                    "endOffset": 39025
                 },
                 "from": {
                     "file": "E:\\Code\\Android\\MyApplication\\objLoader\\src\\main\\res\\values-en\\strings.xml"
@@ -3149,9 +3135,9 @@
                 "to": {
                     "startLine": 536,
                     "startColumn": 4,
-                    "startOffset": 39094,
-                    "endColumn": 75,
-                    "endOffset": 39165
+                    "startOffset": 39030,
+                    "endColumn": 115,
+                    "endOffset": 39141
                 },
                 "from": {
                     "file": "E:\\Code\\Android\\MyApplication\\objLoader\\src\\main\\res\\values-en\\strings.xml"
@@ -3161,9 +3147,9 @@
                 "to": {
                     "startLine": 537,
                     "startColumn": 4,
-                    "startOffset": 39170,
-                    "endColumn": 37,
-                    "endOffset": 39203
+                    "startOffset": 39146,
+                    "endColumn": 75,
+                    "endOffset": 39217
                 },
                 "from": {
                     "file": "E:\\Code\\Android\\MyApplication\\objLoader\\src\\main\\res\\values-en\\strings.xml"
@@ -3173,9 +3159,9 @@
                 "to": {
                     "startLine": 538,
                     "startColumn": 4,
-                    "startOffset": 39208,
-                    "endColumn": 71,
-                    "endOffset": 39275
+                    "startOffset": 39222,
+                    "endColumn": 37,
+                    "endOffset": 39255
                 },
                 "from": {
                     "file": "E:\\Code\\Android\\MyApplication\\objLoader\\src\\main\\res\\values-en\\strings.xml"
@@ -3185,9 +3171,9 @@
                 "to": {
                     "startLine": 539,
                     "startColumn": 4,
-                    "startOffset": 39280,
-                    "endColumn": 44,
-                    "endOffset": 39320
+                    "startOffset": 39260,
+                    "endColumn": 71,
+                    "endOffset": 39327
                 },
                 "from": {
                     "file": "E:\\Code\\Android\\MyApplication\\objLoader\\src\\main\\res\\values-en\\strings.xml"
@@ -3197,9 +3183,9 @@
                 "to": {
                     "startLine": 540,
                     "startColumn": 4,
-                    "startOffset": 39325,
-                    "endColumn": 56,
-                    "endOffset": 39377
+                    "startOffset": 39332,
+                    "endColumn": 44,
+                    "endOffset": 39372
                 },
                 "from": {
                     "file": "E:\\Code\\Android\\MyApplication\\objLoader\\src\\main\\res\\values-en\\strings.xml"
@@ -3209,9 +3195,9 @@
                 "to": {
                     "startLine": 541,
                     "startColumn": 4,
-                    "startOffset": 39382,
-                    "endColumn": 61,
-                    "endOffset": 39439
+                    "startOffset": 39377,
+                    "endColumn": 56,
+                    "endOffset": 39429
                 },
                 "from": {
                     "file": "E:\\Code\\Android\\MyApplication\\objLoader\\src\\main\\res\\values-en\\strings.xml"
@@ -3221,9 +3207,9 @@
                 "to": {
                     "startLine": 542,
                     "startColumn": 4,
-                    "startOffset": 39444,
-                    "endColumn": 60,
-                    "endOffset": 39500
+                    "startOffset": 39434,
+                    "endColumn": 61,
+                    "endOffset": 39491
                 },
                 "from": {
                     "file": "E:\\Code\\Android\\MyApplication\\objLoader\\src\\main\\res\\values-en\\strings.xml"
@@ -3233,9 +3219,9 @@
                 "to": {
                     "startLine": 543,
                     "startColumn": 4,
-                    "startOffset": 39505,
+                    "startOffset": 39496,
                     "endColumn": 60,
-                    "endOffset": 39561
+                    "endOffset": 39552
                 },
                 "from": {
                     "file": "E:\\Code\\Android\\MyApplication\\objLoader\\src\\main\\res\\values-en\\strings.xml"
@@ -3245,9 +3231,9 @@
                 "to": {
                     "startLine": 544,
                     "startColumn": 4,
-                    "startOffset": 39566,
-                    "endColumn": 57,
-                    "endOffset": 39619
+                    "startOffset": 39557,
+                    "endColumn": 60,
+                    "endOffset": 39613
                 },
                 "from": {
                     "file": "E:\\Code\\Android\\MyApplication\\objLoader\\src\\main\\res\\values-en\\strings.xml"
@@ -3257,9 +3243,9 @@
                 "to": {
                     "startLine": 545,
                     "startColumn": 4,
-                    "startOffset": 39624,
-                    "endColumn": 81,
-                    "endOffset": 39701
+                    "startOffset": 39618,
+                    "endColumn": 57,
+                    "endOffset": 39671
                 },
                 "from": {
                     "file": "E:\\Code\\Android\\MyApplication\\objLoader\\src\\main\\res\\values-en\\strings.xml"
@@ -3269,9 +3255,9 @@
                 "to": {
                     "startLine": 546,
                     "startColumn": 4,
-                    "startOffset": 39706,
-                    "endColumn": 46,
-                    "endOffset": 39748
+                    "startOffset": 39676,
+                    "endColumn": 81,
+                    "endOffset": 39753
                 },
                 "from": {
                     "file": "E:\\Code\\Android\\MyApplication\\objLoader\\src\\main\\res\\values-en\\strings.xml"
@@ -3281,9 +3267,9 @@
                 "to": {
                     "startLine": 547,
                     "startColumn": 4,
-                    "startOffset": 39753,
-                    "endColumn": 64,
-                    "endOffset": 39813
+                    "startOffset": 39758,
+                    "endColumn": 56,
+                    "endOffset": 39810
                 },
                 "from": {
                     "file": "E:\\Code\\Android\\MyApplication\\objLoader\\src\\main\\res\\values-en\\strings.xml"
@@ -3293,9 +3279,9 @@
                 "to": {
                     "startLine": 548,
                     "startColumn": 4,
-                    "startOffset": 39818,
-                    "endColumn": 68,
-                    "endOffset": 39882
+                    "startOffset": 39815,
+                    "endColumn": 46,
+                    "endOffset": 39857
                 },
                 "from": {
                     "file": "E:\\Code\\Android\\MyApplication\\objLoader\\src\\main\\res\\values-en\\strings.xml"
@@ -3305,9 +3291,9 @@
                 "to": {
                     "startLine": 549,
                     "startColumn": 4,
-                    "startOffset": 39887,
-                    "endColumn": 56,
-                    "endOffset": 39939
+                    "startOffset": 39862,
+                    "endColumn": 64,
+                    "endOffset": 39922
                 },
                 "from": {
                     "file": "E:\\Code\\Android\\MyApplication\\objLoader\\src\\main\\res\\values-en\\strings.xml"
@@ -3317,9 +3303,9 @@
                 "to": {
                     "startLine": 550,
                     "startColumn": 4,
-                    "startOffset": 39944,
-                    "endColumn": 55,
-                    "endOffset": 39995
+                    "startOffset": 39927,
+                    "endColumn": 68,
+                    "endOffset": 39991
                 },
                 "from": {
                     "file": "E:\\Code\\Android\\MyApplication\\objLoader\\src\\main\\res\\values-en\\strings.xml"
@@ -3329,9 +3315,9 @@
                 "to": {
                     "startLine": 551,
                     "startColumn": 4,
-                    "startOffset": 40000,
-                    "endColumn": 94,
-                    "endOffset": 40090
+                    "startOffset": 39996,
+                    "endColumn": 56,
+                    "endOffset": 40048
                 },
                 "from": {
                     "file": "E:\\Code\\Android\\MyApplication\\objLoader\\src\\main\\res\\values-en\\strings.xml"
@@ -3341,9 +3327,9 @@
                 "to": {
                     "startLine": 552,
                     "startColumn": 4,
-                    "startOffset": 40095,
-                    "endColumn": 48,
-                    "endOffset": 40139
+                    "startOffset": 40053,
+                    "endColumn": 55,
+                    "endOffset": 40104
                 },
                 "from": {
                     "file": "E:\\Code\\Android\\MyApplication\\objLoader\\src\\main\\res\\values-en\\strings.xml"
@@ -3353,9 +3339,33 @@
                 "to": {
                     "startLine": 553,
                     "startColumn": 4,
-                    "startOffset": 40144,
+                    "startOffset": 40109,
+                    "endColumn": 94,
+                    "endOffset": 40199
+                },
+                "from": {
+                    "file": "E:\\Code\\Android\\MyApplication\\objLoader\\src\\main\\res\\values-en\\strings.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 554,
+                    "startColumn": 4,
+                    "startOffset": 40204,
+                    "endColumn": 48,
+                    "endOffset": 40248
+                },
+                "from": {
+                    "file": "E:\\Code\\Android\\MyApplication\\objLoader\\src\\main\\res\\values-en\\strings.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 555,
+                    "startColumn": 4,
+                    "startOffset": 40253,
                     "endColumn": 55,
-                    "endOffset": 40195
+                    "endOffset": 40304
                 },
                 "from": {
                     "file": "E:\\Code\\Android\\MyApplication\\objLoader\\src\\main\\res\\values-en\\strings.xml"

@@ -8,9 +8,9 @@ import butterknife.ButterKnife.ViewBinder;
 public class SettingActivity$$ViewBinder<T extends com.example.objLoader.module.setting.SettingActivity> implements ViewBinder<T> {
   @Override public void bind(final Finder finder, final T target, Object source) {
     View view;
-    view = finder.findRequiredView(source, 2131689702, "field 'tvClearCash'");
-    target.tvClearCash = finder.castView(view, 2131689702, "field 'tvClearCash'");
-    view = finder.findRequiredView(source, 2131689701, "method 'onClick'");
+    view = finder.findRequiredView(source, 2131689707, "field 'tvClearCash'");
+    target.tvClearCash = finder.castView(view, 2131689707, "field 'tvClearCash'");
+    view = finder.findRequiredView(source, 2131689706, "method 'onClick'");
     view.setOnClickListener(
       new butterknife.internal.DebouncingOnClickListener() {
         @Override public void doClick(

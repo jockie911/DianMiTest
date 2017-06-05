@@ -340,6 +340,7 @@
     <string name="delete_log">Whether to delete the selected record</string>
     <string name="delete_my_log">Please select the record you want to delete first</string>
     <string name="double_click_exit">Press the exit program again</string>
+    <string name="edit_pwd_success">密码修改成功</string>
     <string name="editor">Editor</string>
     <string name="error_no">Unknown mistake</string>
     <string name="error_pic_model">Photo format error</string>
@@ -544,6 +545,7 @@
     <string name="topic_camera_flashlight_on">Close</string>
     <string name="topic_camera_front">Front lens</string>
     <string name="topic_camera_takephoto_failure">The photograph failed!</string>
+    <string name="twice_same_psw">新的密码不能与之前密码相同</string>
     <string name="uRLError">URL error</string>
     <string name="unKnownHostError">No server specified</string>
     <string name="upload_pic_error">Picture upload error!!!</string>

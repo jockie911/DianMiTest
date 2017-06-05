@@ -187,6 +187,8 @@
     <string name="choose_right_front_pic">请根据模板提示选择正确的正面照.</string>
     <string name="choose_right_side_pic">请根据模板提示选择正确的侧面照</string>
     <string name="loading">加载中</string>
+    <string name="twice_same_psw">新的密码不能与之前密码相同</string>
+    <string name="edit_pwd_success">密码修改成功</string>
     <!--<string name="topic_camera_photo_save">拍照文件存储失败了！</string>-->
 
 </resources>

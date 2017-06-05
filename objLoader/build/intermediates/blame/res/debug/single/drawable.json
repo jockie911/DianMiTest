@@ -8,6 +8,14 @@
         "source": "C:\\Users\\yc\\.android\\build-cache\\24f64522b38ec1c47659b647328ec022bee813c2\\output\\res\\drawable\\leak_canary_toast_background.xml"
     },
     {
+        "merged": "E:\\Code\\Android\\MyApplication\\objLoader\\build\\intermediates\\res\\merged\\debug\\drawable\\close.png",
+        "source": "C:\\Users\\yc\\.android\\build-cache\\185228fa4dc2133000bf4dec70f06b17aa234e31\\output\\res\\drawable\\close.png"
+    },
+    {
+        "merged": "E:\\Code\\Android\\MyApplication\\objLoader\\build\\intermediates\\res\\merged\\debug\\drawable\\write.png",
+        "source": "C:\\Users\\yc\\.android\\build-cache\\185228fa4dc2133000bf4dec70f06b17aa234e31\\output\\res\\drawable\\write.png"
+    },
+    {
         "merged": "E:\\Code\\Android\\MyApplication\\objLoader\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_spinner_textfield_background_material.xml",
         "source": "C:\\Users\\yc\\.android\\build-cache\\d0928f8ffb5d248f984d90ffe3601d0e67dd1423\\output\\res\\drawable\\abc_spinner_textfield_background_material.xml"
     },
@@ -36,6 +44,10 @@
         "source": "C:\\Users\\yc\\.android\\build-cache\\d0928f8ffb5d248f984d90ffe3601d0e67dd1423\\output\\res\\drawable\\abc_list_selector_background_transition_holo_light.xml"
     },
     {
+        "merged": "E:\\Code\\Android\\MyApplication\\objLoader\\build\\intermediates\\res\\merged\\debug\\drawable\\add.png",
+        "source": "C:\\Users\\yc\\.android\\build-cache\\185228fa4dc2133000bf4dec70f06b17aa234e31\\output\\res\\drawable\\add.png"
+    },
+    {
         "merged": "E:\\Code\\Android\\MyApplication\\objLoader\\build\\intermediates\\res\\merged\\debug\\drawable\\selector_camera_icon_album.xml",
         "source": "E:\\Code\\Android\\MyApplication\\objLoader\\src\\main\\res\\drawable\\selector_camera_icon_album.xml"
     },
@@ -50,6 +62,10 @@
     {
         "merged": "E:\\Code\\Android\\MyApplication\\objLoader\\build\\intermediates\\res\\merged\\debug\\drawable\\alertdialog_left_selector.xml",
         "source": "E:\\Code\\Android\\MyApplication\\objLoader\\src\\main\\res\\drawable\\alertdialog_left_selector.xml"
+    },
+    {
+        "merged": "E:\\Code\\Android\\MyApplication\\objLoader\\build\\intermediates\\res\\merged\\debug\\drawable\\like.png",
+        "source": "C:\\Users\\yc\\.android\\build-cache\\185228fa4dc2133000bf4dec70f06b17aa234e31\\output\\res\\drawable\\like.png"
     },
     {
         "merged": "E:\\Code\\Android\\MyApplication\\objLoader\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_seekbar_track_material.xml",
@@ -222,6 +238,10 @@
     {
         "merged": "E:\\Code\\Android\\MyApplication\\objLoader\\build\\intermediates\\res\\merged\\debug\\drawable\\selector_btn_camera_front.xml",
         "source": "E:\\Code\\Android\\MyApplication\\objLoader\\src\\main\\res\\drawable\\selector_btn_camera_front.xml"
+    },
+    {
+        "merged": "E:\\Code\\Android\\MyApplication\\objLoader\\build\\intermediates\\res\\merged\\debug\\drawable\\search.png",
+        "source": "C:\\Users\\yc\\.android\\build-cache\\185228fa4dc2133000bf4dec70f06b17aa234e31\\output\\res\\drawable\\search.png"
     },
     {
         "merged": "E:\\Code\\Android\\MyApplication\\objLoader\\build\\intermediates\\res\\merged\\debug\\drawable\\youxi.xml",

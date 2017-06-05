@@ -22,6 +22,7 @@ import com.bumptech.glide.signature.StringSignature;
 import com.example.objLoader.R;
 import com.example.objLoader.base.BaseActivity;
 import com.example.objLoader.base.BaseApp;
+import com.example.objLoader.base.BasePresenter;
 import com.example.objLoader.istatic.IConstant;
 import com.example.objLoader.module.ChangeUsernameActivity;
 import com.example.objLoader.module.MeasureRecordActivity;
@@ -42,7 +43,7 @@ import java.io.IOException;
 import butterknife.Bind;
 import butterknife.OnClick;
 
-public class AccountInfoActivity extends BaseActivity {
+public class AccountInfoActivity extends BaseActivity implements InfoView{
 
     @Bind(R.id.rl_change_pwd)
     RelativeLayout rl_change_pwd;
@@ -58,9 +59,8 @@ public class AccountInfoActivity extends BaseActivity {
     ImageView ivRightTitleBar;
 
 	private String username,mobile;
-	private Uri imageUriFromCamera;
 	private InfoPresent infoPresent;
-	private File file2;
+	private Uri storeUri;
 
 	@Override
     protected int getLayoutRes() {
@@ -89,13 +89,13 @@ public class AccountInfoActivity extends BaseActivity {
 			tv_phone_number.setText(maskNumber);
 		}
 		tv_username.setText(username);
+	}
 
-		infoPresent = new InfoPresent();
-
-		File file1 = new File(FileUtil.getAppFoler());
-		if(!file1.exists())
-			file1.mkdir();
-		file2 = new File(file1.getAbsolutePath(),"temp.png");
+	@Override
+	protected BasePresenter initPresenter() {
+		infoPresent = new InfoPresent(this);
+		infoPresent.attachView(this);
+		return infoPresent;
 	}
 
 	@Override
@@ -110,10 +110,10 @@ public class AccountInfoActivity extends BaseActivity {
 			startActivity(new Intent(this, ChangeUsernameActivity.class));
 			break;
 		case R.id.iv_right_title_bar:
-			infoPresent.logout(this);
+			infoPresent.logout();
 			break;
 		case R.id.ivPic:
-			showPopup();
+			infoPresent.clickAvatar();
 			break;
 		case R.id.rl_measure_record:
 			startActivity(new Intent(this, MeasureRecordActivity.class));
@@ -122,23 +122,6 @@ public class AccountInfoActivity extends BaseActivity {
 			startActivity(new Intent(this, SettingActivity.class));
 			break;
 		}
-	}
-
-	private void showPopup() {
-		new ActionSheetDialog(this).builder().addSheetItem(getResources().getString(R.string.camear), ActionSheetDialog.SheetItemColor.Blue, new ActionSheetDialog.OnSheetItemClickListener() {
-			@Override
-			public void onClick(int which) {
-				Intent cameraIntent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
-				cameraIntent.putExtra(MediaStore.EXTRA_OUTPUT, Uri.fromFile(file2));
-				startActivityForResult(cameraIntent, IConstant.CAMERA_REQUEST_CODE);
-			}
-		}).addSheetItem(getResources().getString(R.string.album), ActionSheetDialog.SheetItemColor.Blue, new ActionSheetDialog.OnSheetItemClickListener() {
-			@Override
-			public void onClick(int which) {
-				Intent photoIntent = new Intent(Intent.ACTION_PICK,android.provider.MediaStore.Images.Media.EXTERNAL_CONTENT_URI);// 调用android的图库
-				startActivityForResult(photoIntent, IConstant.ALBUM_REQUEST_CODE);
-			}
-		}).show();
 	}
 
 	@Override
@@ -153,72 +136,24 @@ public class AccountInfoActivity extends BaseActivity {
 	protected void onActivityResult(int requestCode, int resultCode, Intent data) {
 		switch (requestCode){
 			case IConstant.CAMERA_REQUEST_CODE:
-				if(file2.exists() && resultCode == RESULT_OK){
-					cropRawPhoto(Uri.fromFile(file2));
+				if(resultCode == RESULT_OK){
+					infoPresent.cropRawPhoto(storeUri);
 				}
 				break;
 			case IConstant.ALBUM_REQUEST_CODE:
 				if(data != null)
-					cropRawPhoto(data.getData());
+					infoPresent.cropRawPhoto(data.getData());
 				break;
 			case IConstant.RESULT_CROP_CODE:
 				if(data != null)
-					setImageToHeadView(data);
+					infoPresent.setImageToHeadView(data,ivAvatar);
 				break;
 		}
 		super.onActivityResult(requestCode, resultCode, data);
 	}
 
-	/**
-	 * 裁剪原始的图片
-	 */
-	public void cropRawPhoto(Uri uri) {
-		Intent intent = new Intent("com.android.camera.action.CROP");
-		intent.setDataAndType(uri, "image/*");
-
-		intent.putExtra("crop", "true");
-		// aspectX , aspectY :宽高的比例
-		intent.putExtra("aspectX", 1);
-		intent.putExtra("aspectY", 1);
-		// outputX , outputY : 裁剪图片宽高
-		intent.putExtra("outputX", 200);
-		intent.putExtra("outputY", 200);
-		intent.putExtra("return-data", true);
-		startActivityForResult(intent, IConstant.RESULT_CROP_CODE);
-	}
-
-	private void setImageToHeadView(Intent intent) {
-		if(intent == null) return;
-		Bundle extras = intent.getExtras();
-		if (extras != null) {
-			Bitmap photo = extras.getParcelable("data");
-
-			ivAvatar.setImageBitmap(photo);
-			File nf = new File(FileUtil.getAppFoler());
-			if(!nf.exists())
-				nf.mkdir();
-			File f = new File(nf.getPath(), "avatar.png");
-			if(f.exists()){
-				f.delete();
-			}
-			try {
-				f.createNewFile();
-			} catch (IOException e) {
-				e.printStackTrace();
-			}
-			FileOutputStream out = null;
-			try {//打开输出流 将图片数据填入文件中
-				out = new FileOutputStream(f);
-				photo.compress(Bitmap.CompressFormat.PNG, 50, out);
-				try {
-					out.flush();
-					out.close();
-				} catch (IOException e) {
-					e.printStackTrace();
-				}
-			} catch (FileNotFoundException e) {
-				e.printStackTrace();
-			}
-		}
+	@Override
+	public void storeUri(Uri uri) {
+		storeUri = uri;
 	}
 }

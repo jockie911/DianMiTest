@@ -49,6 +49,7 @@ public class ChangePwdActivity extends BaseActivity implements ChangePwdView {
 	@Override
 	protected BasePresenter initPresenter() {
 		changePwdPresenter = new ChangePwdPresenter();
+		changePwdPresenter.attachView(this);
 		return changePwdPresenter;
 	}
 
@@ -85,6 +86,7 @@ public class ChangePwdActivity extends BaseActivity implements ChangePwdView {
 
 	@Override
 	public void onChangePwsSuccess() {
+		ToastUtils.show(R.string.edit_pwd_success);
 		finish();
 	}
 

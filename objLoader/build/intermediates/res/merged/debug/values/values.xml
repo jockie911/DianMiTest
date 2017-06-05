@@ -286,6 +286,12 @@
     </string-array>
     <attr format="reference" name="constraintSet"/>
     <attr format="reference" name="drawerArrowStyle"/>
+    <attr name="expandDirect">
+        <enum name="expandDirectTop" value="0"/>
+        <enum name="expandDirectDown" value="1"/>
+        <enum name="expandDirectLeft" value="2"/>
+        <enum name="expandDirectRight" value="3"/>
+    </attr>
     <attr format="dimension" name="height"/>
     <attr format="boolean" name="isLightTheme"/>
     <attr format="integer" name="layout_constraintBaseline_creator"/>
@@ -510,6 +516,7 @@
             <flag name="disableHome" value="0x20"/>
         </attr><attr name="title"/><attr format="string" name="subtitle"/><attr format="reference" name="titleTextStyle"/><attr format="reference" name="subtitleTextStyle"/><attr format="reference" name="icon"/><attr format="reference" name="logo"/><attr format="reference" name="divider"/><attr format="reference" name="background"/><attr format="reference|color" name="backgroundStacked"/><attr format="reference|color" name="backgroundSplit"/><attr format="reference" name="customNavigationLayout"/><attr name="height"/><attr format="reference" name="homeLayout"/><attr format="reference" name="progressBarStyle"/><attr format="reference" name="indeterminateProgressStyle"/><attr format="dimension" name="progressBarPadding"/><attr name="homeAsUpIndicator"/><attr format="dimension" name="itemPadding"/><attr format="boolean" name="hideOnContentScroll"/><attr format="dimension" name="contentInsetStart"/><attr format="dimension" name="contentInsetEnd"/><attr format="dimension" name="contentInsetLeft"/><attr format="dimension" name="contentInsetRight"/><attr format="dimension" name="contentInsetStartWithNavigation"/><attr format="dimension" name="contentInsetEndWithActions"/><attr format="dimension" name="elevation"/><attr format="reference" name="popupTheme"/></declare-styleable>
     <declare-styleable name="ActionBarLayout"><attr name="android:layout_gravity"/></declare-styleable>
+    <declare-styleable name="ActionMenu"><attr format="dimension" name="circleRadius"/><attr format="dimension" name="dimens"/><attr format="integer" name="animationDuration"/><attr format="color" name="buttonNormalColor"/><attr format="color" name="buttonPressColor"/><attr format="reference" name="actionMenuIcon"/><attr format="reference" name="actionMenuOnIcon"/><attr name="expandDirect"/></declare-styleable>
     <declare-styleable name="ActionMenuItemView"><attr name="android:minWidth"/></declare-styleable>
     <declare-styleable name="ActionMenuView"/>
     <declare-styleable name="ActionMode"><attr name="titleTextStyle"/><attr name="subtitleTextStyle"/><attr name="background"/><attr name="backgroundSplit"/><attr name="height"/><attr format="reference" name="closeItemLayout"/></declare-styleable>
@@ -2455,6 +2462,7 @@
     <string name="delete_my_log">请先选择需要删除的记录</string>
     <string name="double_click_exit">再按一次退出程序</string>
     <string name="dsv_ex_msg_dont_set_lm">You should not set LayoutManager on DiscreteScrollView.class instance. Library uses a special one. Just don\'t call the method.</string>
+    <string name="edit_pwd_success">密码修改成功</string>
     <string name="editor">编辑</string>
     <string name="error_no">未知错误</string>
     <string name="error_pic_model">照片格式错误</string>
@@ -2689,6 +2697,7 @@
     <string name="topic_camera_flashlight_on">开启</string>
     <string name="topic_camera_front">前镜头</string>
     <string name="topic_camera_takephoto_failure">拍照竟然失败了！</string>
+    <string name="twice_same_psw">新的密码不能与之前密码相同</string>
     <string name="uRLError">URL错误</string>
     <string name="unKnownHostError">未发现指定服务器</string>
     <string name="upload_pic_error">上传图片出错!!!</string>
@@ -2710,27 +2719,27 @@
     <style name="ActionSheetDialogStyle" parent="android:Theme.Dialog">
         <item name="android:windowBackground">@android:color/transparent</item>
         <item name="android:windowContentOverlay">@null</item>
-        <!-- 浮于Activity之上 -->
+        
         <item name="android:windowIsFloating">true</item>
-        <!-- 边框 -->
+        
         <item name="android:windowFrame">@null</item>
-        <!-- Dialog以外的区域模糊效果 -->
+        
         <item name="android:backgroundDimEnabled">true</item>
-        <!-- 无标题 -->
+        
         <item name="android:windowNoTitle">true</item>
-        <!-- 半透明 -->
+        
         <item name="android:windowIsTranslucent">true</item>
-        <!-- Dialog进入及退出动画 -->
+        
         <item name="android:windowAnimationStyle">@style/ActionSheetDialogAnimation</item>
     </style>
     <style name="AlertDialog" parent="@android:Theme.DeviceDefault.Light.Dialog">
 
-        <!-- 这里设置背景为透明，为了隐藏边框 -->
+        
         <item name="android:windowBackground">@android:color/transparent</item>
         <item name="android:windowNoTitle">true</item>
-        <!-- 这里是修改顶部标题背景颜色，具体颜色自己定，可以是图片 -->
+        
         <item name="android:topDark">@color/white</item>
-        <!-- 这里是修改内容区域背景颜色 -->
+        
         <item name="android:centerDark">@color/white</item>
         <item name="android:windowIsTranslucent">true</item>
         <item name="android:windowAnimationStyle">@+android:style/Animation.Translucent</item>
@@ -2753,14 +2762,7 @@
         <item name="android:windowExitAnimation">@anim/design_bottom_sheet_slide_out</item>
     </style>
     <style name="AppBaseTheme" parent="android:Theme.Light">
-        <!--
-        Theme customizations available in newer API levels can go in  
-        res/values-vXX/styles.xml, while customizations related to  
-        backward-compatibility can go here.  
-
-
-
-        -->
+        
     </style>
     <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
         <item name="colorPrimary">@color/colorPrimary</item>
@@ -4325,9 +4327,9 @@
     <item name="android:windowNoTitle">true</item>
     <item name="android:backgroundDimEnabled">false</item>
   </style>
-    <style name="tablayout"><!--parent="TextAppearance.Design.Tab"-->
+    <style name="tablayout">
         <item name="android:textSize">15sp</item>
-        <!--<item name="textAllCaps">true</item>-->
+        
     </style>
     <style name="umeng_socialize_action_bar_item_im">
         <item name="android:layout_width">25dp</item>

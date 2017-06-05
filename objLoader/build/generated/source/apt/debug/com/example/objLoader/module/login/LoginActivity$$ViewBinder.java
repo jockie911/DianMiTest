@@ -8,12 +8,12 @@ import butterknife.ButterKnife.ViewBinder;
 public class LoginActivity$$ViewBinder<T extends com.example.objLoader.module.login.LoginActivity> implements ViewBinder<T> {
   @Override public void bind(final Finder finder, final T target, Object source) {
     View view;
-    view = finder.findRequiredView(source, 2131689663, "field 'et_username'");
-    target.et_username = finder.castView(view, 2131689663, "field 'et_username'");
-    view = finder.findRequiredView(source, 2131689664, "field 'et_password'");
-    target.et_password = finder.castView(view, 2131689664, "field 'et_password'");
-    view = finder.findRequiredView(source, 2131689666, "field 'tv_forget_pwd' and method 'onClick'");
-    target.tv_forget_pwd = finder.castView(view, 2131689666, "field 'tv_forget_pwd'");
+    view = finder.findRequiredView(source, 2131689666, "field 'et_username'");
+    target.et_username = finder.castView(view, 2131689666, "field 'et_username'");
+    view = finder.findRequiredView(source, 2131689667, "field 'et_password'");
+    target.et_password = finder.castView(view, 2131689667, "field 'et_password'");
+    view = finder.findRequiredView(source, 2131689669, "field 'tv_forget_pwd' and method 'onClick'");
+    target.tv_forget_pwd = finder.castView(view, 2131689669, "field 'tv_forget_pwd'");
     view.setOnClickListener(
       new butterknife.internal.DebouncingOnClickListener() {
         @Override public void doClick(
@@ -22,8 +22,8 @@ public class LoginActivity$$ViewBinder<T extends com.example.objLoader.module.lo
           target.onClick(p0);
         }
       });
-    view = finder.findRequiredView(source, 2131689665, "field 'ivEyePwd' and method 'onClick'");
-    target.ivEyePwd = finder.castView(view, 2131689665, "field 'ivEyePwd'");
+    view = finder.findRequiredView(source, 2131689668, "field 'ivEyePwd' and method 'onClick'");
+    target.ivEyePwd = finder.castView(view, 2131689668, "field 'ivEyePwd'");
     view.setOnClickListener(
       new butterknife.internal.DebouncingOnClickListener() {
         @Override public void doClick(
@@ -32,7 +32,7 @@ public class LoginActivity$$ViewBinder<T extends com.example.objLoader.module.lo
           target.onClick(p0);
         }
       });
-    view = finder.findRequiredView(source, 2131689667, "method 'onClick'");
+    view = finder.findRequiredView(source, 2131689670, "method 'onClick'");
     view.setOnClickListener(
       new butterknife.internal.DebouncingOnClickListener() {
         @Override public void doClick(
@@ -41,7 +41,7 @@ public class LoginActivity$$ViewBinder<T extends com.example.objLoader.module.lo
           target.onClick(p0);
         }
       });
-    view = finder.findRequiredView(source, 2131689712, "method 'onClick'");
+    view = finder.findRequiredView(source, 2131689719, "method 'onClick'");
     view.setOnClickListener(
       new butterknife.internal.DebouncingOnClickListener() {
         @Override public void doClick(
@@ -50,7 +50,7 @@ public class LoginActivity$$ViewBinder<T extends com.example.objLoader.module.lo
           target.onClick(p0);
         }
       });
-    view = finder.findRequiredView(source, 2131689669, "method 'onClick'");
+    view = finder.findRequiredView(source, 2131689672, "method 'onClick'");
     view.setOnClickListener(
       new butterknife.internal.DebouncingOnClickListener() {
         @Override public void doClick(

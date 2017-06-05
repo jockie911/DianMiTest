@@ -97,11 +97,30 @@
                     android:gravity="center"
                     android:textColor="@color/title"/>
             </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:id="@+id/tv_height"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:textColor="@color/title"/>
+                <TextView
+                    android:id="@+id/tv_weight"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:textColor="@color/title"/>
+            </LinearLayout>
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="20dp">
+                android:layout_marginBottom="20dp"
+                android:layout_marginTop="5dp">
                 <!--属性解释:
                   wheel_atmospheric :  条目颜色是否执行衔接处理 效果更好
                   wheel_curved ： 是否是弧形状态显示
@@ -118,11 +137,10 @@
                     app:wheel_curved="true"
                     app:wheel_indicator="true"
                     app:wheel_indicator_color="@color/yollow"
-                    app:wheel_indicator_size="0.5dp"
-                    app:wheel_item_space="2dp"
+                    app:wheel_indicator_size="1sp"
                     app:wheel_cyclic="false"
                     app:wheel_selected_item_text_color="#fefefe"
-                    app:wheel_visible_item_count="7"
+                    app:wheel_visible_item_count="9"
                     app:wheel_item_text_color="#666666" />
 
                 <com.example.objLoader.wedgit.wheelpicker.WheelPicker
@@ -134,9 +152,9 @@
                     app:wheel_curved="true"
                     app:wheel_indicator="true"
                     app:wheel_indicator_color="@color/yollow"
-                    app:wheel_indicator_size="0.5dp"
+                    app:wheel_indicator_size="1sp"
                     app:wheel_cyclic="false"
-                    app:wheel_visible_item_count="7"
+                    app:wheel_visible_item_count="9"
                     app:wheel_selected_item_text_color="#fefefe"
                     app:wheel_item_text_color="#666666" />
             </LinearLayout>

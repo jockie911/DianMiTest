@@ -26,6 +26,7 @@ MERGED from [com.android.support:recyclerview-v7:25.3.1] C:\Users\yc\.android\bu
 MERGED from [com.android.support:transition:25.3.1] C:\Users\yc\.android\build-cache\ca9c1ba974168447b8ba02ddc475b6c6960c47f0\output\AndroidManifest.xml:20:5-44
 MERGED from [io.reactivex:rxandroid:1.2.1] C:\Users\yc\.android\build-cache\d82d3d76fbed2eace608532fff32b2f389d1654d\output\AndroidManifest.xml:19:5-43
 MERGED from [com.wang.avi:library:1.0.0] C:\Users\yc\.android\build-cache\610ca8b68f3330ca4eac7784208b9e3f80621583\output\AndroidManifest.xml:7:5-9:41
+MERGED from [com.github.lilei644:SpringActionMenu:1.0.0] C:\Users\yc\.android\build-cache\185228fa4dc2133000bf4dec70f06b17aa234e31\output\AndroidManifest.xml:7:5-9:41
 MERGED from [com.android.support:appcompat-v7:25.3.1] C:\Users\yc\.android\build-cache\d0928f8ffb5d248f984d90ffe3601d0e67dd1423\output\AndroidManifest.xml:21:5-23:78
 MERGED from [com.android.support:support-v4:25.3.1] C:\Users\yc\.android\build-cache\f4cc810a5d1d0f67b511eaf90ca566300aeddc70\output\AndroidManifest.xml:21:5-23:54
 MERGED from [com.android.support:support-fragment:25.3.1] C:\Users\yc\.android\build-cache\8b43b5bb113515b65480c6490b82f6243b80034e\output\AndroidManifest.xml:21:5-23:60
@@ -127,6 +128,7 @@ MERGED from [com.android.support.constraint:constraint-layout:1.0.2] C:\Users\yc
 MERGED from [com.android.support:design:25.3.1] C:\Users\yc\.android\build-cache\9bb9c0f4e18f768e3516e9c4152543666304976c\output\AndroidManifest.xml:29:5-20
 MERGED from [com.android.support:transition:25.3.1] C:\Users\yc\.android\build-cache\ca9c1ba974168447b8ba02ddc475b6c6960c47f0\output\AndroidManifest.xml:26:5-20
 MERGED from [com.wang.avi:library:1.0.0] C:\Users\yc\.android\build-cache\610ca8b68f3330ca4eac7784208b9e3f80621583\output\AndroidManifest.xml:11:5-14:19
+MERGED from [com.github.lilei644:SpringActionMenu:1.0.0] C:\Users\yc\.android\build-cache\185228fa4dc2133000bf4dec70f06b17aa234e31\output\AndroidManifest.xml:11:5-15:19
 MERGED from [com.android.support:appcompat-v7:25.3.1] C:\Users\yc\.android\build-cache\d0928f8ffb5d248f984d90ffe3601d0e67dd1423\output\AndroidManifest.xml:29:5-20
 MERGED from [com.android.support:support-v4:25.3.1] C:\Users\yc\.android\build-cache\f4cc810a5d1d0f67b511eaf90ca566300aeddc70\output\AndroidManifest.xml:29:5-20
 MERGED from [com.android.support:support-fragment:25.3.1] C:\Users\yc\.android\build-cache\8b43b5bb113515b65480c6490b82f6243b80034e\output\AndroidManifest.xml:29:5-20
@@ -139,6 +141,8 @@ MERGED from [com.android.support:support-compat:25.3.1] C:\Users\yc\.android\bui
 MERGED from [com.squareup.leakcanary:leakcanary-android:1.5.1] C:\Users\yc\.android\build-cache\24f64522b38ec1c47659b647328ec022bee813c2\output\AndroidManifest.xml:26:5-55:19
 	android:label
 		ADDED from E:\Code\Android\MyApplication\objLoader\src\main\AndroidManifest.xml:40:9-41
+	android:supportsRtl
+		ADDED from [com.github.lilei644:SpringActionMenu:1.0.0] C:\Users\yc\.android\build-cache\185228fa4dc2133000bf4dec70f06b17aa234e31\output\AndroidManifest.xml:14:9-35
 	android:icon
 		ADDED from E:\Code\Android\MyApplication\objLoader\src\main\AndroidManifest.xml:39:9-43
 	android:allowBackup

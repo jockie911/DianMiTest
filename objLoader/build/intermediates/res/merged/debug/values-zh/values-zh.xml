@@ -310,6 +310,7 @@
     <string name="delete_log">是否删除选中的记录</string>
     <string name="delete_my_log">请先选择需要删除的记录</string>
     <string name="double_click_exit">再按一次退出程序</string>
+    <string name="edit_pwd_success">密码修改成功</string>
     <string name="editor">编辑</string>
     <string name="error_no">未知错误</string>
     <string name="error_pic_model">照片格式错误</string>
@@ -514,6 +515,7 @@
     <string name="topic_camera_flashlight_on">开启</string>
     <string name="topic_camera_front">前镜头</string>
     <string name="topic_camera_takephoto_failure">拍照竟然失败了！</string>
+    <string name="twice_same_psw">新的密码不能与之前密码相同</string>
     <string name="uRLError">URL错误</string>
     <string name="unKnownHostError">未发现指定服务器</string>
     <string name="upload_pic_error">上传图片出错!!!</string>

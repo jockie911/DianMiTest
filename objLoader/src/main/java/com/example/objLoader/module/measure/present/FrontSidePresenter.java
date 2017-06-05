@@ -41,6 +41,8 @@ public class FrontSidePresenter<T extends BaseActivity> extends BasePresenter<IF
         String picPath = SPUtils.getInstance().getString(mBaseView.isFrontPic() ? IConstant.FRONT_PIC_PATH : IConstant.SIDE_PIC_PATH);
         if(!TextUtils.isEmpty(picPath)){
             Glide.with(activity).load(picPath).into(targetImageView);
+        }else{
+            showCameraFragment(true);
         }
     }
 

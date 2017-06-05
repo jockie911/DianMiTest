@@ -11,11 +11,14 @@ import android.hardware.Camera;
 import android.media.AudioManager;
 import android.media.SoundPool;
 import android.net.Uri;
+import android.os.Build;
 import android.os.Handler;
 import android.os.Message;
 import android.os.SystemClock;
+import android.support.v7.app.ActionBarActivity;
 import android.util.AttributeSet;
 import android.util.Log;
+import android.util.TypedValue;
 import android.view.MotionEvent;
 import android.view.View;
 import android.widget.FrameLayout;
@@ -40,6 +43,8 @@ import org.greenrobot.eventbus.EventBus;
 import java.io.ByteArrayInputStream;
 import java.io.IOException;
 import java.io.InputStream;
+import java.lang.ref.WeakReference;
+import java.lang.reflect.Field;
 
 /**
  * 正方形的CamerContainer
@@ -79,7 +84,7 @@ public class SquareCameraContainer<T extends BaseActivity> extends FrameLayout i
     public static final int RESETMASK_DELY = 1000; //一段时间后遮罩层一定要隐藏
     private boolean isFrontTakePhoto;
     private int gender;
-    private Bitmap targetBitmap;
+    private static Bitmap targetBitmap;
 
     public SquareCameraContainer(Context context) {
         super(context);
@@ -521,13 +526,60 @@ public class SquareCameraContainer<T extends BaseActivity> extends FrameLayout i
         int width = options.outWidth;
         int height = options.outHeight;
         int mScreenHeight = BaseApp.mScreenHeight;
-        float hRate = DensityUtil.dip2px(getContext(),60) /(mScreenHeight + 0.0f);
+        float hRate =  (getStatusBarHeight() + getActionBarHeight())/(mScreenHeight + 0.0f);
+
+        Logger.d(TAG,hRate + "");
         int v = (int)(width * hRate);
-        int v1 = (int)(width * (1 - 1.75 * hRate));
+        int v1 = width - v;
 
         Logger.d("v " + v + "  v2  " + v1);
         Logger.d("width " + width + "  height  " + height);
-        return new Rect(v, 0, v1, height);
+        return new Rect(0, 0, v1, height);
+    }
+
+    private int getActionBarHeight() {
+        int actionBarHeight = 0;
+        final TypedValue tv = new TypedValue();
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.HONEYCOMB) {
+            if (mActivity.getTheme().resolveAttribute(android.R.attr.actionBarSize, tv, true)) {
+                actionBarHeight = TypedValue.complexToDimensionPixelSize(
+                        tv.data, getResources().getDisplayMetrics());
+            }
+        }
+        else {
+            // 使用android.support.v7.appcompat包做actionbar兼容的情况
+            if (mActivity.getTheme().resolveAttribute(
+                            android.support.v7.appcompat.R.attr.actionBarSize,
+                            tv, true)) {
+                actionBarHeight = TypedValue.complexToDimensionPixelSize(
+                        tv.data, getResources().getDisplayMetrics());
+            }
+
+        }
+        return actionBarHeight;
+    }
+
+    /**
+     * 获取状态栏的高度
+     * @return
+     */
+    public static int getStatusBarHeight() {
+        Class<?> c = null;
+        Object obj = null;
+        java.lang.reflect.Field field = null;
+        int x = 0;
+        int statusBarHeight = 0;
+        try {
+            c = Class.forName("com.android.internal.R$dimen");
+            obj = c.newInstance();
+            field = c.getField("status_bar_height");
+            x = Integer.parseInt(field.get(obj).toString());
+            statusBarHeight = BaseApp.getContext().getResources().getDimensionPixelSize(x);
+            return statusBarHeight;
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return statusBarHeight;
     }
 
     /**

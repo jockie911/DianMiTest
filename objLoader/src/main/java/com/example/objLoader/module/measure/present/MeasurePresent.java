@@ -1,10 +1,12 @@
 package com.example.objLoader.module.measure.present;
 
+import com.example.objLoader.base.BasePresenter;
+
 /**
  * Created by yc on 2017/5/23.
  */
 
-public class MeasurePresent {
+public class MeasurePresent extends BasePresenter{
 
     public MeasurePresent(){
 

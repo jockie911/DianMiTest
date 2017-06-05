@@ -3,9 +3,11 @@ package com.example.objLoader.module.measure;
 import android.content.Intent;
 import android.view.View;
 import android.widget.RelativeLayout;
+import android.widget.TextView;
 
 import com.example.objLoader.R;
 import com.example.objLoader.base.AbActivityManager;
+import com.example.objLoader.base.BasePresenter;
 import com.example.objLoader.bean.MeasureRecordBean;
 import com.example.objLoader.base.BaseActivity;
 import com.example.objLoader.istatic.IConstant;
@@ -18,12 +20,16 @@ import java.util.ArrayList;
 import butterknife.Bind;
 import butterknife.OnClick;
 
-public class MeasureWeightAndHeightActivity extends BaseActivity implements View.OnClickListener{
+public class MeasureWeightAndHeightActivity extends BaseActivity implements View.OnClickListener, WheelPicker.OnWheelChangeListener {
 
 	@Bind(R.id.picker_height)
 	WheelPicker pickerHeight;
 	@Bind(R.id.picker_weight)
 	WheelPicker pickerWeight;
+	@Bind(R.id.tv_height)
+	TextView tvHeight;
+	@Bind(R.id.tv_weight)
+	TextView tvWeight;
 
 	private ArrayList<String> heightList = new ArrayList<>();
 	private ArrayList<String> weightList = new ArrayList<>();
@@ -53,8 +59,17 @@ public class MeasureWeightAndHeightActivity extends BaseActivity implements View
 		pickerWeight.setData(weightList);
 		pickerHeight.setSelectedItemPosition(30);
 		pickerWeight.setSelectedItemPosition(10);
+		pickerHeight.setOnWheelChangeListener(this);
+		pickerWeight.setOnWheelChangeListener(this);
 
+		tvHeight.setText(String.valueOf(pickerHeight.getData().get(pickerHeight.getCurrentItemPosition())));
+		tvWeight.setText(String.valueOf(pickerWeight.getData().get(pickerWeight.getCurrentItemPosition())));
+	}
+
+	@Override
+	protected BasePresenter initPresenter() {
 		measurePresent = new MeasurePresent();
+		return measurePresent;
 	}
 
 	@Override
@@ -73,5 +88,21 @@ public class MeasureWeightAndHeightActivity extends BaseActivity implements View
 
 			measurePresent.measure();
 		}
+	}
+
+	@Override
+	public void onWheelScrolled(int offset) {
+
+	}
+
+	@Override
+	public void onWheelSelected(int position) {
+		tvHeight.setText(String.valueOf(pickerHeight.getData().get(pickerHeight.getCurrentItemPosition())));
+		tvWeight.setText(String.valueOf(pickerWeight.getData().get(pickerWeight.getCurrentItemPosition())));
+	}
+
+	@Override
+	public void onWheelScrollStateChanged(int state) {
+
 	}
 }

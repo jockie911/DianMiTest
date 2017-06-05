@@ -185,4 +185,6 @@
     <string name="choose_right_front_pic">Please select the correct front view from the template prompt</string>
     <string name="choose_right_side_pic">Please select the correct profile according to the template prompt</string>
     <string name="loading">Loading</string>
+    <string name="twice_same_psw">新的密码不能与之前密码相同</string>
+    <string name="edit_pwd_success">密码修改成功</string>
 </resources>

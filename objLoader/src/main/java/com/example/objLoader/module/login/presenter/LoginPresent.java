@@ -45,7 +45,7 @@ public class LoginPresent<T extends BaseActivity> extends BasePresenter<ILoginVi
 
     @Override
     public void onSuccess(BaseRequestBean bean) {
-//        SPUtils.getInstance(BaseApp.getContext()).putString(IConstant.MOBILE, phoneNum);
+        SPUtils.getInstance().putString(IConstant.MOBILE, mBaseView.getPhoneNum());
         SPUtils.getInstance().putBoolean(IConstant.IS_LOGIN, true);
         ToastUtils.show(bean.info);
         if(mBaseView.isCheckLogin()){
