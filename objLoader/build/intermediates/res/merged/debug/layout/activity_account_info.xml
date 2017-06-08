@@ -8,23 +8,25 @@
     android:orientation="vertical" >
 
     <include layout="@layout/base_title_bar"/>
-    
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/color_base_deep"/>
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="160dp"
         android:background="@color/color_base"
         android:gravity="center_horizontal"
         android:orientation="horizontal" >
-
         <com.example.objLoader.wedgit.CircleImageView
             android:id="@+id/ivPic"
-            android:layout_width="90dp"
-            android:layout_height="90dp"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
             android:layout_centerVertical="true"
             android:src="@drawable/login_default"
             app:border_color="@color/color_base"
             app:border_width="2dp" />
-
         <TextView
             android:id="@+id/tv_phone_number"
             android:layout_width="wrap_content"
@@ -36,12 +38,12 @@
             android:textSize="16sp" />
     </RelativeLayout>
 
-
     <RelativeLayout
         android:id="@+id/rl_change_username"
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:layout_marginTop="1dp"
+        android:visibility="gone"
         android:background="@color/color_base">
         <ImageView
             android:layout_width="30dp"
@@ -79,15 +81,11 @@
             android:textColor="@color/title" />
     </RelativeLayout>
 
-    <View
-        android:layout_width="15dp"
-        android:layout_height="0.5dp"
-        android:background="@color/color_base"/>
-
     <RelativeLayout
         android:id="@+id/rl_change_pwd"
         android:layout_width="match_parent"
         android:layout_height="50dp"
+        android:layout_marginTop="1dp"
         android:background="@color/color_base">
         <ImageView
             android:layout_width="30dp"
@@ -150,10 +148,37 @@
         android:background="@color/color_base"/>
 
     <RelativeLayout
-        android:id="@+id/rel_setting"
+        android:id="@+id/rel_clear_cash"
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:background="@color/color_base">
+
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="15dp"
+            android:src="@drawable/clear_cache" />
+        <TextView
+            android:text="@string/your_clear_cash"
+            style="@style/account_info_tv" />
+        <TextView
+            android:id="@+id/tv_clear_cash"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:textColor="@color/title"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="25dp" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rel_setting"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/color_base"
+        android:visibility="gone">
 
         <ImageView
             android:layout_width="30dp"

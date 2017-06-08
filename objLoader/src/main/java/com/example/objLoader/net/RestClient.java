@@ -2,6 +2,7 @@ package com.example.objLoader.net;
 
 import com.example.objLoader.bean.BaseHttpBean;
 import com.example.objLoader.bean.BaseRequestBean;
+import com.example.objLoader.bean.MeasureRecordBean;
 import com.example.objLoader.bean.Temp;
 import com.example.objLoader.bean.WXUserInfoBean;
 import com.example.objLoader.istatic.Constants;
@@ -126,5 +127,13 @@ public class RestClient<T> {
 
     public Observable<BaseRequestBean> post(String url, Map<String,String> params){
         return api().post(url,params);
+    }
+
+    public Observable<MeasureRecordBean> getRecordMeasureData(String url, String mobile, String md5) {
+        return api().getRecordMeasureData(url, mobile, md5);
+    }
+
+    public Observable<BaseRequestBean> deleteMyMeasureRecord(String url, String mobile, String recid, String md5) {
+        return api().deleteMyMeasureRecord(url,mobile,recid,md5);
     }
 }

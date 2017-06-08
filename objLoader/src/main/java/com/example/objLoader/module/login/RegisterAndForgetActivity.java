@@ -9,9 +9,9 @@ import com.example.objLoader.R;
 import com.example.objLoader.base.BaseActivity;
 import com.example.objLoader.base.BasePresenter;
 import com.example.objLoader.istatic.IConstant;
-import com.example.objLoader.module.login.imple.IRegistForgetView;
-import com.example.objLoader.module.login.presenter.LoginPresent;
-import com.example.objLoader.module.login.presenter.RegistForgetPresent;
+import com.example.objLoader.present.view.IRegistForgetView;
+import com.example.objLoader.present.LoginPresent;
+import com.example.objLoader.present.RegistForgetPresent;
 
 import butterknife.Bind;
 import butterknife.OnClick;
@@ -101,6 +101,11 @@ public class RegisterAndForgetActivity extends BaseActivity implements IRegistFo
 	@Override
 	public boolean isForgetPwd() {
 		return isForgetpsw;
+	}
+
+	@Override
+	public boolean isBindMobile() {
+		return false;
 	}
 
 	@Override

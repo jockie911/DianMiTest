@@ -35,13 +35,6 @@ public class LoadingDialog {
         WindowManager windowManager = (WindowManager) context
                 .getSystemService(Context.WINDOW_SERVICE);
         display = windowManager.getDefaultDisplay();
-
-      /*  if(context instanceof Activity){
-            Activity activity = (Activity) context;
-            WindowManager.LayoutParams attributes = activity.getWindow().getAttributes();
-            attributes.alpha = 1.0f;
-            activity.getWindow().setAttributes(attributes);
-        }*/
     }
 
     public LoadingDialog builder(){

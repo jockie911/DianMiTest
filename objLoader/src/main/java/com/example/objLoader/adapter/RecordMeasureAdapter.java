@@ -40,7 +40,7 @@ public class RecordMeasureAdapter extends CommonAdapter<MeasureRecordBean.DataBe
         datas.size();
         datas.size();
         tvRecordName.setText(dataBean.getName());
-        tvRecordGender.setText(dataBean.getObjname());
+        tvRecordGender.setText(dataBean.getInfo().get(dataBean.getInfo().size() - 1).getValue());
 
         bottomView.setVisibility(position == datas.size() - 1 ? View.GONE : View.VISIBLE);
         checkBox.setVisibility(isVisible ? View.VISIBLE : View.GONE);
@@ -85,7 +85,8 @@ public class RecordMeasureAdapter extends CommonAdapter<MeasureRecordBean.DataBe
             }
         }
         deleteIDList.clear();
-        datas.removeAll(copyDatas);
+        if(datas != null)
+            datas.removeAll(copyDatas);
         notifyDataSetChanged();
     }
 }

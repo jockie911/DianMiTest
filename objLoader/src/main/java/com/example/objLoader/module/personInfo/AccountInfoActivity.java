@@ -1,49 +1,37 @@
 package com.example.objLoader.module.personInfo;
 
 import android.content.Intent;
-import android.graphics.Bitmap;
-import android.graphics.BitmapFactory;
 import android.net.Uri;
-import android.os.Bundle;
-import android.os.Environment;
-import android.provider.MediaStore;
-import android.support.v4.graphics.drawable.RoundedBitmapDrawable;
-import android.support.v4.graphics.drawable.RoundedBitmapDrawableFactory;
 import android.text.TextUtils;
-import android.util.Log;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
-import com.bumptech.glide.request.target.BitmapImageViewTarget;
 import com.bumptech.glide.signature.StringSignature;
 import com.example.objLoader.R;
 import com.example.objLoader.base.BaseActivity;
-import com.example.objLoader.base.BaseApp;
 import com.example.objLoader.base.BasePresenter;
 import com.example.objLoader.istatic.IConstant;
 import com.example.objLoader.module.ChangeUsernameActivity;
 import com.example.objLoader.module.MeasureRecordActivity;
 import com.example.objLoader.module.setting.SettingActivity;
-import com.example.objLoader.module.personInfo.presenter.InfoPresent;
+import com.example.objLoader.present.InfoPresent;
+import com.example.objLoader.present.SettingPresent;
+import com.example.objLoader.present.view.InfoView;
+import com.example.objLoader.utils.DataCleanManager;
 import com.example.objLoader.utils.FileUtil;
+import com.example.objLoader.utils.IntentUtils;
 import com.example.objLoader.utils.SPUtils;
-import com.example.objLoader.utils.ToastUtils;
-import com.example.objLoader.wedgit.ActionSheetDialog;
-import com.example.objLoader.utils.Utils;
 import com.example.objLoader.wedgit.CircleImageView;
 
 import java.io.File;
-import java.io.FileNotFoundException;
-import java.io.FileOutputStream;
-import java.io.IOException;
 
 import butterknife.Bind;
 import butterknife.OnClick;
 
-public class AccountInfoActivity extends BaseActivity implements InfoView{
+public class AccountInfoActivity extends BaseActivity implements InfoView {
 
     @Bind(R.id.rl_change_pwd)
     RelativeLayout rl_change_pwd;
@@ -57,10 +45,13 @@ public class AccountInfoActivity extends BaseActivity implements InfoView{
     CircleImageView ivAvatar;
     @Bind(R.id.iv_right_title_bar)
     ImageView ivRightTitleBar;
+	@Bind(R.id.tv_clear_cash)
+	TextView tvClearCash;
 
 	private String username,mobile;
 	private InfoPresent infoPresent;
 	private Uri storeUri;
+	private SettingPresent settingPresent;
 
 	@Override
     protected int getLayoutRes() {
@@ -89,6 +80,13 @@ public class AccountInfoActivity extends BaseActivity implements InfoView{
 			tv_phone_number.setText(maskNumber);
 		}
 		tv_username.setText(username);
+
+		try {
+			String totalCacheSize = DataCleanManager.getTotalCacheSize();
+			tvClearCash.setText(totalCacheSize);
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
 	}
 
 	@Override
@@ -99,7 +97,8 @@ public class AccountInfoActivity extends BaseActivity implements InfoView{
 	}
 
 	@Override
-    @OnClick({R.id.rl_change_pwd,R.id.rl_change_username,R.id.iv_right_title_bar,R.id.ivPic,R.id.rl_measure_record,R.id.rel_setting})
+    @OnClick({R.id.rl_change_pwd,R.id.rl_change_username,R.id.iv_right_title_bar,R.id.ivPic,R.id.rl_measure_record,R.id.rel_setting
+    ,R.id.rl_measure_prorecord,R.id.rel_clear_cash})
 	public void onClick(View v) {
 		if(isDoubleClick(v)) return;
 		switch (v.getId()) {
@@ -117,6 +116,14 @@ public class AccountInfoActivity extends BaseActivity implements InfoView{
 			break;
 		case R.id.rl_measure_record:
 			startActivity(new Intent(this, MeasureRecordActivity.class));
+			break;
+		case R.id.rl_measure_prorecord:
+			IntentUtils.startToWebview(this,0);
+			break;
+		case R.id.rel_clear_cash:
+			if(settingPresent == null)
+				settingPresent = new SettingPresent(this);
+			settingPresent.clearCash(tvClearCash);
 			break;
 		case R.id.rel_setting:
 			startActivity(new Intent(this, SettingActivity.class));

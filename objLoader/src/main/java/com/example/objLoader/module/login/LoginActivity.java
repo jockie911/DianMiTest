@@ -10,11 +10,15 @@ import com.example.objLoader.R;
 import com.example.objLoader.base.BaseActivity;
 import com.example.objLoader.base.BasePresenter;
 import com.example.objLoader.bean.event.WxLoginSuccessEvent;
+import com.example.objLoader.istatic.Constants;
 import com.example.objLoader.istatic.IConstant;
-import com.example.objLoader.module.login.imple.ILoginView;
-import com.example.objLoader.module.login.presenter.LoginPresent;
+import com.example.objLoader.present.view.ILoginView;
+import com.example.objLoader.present.LoginPresent;
 import com.example.objLoader.module.personInfo.AccountInfoActivity;
 import com.example.objLoader.utils.SPUtils;
+import com.tencent.mm.opensdk.modelmsg.SendAuth;
+import com.tencent.mm.opensdk.openapi.IWXAPI;
+import com.tencent.mm.opensdk.openapi.WXAPIFactory;
 
 import org.greenrobot.eventbus.EventBus;
 import org.greenrobot.eventbus.Subscribe;
@@ -80,7 +84,12 @@ public class LoginActivity extends BaseActivity implements ILoginView {
 		    loginPresent.changeEdittextPwdStatus(et_password,ivEyePwd);
 			break;
 		case R.id.iv_login_weixin:
-			loginPresent.loginWX();
+			SendAuth.Req req = new SendAuth.Req();
+			req.scope = IConstant.WX_REQ_SCOPE;
+			req.state = IConstant.WX_REQ_STATE;
+			IWXAPI wxapi = WXAPIFactory.createWXAPI(this, Constants.WX_ID,true);
+			wxapi.sendReq(req);
+//			loginPresent.loginWX();
 			break;
 		}
 	}

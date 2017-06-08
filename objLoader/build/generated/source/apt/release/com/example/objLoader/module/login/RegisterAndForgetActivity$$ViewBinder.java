@@ -8,14 +8,14 @@ import butterknife.ButterKnife.ViewBinder;
 public class RegisterAndForgetActivity$$ViewBinder<T extends com.example.objLoader.module.login.RegisterAndForgetActivity> implements ViewBinder<T> {
   @Override public void bind(final Finder finder, final T target, Object source) {
     View view;
-    view = finder.findRequiredView(source, 2131689694, "field 'et_mobile'");
-    target.et_mobile = finder.castView(view, 2131689694, "field 'et_mobile'");
-    view = finder.findRequiredView(source, 2131689695, "field 'et_auth_code'");
-    target.et_auth_code = finder.castView(view, 2131689695, "field 'et_auth_code'");
-    view = finder.findRequiredView(source, 2131689697, "field 'et_register_password'");
-    target.et_register_password = finder.castView(view, 2131689697, "field 'et_register_password'");
-    view = finder.findRequiredView(source, 2131689696, "field 'tv_send_auth_code' and method 'onClick'");
-    target.tv_send_auth_code = finder.castView(view, 2131689696, "field 'tv_send_auth_code'");
+    view = finder.findRequiredView(source, 2131689646, "field 'et_mobile'");
+    target.et_mobile = finder.castView(view, 2131689646, "field 'et_mobile'");
+    view = finder.findRequiredView(source, 2131689647, "field 'et_auth_code'");
+    target.et_auth_code = finder.castView(view, 2131689647, "field 'et_auth_code'");
+    view = finder.findRequiredView(source, 2131689706, "field 'et_register_password'");
+    target.et_register_password = finder.castView(view, 2131689706, "field 'et_register_password'");
+    view = finder.findRequiredView(source, 2131689648, "field 'tv_send_auth_code' and method 'onClick'");
+    target.tv_send_auth_code = finder.castView(view, 2131689648, "field 'tv_send_auth_code'");
     view.setOnClickListener(
       new butterknife.internal.DebouncingOnClickListener() {
         @Override public void doClick(
@@ -24,8 +24,8 @@ public class RegisterAndForgetActivity$$ViewBinder<T extends com.example.objLoad
           target.onClick(p0);
         }
       });
-    view = finder.findRequiredView(source, 2131689665, "field 'ivEyePwd' and method 'onClick'");
-    target.ivEyePwd = finder.castView(view, 2131689665, "field 'ivEyePwd'");
+    view = finder.findRequiredView(source, 2131689675, "field 'ivEyePwd' and method 'onClick'");
+    target.ivEyePwd = finder.castView(view, 2131689675, "field 'ivEyePwd'");
     view.setOnClickListener(
       new butterknife.internal.DebouncingOnClickListener() {
         @Override public void doClick(
@@ -34,8 +34,8 @@ public class RegisterAndForgetActivity$$ViewBinder<T extends com.example.objLoad
           target.onClick(p0);
         }
       });
-    view = finder.findRequiredView(source, 2131689698, "field 'tvRegister' and method 'onClick'");
-    target.tvRegister = finder.castView(view, 2131689698, "field 'tvRegister'");
+    view = finder.findRequiredView(source, 2131689649, "field 'tvRegister' and method 'onClick'");
+    target.tvRegister = finder.castView(view, 2131689649, "field 'tvRegister'");
     view.setOnClickListener(
       new butterknife.internal.DebouncingOnClickListener() {
         @Override public void doClick(

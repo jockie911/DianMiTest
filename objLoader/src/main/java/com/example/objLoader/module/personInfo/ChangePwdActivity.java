@@ -7,9 +7,9 @@ import android.widget.ImageView;
 import com.example.objLoader.R;
 import com.example.objLoader.base.BaseActivity;
 import com.example.objLoader.base.BasePresenter;
-import com.example.objLoader.module.login.presenter.LoginPresent;
-import com.example.objLoader.module.personInfo.presenter.ChangePwdPresenter;
-import com.example.objLoader.module.personInfo.presenter.ChangePwdView;
+import com.example.objLoader.present.LoginPresent;
+import com.example.objLoader.present.ChangePwdPresenter;
+import com.example.objLoader.present.view.ChangePwdView;
 import com.example.objLoader.utils.ToastUtils;
 
 import butterknife.Bind;

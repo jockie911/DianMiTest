@@ -22,6 +22,7 @@ import com.example.objLoader.utils.Logger;
 import com.example.objLoader.utils.ToastUtils;
 
 import java.io.IOException;
+import java.lang.ref.WeakReference;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -43,7 +44,7 @@ public class CameraView<T extends BaseActivity> extends SurfaceView implements S
     private int mLayoutOrientation;
     private CameraOrientationListener mOrientationListener;
 
-    private T mActivity;
+    private WeakReference<T> mActivity;
     /**
      * 当前缩放
      */
@@ -83,7 +84,7 @@ public class CameraView<T extends BaseActivity> extends SurfaceView implements S
     }
 
     public void bindActivity(T activity) {
-        this.mActivity = activity;
+        mActivity = new WeakReference<T>(activity);
     }
 
     public void setOnCameraPrepareListener(OnCameraPrepareListener onCameraPrepareListener) {
@@ -467,7 +468,7 @@ public class CameraView<T extends BaseActivity> extends SurfaceView implements S
         Camera.CameraInfo cameraInfo = new Camera.CameraInfo();
         Camera.getCameraInfo(mCameraId.ordinal(), cameraInfo);
 
-        int rotation = mActivity.getWindowManager().getDefaultDisplay().getRotation();
+        int rotation = mActivity.get().getWindowManager().getDefaultDisplay().getRotation();
         int degrees = 0;
 
         switch (rotation) {

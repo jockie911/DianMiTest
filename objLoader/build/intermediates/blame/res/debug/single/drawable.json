@@ -56,16 +56,16 @@
         "source": "E:\\Code\\Android\\MyApplication\\objLoader\\src\\main\\res\\drawable\\icon.png"
     },
     {
+        "merged": "E:\\Code\\Android\\MyApplication\\objLoader\\build\\intermediates\\res\\merged\\debug\\drawable\\like.png",
+        "source": "C:\\Users\\yc\\.android\\build-cache\\185228fa4dc2133000bf4dec70f06b17aa234e31\\output\\res\\drawable\\like.png"
+    },
+    {
         "merged": "E:\\Code\\Android\\MyApplication\\objLoader\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_dialog_material_background.xml",
         "source": "C:\\Users\\yc\\.android\\build-cache\\d0928f8ffb5d248f984d90ffe3601d0e67dd1423\\output\\res\\drawable\\abc_dialog_material_background.xml"
     },
     {
         "merged": "E:\\Code\\Android\\MyApplication\\objLoader\\build\\intermediates\\res\\merged\\debug\\drawable\\alertdialog_left_selector.xml",
         "source": "E:\\Code\\Android\\MyApplication\\objLoader\\src\\main\\res\\drawable\\alertdialog_left_selector.xml"
-    },
-    {
-        "merged": "E:\\Code\\Android\\MyApplication\\objLoader\\build\\intermediates\\res\\merged\\debug\\drawable\\like.png",
-        "source": "C:\\Users\\yc\\.android\\build-cache\\185228fa4dc2133000bf4dec70f06b17aa234e31\\output\\res\\drawable\\like.png"
     },
     {
         "merged": "E:\\Code\\Android\\MyApplication\\objLoader\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_seekbar_track_material.xml",

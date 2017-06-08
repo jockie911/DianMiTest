@@ -1,4 +1,4 @@
-#Mon Jun 05 13:58:47 CST 2017
+#Thu Jun 08 17:10:32 CST 2017
 file.9=E\:\\Code\\Android\\MyApplication\\objLoader\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10\\retrofit-2.2.0_7dc91a84c5b5f36a2497c1f7e2744e547f9536fa\\classes.dex
 base.10=E\:\\Code\\Android\\MyApplication\\objLoader\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10\\gson-2.7_7f7cca7fdee5eebd904313db0672b3890f8ed8a7
 file.8=E\:\\Code\\Android\\MyApplication\\objLoader\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10\\classes_66a8aef113dae63a1ed5d3cd735cfd8697e0a79a\\classes.dex

@@ -3,6 +3,7 @@ package com.example.objLoader.module;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
+import android.os.Message;
 import android.view.View;
 import android.view.WindowManager;
 import android.view.animation.AccelerateInterpolator;
@@ -13,6 +14,9 @@ import android.widget.ImageView;
 
 import com.example.objLoader.R;
 import com.example.objLoader.base.BaseActivity;
+import com.example.objLoader.module.setting.SettingActivity;
+
+import java.lang.ref.WeakReference;
 
 import butterknife.Bind;
 
@@ -21,6 +25,8 @@ public class SplashActivity extends BaseActivity implements Animation.AnimationL
     @Bind(R.id.iv_splash)
     ImageView ivSplash;
     private AnimationSet animationSet;
+
+    private MyHandler sHandler = new MyHandler(this);
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -42,27 +48,23 @@ public class SplashActivity extends BaseActivity implements Animation.AnimationL
 
     @Override
     protected void initData() {
-        animationSet = new AnimationSet(true);
+
         sHandler.postDelayed(new Runnable() {
             @Override
             public void run() {
-//                AlphaAnimation aa = new AlphaAnimation(1.0f,0.0f);
-//                aa.setRepeatMode(Animation.REVERSE);
+                animationSet = new AnimationSet(true);
+                animationSet.setAnimationListener(SplashActivity.this);
 
-
-                ScaleAnimation sa = new ScaleAnimation(1.0f, 1.3f, 1.0f, 1.3f,
+                ScaleAnimation sa = new ScaleAnimation(1.0f, 1.2f, 1.0f, 1.2f,
                         Animation.RELATIVE_TO_SELF, 0.5f, Animation.RELATIVE_TO_SELF, 0.5f);
-
                 animationSet.setDuration(1200);
-//                animationSet.addAnimation(aa);
+        //                animationSet.addAnimation(aa);
                 animationSet.addAnimation(sa);
                 animationSet.setInterpolator(new AccelerateInterpolator());
                 animationSet.setFillAfter(true);
-
                 ivSplash.startAnimation(animationSet);
             }
         },2000);
-        animationSet.setAnimationListener(this);
         //TODO check out new version to update --> force update/choose update
     }
 
@@ -71,8 +73,6 @@ public class SplashActivity extends BaseActivity implements Animation.AnimationL
         if(isDoubleClick(v)) return;
     }
 
-
-    static Handler sHandler = new Handler();
 
     @Override
     protected void onDestroy() {
@@ -96,5 +96,19 @@ public class SplashActivity extends BaseActivity implements Animation.AnimationL
     @Override
     public void onAnimationRepeat(Animation animation) {
 
+    }
+
+    private static class MyHandler extends Handler {
+        private final WeakReference<SplashActivity> mActivity;
+
+        public MyHandler(SplashActivity activity) {
+            mActivity = new WeakReference(activity);
+        }
+
+        @Override
+        public void handleMessage(Message msg) {
+            super.handleMessage(msg);
+
+        }
     }
 }

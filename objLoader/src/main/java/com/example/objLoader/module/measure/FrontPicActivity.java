@@ -14,9 +14,9 @@ import com.example.objLoader.base.BaseApp;
 import com.example.objLoader.base.BasePresenter;
 import com.example.objLoader.bean.event.PicPathEvent;
 import com.example.objLoader.istatic.IConstant;
-import com.example.objLoader.module.measure.present.FrontSidePresenter;
+import com.example.objLoader.present.FrontSidePresenter;
+import com.example.objLoader.present.view.IFrontSideView;
 import com.example.objLoader.utils.SPUtils;
-import com.example.objLoader.utils.ToastUtils;
 import com.lilei.springactionmenu.ActionMenu;
 import com.lilei.springactionmenu.OnActionItemClickListener;
 
@@ -35,8 +35,8 @@ public class FrontPicActivity extends BaseActivity implements IFrontSideView, On
 	TextView tvRightTitleBar;
 	@Bind(R.id.actionMenu)
 	ActionMenu actionMenu;
-
-	public static FrontPicActivity activity;
+	@Bind(R.id.v_bg)
+	View vBg;
 
 	protected int GENDER ;
 	protected FrontSidePresenter frontSidePresenter;
@@ -54,7 +54,7 @@ public class FrontPicActivity extends BaseActivity implements IFrontSideView, On
 
 	@Override
 	protected void initData() {
-		activity = this;
+//		activity = this;
 		if(!EventBus.getDefault().isRegistered(this))
 			EventBus.getDefault().register(this);
 		tvTitle.setText(R.string.front_Pic);
@@ -72,12 +72,11 @@ public class FrontPicActivity extends BaseActivity implements IFrontSideView, On
 	protected BasePresenter initPresenter() {
 		frontSidePresenter = new FrontSidePresenter(this);
 		frontSidePresenter.attachView(this);
-
 		return frontSidePresenter;
 	}
 
 	@Override
-	@OnClick({/*R.id.btn_front_camera,R.id.btn_front_album,*/R.id.tv_right_title_bar})
+	@OnClick({/*R.id.btn_front_camera,R.id.btn_front_album,*/R.id.tv_right_title_bar,R.id.v_bg})
 	public void onClick(View v) {
 		if(isDoubleClick(v)) return;
 		switch (v.getId()) {
@@ -90,6 +89,12 @@ public class FrontPicActivity extends BaseActivity implements IFrontSideView, On
 			break;*/
 		case R.id.tv_right_title_bar:
 			frontSidePresenter.nextStep();
+			break;
+		case R.id.v_bg:
+			if(actionMenu != null && actionMenu.isOpen()){
+				setViewBackground(R.color.transparent);
+				actionMenu.closeMenu();
+			}
 			break;
 		}
 	}
@@ -118,6 +123,12 @@ public class FrontPicActivity extends BaseActivity implements IFrontSideView, On
 				ivTarget.setImageBitmap(bitmap);
 			showCameraFragment(false);
 		}
+	}
+
+	@Override
+	protected void onResume() {
+		setViewBackground(R.color.transparent);
+		super.onResume();
 	}
 
 	@Override
@@ -165,8 +176,10 @@ public class FrontPicActivity extends BaseActivity implements IFrontSideView, On
 	public void onItemClick(int i) {
 		if(i == 0){
 			if(actionMenu != null && actionMenu.isOpen()){ //此处设计的有问题，状态改变发生在点击之前
+				setViewBackground(R.color.transparent);
 				actionMenu.openMenu();
 			}else{
+				setViewBackground(R.color.fab_bg_color);
 				actionMenu.closeMenu();
 			}
 		}else if(i == 1){
@@ -186,5 +199,9 @@ public class FrontPicActivity extends BaseActivity implements IFrontSideView, On
 		super.onPause();
 		if(actionMenu != null && actionMenu.isOpen())
 			actionMenu.closeMenu();
+	}
+
+	public void setViewBackground(int colorResID){
+		vBg.setBackgroundColor(getResources().getColor(colorResID));
 	}
 }

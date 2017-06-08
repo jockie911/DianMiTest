@@ -1,5 +1,9 @@
 [
     {
+        "merged": "E:\\Code\\Android\\MyApplication\\objLoader\\build\\intermediates\\res\\merged\\release\\drawable\\write.png",
+        "source": "C:\\Users\\yc\\.android\\build-cache\\185228fa4dc2133000bf4dec70f06b17aa234e31\\output\\res\\drawable\\write.png"
+    },
+    {
         "merged": "E:\\Code\\Android\\MyApplication\\objLoader\\build\\intermediates\\res\\merged\\release\\drawable\\actionsheet_middle_selector.xml",
         "source": "E:\\Code\\Android\\MyApplication\\objLoader\\src\\main\\res\\drawable\\actionsheet_middle_selector.xml"
     },
@@ -10,6 +14,10 @@
     {
         "merged": "E:\\Code\\Android\\MyApplication\\objLoader\\build\\intermediates\\res\\merged\\release\\drawable\\selector_btn_camera_back.xml",
         "source": "E:\\Code\\Android\\MyApplication\\objLoader\\src\\main\\res\\drawable\\selector_btn_camera_back.xml"
+    },
+    {
+        "merged": "E:\\Code\\Android\\MyApplication\\objLoader\\build\\intermediates\\res\\merged\\release\\drawable\\close.png",
+        "source": "C:\\Users\\yc\\.android\\build-cache\\185228fa4dc2133000bf4dec70f06b17aa234e31\\output\\res\\drawable\\close.png"
     },
     {
         "merged": "E:\\Code\\Android\\MyApplication\\objLoader\\build\\intermediates\\res\\merged\\release\\drawable\\abc_list_selector_background_transition_holo_dark.xml",
@@ -72,6 +80,10 @@
         "source": "C:\\Users\\yc\\.android\\build-cache\\d0928f8ffb5d248f984d90ffe3601d0e67dd1423\\output\\res\\drawable\\abc_ic_menu_overflow_material.xml"
     },
     {
+        "merged": "E:\\Code\\Android\\MyApplication\\objLoader\\build\\intermediates\\res\\merged\\release\\drawable\\add.png",
+        "source": "C:\\Users\\yc\\.android\\build-cache\\185228fa4dc2133000bf4dec70f06b17aa234e31\\output\\res\\drawable\\add.png"
+    },
+    {
         "merged": "E:\\Code\\Android\\MyApplication\\objLoader\\build\\intermediates\\res\\merged\\release\\drawable\\xj_selector.xml",
         "source": "E:\\Code\\Android\\MyApplication\\objLoader\\src\\main\\res\\drawable\\xj_selector.xml"
     },
@@ -104,8 +116,16 @@
         "source": "C:\\Users\\yc\\.android\\build-cache\\d0928f8ffb5d248f984d90ffe3601d0e67dd1423\\output\\res\\drawable\\abc_ratingbar_indicator_material.xml"
     },
     {
+        "merged": "E:\\Code\\Android\\MyApplication\\objLoader\\build\\intermediates\\res\\merged\\release\\drawable\\search.png",
+        "source": "C:\\Users\\yc\\.android\\build-cache\\185228fa4dc2133000bf4dec70f06b17aa234e31\\output\\res\\drawable\\search.png"
+    },
+    {
         "merged": "E:\\Code\\Android\\MyApplication\\objLoader\\build\\intermediates\\res\\merged\\release\\drawable\\design_fab_background.xml",
         "source": "C:\\Users\\yc\\.android\\build-cache\\9bb9c0f4e18f768e3516e9c4152543666304976c\\output\\res\\drawable\\design_fab_background.xml"
+    },
+    {
+        "merged": "E:\\Code\\Android\\MyApplication\\objLoader\\build\\intermediates\\res\\merged\\release\\drawable\\like.png",
+        "source": "C:\\Users\\yc\\.android\\build-cache\\185228fa4dc2133000bf4dec70f06b17aa234e31\\output\\res\\drawable\\like.png"
     },
     {
         "merged": "E:\\Code\\Android\\MyApplication\\objLoader\\build\\intermediates\\res\\merged\\release\\drawable\\abc_spinner_textfield_background_material.xml",

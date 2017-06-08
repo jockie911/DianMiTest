@@ -13,6 +13,10 @@ public class IConstant {
     public static final String REGISTER_OR_FORGET = "register_or_forget";
     public static final String WX_REQ_STATE = "wechat_dianmi";
     public static final String WX_REQ_SCOPE = "snsapi_userinfo";
+    public static final String TITLE = "title";
+    public static final String URL = "url";
+    public static final String RECID = "recid";
+    public static final String CODE = "code";
 
     public static long NO_DOUBLE_CLICK_TIME = 500;
 

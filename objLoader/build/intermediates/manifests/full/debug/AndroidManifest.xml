@@ -136,6 +136,8 @@
             android:exported="true"
             android:screenOrientation="portrait"
             android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+        <activity android:name="com.example.objLoader.module.WebviewActivity" />
+        <activity android:name="com.example.objLoader.module.login.BindMobileActivity" />
 
         <service
             android:name="com.squareup.leakcanary.internal.HeapAnalyzerService"

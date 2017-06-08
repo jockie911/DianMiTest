@@ -187,4 +187,9 @@
     <string name="loading">Loading</string>
     <string name="twice_same_psw">新的密码不能与之前密码相同</string>
     <string name="edit_pwd_success">密码修改成功</string>
+    <string name="user_agreement">用户协议</string>
+    <string name="delete_record_success">删除记录成功</string>
+    <string name="current_no_cash">暂时没有可以清理的缓存</string>
+    <string name="clear_cash_complete">清理缓存成功！</string>
+    <string name="bind_mobile">绑定手机号</string>
 </resources>

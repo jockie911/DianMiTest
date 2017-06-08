@@ -5,6 +5,7 @@ import android.graphics.Bitmap;
 import com.example.objLoader.R;
 import com.example.objLoader.bean.event.PicPathEvent;
 import com.example.objLoader.base.BaseApp;
+import com.example.objLoader.present.view.IFrontSideView;
 
 import org.greenrobot.eventbus.Subscribe;
 import org.greenrobot.eventbus.ThreadMode;

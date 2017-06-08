@@ -8,8 +8,8 @@ import butterknife.ButterKnife.ViewBinder;
 public class SplashActivity$$ViewBinder<T extends com.example.objLoader.module.SplashActivity> implements ViewBinder<T> {
   @Override public void bind(final Finder finder, final T target, Object source) {
     View view;
-    view = finder.findRequiredView(source, 2131689708, "field 'ivSplash'");
-    target.ivSplash = finder.castView(view, 2131689708, "field 'ivSplash'");
+    view = finder.findRequiredView(source, 2131689716, "field 'ivSplash'");
+    target.ivSplash = finder.castView(view, 2131689716, "field 'ivSplash'");
   }
 
   @Override public void unbind(T target) {

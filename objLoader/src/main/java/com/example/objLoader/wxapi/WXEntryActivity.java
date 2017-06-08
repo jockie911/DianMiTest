@@ -1,6 +1,8 @@
 package com.example.objLoader.wxapi;
 
 import android.app.Activity;
+import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.text.TextUtils;
 
@@ -10,7 +12,9 @@ import com.example.objLoader.bean.WXUserInfoBean;
 import com.example.objLoader.bean.event.WxLoginSuccessEvent;
 import com.example.objLoader.istatic.Constants;
 import com.example.objLoader.istatic.IConstant;
+import com.example.objLoader.module.login.BindMobileActivity;
 import com.example.objLoader.net.RestClient;
+import com.example.objLoader.utils.IntentUtils;
 import com.example.objLoader.utils.ToastUtils;
 import com.tencent.mm.opensdk.modelbase.BaseReq;
 import com.tencent.mm.opensdk.modelbase.BaseResp;
@@ -47,12 +51,13 @@ public class WXEntryActivity extends Activity implements IWXAPIEventHandler {
 
     @Override
     public void onResp(BaseResp baseResp) {
+
         switch (baseResp.errCode){
             case BaseResp.ErrCode.ERR_OK:
                 if(TextUtils.equals(IConstant.WX_REQ_STATE,((SendAuth.Resp) baseResp).state)){
                     String code = ((SendAuth.Resp) baseResp).code;
-//                    getOpenID(code);
-                    textLogin(code);
+                    IntentUtils.startToBindMobile(this,code);
+                    finish();
                 }
                 break;
             case BaseResp.ErrCode.ERR_AUTH_DENIED :
@@ -115,63 +120,5 @@ public class WXEntryActivity extends Activity implements IWXAPIEventHandler {
                 finish();
             }
         });
-    }
-
-
-    private void textLogin(String code){
-        String urlStr = "https://api.weixin.qq.com/sns/oauth2/access_token?appid="+Constants.WX_ID+"&secret="+Constants.WX_SECRET+
-                "&code="+code+"&grant_type=authorization_code";
-        RestClient.instance().wxLogin(urlStr)
-                .subscribeOn(Schedulers.io())
-                .flatMap(new Func1<Temp, Observable<Temp>>() {
-                    @Override
-                    public Observable<Temp> call(Temp temp) {
-                        return RestClient.instance().wxUserInfo("https://api.weixin.qq.com/sns/userinfo", temp.getAccess_token(), temp.getOpenid());
-                    }
-                }).flatMap(new Func1<WXUserInfoBean,Observable<WXUserInfoBean>>() {
-                        @Override
-                        public Observable<WXUserInfoBean> call(WXUserInfoBean wxUserInfoBean) {
-                            return RestClient.instance().checkWXLogin(Constants.WX_LOGIN,
-                                    wxUserInfoBean.getUnionid(),
-                                    wxUserInfoBean.getNickname(),
-                                    wxUserInfoBean.getHeadimgurl(),
-                                    wxUserInfoBean.getSex(),
-                                    1,
-                                    "18297508272");
-                        }
-                    })
-                .observeOn(AndroidSchedulers.mainThread())
-               /* .subscribe(new Action1<WXUserInfoBean>() {
-                    @Override
-                    public void call(WXUserInfoBean wxUserInfoBean) {
-                        if(wxUserInfoBean != null && TextUtils.equals("0",wxUserInfoBean.getIserror())){
-                            EventBus.getDefault().post(new WxLoginSuccessEvent());
-                        }else{
-                            ToastUtils.show("error");
-                        }
-                        finish();
-                    }
-                });*/
-               .subscribe(new BaseSubscriber<WXUserInfoBean>(this) {
-                   @Override
-                   public void onNext(WXUserInfoBean wxUserInfoBean) {
-                       if(wxUserInfoBean != null && TextUtils.equals("0",wxUserInfoBean.getIserror())){
-                           EventBus.getDefault().post(new WxLoginSuccessEvent());
-                       }else{
-                           ToastUtils.show("error");
-                       }
-                       finish();
-                   }
-
-                   @Override
-                   public void onSuccess(WXUserInfoBean wxUserInfoBean) {
-
-                   }
-
-                   @Override
-                   public void onFailed(String errMsg) {
-                   }
-               });
-
     }
 }

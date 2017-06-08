@@ -2,17 +2,15 @@ package com.example.objLoader.module.measure;
 
 import android.content.Intent;
 import android.view.View;
-import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import com.example.objLoader.R;
-import com.example.objLoader.base.AbActivityManager;
 import com.example.objLoader.base.BasePresenter;
 import com.example.objLoader.bean.MeasureRecordBean;
 import com.example.objLoader.base.BaseActivity;
 import com.example.objLoader.istatic.IConstant;
 import com.example.objLoader.module.DetailMeasureSizeActivity;
-import com.example.objLoader.module.measure.present.MeasurePresent;
+import com.example.objLoader.present.MeasurePresent;
 import com.example.objLoader.wedgit.wheelpicker.WheelPicker;
 
 import java.util.ArrayList;

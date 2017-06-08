@@ -2,6 +2,7 @@ package com.example.objLoader.net.api;
 
 import com.example.objLoader.bean.BaseHttpBean;
 import com.example.objLoader.bean.BaseRequestBean;
+import com.example.objLoader.bean.MeasureRecordBean;
 import com.example.objLoader.bean.Temp;
 import com.example.objLoader.bean.WXUserInfoBean;
 import com.example.objLoader.istatic.Constants;
@@ -34,6 +35,12 @@ public interface Api<T> {
 
     @FormUrlEncoded
     @POST
+    Observable<MeasureRecordBean> getRecordMeasureData(@Url String url,
+                                                       @Field(IConstant.MOBILE) String mobile,
+                                                       @Field(IConstant.STRING) String md5);
+
+    @FormUrlEncoded
+    @POST
     Observable<WXUserInfoBean> checkWXLogin(@Url String url,
                                             @Field("uid") String uid,
                                             @Field("name") String name,
@@ -48,6 +55,12 @@ public interface Api<T> {
                                               @Field(IConstant.PASSWORD_NEW) String newpwd,
                                               @Field(IConstant.STRING) String md5);
 
+    @FormUrlEncoded
+    @POST
+    Observable<BaseRequestBean> deleteMyMeasureRecord(@Url String url,
+                                                      @Field((IConstant.MOBILE))String mobile,
+                                                      @Field((IConstant.RECID))String recid,
+                                                      @Field((IConstant.STRING))String md5);
 
 //    @GET()
 //    Observable<BaseHttpBean<T>> get(@Url String url, @QueryMap Map<String, String> params/*, @Header("Cache-Time") String time*/);
@@ -62,4 +75,6 @@ public interface Api<T> {
     @FormUrlEncoded
     @POST()
     Observable<BaseRequestBean> post(@Url String url, @FieldMap Map<String, String> params);
+
+
 }

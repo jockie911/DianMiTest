@@ -39,7 +39,7 @@ public abstract class BaseActivity extends AppCompatActivity implements OnClickL
 	protected View rootView;
 	protected TextView tvRightTitle;
 	protected TextView tvTitle;
-	private BasePresenter presenter;
+	private BasePresenter mPresenter;
 
 	@SuppressLint("NewApi") @Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -51,7 +51,7 @@ public abstract class BaseActivity extends AppCompatActivity implements OnClickL
 		initBaseTitleBar();
 		ButterKnife.bind(this);
 
-		presenter = initPresenter();
+		mPresenter = initPresenter();
 		initData();
 
 		AbActivityManager.getInstance().addActivity(this);
@@ -140,8 +140,8 @@ public abstract class BaseActivity extends AppCompatActivity implements OnClickL
 			imm.hideSoftInputFromWindow(getWindow().getDecorView().getWindowToken(), 0);
 //		SoftInputUtils.closeSoftInput(this);
         CallServer.getInstance().cancelAll();
-		if (presenter != null) {
-			presenter.detachView();
+		if (mPresenter != null) {
+			mPresenter.detachView();
 		}
 		super.onDestroy();
 	}

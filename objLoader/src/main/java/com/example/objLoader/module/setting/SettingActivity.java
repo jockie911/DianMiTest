@@ -5,7 +5,7 @@ import android.widget.TextView;
 
 import com.example.objLoader.R;
 import com.example.objLoader.base.BaseActivity;
-import com.example.objLoader.module.setting.presenter.SettingPresent;
+import com.example.objLoader.present.SettingPresent;
 import com.example.objLoader.utils.DataCleanManager;
 
 import butterknife.Bind;

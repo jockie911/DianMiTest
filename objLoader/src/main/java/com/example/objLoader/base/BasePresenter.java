@@ -45,4 +45,5 @@ public abstract class BasePresenter<T extends IBaseView> {
     public Context getApplication() {
         return BaseApp.getContext();
     }
+
 }

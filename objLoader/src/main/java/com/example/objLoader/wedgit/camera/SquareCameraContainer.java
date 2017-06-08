@@ -15,7 +15,6 @@ import android.os.Build;
 import android.os.Handler;
 import android.os.Message;
 import android.os.SystemClock;
-import android.support.v7.app.ActionBarActivity;
 import android.util.AttributeSet;
 import android.util.Log;
 import android.util.TypedValue;
@@ -26,12 +25,11 @@ import android.widget.SeekBar;
 import android.widget.Toast;
 
 import com.example.objLoader.R;
-import com.example.objLoader.bean.event.PicPathEvent;
 import com.example.objLoader.base.BaseActivity;
 import com.example.objLoader.base.BaseApp;
+import com.example.objLoader.bean.event.PicPathEvent;
 import com.example.objLoader.istatic.IConstant;
 import com.example.objLoader.utils.BitmapUtils;
-import com.example.objLoader.utils.DensityUtil;
 import com.example.objLoader.utils.FileUtil;
 import com.example.objLoader.utils.Logger;
 import com.example.objLoader.utils.SPUtils;
@@ -44,7 +42,6 @@ import java.io.ByteArrayInputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.lang.ref.WeakReference;
-import java.lang.reflect.Field;
 
 /**
  * 正方形的CamerContainer
@@ -69,7 +66,7 @@ public class SquareCameraContainer<T extends BaseActivity> extends FrameLayout i
     private SeekBar mZoomSeekBar;
 
     //TODO jiang
-    private T mActivity;
+    private WeakReference<T> mActivity;
 
     private SoundPool mSoundPool;
 
@@ -185,7 +182,7 @@ public class SquareCameraContainer<T extends BaseActivity> extends FrameLayout i
      * @param gender
      */
     public void bindActivity(T activity, boolean isFrontTakePhoto, int gender) {
-        this.mActivity = activity;
+        mActivity = new WeakReference(activity);
         this.isFrontTakePhoto = isFrontTakePhoto;
         this.gender = gender;
         if (mCameraView != null) {
@@ -412,7 +409,7 @@ public class SquareCameraContainer<T extends BaseActivity> extends FrameLayout i
             }else{
 
             }
-            loadingDialog = new LoadingDialog(mActivity).builder();
+            loadingDialog = new LoadingDialog(mActivity.get()).builder();
             loadingDialog.setCancelable(false)
                     .setMsg(getResources().getString(R.string.loading))
                     .show();
@@ -541,14 +538,14 @@ public class SquareCameraContainer<T extends BaseActivity> extends FrameLayout i
         int actionBarHeight = 0;
         final TypedValue tv = new TypedValue();
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.HONEYCOMB) {
-            if (mActivity.getTheme().resolveAttribute(android.R.attr.actionBarSize, tv, true)) {
+            if (mActivity != null && mActivity.get() != null && mActivity.get().getTheme().resolveAttribute(android.R.attr.actionBarSize, tv, true)) {
                 actionBarHeight = TypedValue.complexToDimensionPixelSize(
                         tv.data, getResources().getDisplayMetrics());
             }
         }
         else {
             // 使用android.support.v7.appcompat包做actionbar兼容的情况
-            if (mActivity.getTheme().resolveAttribute(
+            if (mActivity != null && mActivity.get() !=null && mActivity.get().getTheme().resolveAttribute(
                             android.support.v7.appcompat.R.attr.actionBarSize,
                             tv, true)) {
                 actionBarHeight = TypedValue.complexToDimensionPixelSize(

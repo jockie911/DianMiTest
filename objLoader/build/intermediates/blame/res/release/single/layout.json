@@ -16,12 +16,12 @@
         "source": "E:\\Code\\Android\\MyApplication\\objLoader\\src\\main\\res\\layout\\include_timespicker.xml"
     },
     {
-        "merged": "E:\\Code\\Android\\MyApplication\\objLoader\\build\\intermediates\\res\\merged\\release\\layout\\fragment_model.xml",
-        "source": "E:\\Code\\Android\\MyApplication\\objLoader\\src\\main\\res\\layout\\fragment_model.xml"
-    },
-    {
         "merged": "E:\\Code\\Android\\MyApplication\\objLoader\\build\\intermediates\\res\\merged\\release\\layout\\activity_photo_command.xml",
         "source": "E:\\Code\\Android\\MyApplication\\objLoader\\src\\main\\res\\layout\\activity_photo_command.xml"
+    },
+    {
+        "merged": "E:\\Code\\Android\\MyApplication\\objLoader\\build\\intermediates\\res\\merged\\release\\layout\\fragment_model.xml",
+        "source": "E:\\Code\\Android\\MyApplication\\objLoader\\src\\main\\res\\layout\\fragment_model.xml"
     },
     {
         "merged": "E:\\Code\\Android\\MyApplication\\objLoader\\build\\intermediates\\res\\merged\\release\\layout\\fragment_photo_command.xml",
@@ -52,20 +52,20 @@
         "source": "E:\\Code\\Android\\MyApplication\\objLoader\\src\\main\\res\\layout\\view_banner_content.xml"
     },
     {
-        "merged": "E:\\Code\\Android\\MyApplication\\objLoader\\build\\intermediates\\res\\merged\\release\\layout\\toast_item.xml",
-        "source": "E:\\Code\\Android\\MyApplication\\objLoader\\src\\main\\res\\layout\\toast_item.xml"
-    },
-    {
         "merged": "E:\\Code\\Android\\MyApplication\\objLoader\\build\\intermediates\\res\\merged\\release\\layout\\pop_heand_pic.xml",
         "source": "E:\\Code\\Android\\MyApplication\\objLoader\\src\\main\\res\\layout\\pop_heand_pic.xml"
     },
     {
-        "merged": "E:\\Code\\Android\\MyApplication\\objLoader\\build\\intermediates\\res\\merged\\release\\layout\\view_alertetdialog.xml",
-        "source": "E:\\Code\\Android\\MyApplication\\objLoader\\src\\main\\res\\layout\\view_alertetdialog.xml"
+        "merged": "E:\\Code\\Android\\MyApplication\\objLoader\\build\\intermediates\\res\\merged\\release\\layout\\toast_item.xml",
+        "source": "E:\\Code\\Android\\MyApplication\\objLoader\\src\\main\\res\\layout\\toast_item.xml"
     },
     {
         "merged": "E:\\Code\\Android\\MyApplication\\objLoader\\build\\intermediates\\res\\merged\\release\\layout\\two_optionszx.xml",
         "source": "E:\\Code\\Android\\MyApplication\\objLoader\\src\\main\\res\\layout\\two_optionszx.xml"
+    },
+    {
+        "merged": "E:\\Code\\Android\\MyApplication\\objLoader\\build\\intermediates\\res\\merged\\release\\layout\\view_alertetdialog.xml",
+        "source": "E:\\Code\\Android\\MyApplication\\objLoader\\src\\main\\res\\layout\\view_alertetdialog.xml"
     },
     {
         "merged": "E:\\Code\\Android\\MyApplication\\objLoader\\build\\intermediates\\res\\merged\\release\\layout\\activity_measure_record.xml",
@@ -104,12 +104,20 @@
         "source": "E:\\Code\\Android\\MyApplication\\objLoader\\src\\main\\res\\layout\\pop_delete_my_log.xml"
     },
     {
+        "merged": "E:\\Code\\Android\\MyApplication\\objLoader\\build\\intermediates\\res\\merged\\release\\layout\\activity_checkout_mobile.xml",
+        "source": "E:\\Code\\Android\\MyApplication\\objLoader\\src\\main\\res\\layout\\activity_checkout_mobile.xml"
+    },
+    {
         "merged": "E:\\Code\\Android\\MyApplication\\objLoader\\build\\intermediates\\res\\merged\\release\\layout\\design_layout_tab_text.xml",
         "source": "C:\\Users\\yc\\.android\\build-cache\\9bb9c0f4e18f768e3516e9c4152543666304976c\\output\\res\\layout\\design_layout_tab_text.xml"
     },
     {
         "merged": "E:\\Code\\Android\\MyApplication\\objLoader\\build\\intermediates\\res\\merged\\release\\layout\\title.xml",
         "source": "E:\\Code\\Android\\MyApplication\\objLoader\\src\\main\\res\\layout\\title.xml"
+    },
+    {
+        "merged": "E:\\Code\\Android\\MyApplication\\objLoader\\build\\intermediates\\res\\merged\\release\\layout\\activity_webview.xml",
+        "source": "E:\\Code\\Android\\MyApplication\\objLoader\\src\\main\\res\\layout\\activity_webview.xml"
     },
     {
         "merged": "E:\\Code\\Android\\MyApplication\\objLoader\\build\\intermediates\\res\\merged\\release\\layout\\abc_list_menu_item_icon.xml",

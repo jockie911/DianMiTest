@@ -10,5 +10,4 @@
         android:id="@+id/tencent_model_webview"
         android:layout_width="match_parent"
         android:layout_height="match_parent" />
-
 </LinearLayout>

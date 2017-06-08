@@ -7,11 +7,15 @@ import android.graphics.Color;
 import android.graphics.Paint;
 import android.graphics.Path;
 import android.graphics.Point;
+import android.graphics.Rect;
 import android.support.annotation.Nullable;
 import android.util.AttributeSet;
 import android.view.View;
 
 import com.example.objLoader.R;
+import com.example.objLoader.base.BaseApp;
+import com.example.objLoader.utils.DensityUtil;
+import com.example.objLoader.utils.Logger;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -149,6 +153,7 @@ public class ShapeView extends View {
         this.paint.setStrokeWidth(3);
         paint.setStyle(Paint.Style.STROKE);
 
+        cc();
         initPoints();
         initMidPoints(this.mPoints);
         initMidMidPoints(this.mMidPoints);
@@ -199,7 +204,8 @@ public class ShapeView extends View {
 
     private void initPoints() {
         for (double[] data : mData) {
-            mPoints.add(new Point((int)(data[0] * 3.5) ,(int)(data[1]* 3.5)));
+//            mPoints.add(new Point((int)(data[0] * 3.5) ,(int)(data[1]* 3.5)));
+            mPoints.add(new Point((int)(data[0] ) ,(int)(data[1])));
         }
     }
 
@@ -231,5 +237,41 @@ public class ShapeView extends View {
             }
         }
         canvas.drawPath(mPath,paint);
+    }
+
+    public void cc(){
+        double minX = mData[0][0];
+        double minY = mData[0][1];
+        double maxX = 0;
+        double maxY = 0;
+        for (int i = 0; i < mData.length; i++) {
+            if(mData[i][0] < minX){
+                minX =  mData[i][0];
+            }
+
+            if(mData[i][0] > maxX){
+                maxX =  mData[i][0];
+            }
+
+            if(mData[i][1] < minY)
+                minY = mData[i][1];
+
+            if(mData[i][1] > maxY)
+                maxY = mData[i][0];
+        }
+
+        int mScreenWidth = BaseApp.mScreenWidth;
+        int mScreenHeight = BaseApp.mScreenHeight - DensityUtil.dip2px(getContext(), 70);
+
+        double scale = mScreenWidth/2/(maxX - minX);
+        double v5 = mScreenWidth / 2 - mData[mData.length - 4][0] * scale;
+
+        double t = (mScreenHeight - (maxY - minY) * scale) / 2;
+        double t1 = t - mData[mData.length - 4][1] * scale;
+
+        for (int i = 0; i < mData.length; i++) {
+            mData[i][0] = mData[i][0] * scale + v5;
+            mData[i][1] = mData[i][1] * scale ;
+        }
     }
 }

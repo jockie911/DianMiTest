@@ -42,8 +42,8 @@ public class AccountInfoActivity$$ViewBinder<T extends com.example.objLoader.mod
           target.onClick(p0);
         }
       });
-    view = finder.findRequiredView(source, 2131689720, "field 'ivRightTitleBar' and method 'onClick'");
-    target.ivRightTitleBar = finder.castView(view, 2131689720, "field 'ivRightTitleBar'");
+    view = finder.findRequiredView(source, 2131689723, "field 'ivRightTitleBar' and method 'onClick'");
+    target.ivRightTitleBar = finder.castView(view, 2131689723, "field 'ivRightTitleBar'");
     view.setOnClickListener(
       new butterknife.internal.DebouncingOnClickListener() {
         @Override public void doClick(
@@ -52,7 +52,27 @@ public class AccountInfoActivity$$ViewBinder<T extends com.example.objLoader.mod
           target.onClick(p0);
         }
       });
+    view = finder.findRequiredView(source, 2131689637, "field 'tvClearCash'");
+    target.tvClearCash = finder.castView(view, 2131689637, "field 'tvClearCash'");
     view = finder.findRequiredView(source, 2131689634, "method 'onClick'");
+    view.setOnClickListener(
+      new butterknife.internal.DebouncingOnClickListener() {
+        @Override public void doClick(
+          android.view.View p0
+        ) {
+          target.onClick(p0);
+        }
+      });
+    view = finder.findRequiredView(source, 2131689638, "method 'onClick'");
+    view.setOnClickListener(
+      new butterknife.internal.DebouncingOnClickListener() {
+        @Override public void doClick(
+          android.view.View p0
+        ) {
+          target.onClick(p0);
+        }
+      });
+    view = finder.findRequiredView(source, 2131689635, "method 'onClick'");
     view.setOnClickListener(
       new butterknife.internal.DebouncingOnClickListener() {
         @Override public void doClick(
@@ -79,5 +99,6 @@ public class AccountInfoActivity$$ViewBinder<T extends com.example.objLoader.mod
     target.tv_username = null;
     target.ivAvatar = null;
     target.ivRightTitleBar = null;
+    target.tvClearCash = null;
   }
 }

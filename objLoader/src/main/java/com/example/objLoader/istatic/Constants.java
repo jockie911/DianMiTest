@@ -54,9 +54,6 @@ public class Constants {
 	public static final String SAVE_NAME = SERVER + "savename.php";
 
 	/**	获取所有保存信息	*/
-	public static final String GET_ALL_MEASURE_INFO = SERVER + "searchobj.php";
-	
-	/**	获取所有保存信息	*/
 	public static final String DELETE_MY_LOG = SERVER + "deleteobj.php";
 
 	/** 获取所有的测量记录 */

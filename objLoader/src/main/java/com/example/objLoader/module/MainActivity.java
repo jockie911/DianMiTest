@@ -16,6 +16,7 @@ import com.example.objLoader.istatic.IConstant;
 import com.example.objLoader.module.login.LoginActivity;
 import com.example.objLoader.module.measure.FrontPicActivity;
 import com.example.objLoader.module.personInfo.AccountInfoActivity;
+import com.example.objLoader.utils.MySnackbar;
 import com.example.objLoader.utils.SPUtils;
 import com.example.objLoader.utils.ToastUtils;
 import com.example.objLoader.utils.DensityUtil;

@@ -69,6 +69,8 @@
         android:layout_height="wrap_content"
         android:text="@string/login_forget_pwd"
         android:textColor="@color/title"
+        android:gravity="right"
+        android:layout_marginRight="15dp"
         android:paddingLeft="52dp"
         android:paddingTop="20dp"/>
 

@@ -74,6 +74,11 @@
                 android:background="@drawable/front_bg"
                 android:scaleType="centerCrop"/>
 
+            <View
+                android:id="@+id/v_bg"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
             <com.lilei.springactionmenu.ActionMenu
                 android:id="@+id/actionMenu"
                 android:layout_width="wrap_content"
@@ -82,14 +87,16 @@
                 android:layout_alignParentRight="true"
                 android:layout_marginBottom="40dp"
                 android:layout_marginRight="10dp"
-                app:circleRadius="25dp"
+                app:circleRadius="28dp"
                 app:dimens="10dp"
-                app:animationDuration="1500"
+                app:animationDuration="1000"
                 app:expandDirect="expandDirectTop"
-                app:buttonNormalColor="#ff5bc0de"
-                app:buttonPressColor="#ff39b3d7"
+                app:buttonNormalColor="#888"
+                app:buttonPressColor="#888"
                 app:actionMenuIcon="@drawable/add"
                 app:actionMenuOnIcon="@drawable/close" />
+            <!--app:buttonNormalColor="#ff5bc0de"-->
+            <!--app:buttonPressColor="#ff39b3d7"-->
 
          <!--   <Button
                 android:id="@+id/btn_front_camera"

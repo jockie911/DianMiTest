@@ -2,6 +2,7 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:fitsSystemWindows="true"
     android:orientation="vertical"
     android:background="@color/color_base_deep">
@@ -59,7 +60,7 @@
                 android:textColor="#4a525b" />
         </RelativeLayout>
 
-        <FrameLayout
+        <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_above="@+id/rel_temp_bottom"
@@ -72,17 +73,32 @@
                 android:layout_height="match_parent"
                 android:background="@drawable/front_bg"
                 android:scaleType="centerCrop"/>
-        </FrameLayout>
 
-        <RelativeLayout
-            android:id="@+id/rel_temp_bottom"
-            android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:layout_alignParentBottom="true"
-            android:layout_gravity="bottom"
-            android:background="@color/color_base">
+            <View
+                android:id="@+id/v_bg"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
 
-            <Button
+            <com.lilei.springactionmenu.ActionMenu
+                android:id="@+id/actionMenu"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginBottom="40dp"
+                android:layout_marginRight="10dp"
+                app:circleRadius="28dp"
+                app:dimens="10dp"
+                app:animationDuration="1000"
+                app:expandDirect="expandDirectTop"
+                app:buttonNormalColor="#888"
+                app:buttonPressColor="#888"
+                app:actionMenuIcon="@drawable/add"
+                app:actionMenuOnIcon="@drawable/close" />
+            <!--app:buttonNormalColor="#ff5bc0de"-->
+            <!--app:buttonPressColor="#ff39b3d7"-->
+
+         <!--   <Button
                 android:id="@+id/btn_front_camera"
                 android:layout_width="30dp"
                 android:layout_height="30dp"
@@ -98,8 +114,17 @@
                 android:layout_centerVertical="true"
                 android:layout_marginLeft="40dp"
                 android:layout_toRightOf="@+id/btn_front_camera"
-                android:background="@drawable/xc_selector" />
+                android:background="@drawable/xc_selector" />-->
+        </RelativeLayout>
 
+        <RelativeLayout
+            android:id="@+id/rel_temp_bottom"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_alignParentBottom="true"
+            android:layout_gravity="bottom"
+            android:background="@color/color_base"
+            android:visibility="gone">
             <TextView
                 android:id="@+id/tv_next_step"
                 android:layout_width="150dp"
